@@ -32,9 +32,9 @@ from typing import Any, TypeVar
 
 from pydantic import BaseModel
 
-from . import config
-from .config import Settings, Tier
-from .errors import TTSError
+from .. import config
+from ..config import Settings, Tier
+from ..errors import TTSError
 
 T = TypeVar("T", bound=BaseModel)
 

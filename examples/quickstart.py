@@ -20,5 +20,7 @@ speech = ancient_language_tts.speak(
     target="it",
     output=Path(__file__).resolve().parent.parent / "out" / "lat.mp3",
     tier="low",
+    use_rules = True,
+    through_ipa=False
 )
 print(json.dumps(speech.summary(), indent=2, ensure_ascii=False))

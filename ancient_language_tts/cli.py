@@ -57,6 +57,8 @@ def _speak(args: argparse.Namespace) -> int:
         cache=False if args.no_cache else None,
         seed=args.seed,
         max_chars=args.max_chars,
+        use_rules=args.use_rules,
+        through_ipa=args.through_ipa,
     )
     _dump(result.summary())
     return 0
@@ -175,6 +177,17 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--seed", type=int, help="best-effort repeatable take")
     _add_llm(p)
     _add_limit(p)
+    p.add_argument(
+        "--use-rules",
+        action="store_true",
+        help="use the rule-based IPA+respelling engine when one exists for this pair",
+    )
+    p.add_argument(
+        "--through-ipa",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="transcribe via IPA (default), or --no-through-ipa to respell Latin directly",
+    )
     p.set_defaults(run=_speak)
 
     p = sub.add_parser("ipa", help="transcribe one passage into IPA")

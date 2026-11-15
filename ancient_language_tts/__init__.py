@@ -14,6 +14,7 @@ Bring your own keys: OpenRouter for the LLM calls, ElevenLabs for the speech.
     )
 """
 
+from . import rule_based
 from .chunks import MAX_CHARS, split
 from .config import TIER_MODELS, Settings, Tier
 from .errors import TTSError
@@ -38,6 +39,7 @@ __all__ = [
     "improve_respelling",
     "modern_languages",
     "respell",
+    "rule_based",
     "score_ipa",
     "score_respelling",
     "speak",

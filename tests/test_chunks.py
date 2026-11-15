@@ -108,7 +108,7 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(speech.audio, b"audio")
 
     def test_to_ipa_joins_the_pieces(self) -> None:
-        with mock.patch("ancient_language_tts.ipa._ensemble", side_effect=lambda text, source, tier: text[::-1]):
+        with mock.patch("ancient_language_tts.llm.ipa._ensemble", side_effect=lambda text, source, tier: text[::-1]):
             line = to_ipa("aa. bb. cc. dd.", "lat", max_chars=10)
         self.assertEqual(line, ".bb .aa .dd .cc")
 

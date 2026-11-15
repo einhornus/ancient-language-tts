@@ -4,6 +4,8 @@ A passage longer than the IPA limit is split on sentence boundaries first
 (`chunks`). Each piece is transcribed and respelled on its own, and the
 pieces are joined before the voice reads them. A short passage is one piece.
 
+With `use_rules=False` (default), the LLM pipeline runs:
+
     1. Every model in the tier transcribes the ancient-language text into
        IPA, scores its own line, and rewrites it. The rewrite stands when
        that model scores it higher than the first line. Each standing line
@@ -15,6 +17,13 @@ pieces are joined before the voice reads them. A short passage is one piece.
        pair rules for these two languages. The call returns the line with
        the highest mean score.
     3. ElevenLabs speaks the respelling with a voice of the modern language.
+
+With `use_rules=True`, steps 1–2 use the deterministic engine in
+`rule_based` when one exists for the language pair (currently
+Ecclesiastical Latin → Italian). ElevenLabs still speaks the result.
+
+`through_ipa=False` skips both of those and respells the Latin spelling
+straight into Italian (`rule_based.direct`). The returned `ipa` is empty.
 
 There is no fourth step that "fixes" the audio. If a sound has no letter
 in the modern language, the pair rules already name the substitute, and
@@ -29,9 +38,13 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
-from . import chunks, config, ipa as ipa_step, languages, respelling as respell_step, tts
+from . import chunks, config, languages, rule_based, tts
+from . import llm as llm_steps
 from .config import Tier
 from .errors import TTSError
+
+ipa_step = llm_steps.ipa
+respell_step = llm_steps.respelling
 
 log = logging.getLogger("ancient_language_tts")
 
@@ -82,6 +95,8 @@ def speak(
     stability: float | None = None,
     similarity_boost: float | None = None,
     seed: int | None = None,
+    use_rules: bool = False,
+    through_ipa: bool = True,
 ) -> Speech:
     """Speak `text` in `source` with a `target` voice.
 
@@ -91,6 +106,16 @@ def speak(
     language except the two Latins, which are bundled with Italian. `output`
     is the audio file to write; leave it empty to only get the bytes on the
     returned `Speech`.
+
+    `use_rules` asks for the deterministic rule engine when one exists for
+    this language pair (no OpenRouter calls for IPA or respelling). When
+    the pair has no rule engine, a `ValueError` is raised. The default is
+    the LLM pipeline.
+
+    `through_ipa` chooses the shape of that rule engine. True (default)
+    transcribes to IPA, then respells. False respells the Latin spelling
+    directly and does not call an LLM. A pair with no direct rules raises
+    `ValueError`.
 
     `openrouter_api_key` and `elevenlabs_api_key` are your keys. `tier`
     (`high`, `medium`, `low`) picks the models. The IPA step and the
@@ -127,7 +152,17 @@ def speak(
         stability=stability,
         similarity_boost=similarity_boost,
     ):
-        return _speak(text, source, target, output=output, voice_id=voice_id, tier=tier, seed=seed)
+        return _speak(
+            text,
+            source,
+            target,
+            output=output,
+            voice_id=voice_id,
+            tier=tier,
+            seed=seed,
+            use_rules=use_rules,
+            through_ipa=through_ipa,
+        )
 
 
 def _speak(
@@ -139,11 +174,19 @@ def _speak(
     voice_id: str | None,
     tier: Tier,
     seed: int | None,
+    use_rules: bool,
+    through_ipa: bool,
 ) -> Speech:
     settings = config.current()
     language = languages.ancient(source)
     modern = languages.modern(target)
     cleaned = text.strip()
+    if (use_rules or not through_ipa) and not rule_based.has(language.code, modern.code):
+        have = ", ".join(f"{s}→{t}" for s, t in rule_based.available()) or "(none)"
+        raise ValueError(
+            f"no rule-based solution for {language.code} → {modern.code}. "
+            f"Available: {have}."
+        )
     parts = chunks.split(cleaned) or [cleaned]
     if len(parts) > 1:
         log.info(
@@ -157,16 +200,24 @@ def _speak(
     for index, part in enumerate(parts, start=1):
         if len(parts) > 1:
             log.info("piece %s/%s, %s characters", index, len(parts), len(part))
-        ipa_line = ipa_step.to_ipa(part, language.code, tier=tier)
-        spelling_lines.append(respell_step.respell(
-            part,
-            ipa_line,
-            language.code,
-            modern.code,
-            tier=tier,
-        ))
+        if not through_ipa:
+            spelling_lines.append(rule_based.direct(part, language.code, modern.code))
+            ipa_lines.append("")
+            continue
+        if use_rules:
+            ipa_line = rule_based.to_ipa(part, language.code, modern.code)
+            spelling_lines.append(rule_based.respell(ipa_line, language.code, modern.code))
+        else:
+            ipa_line = ipa_step.to_ipa(part, language.code, tier=tier)
+            spelling_lines.append(respell_step.respell(
+                part,
+                ipa_line,
+                language.code,
+                modern.code,
+                tier=tier,
+            ))
         ipa_lines.append(ipa_line)
-    ipa = " ".join(ipa_lines)
+    ipa = " ".join(line for line in ipa_lines if line)
     respelling = " ".join(spelling_lines)
     try:
         audio = tts.synthesize(
