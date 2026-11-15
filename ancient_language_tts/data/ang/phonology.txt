@@ -1,0 +1,37 @@
+Stage. Late West Saxon, about 900 to 1000 AD, the teaching pronunciation of introductory Old English. c before a front vowel is /tʃ/. g before a front vowel is /j/. Do not read the text as modern English and do not read it as Middle English.
+
+Spelling of the input
+- A macron marks length. Where the input omits macrons, restore the dictionary quantities and transcribe those quantities.
+- þ and ð are the same phoneme.
+
+Vowels
+- a /ɑ/, ā /ɑː/
+- æ /æ/, ǣ /æː/
+- e /e/, ē /eː/
+- i /i/, ī /iː/
+- o /o/, ō /oː/
+- u /u/, ū /uː/
+- y /y/, ȳ /yː/
+- ea /æɑ/, ēa /æːɑ/
+- eo /eo/, ēo /eːo/
+- ie /iy/, īe /iːy/. At this date those are still diphthongs. If the spelling has already been updated to y or ȳ, use /y/ or /yː/.
+
+Consonants
+- p t b d m n w have their ordinary values. r is a trill /r/. l is /l/.
+- c is /tʃ/ before a front vowel (i, e, æ, y, ea, eo, ie), when it is written ċ, and in word-final position after a front vowel (ic is /itʃ/). Otherwise c is /k/. cc follows the same split, geminated.
+- g is /j/ before a front vowel and when it is written ġ. g is /ɣ/ between back vowels. g is /g/ at the start of a word before a back vowel or a consonant. cg is /dʒ/.
+- ng is /ŋ/ plus the g that the rule above would give.
+- sc in a native word is /ʃ/. In a Latin loan, sc is /sk/ when the cluster is still the Latin one.
+- h at the start of a word is /h/. After a front vowel it is /ç/. After a back vowel it is /x/.
+- hl, hr, hn are /l̥ r̥ n̥/. hw is /ʍ/.
+- f and s are /f s/ at the start or end of a word and next to a voiceless sound, and /v z/ between voiced sounds.
+- þ and ð are /θ/ at the start of a word and next to a voiceless sound, and /ð/ between voiced sounds.
+- cn, gn, wl, wr are pronounced as written. A doubled consonant is a geminate.
+
+Stress
+- Stress the first syllable of the lexical word.
+- The prefixes ge-, be-, and the verbal for- are unstressed, and so is ne. The stress then falls on the root. A noun in for- stresses the prefix.
+- Put ˈ before the stressed syllable.
+
+Symbols
+ɑ ɑː æ æː e eː i iː o oː u uː y yː æɑ æːɑ eo eːo iy iːy p t k b d g tʃ dʒ ʃ j ɣ f v θ ð s z h x ç m n ŋ l r w ʍ l̥ r̥ n̥

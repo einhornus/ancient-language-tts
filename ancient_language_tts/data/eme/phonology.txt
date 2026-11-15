@@ -1,0 +1,28 @@
+Stage. Educated southern English of about 1600, the Original Pronunciation used for Shakespeare. The spelling looks like today's English. The values below replace today's values wherever they differ. Do not return a modern dictionary pronunciation.
+
+Vowels, by the lexical set the word belongs to
+- KIT /ɪ/, DRESS /ɛ/, TRAP /a/, LOT /ɔ/, CLOTH /ɔ/, BATH /a/. There is no trap–bath split.
+- STRUT /ʊ/ and FOOT /ʊ/. They have not split. cut, put, and blood all have /ʊ/.
+- FLEECE /iː/. The MEAT set (meat, sea, speak, beat), words with Middle English open ē, is /eː/, distinct from FLEECE. If you cannot tell the two sets apart, use /iː/.
+- FACE /eː/, PALM /a/, THOUGHT /ɔː/, GOAT /oː/, GOOSE /uː/.
+- PRICE /əɪ/, CHOICE /ɔɪ/, MOUTH /əʊ/.
+- NEAR /iː/ plus /ɹ/, SQUARE /eː/ plus /ɹ/, START /a/ plus /ɹ/, NORTH and FORCE /ɔː/ plus /ɹ/, CURE /uː/ plus /ɹ/.
+- NURSE and lettER are /ə/ plus /ɹ/. happY is /ɪ/. commA is /ə/. A syllabic -ed or -es is /ɪ/.
+
+Consonants
+- r is /ɹ/ in every position where it is written, including before a consonant and at the end of a word.
+- kn is /kn/. gn at the start of a word is /gn/. wr is /wr/.
+- wh is /ʍ/, distinct from w /w/.
+- ng is /ŋ/ plus /g/. The g is pronounced, including in singer.
+- h is /h/, except in hour, honest, heir, and honor, where it is silent.
+- gh is silent, except where the modern word has /f/ (laugh, enough, cough), and there it is /f/.
+- -tion is /sɪ.ən/. -sion is /zɪ.ən/ after a vowel and /sɪ.ən/ after a consonant. It is not /ʃən/.
+- th is /θ/ at the start of a content word and at the end of a word, and /ð/ between vowels and at the start of this, that, the, them, then, there, these, those, thou, thee, thy.
+- Other consonants have their modern English values: p b t d k g f v s z ʃ ʒ tʃ dʒ m n l j.
+
+Stress
+- Use the stress of about 1600 where you know it. Where you do not, use the modern lexical stress.
+- Put ˈ before the stressed syllable.
+
+Symbols
+iː eː ɛ ɪ ə a ɔ ɔː oː uː ʊ əɪ əʊ ɔɪ p b t d k g f v θ ð s z ʃ ʒ tʃ dʒ m n ŋ l ɹ j w ʍ h

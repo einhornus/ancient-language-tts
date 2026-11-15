@@ -1,0 +1,81 @@
+Stage. Ecclesiastical Latin in the Italian school: the Roman pronunciation of the Liber Usualis and of Italian literary Latin. e and o are always open. c and g soften before front vowels. Vowel length is not pronounced. This is not Classical Latin, and not the French, German, or English church pronunciations. Do not use those values.
+
+Output
+- Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
+- Separate syllables with a dot and words with a space. Drop capitals. The pause marks are a comma, an exclamation mark, a question mark, and a period. A comma is a short pause. An exclamation mark and a question mark stay as they are. A period is a long pause and the end of a sentence. A semicolon or a colon is a long pause: write a period.
+- Do not write a length mark. A macron is not a long vowel in this pronunciation.
+
+Spelling of the input
+- A macron, or an unmarked Classical quantity, is used only to decide whether a penult is heavy. It does not change the vowel you write. Rōma and Roma are both [ˈrɔ.ma].
+- i at the start of a word before a vowel is [j] (iam, Iēsus, iūcundus). It is also [j] after a prefix: coniungō [kɔnˈjun.gɔ], iniūria [inˈju.ri.a].
+- i between vowels in maior, peior, eius, cuius, huius, Troia is one [j], the onset of the next syllable: maior [ˈma.jɔr], eius [ˈɛ.jus], huius [ˈu.jus]. It is not a geminate.
+- Compounds of iaciō written with one i have [j] plus the vowel, and a following c before e, i, ae, oe, or y is still soft: coniciō [kɔnˈji.tʃi.ɔ].
+- Every other i is the vowel [i]. This includes etiam, the stem vowel of fīlius and fīliī [ˈfi.li.i], and Gāius [ˈga.i.us]. Each vowel letter of fīliī is its own syllable.
+- v, and u when it is a consonant, is [v]. Never [w]. u is a consonant after q, where it is the glide of [kʷ]; in ngu before a vowel, where it is the glide of [gʷ]; and in suādeō, suāvis, suēscō and their derivatives, where that u is [v] (suāvis [ˈsva.vis]). In suus, tuus, fuit, genua it is a vowel. If the edition prints u for v (uīuō), the consonant is [v].
+- A written j is consonantal i and is [j].
+- k is [k] (Kalendae).
+- y is [i], the same vowel as i. It is not [y].
+- z is [dz], one consonant, including between vowels: zēlus [ˈdzɛ.lus], gaza [ˈga.dza]. It does not geminate.
+- ch is [k], ph is [f], th is [t], rh is [r]. They are not aspirated stops. cch is [k.k]: Bacchus [ˈbak.kus]. sch is [sk]: schola [ˈskɔ.la], schema [ˈskɛ.ma].
+
+Consonants
+- c is [tʃ] before e, i, ae, oe, æ, œ, or y. It is [k] before a, o, u, a consonant, or the end of a word. caelum [ˈtʃɛ.lum], cibus [ˈtʃi.bus], cantus [ˈkan.tus].
+- g is [dʒ] before e, i, ae, oe, æ, œ, or y. It is [g] elsewhere. rēgīna [rɛˈdʒi.na], gens [ˈdʒɛns], glōria [ˈglɔ.ri.a].
+- A doubled c or g follows the same front-vowel rule on the second letter. ecce [ˈɛt.tʃɛ], peccāta [pɛkˈka.ta]. A doubled g before a front vowel is [d.dʒ].
+- sc is [ʃ] before e, i, ae, oe, æ, œ, or y, and that [ʃ] is one consonant. It is [sk] elsewhere. dēscendit [dɛˈʃɛn.dit], scio [ˈʃi.ɔ], scūtum [ˈsku.tum].
+- xc before e, i, ae, oe, æ, œ, or y is [kʃ]: the [k] closes the syllable and [ʃ] begins the next. excelsīs [ɛkˈʃɛl.sis]. Any other xc is [ksk], and the [ks] closes the first syllable: excussōrum [ɛks.kusˈsɔ.rum].
+- A word that begins with ex- before a vowel or h has [gz], the [g] closing the first syllable: exaudi [ɛgˈzau.di], exercitus [ɛgˈzɛr.tʃi.tus]. Every other x is [ks], split [k.s] when a vowel follows: dīxī [ˈdik.si], lūx [ˈluks], rēx [ˈrɛks].
+- The sequence ti before a vowel is [tsi], and [ts] is one consonant, the onset of the syllable with i. grātia [ˈgra.tsi.a], etiam [ˈɛ.tsi.am], laetitia [lɛˈti.tsi.a], nātiō [ˈna.tsi.ɔ], patientia [pa.tsiˈɛn.tsi.a]. The first ti of laetitia is [ti] because that i is followed by a consonant.
+- This [tsi] does not apply when the t is preceded by s, t, or x. ostium [ˈɔs.ti.um], Attius [ˈat.ti.us], mixtiō [ˈmiks.ti.ɔ]. A t before i at the end of a word is [ti]: nītī [ˈni.ti].
+- f is [f]. s is [s] in every position, between vowels too. Never [z], except the [z] of word-initial ex- before a vowel or h.
+- h is silent. Leave it out: hora [ˈɔ.ra], haec [ˈɛk], hic [ˈik], homō [ˈɔ.mɔ]. In mihi, nihil, and the forms and compounds built on those two words, h is [k]: mihi [ˈmi.ki], nihil [ˈni.kil], nihilum [ˈni.ki.lum].
+- r is a trill [r]. l is clear [l] in every position. There is no dark l.
+- qu is the single consonant [kʷ]. ngu before a vowel is [ŋgʷ]: lingua [ˈliŋ.gʷa].
+- bs and bt stay [bs] and [bt]. urbs [urbs], obtineō [ɔbˈti.nɛ.ɔ].
+- gn between vowels is the long palatal [ɲ.ɲ]. magnus [ˈmaɲ.ɲum], agnus [ˈaɲ.ɲus], rēgnum [ˈrɛɲ.ɲum], cognōscō [kɔɲˈɲɔ.skɔ]. gn at the start of a word is [ɲ].
+- A doubled letter is a geminate. Write the consonant twice with the syllable boundary between: annus [ˈan.nus], terra [ˈtɛr.ra], mīlle [ˈmil.lɛ].
+- p t k b d are plain stops. A final consonant is pronounced.
+
+Nasals
+- m is [m]. n is [n]. Do not drop either, and do not write a nasal vowel. cōnsul [ˈkɔn.sul], īnfāns [ˈin.fans], Rōmam [ˈrɔ.mam], cum [kum], tam [tam].
+- n or m before c, ch, g, qu, or x inside a word is [ŋ]: sanctus [ˈsaŋk.tus], numquam [ˈnuŋ.kʷam], virumque [viˈruŋ.kʷɛ].
+
+Vowels
+- a [a]
+- e, ae, oe, æ, œ [ɛ]. One open vowel, not a diphthong, and not a close [e]. caelum [ˈtʃɛ.lum], poena [ˈpɛ.na], saepe [ˈsɛ.pɛ].
+- i and y [i]. Not [ɪ].
+- o [ɔ]. One open vowel, not a close [o].
+- u [u]. Not [ʊ].
+- au [au], one syllable. eu [ɛu], one syllable, in heu, ēheu, seu, neu, ceu, neuter, and Greek words (Eurōpa, Orpheus). Where a stem meets an ending, eu is two syllables: meus [ˈmɛ.us], deus [ˈdɛ.us], eum [ˈɛ.um], aureus.
+- ei is [ɛi] only in the interjection ei (hei) and in dein, deinde, deinceps. Elsewhere it is two syllables: reī [ˈrɛ.i], deī [ˈdɛ.i], meīs.
+- ui is two syllables: cui [ˈku.i], huic [ˈu.ik], fuit [ˈfu.it].
+- Two vowels that are not those diphthongs stay two syllables: poēta [pɔˈɛ.ta], fīliī [ˈfi.li.i], ait [ˈa.it].
+- Pronounce every vowel. Do not elide a vowel unless the input marks the elision with an apostrophe.
+
+Syllables
+- Every vowel or diphthong makes one syllable. Syllabify each word separately.
+- A single consonant between vowels goes with the following vowel. [kʷ], [gʷ], [tʃ], [dʒ], [ʃ], [ts], and [dz] each count as one consonant.
+- Of two or more consonants, the last goes with the following vowel and the rest close the preceding syllable: arma [ˈar.ma], sanctus [ˈsaŋk.tus], praestāre [prɛsˈta.rɛ], mixtūra [miksˈtu.ra].
+- A stop plus l or r stays together and begins the next syllable: patria [ˈpa.tri.a], pulchrum [ˈpul.krum], nostrā [ˈnɔs.tra].
+- A prefix boundary overrides this: absum [ˈab.sum], obruō.
+- [ɲ.ɲ], a doubled letter, and [ks] close the preceding syllable. A single [j] does not.
+
+Stress
+- Stress falls where Classical stress falls. Use the historical quantity for that decision only. The stressed vowel is not written long.
+- A monosyllable takes ˈ unless it is a preposition or a conjunction: in, ad, ab, ex, dē, cum, et, sed, sī, ut, nē. quam is unstressed.
+- A word of two syllables stresses the first.
+- A longer word stresses the penult if it is heavy, and the antepenult if the penult is light. A syllable is heavy when its vowel is historically long, or a diphthong, or closed by a consonant. prīncipium [prinˈtʃi.pi.um] has a light penult. redēmptōris [rɛ.dɛmpˈtɔ.ris] has a heavy penult. The macron records that weight. It is not a length mark and it is not the stress.
+- A stop plus a liquid does not close the syllable. Neither does [kʷ], [tʃ], [dʒ], [ʃ], [ts], [dz], or a single [j]. x, [ɲ.ɲ], and a doubled letter do close it.
+- The enclitics -que, -ve, and -ne are part of the word. Stress the syllable that precedes the enclitic, whatever its weight: virumque [viˈruŋ.kʷɛ], populusque [pɔ.puˈlus.kʷɛ].
+- Fixed words that only look like enclitic forms follow the normal rule: itaque [ˈi.ta.kʷɛ], utique, undique, dēnique.
+- Stress a final syllable only in words that lost or contracted their last syllable: illīc [ilˈlik], adhūc [adˈuk].
+- The genitive and vocative in -ī of nouns in -ius keep the stress of the full form: Vergilī [vɛrˈdʒi.li].
+- Put ˈ before the stressed syllable. It replaces the dot.
+
+Symbols
+Vowels: a ɛ i ɔ u
+Diphthongs: au ɛu ɛi
+Consonants: p t k b d g tʃ dʒ ts dz f s z ʃ m n ɲ ŋ r l j v kʷ gʷ
+Marks: ˈ .
+Pauses: , ! ? .
+z is only the voiced s of word-initial ex- before a vowel or h. The letter z of the spelling is dz.

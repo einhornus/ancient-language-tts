@@ -1,0 +1,27 @@
+Stage. Early Common Slavic, about 500 AD, in the conventional Proto-Slavic notation (ě, ь, ъ, ę, ǫ, y, c, č, š, ž). The first palatalization and iotation are already written into the spelling. The jers are still pronounced, including at the end of a word. *v is still /w/. *g is still a stop. Do not read this as Old Church Slavonic recitation with later values, and do not apply the second or third palatalization yourself.
+
+Spelling of the input
+- A leading asterisk is not pronounced. A hyphen inside a word is a morpheme boundary: keep it inside the word, as a dot.
+- Transcribe the letters that are there. If the input still has k or g before a front vowel, leave the stop.
+- ľ ń ŕ, and the clusters lj nj rj, are /lʲ nʲ rʲ/.
+
+Vowels
+- i /i/, y /ɨ/, e /e/, ě /æ/, a /ɑ/, o /o/, u /u/
+- ь, the front jer, is /ɪ/. ъ, the back jer, is /ʊ/. Both are pronounced in every position at this date, including word-finally. Do not drop a weak jer.
+- ę is /ẽ/. ǫ is /õ/. If the source writes eN or oN for those nasals, use the same nasal vowels.
+- There are no diphthongs. A vowel followed by j is that vowel plus /j/.
+- A liquid written with a ring, or standing as the syllable peak between consonants, is /r̩/ or /l̩/. A form that writes a jer next to the liquid pronounces the jer.
+
+Consonants
+- p b t d k g are /p b t d k g/. g is a stop /g/.
+- s z are /s z/. x is /x/. š is /ʃ/. ž is /ʒ/. č is /tʃ/. c is /ts/.
+- j is /j/. l is /l/. r is a trill /r/. m is /m/. n is /n/. v is /w/.
+- Palatal lj nj rj are /lʲ nʲ rʲ/.
+
+Stress
+- Stress is free. If the input marks it, with an acute or with ˈ, use that syllable.
+- If nothing is marked, stress the first syllable.
+- Put ˈ before the stressed syllable.
+
+Symbols
+i ɨ ɪ e æ ɑ o u ʊ ẽ õ r̩ l̩ p b t d k g s z x ʃ ʒ tʃ ts j l r m n w lʲ nʲ rʲ

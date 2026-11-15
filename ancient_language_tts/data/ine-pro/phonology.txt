@@ -1,0 +1,27 @@
+Stage. Late Proto-Indo-European, about 3000 BC, in the phonemic system used by the standard handbooks and by Wiktionary. This is a reconstruction. The values below are a speaking convention for those phonemes: the laryngeals and the palatovelars stay audible, so that a later step can respell them. Do not simplify the word into Latin, Sanskrit, or a documentary pronunciation that drops them.
+
+Spelling of the input
+- A leading asterisk is not pronounced. An acute on a vowel (é, ḗ, ó) is the accent: put ˈ on that syllable and keep the vowel's length.
+- A hyphen inside a word is a morpheme boundary. Keep it inside the word, as a dot.
+- Transcribe the vowels that are written. If the input still writes a laryngeal, pronounce the laryngeal as well. Do not delete h₁ h₂ h₃ and do not color a neighboring vowel a second time.
+- Accept ḱ ǵ, kʷ gʷ, h₁ h₂ h₃, the ring for a syllabic resonant, and macrons.
+
+Consonants
+- Voiceless: p /p/, t /t/, ḱ /c/, k /k/, kʷ /kʷ/.
+- Voiced: b /b/, d /d/, ǵ /ɟ/, g /g/, gʷ /gʷ/. b is rare; if it is written, it is /b/.
+- Voiced aspirated: bʰ /bʱ/, dʰ /dʱ/, ǵʰ /ɟʱ/, gʰ /gʱ/, gʷʰ /gʷʱ/. Keep the aspiration. Do not turn these into fricatives.
+- s is /s/. n before a velar is /ŋ/. r is a trill /r/. l is /l/. i before a vowel is /j/. u before a vowel is /w/.
+- Laryngeals, always pronounced: h₁ /ʔ/, h₂ /χ/, h₃ /ʁ/.
+- A laryngeal between consonants, or at the start of a word before a consonant, is syllabic. Put /ə/ on it and keep the laryngeal: ph₂tḗr is /pəχ.ˈteːr/.
+
+Vowels
+- e /e/, ē /eː/, o /o/, ō /oː/, a /ɑ/, ā /ɑː/
+- i /i/, ī /iː/, u /u/, ū /uː/
+- ei /ei/, oi /oi/, ai /ɑi/, eu /eu/, ou /ou/, au /ɑu/
+- Syllabic resonants: m̥ /m̩/, n̥ /n̩/, l̥ /l̩/, r̥ /r̩/. If the input has already written a vowel instead of the ring, transcribe the vowel that is written.
+
+Accent
+- Put ˈ on the accented syllable. If no accent is written, stress the first syllable.
+
+Symbols
+p t c k kʷ b d ɟ g gʷ bʱ dʱ ɟʱ gʱ gʷʱ s m n ŋ l r j w ʔ χ ʁ ə e eː o oː ɑ ɑː i iː u uː ei oi ɑi eu ou ɑu m̩ n̩ l̩ r̩

@@ -1,0 +1,49 @@
+Map each IPA symbol to the Italian spelling. Write an accent on the stressed vowel of every word that carries ˈ, including a monosyllable. A word with no ˈ gets no accent.
+
+A grave accent marks à, ì, ù, and the open vowels è for /ɛ/ and ò for /ɔ/. This Latin has no close e and no close o. Do not write é or ó. On a diphthong the accent sits on the first letter: àu, èu, èi.
+
+No vowel is long. Do not double a vowel letter. /ˈka.nɔ/ is càno.
+
+The IPA has already turned ae and oe into /ɛ/. Spell that /ɛ/ as e. Do not write ae or oe.
+
+Vowels
+- /a/ → a. Stressed, à.
+- /ɛ/ → e. Stressed, è.
+- /i/ → i. Stressed, ì.
+- /ɔ/ → o. Stressed, ò.
+- /u/ → u. Stressed, ù.
+- /au/ → au, one syllable. Stressed, àu.
+- /ɛu/ → eu, one syllable. Stressed, èu.
+- /ɛi/ → ei, one syllable. Stressed, èi.
+
+An unstressed /ɛ/ or /ɔ/ is e or o. The voice has open e and open o only in a stressed syllable, so an unstressed one comes out close.
+
+Consonants
+- /tʃ/ → c before e or i. /ˈtʃɛ.lum/ is cèlum. /ˈtʃi.bus/ is cìbus.
+- /dʒ/ → g before e or i. /rɛˈdʒi.na/ is regìna.
+- /ʃ/ → sc before e or i. /dɛˈʃɛn.dit/ is descèndit. /siˈlɛ.ʃit/ is silèscit.
+- /k/ → c before a, o, u, a consonant, or the end of a word. ch before e or i. /ˈmi.ki/ is mìchi. /ˈɛk/ is èc.
+- /k/ immediately before /ʃ/ → k, so the following sc stays [ʃ]. /ɛkˈʃɛl.sis/ is ekscèlsis.
+- /g/ → g before a, o, u, or a consonant. gh before e or i.
+- /s/ plus /k/ before e or i → sch. sc before e or i would be /ʃ/. /ˈskɛ.ma/ is schèma.
+- /g/ plus /l/ plus /i/ → ghli. The voice reads gli as the palatal /ʎ/.
+- /ts/ → z. The z is the whole affricate. Do not also write a t. /ˈgra.tsi.a/ is gràzia. /lɛˈti.tsi.a/ is letìzia. /ɛ.kʷi.nɔk.tsiˈa.lis/ is equinocziàlis. /ˈɛt.tʃɛ/ is ècce, because that one is a real /t/ plus /tʃ/.
+- /dz/ → z. /ˈdzɛ.lus/ is zèlus. z is also the spelling of /ts/, and the voice may not keep [dz] and [ts] apart.
+- /z/ → s. This is the voiced s of word-initial ex-. /ɛgˈzau.di/ is egsàudi. The voice may say [s].
+- /ks/ /k.s/ → x, read [ks]. /ˈfɛ.liks/ is fèlix. /miksˈtu.ra/ is mixtùra. /ˈfiŋk.sit/ is fìnxit.
+- /kʷ/ → qu, read [kw].
+- /gʷ/ → gu, read [gw].
+- /v/ → v.
+- /j/ → i before a vowel. /ˈjam/ is iàm. /ˈma.jɔr/ is màior.
+- /ɲ/ /ɲ.ɲ/ → gn. One gn. The voice already lengthens it. /ˈmaɲ.ɲum/ is màgnum. /ˈaɲ.ɲus/ is àgnus. Write gn. The general spelling rules that forbid gn do not apply to this pair.
+- /ŋ/ before /k/ or /g/ → n.
+- /s/ between vowels → ss. A single s between vowels may be said [z]. ss keeps [s], and the consonant is longer. /ˈtʃɛ.sar/ is cèssar. /diˈvi.sa/ is divìssa.
+- /s/ elsewhere → s.
+- /f/ → f. This includes the sound that was written ph.
+- /p/ /b/ /t/ /d/ /m/ /n/ /r/ /l/ → the same letters.
+- A geminate, the same consonant on both sides of a syllable break, is a doubled letter. /k.k/ is cc, or cch before e or i. /t.tʃ/ before e or i is cc. /d.dʒ/ before e or i is gg. /ˈɛt.tʃɛ/ is ècce. /pɛkˈka.ta/ is peccàta.
+
+The voice lengthens a stressed vowel in an open syllable that is not the last syllable of the word. That is the Italian rhythm. Do not double the vowel to mark it.
+An unstressed i or u before a vowel glides. gàllia may lose a syllable, and pòtuit may become [twit].
+A vowel followed by i in hiatus may come out as one syllable. dèi, rèi, fùit, and cùi are still written as two vowels.
+s before a voiced consonant across a word boundary may voice.

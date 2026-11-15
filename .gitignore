@@ -218,3 +218,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local run artifacts (LLM cache and generated audio)
+.cache/
+cache/
+out/
+
+# Local IDE metadata (the module file stores this machine's interpreter path)
+.idea/
+
+# Working notes, not part of the package
+_extracted_*.txt

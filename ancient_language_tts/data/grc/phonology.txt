@@ -1,0 +1,33 @@
+Stage. Classical Attic of the 5th and 4th centuries BC. φ θ χ are aspirated stops. ζ is /zd/. This is not Modern Greek and not Koine.
+
+Spelling of the input
+- The input may be polytonic Greek, monotonic Greek, or a Latin transliteration. In transliteration, ph th ch are /pʰ tʰ kʰ/, y is /y/, ē is η, ō is ω, and a rough breathing may be written h.
+- A rough breathing is /h/ at the start of that vowel or diphthong. A smooth breathing adds nothing.
+- An iota subscript is silent. Transcribe the long vowel only.
+- ῥ is /r̥/. ρρ is a geminate /r.r/.
+
+Consonants
+- π τ κ are /p t k/. φ θ χ are /pʰ tʰ kʰ/, not /f θ x/.
+- β δ γ are /b d g/. γ before κ, γ, χ, or ξ is /ŋ/.
+- σ and ς are /s/, and /z/ before a voiced stop. ζ is /zd/, one cluster, not /z/ and not /dz/.
+- ξ is /k/ plus /s/. ψ is /p/ plus /s/.
+- μ ν are /m n/. ν before a velar is /ŋ/. λ is /l/. ρ is a trill /r/.
+- ϝ, if it is written, is /w/.
+
+Vowels
+- α /a/, ᾱ /aː/
+- ε /e/, η /ɛː/
+- ι /i/, ῑ /iː/
+- ο /o/, ω /ɔː/
+- υ /y/, ῡ /yː/
+- ει is /eː/. ου is /uː/. Both are single long vowels in this stage, whether the diphthong is called genuine or spurious.
+- αι /ai/, αυ /au/, ευ /eu/, οι /oi/, υι /yi/
+
+Accent
+- The accent is a pitch. For this transcription, put ˈ on the syllable that carries the acute, the circumflex, or a grave. A grave is an acute that was lowered in front of another word; the syllable is still the accented one.
+- A circumflex vowel is long.
+- If the input writes no accent, use the dictionary accent.
+- Honor an elision the input marks with an apostrophe. Do not add elisions that are not written.
+
+Symbols
+a aː e ɛː i iː o ɔː y yː eː uː ai au eu oi yi p t k b d g pʰ tʰ kʰ s z m n ŋ l r r̥ h j w

@@ -1,0 +1,26 @@
+Stage. Late Proto-Germanic, about 200 AD, after Grimm's law and Verner's law and before the split into North, West, and East Germanic. This is a reconstruction. Transcribe the conventional values below. Do not turn the word into Old Norse, Gothic, or Old English.
+
+Spelling of the input
+- A leading asterisk is not pronounced. A hyphen inside a word is a morpheme boundary: keep it inside the word, as a dot, and do not make it a pause.
+- Where the source writes *ƀ, *β, *đ, *ð, *ǥ, or *ɣ for a Verner's-law fricative, use /β ð ɣ/. Where it writes *b *d *g for those same outcomes, use the stops /b d g/. Do not invent a fricative the spelling does not show.
+- *ē₂ and *ē² are /eː/, the same quality as *ē.
+
+Consonants
+- p t k are /p t k/. kw and kʷ are /kʷ/. b d g are /b d g/. gw and gʷ are /gʷ/.
+- f is /f/. þ is /θ/. s is /s/. z is /z/.
+- h at the start of a word is /h/. h anywhere else is /x/. hw at the start of a word is /ʍ/. hw after a vowel is /xʷ/.
+- j is /j/. w is /w/. l is /l/. r is a trill /r/. m is /m/. n is /n/, and /ŋ/ before a velar.
+- A syllabic resonant written with a ring is that consonant with a prop vowel /ə/ before it.
+
+Vowels
+- i /i/, e /e/, a /a/, u /u/
+- ī /iː/, ē /eː/, ō /oː/, ū /uː/
+- ai /ɑi/, au /ɑu/, eu /eu/, iu /iu/
+- A vowel written with a nasal hook (ą, į, ų) is /ɑ̃ ĩ ũ/.
+
+Stress
+- Stress the first syllable of the word. A prefix that is written as part of the word carries the stress when it is that first syllable.
+- Put ˈ before that syllable. Do not apply Latin, Greek, or modern Germanic stress.
+
+Symbols
+p t k kʷ b d g gʷ f θ s z h x ʍ xʷ β ð ɣ j w l r m n ŋ i e a u iː eː oː uː ɑi ɑu eu iu ɑ̃ ĩ ũ ə

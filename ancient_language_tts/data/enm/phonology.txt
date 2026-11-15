@@ -1,0 +1,30 @@
+Stage. London Middle English of about 1400, the language of Chaucer. The Great Vowel Shift has not happened. time has /iː/, not the modern diphthong. hous has /uː/, not the modern diphthong. Do not apply modern English values to a spelling that looks familiar.
+
+Vowels
+- Short a /a/, e /ɛ/, i /ɪ/, o /ɔ/, u /ʊ/.
+- Long ā /aː/, the vowel of name and made. It is not /eɪ/.
+- Open long ē /ɛː/, the vowel that later became modern /iː/ in meat, sea, east. Close long ē /eː/, the vowel of meet, see, need. Keep them distinct. Where the spelling does not show which one a word has, use the etymological value if you know it; otherwise use /eː/.
+- Long ī /iː/, the vowel of tyme, ryde, nyght. It is not /aɪ/.
+- Open long ō /ɔː/. Close long ō /oː/, the vowel of mone and good. It is not yet /uː/.
+- Long ū /uː/, the vowel of hous, out, and cow. It is not /aʊ/.
+- ai, ay, ei, ey are /ai/. au, aw are /au/.
+- ou, ow for the hous set is /uː/. ou, ow for the know set is /ɔu/.
+- ew is /iu/. eu is /ɛu/. oi, oy are /ɔi/.
+- Unstressed final -e is /ə/ when it is etymological or when the line is verse and the meter wants it. Before a following vowel, drop it. A purely scribal -e is silent. When the two cannot be told apart, pronounce /ə/.
+
+Consonants
+- Every written consonant is pronounced. kn is /kn/, gn at the start of a word is /gn/, wr is /wr/.
+- gh and h after a vowel are /ç/ after a front vowel and /x/ after a back vowel. They are not silent.
+- wh is /ʍ/. th, þ, and ð are /θ/ at the start or end of a word and next to a voiceless consonant, and /ð/ between voiced sounds.
+- sh is /ʃ/. ch is /tʃ/. j, dg, and gg are /dʒ/.
+- r is a tap /r/ wherever it is written. l is /l/, including in folk, walk, and palm.
+- ng is /ŋ/ plus /g/. A doubled consonant is a geminate.
+- f and v are the sounds that are written. s is /s/, and /z/ between vowels when the modern word voices it.
+
+Stress
+- A native word stresses the first syllable.
+- A French loan often stresses a later syllable, as in Chaucer. Use that stress.
+- Put ˈ before the stressed syllable.
+
+Symbols
+a aː ɛ ɛː eː ɪ iː ɔ ɔː oː ʊ uː ə ai au ɔu iu ɛu ɔi p b t d k g f v θ ð s z ʃ tʃ dʒ x ç m n ŋ l r j w ʍ h

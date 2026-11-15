@@ -1,0 +1,42 @@
+[project]
+name = "ancient-language-tts"
+dynamic = ["version"]
+description = "Text-to-speech for ancient languages, through a modern voice. Bring your own OpenRouter and ElevenLabs keys."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+keywords = ["tts", "ancient languages", "ipa", "elevenlabs", "openrouter", "llm"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "pydantic>=2.0",
+    "pydantic-ai-slim[openrouter]>=1.0",
+    "httpx>=0.27",
+    "python-dotenv>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/einhornus/ancient-language-tts"
+
+[project.scripts]
+ancient-language-tts = "ancient_language_tts.cli:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { attr = "ancient_language_tts.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["ancient_language_tts*"]
+
+[tool.setuptools.package-data]
+ancient_language_tts = ["data/*/*.txt", "data/*/respelling/*.txt"]

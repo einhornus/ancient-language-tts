@@ -1,0 +1,50 @@
+The voice is an English text-to-speech model. It applies English letter-to-sound rules and knows nothing about the source language. Write only the spellings listed here. The pair rules say which spelling stands for which sound. If a pair rule adds an onset or a nucleus, that addition is allowed for that language only.
+
+Shape
+- The line is ordinary text. A space separates words. A word is one string of letters. Do not put a hyphen inside a word.
+- Do not capitalize a syllable to mark stress. Write lowercase letters. Capitalize only the first letter of a sentence.
+- A syllable marked ˌ is written like any other syllable: no capital.
+- A diphthong the pair rules write with an apostrophe stays inside the word. The apostrophe does not split the word, and the letters around it stay lowercase except the first letter of a sentence: ae'ah.
+- Keep a period, comma, question mark, or exclamation mark that the IPA uses as a pause. No other punctuation, no asterisks, no digits, no IPA symbols, no quotation marks.
+- Do not copy the original orthography. A result that happens to be an English word is fine when the tables spell it that way.
+
+How a syllable is built
+- Onset, then the nucleus spelling, then the coda, with no extra letter. Do not add a hyphen.
+- The nucleus spellings below are the whole vowel. Do not add a silent e, and do not double a vowel to show length.
+- A diphthong nucleus from the list is one piece. Put consonants around it: the nucleus eye with t before it and m after it is teyem, one syllable. The nucleus ow with h before it and s after it is hows, one syllable.
+
+Nucleus spellings
+- ah = the vowel of father
+- ae = the vowel of cat
+- eh = the vowel of pet
+- ey = the vowel of day
+- ee = the vowel of see
+- ih = the vowel of sit
+- aw = the vowel of law
+- oh = the vowel of go
+- oo = the vowel of food
+- uh = the vowel of cup
+- eye = the vowel of eye, one syllable
+- oy = the vowel of boy
+- ow = the vowel of cow
+- ew = the vowel of few
+
+Consonant spellings
+- b d f g h j k l m n p r s t v w y z, each with its ordinary English value
+- ch = the first sound of chip
+- sh = the first sound of ship
+- zh = the middle of vision
+- th = the first sound of thin, and between vowels the first sound of this
+- ng = the end of sing
+- kh = the end of Bach
+- gh = a voiced version of that fricative, as in a Spanish g between vowels
+- hw = the start of which, when the h is pronounced
+- hl hr hn = h followed by that consonant, one onset
+- kw gw = those two consonants, one onset
+- ts = those two consonants, one onset or one coda
+- The letter c never appears except inside ch. The letters q and x never appear.
+- r is always pronounced.
+- A geminate is a doubled letter inside the word: ahnnuhs for a long n. Do not invent a geminate the IPA does not have. Do not split it with a hyphen.
+
+Sounds English cannot hold
+- Vowel length, pure aspiration, a front rounded vowel, and a trill are not available as separate letters. Use the substitute the pair rules name. Do not add a syllable in order to imitate length.

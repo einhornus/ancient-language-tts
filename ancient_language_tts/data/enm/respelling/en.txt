@@ -1,0 +1,31 @@
+Do not apply the Great Vowel Shift. /iː/ is ee, so a Middle English "time" is teem, not teyem. /uː/ is oo, so hous is hoos, not hows. /x/ and /ç/ are pronounced.
+
+Vowels
+- /a/ /aː/ → ah
+- /ɛ/ /ɛː/ → eh
+- /eː/ → ey
+- /ɪ/ → ih
+- /iː/ → ee
+- /ɔ/ /ɔː/ → aw
+- /oː/ → oh
+- /ʊ/ → uh
+- /uː/ → oo
+- /ə/ → uh, and a final /ə/ is its own syllable
+- /ai/ → eye
+- /au/ → ow
+- /ɔu/ → oh, the whole nucleus. /knɔu/ is knoh, one syllable.
+- /iu/ → yoo, the whole nucleus. /niu/ is nyoo, one syllable. yoo is allowed here.
+- /ɛu/ → ew
+- /ɔi/ → oy
+
+Consonants
+- /p b t d k g f v s z m n l r w h/ → the same letters
+- /j/ → y
+- /θ/ /ð/ → th
+- /ʃ/ → sh
+- /tʃ/ → ch
+- /dʒ/ → j
+- /ŋ/ plus /g/ in the same syllable → ng
+- /x/ /ç/ → kh
+- /ʍ/ → hw
+- /kn/, /gn/, and /wr/ keep both consonants.
