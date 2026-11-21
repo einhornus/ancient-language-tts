@@ -1,0 +1,402 @@
+[
+  {
+    "id": "Ntd0iVwICtUtA6Fvx27M",
+    "name": "Evgeniy Shevchenko - Vibrant & Rich",
+    "description": "Warm Ukrainian bass-baritone (around 100 Hz) with crystal-clear diction and an even, unhurried flow that holds attention across long chapters. The most-used Ukrainian male voice for narration in the library, verified by ElevenLabs in 12 languages. Ideal for audiobooks, documentaries, narration, commercials, eLearning, corporate video, and voiceover. \nKey qualities: warm, steady, trustworthy.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 47.01
+  },
+  {
+    "id": "GVRiwBELe0czFUAJj0nX",
+    "name": "Anton - Friendly and Warm Storyteller",
+    "description": "A middle-aged Ukrainian man has a medium pitch and emotional tone to his voice. He speaks Ukrainian at a moderate pace, using moderate pauses between words, which helps to convey his thoughts clearly. He is well-suited for delivering news.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 43.86
+  },
+  {
+    "id": "jn6ifzU1eO5tfUZ2ZJVg",
+    "name": "Bogdan - Melodic and Calm",
+    "description": "A deep Ukrainian baritone radiating warmth and a subtle melodic cadence. Perfect for storytelling and narration.",
+    "locale": "uk-UA",
+    "age": "old",
+    "gender": "male",
+    "tags": [
+      "male",
+      "old",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 43.46
+  },
+  {
+    "id": "eLDtXX7z65CuLasDRxrP",
+    "name": "Leonid Drapei - Wise, Calm Teacher",
+    "description": "A deep, calm, and expressive male voice with a haunting undertone, blending emotional depth with a sense of mystery. Perfect for eerie reflections, dark monologues, and immersive storytelling.",
+    "locale": "uk-UA",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "kiev",
+      "meditative",
+      "narrative_story"
+    ],
+    "popularity": 43.82
+  },
+  {
+    "id": "BFmokXObxZMCBXC0A9ny",
+    "name": "Taras Boyko - Resonant and Flowing",
+    "description": "Deep, articulate, and emotionally resonant, this Ukrainian male voice combines authority with genuine warmth—crafted for audiobooks, narration, and thoughtful storytelling.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "excited",
+      "narrative_story"
+    ],
+    "popularity": 40.92
+  },
+  {
+    "id": "dZde1M1SiLkAKiqjpqqT",
+    "name": "Anton - Unusual, Pleasant and Mysterious",
+    "description": "Warm Male Ukrainian baritone with crystal-clear diction and a gentle Slavic undertone. With years of broadcast and voiceover experience, Anton brings dynamic range and emotive depth to every project. His precise  natural warmth inspire trust and engagement—ideal for commercials, documentaries, narration, and eLearning.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "soft",
+      "narrative_story"
+    ],
+    "popularity": 40.08
+  },
+  {
+    "id": "ZwwNZP0QbNaQsoNgkPWr",
+    "name": "Vev - Deep and Pleasant",
+    "description": "A virtual copy of the voice of professional voiceover Eugene Vasylenko. Deep baritone, pleasant, bright, velvety, kind voice, well suited for many projects: voiceover for vlogs, YouTube, advertising, stories, tales, guides, presentations and others",
+    "locale": "uk-UA",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 40.22
+  },
+  {
+    "id": "WAkiH8uTgFArLLKVWgeS",
+    "name": "Stanislav - Clear and Charming",
+    "description": "Male, Adult (25-35), Ukrainian, no accent",
+    "locale": "uk-UA",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 38.44
+  },
+  {
+    "id": "MajbwhPMg2mRJJCesMAF",
+    "name": "Oleksii Safin - Friendly Storyteller",
+    "description": "Ukrainian middle-aged baritone. Great for audiobooks, video narrations, instruction videos, IVR etc.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 39.17
+  },
+  {
+    "id": "0p9W8EFOJbkw3zD1oNop",
+    "name": "Alex - Warm Storyteller",
+    "description": "A versatile and authentic Ukrainian male voice with a warm, grounded, and engaging tone. Perfect for a wide range of content: from soothing bedtime stories and fairy tales to epic historical narrations and myths. It features natural resonance and clear articulation that builds a deep connection with the listener",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 35.19
+  },
+  {
+    "id": "V6PW5xGyI4Q6XPxkt8G9",
+    "name": "Yevhen - Velvet baritone, brand voice",
+    "description": "Ukrainian male voice with a smooth, velvet baritone. Natural, clear, and engaging delivery. Suitable for Social Media, news, storytelling, courses, and brand voice projects.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 38.23
+  },
+  {
+    "id": "0CH1jv2shWMGGZ3uM0rX",
+    "name": "Yevhenii - Calm, Articulate and Sharp",
+    "description": "For lectures, online courses, and audiobooks — confident, clear, and pleasant for long listening. A calm, expressive Ukrainian male voice with a natural tone.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 38.85
+  },
+  {
+    "id": "yFgkuUnlOWx3k7ezUZQm",
+    "name": "Mykhailo Grushevski - Warm, Deep, Rich",
+    "description": "A textured, deep, and warm Ukrainian male voice channels raw emotion and gravity into every story.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "excited",
+      "narrative_story"
+    ],
+    "popularity": 39.16
+  },
+  {
+    "id": "9oLzyMRRRWl0OdCCVwlU",
+    "name": "Pavlo Lysenko - Premium Audiobook",
+    "description": "Warm, velvety, and effortlessly smooth, this Ukrainian male voice blends elegance with quiet authority — perfect for audiobooks, podcasts, and storytelling that demands depth and presence.",
+    "locale": "uk-UA",
+    "age": "old",
+    "gender": "male",
+    "tags": [
+      "male",
+      "old",
+      "standard",
+      "excited",
+      "narrative_story"
+    ],
+    "popularity": 35.09
+  },
+  {
+    "id": "GVYxfyhhakQOHOUnYfIG",
+    "name": "Dmytro - Warm Cinematic Narrator",
+    "description": "Warm and expressive Ukrainian male narrator with a natural, confident and emotionally engaging delivery. Ideal for cinematic storytelling, inspirational videos, documentaries, social media and meaningful narration.",
+    "locale": "uk-UA",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 34.5
+  },
+  {
+    "id": "nCqaTnIbLdME87OuQaZY",
+    "name": "Vira - Natural and Young Storyteller",
+    "description": "A middle-aged Ukrainian woman with a medium pitch and emotional tone to her voice. Works well for Storytelling.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "chill",
+      "narrative_story"
+    ],
+    "popularity": 42.13
+  },
+  {
+    "id": "2o2uQnlGaNuV3ObRpxXt",
+    "name": "Anna Stepanenko - Bright and Distinct",
+    "description": "Energetic and engaging, the Ukrainian female narrator is perfect for audiobooks. She brings every story to life with clear intonation, emotional depth, and expressive delivery. This voice was crafted by a professional voice artist to captivate listeners.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "excited",
+      "narrative_story"
+    ],
+    "popularity": 41.62
+  },
+  {
+    "id": "2OXYbN1uGomXXJtv9Dq6",
+    "name": "Mariya Maro - Educational and Harmonious",
+    "description": "A unique Ukrainian female voice: warm, rich, and versatile, perfect for audiobooks, ads, and documentaries. Blending emotional depth with clarity, it adapts seamlessly to various projects—from engaging advertisements and immersive audiobooks to compelling documentaries and educational content.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "professional",
+      "narrative_story"
+    ],
+    "popularity": 41.88
+  },
+  {
+    "id": "2HWb7sZSrZqPB8HOI0KI",
+    "name": "Kira - Smooth, Pleasant and Expressive",
+    "description": "Middle aged Ukrainian female with a strong, engaging, and reassuring female voice, perfect for delivering clear instructions, compelling presentations, and captivating narratives that keep your audience hooked.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 37.93
+  },
+  {
+    "id": "Bn2Tw7ruLKdtFQ6xcEkG",
+    "name": "Yevheniia - Warm & Bright for narration",
+    "description": "Bright and Pleasant female Voice, which is best for educational materials, training sessions, narration courses, lectures, and audiobooks. Confident clarity, smooth pacing, and a relaxed Ukrainian tone that stays pleasant over longer sessions.",
+    "locale": "uk-UA",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 36.81
+  },
+  {
+    "id": "lkMXdLVaZ3W8mreYvUGj",
+    "name": "Olga",
+    "description": "Soft and calm voice of a young Ukrainain woman. Good for children audiobooks",
+    "locale": "uk-UA",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 39.36
+  },
+  {
+    "id": "FqTvupDLWXjo91Dte1vR",
+    "name": "Kate - Bright and Enchanting",
+    "description": "Ukrainian native female mature voice with medium pitch and emotional tone. Ideal for fairy tales, audio books and cartoons.",
+    "locale": "uk-UA",
+    "age": "old",
+    "gender": "female",
+    "tags": [
+      "female",
+      "old",
+      "kiev",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 38.11
+  },
+  {
+    "id": "X1WtgMmQUBwtiAPn4j1P",
+    "name": "Kateryna - Native Ukrainian",
+    "description": "Native Ukrainian female voice with a warm, natural and clear speaking style. Suitable for audiobooks, documentaries, educational content, podcasts, YouTube narration and commercial voice-over projects. Also fluent in Russian, English and German.",
+    "locale": "uk-UA",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 38.64
+  },
+  {
+    "id": "gF0lB8o9gaDnjqCxZayW",
+    "name": "Khrystyna - Sweet & Calm",
+    "description": "A soft, sweet, warm female voice with a calm and soothing tone. Gentle, slow-paced delivery with natural pauses and a relaxed rhythm. Warm and comforting, slightly breathy but still clear and articulate. Feels intimate, peaceful, dreamy, and reassuring, like someone softly telling you a story before bedtime. Emotionally expressive but subtle, never overly dramatic or energetic.",
+    "locale": "uk-UA",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "gentle",
+      "narrative_story"
+    ],
+    "popularity": 32.16
+  },
+  {
+    "id": "4m9JlYe3SXVOj4qPhtRN",
+    "name": "Veselyna - Bold, Strong & Confident",
+    "description": "A bold and strict Ukrainian female voice with commanding presence — perfect for social media voiceover, advertising, game bosses/villains, and dramatic narration.",
+    "locale": "uk-UA",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 30.31
+  }
+]

@@ -22,9 +22,9 @@ Long and short vowels
 - A vowel written double is long.
 - A single a, e, or o in an open syllable of a native or early French word, before a single consonant and another vowel, is long: name [ˈnaː.mə], make, tale, mete "meat" [ˈmɛː.tə], hope [ˈhɔː.pə], open [ˈɔː.pən].
 - A single vowel before a doubled consonant or before two consonants is short: hadde [ˈhad.də], sonne, croppes, kepte [ˈkɛp.tə], dette.
-- Exception. i, y, and ou are long before ld, nd, and mb: child [ˈtʃiːld], fynde [ˈfiːn.də], clymbe, founde [ˈfuːn.də]. o is long [ɔː] before ld: olde [ˈɔːl.də], holde, colde.
-- A vowel before gh is short, and it stays short: nyght [ˈnɪçt], knyght, droghte [ˈdrʊxt]. After a diphthong the diphthong stays: taughte [ˈtaux.tə], thought [ˈθɔuxt].
-- i and y are long [iː] in a stressed open syllable (tyme, ryde) and in a word whose modern form has [aɪ] (lyf, wyf, myn, I). Elsewhere they are short [ɪ]: with [wɪθ], his, swich, Aprille, Cristes [ˈkrɪs.təs].
+- Exception, from lengthening before a homorganic group. i, y, and ou are long before ld, nd, and mb: child [ˈtʃiːld], fynde [ˈfiːn.də], clymbe, founde [ˈfuːn.də]. e is long close [eː] before ld: feld [ˈfeːld], feldes [ˈfeːl.dəs], sheeld, yelde. o is long [ɔː] before ld where the modern word has [oʊ]: olde [ˈɔːl.də], holde, colde, tolde, bolde. The lengthening does not happen when a third consonant follows (children [ˈtʃɪl.drən]), nor in wolde [ˈwɔl.də], sholde [ˈʃɔl.də], shulde [ˈʃʊl.də]. a stays short before nd and mb: hand, lamb.
+- A vowel before gh keeps the length it has in the word. Short: nyght [ˈnɪçt], knyght, myght, droghte [ˈdrʊxt]. ogh and ough at the end of a word, where the modern word ends in [aʊ] or [ʌf], are long [uː]: ynogh [ɪˈnuːx], bough, plough, tough, lough "laughed" [ˈluːx]. A diphthong stays a diphthong: taughte [ˈtaux.tə], thought [ˈθɔuxt], heigh [ˈhaiç].
+- i and y are long [iː] where the modern word has [aɪ]: tyme, ryde, lyf, wyf, myn, I, fynde, child, delit. They are also long in the stressed syllable of a French loan when it ends the word or is open: servyse [sɛrˈviː.sə], malice [maˈliː.sə], justice, melodye, chivalrie, curteisie. Elsewhere they are short [ɪ], also in an open syllable of a native word: with [wɪθ], his, swich, Aprille, Cristes [ˈkrɪs.təs], lymes [ˈlɪ.məs], lyvyng [ˈlɪ.vɪŋg], yiven. An i or u lengthened in an open syllable became [eː] or [oː] and is written e or o: weke "week" [ˈweː.kə], wode "wood" [ˈwoː.də], dore [ˈdoː.rə].
 
 Vowels
 - Short a [a], e [ɛ], i and y [ɪ], o [ɔ], u [ʊ]. The o of the cup words above is [ʊ].
@@ -32,21 +32,22 @@ Vowels
 - Long e has two values. Close [eː] is the vowel of modern meet, see, sweet, green, deep, be, he, me: sweete [ˈsweː.tə], grene, slepen [ˈsleː.pən]. Open [ɛː] is the vowel of modern meat, sea, heath, breath, clean, speak, great, break, eek: heeth [ˈhɛːθ], breeth [ˈbrɛːθ], eek [ˈɛːk], clene [ˈklɛː.nə]. The spelling does not tell them apart. Use the modern reflex: a modern ee or ie, or the vowel of field, is [eː]. A modern ea, or a modern short e from a long vowel (breath, dead, deaf), is [ɛː]. When you cannot tell, use [eː].
 - Long i and y [iː]: tyme, ryde, wyf. It is not [aɪ].
 - Long o has two values. Close [oː] is the vowel of modern food, good, root, moon, foot, book, do, to: roote [ˈroː.tə], soote [ˈsoː.tə], goode, mone, sooth. Open [ɔː] is the vowel of modern boat, stone, home, holy, go, so, both, and of every o that came from Old English ā: hooly [ˈhɔː.lɪ], hoom, goon [ˈgɔːn], stoon, so, open. Use the modern reflex: a modern [uː] or [ʊ] is [oː], a modern [oʊ] is [ɔː]. When you cannot tell, use [oː]. It is not yet [uː].
-- ou and ow in words whose modern vowel is [aʊ], and in French loans with ou, are long [uː]: hous [ˈhuːs], shoures [ˈʃuː.rəs], flour [ˈfluːr], licour [lɪˈkuːr], cours, foweles [ˈfuː.ləs], now [ˈnuː], how. It is not [aʊ].
+- ou and ow in words whose modern vowel is [aʊ], and in French loans with ou, are long [uː]: hous [ˈhuːs], shoures [ˈʃuː.rəs], flour [ˈfluːr], licour [lɪˈkuːr], cours, foweles [ˈfuː.ləs], now [ˈnuː], how. So are thou [ˈðuː], yow [ˈjuː], oure [ˈuː.rə], youre, and koude, coude "could" [ˈkuː.də]. It is not [aʊ].
 - Unstressed final y and ie are [ɪ]: every [ˈɛv.rɪ], hooly, Caunterbury, sely.
 
 Diphthongs
 - ai, ay, ei, ey are [ai]: day [ˈdai], wey, veyne [ˈvai.nə], seyde, certeyn [sɛrˈtain], verray [ˈvɛr.rai].
 - au and aw are [au]: cause, lawe, straunge [ˈstraun.dʒə], taughte. The a before n plus a consonant in French loans is often written au and is [au].
 - ou and ow in words whose modern vowel is [oʊ] or [ɔː] are [ɔu]: knowe [ˈknɔu.ə], growe, soule, thought [ˈθɔuxt], broughte, nought. This includes every ough and ought whose modern word has the vowel of law or of go.
-- ew and eu are [iu] in words from Old English ēow and īw and in new, trewe, knew, hewe "hue": newe [ˈniu.ə], trewe. They are [ɛu] in fewe, lewed, shewe, beautee: fewe [ˈfɛu.ə]. When you cannot tell, use [iu].
-- French u, and French ew and eu, are [iu]: vertu [vɛrˈtiu], nature [naˈtiu.rə], vertuous, mesure. Do not use the front rounded [y].
+- ew and eu are [iu] in words from Old English ēow, īw, and ēw: newe [ˈniu.ə], trewe, knew, hewe "hue", rewe "rue", chewe. They are [ɛu] in words from Old English ēaw, ǣw, and ew, and in French eau: fewe [ˈfɛu.ə], shewe, dew, lewed, beautee [bɛuˈteː]. When you cannot tell, use [iu].
+- French u, and French ew and eu, are [iu], the ordinary vernacular value: vertu [vɛrˈtiu], nature [naˈtiu.rə], vertuous, mesure. Do not use the front rounded [y], which belonged at most to learned French-speaking usage.
 - oi and oy are [ɔi]: joye [ˈdʒɔi.ə], coy, point.
 - Each diphthong is one syllable.
 
 Unstressed vowels and endings
 - Unstressed e is [ə]. The endings -es, -ed, -en, -eth, and -er are syllables with [ə]: shoures [ˈʃuː.rəs], perced [ˈpɛr.səd], bathed [ˈbaː.ðəd], maken [ˈmaː.kən], priketh [ˈprɪ.kəθ], fader [ˈfaː.dər].
 - Final -e is [ə], its own syllable: name [ˈnaː.mə], roote, soote, Aprille [aˈprɪl.lə], knowe [ˈknɔu.ə]. It is pronounced at a pause and at the end of a verse line.
+- In verse, final -e before a consonant is pronounced by default. Drop it only where the line cannot otherwise have ten or eleven syllables: this happens most in unstressed forms such as hadde, were, wolde, sholde, and in a word that already ends in an unstressed syllable. Outside verse, pronounce it.
 - Before a word that begins with a vowel, drop the final -e: droghte of [ˈdrʊxt ɔf], veyne in [ˈvain ɪn]. Drop it also before an h that is silent and before the weak words he, his, him, hir, hem, hath, hadde, how, here: thanne he [ˈðan ˈheː].
 - The -e of the, he, me, she, we, be, ye, thee is not this -e. It is the stressed vowel of the word: [ðə] for the, [ˈheː] for he.
 - In verse, an unstressed e between two consonants, next to another unstressed syllable, is often silent: every [ˈɛv.rɪ], evere [ˈɛv.rə], foweles [ˈfuː.ləs], palmeres [ˈpal.mərs], sovereyn. Drop it where the line of ten or eleven syllables needs it. Outside verse, keep it except in every and evere.

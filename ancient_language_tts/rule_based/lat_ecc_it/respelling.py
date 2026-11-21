@@ -10,7 +10,7 @@ from pathlib import Path
 
 # Longest-first IPA tokens.
 _TOKENS = (
-    "tʃ", "dʒ", "kʷ", "gʷ", "ɛu", "ɛi", "au", "ts", "dz", "ʃ", "ɲ", "ŋ",
+    "tʃ", "dʒ", "kʷ", "gʷ", "ɛu", "ɛi", "au", "ts", "dz", "ʃ", "ɲ", "ŋ", "ɱ",
     "ˈ", ".", ",", "!", "?",
     "a", "ɛ", "i", "ɔ", "u",
     "p", "b", "t", "d", "k", "g", "f", "s", "z", "m", "n", "r", "l", "j", "v",
@@ -41,6 +41,8 @@ def respell(ipa: str) -> str:
         word, pause = _strip_pause(raw)
         if word:
             spelled = _word(word)
+            if not pause and index + 1 < len(raw_words):
+                spelled += _boundary_double(word, raw_words[index + 1])
             if sentence_start and spelled:
                 spelled = spelled[0].upper() + spelled[1:]
                 sentence_start = False
@@ -64,6 +66,27 @@ def _strip_pause(token: str) -> tuple[str, str]:
         # Syllable dots never end a token after split() — they sit mid-word.
         return token[:-1], token[-1]
     return token, ""
+
+
+# A word-final consonant before the same consonant opening the next word is
+# written double ("quamm mìnimum"): with one letter on each side the voice
+# merges the two into a single short consonant.
+_BOUNDARY_DOUBLE = {
+    "p": "p", "b": "b", "t": "t", "d": "d", "k": "c", "g": "g", "f": "f",
+    "m": "m", "n": "n", "r": "r", "l": "l", "s": "s",
+}
+
+
+def _boundary_double(ipa_word: str, next_raw: str) -> str:
+    """The extra letter that doubles a final consonant shared with the next word."""
+    this = [t for t in _tokenize(ipa_word) if t not in ("ˈ", ".")]
+    following = [t for t in _tokenize(next_raw) if t not in ("ˈ", ".")]
+    if len(this) < 2 or not following:
+        return ""
+    last, before = this[-1], this[-2]
+    if last != following[0] or last not in _BOUNDARY_DOUBLE or before not in _VOWELS:
+        return ""
+    return _BOUNDARY_DOUBLE[last]
 
 
 def _tokenize(ipa_word: str) -> list[str]:
@@ -102,6 +125,7 @@ def _spell_segments(marked: list[tuple[str, bool]]) -> str:
     out: list[str] = []
     i = 0
     n = len(marked)
+    after_stress = False
     while i < n:
         tok, stress = marked[i]
         nxt = marked[i + 1][0] if i + 1 < n else ""
@@ -110,7 +134,15 @@ def _spell_segments(marked: list[tuple[str, bool]]) -> str:
 
         # Vowels
         if tok in _VOWELS:
-            out.append(_STRESSED[tok] if stress else _PLAIN[tok])
+            if stress:
+                out.append(_STRESSED[tok])
+                after_stress = True
+            elif tok == "ɛ" and after_stress and nxt in _VOWELS:
+                # Unstressed /ɛ/ in hiatus after the stress: è, or the voice
+                # glides it to [j] (àlea → [ˈalja]).
+                out.append("è")
+            else:
+                out.append(_PLAIN[tok])
             i += 1
             continue
 
@@ -123,8 +155,8 @@ def _spell_segments(marked: list[tuple[str, bool]]) -> str:
             out.append("gn")
             continue
 
-        # /ŋ/ before k/g → n
-        if tok == "ŋ":
+        # /ŋ/ before k/g, /ɱ/ before f/v → n
+        if tok in ("ŋ", "ɱ"):
             out.append("n")
             i += 1
             continue
@@ -162,6 +194,12 @@ def _spell_segments(marked: list[tuple[str, bool]]) -> str:
                 out.append("g")
             else:
                 out.append("gi")
+            i += 1
+            continue
+
+        # Italian long /ʃ.ʃ/ /t.ts/ /d.dz/ → one sc / z: the voice makes
+        # them long between vowels by itself.
+        if (tok, nxt) in (("ʃ", "ʃ"), ("t", "ts"), ("d", "dz")):
             i += 1
             continue
 

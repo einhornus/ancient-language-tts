@@ -1,23 +1,13 @@
-"""Proto-Slavic. MOCK engine: grapheme tables only, no stress."""
+"""Proto-Slavic: the full rule engine (see `sla_pro_rules`)."""
 
 from __future__ import annotations
 
-from . import _mock
+from . import sla_pro_rules
+from .base import RuleEngine
 
-GRAPHEMES = {
-    "ch": "x", "dž": "dʒ",
-    "ě": "æː", "ъ": "ʊ", "ь": "ɪ", "y": "ɨ", "ę": "ẽ", "ǫ": "õ",
-    "č": "tʃ", "š": "ʃ", "ž": "ʒ", "c": "ts", "ś": "ɕ",
-    "ā": "aː", "ē": "eː", "ī": "iː", "ō": "oː", "ū": "uː",
-}
-
-TO_UKRAINIAN = {
-    "tʃ": "ч", "dʒ": "дж", "ts": "ц", "ʃ": "ш", "ʒ": "ж", "ɕ": "сь", "x": "х",
-    "æː": "я", "ʊ": "у", "ɪ": "і", "ɨ": "и", "ẽ": "ен", "õ": "он",
-    "aː": "а", "eː": "е", "iː": "і", "oː": "о", "uː": "у",
-    "a": "а", "e": "е", "i": "і", "o": "о", "u": "у", "j": "й",
-    "b": "б", "v": "в", "g": "г", "d": "д", "z": "з", "k": "к", "l": "л",
-    "m": "м", "n": "н", "p": "п", "r": "р", "s": "с", "t": "т", "f": "ф",
-}
-
-ENGINE = _mock.engine("sla-pro", GRAPHEMES, {"uk": TO_UKRAINIAN})
+ENGINE = RuleEngine(
+    source="sla-pro",
+    to_ipa=sla_pro_rules.to_ipa,
+    respell={"uk": sla_pro_rules.to_ukrainian},
+    respell_ipa={"uk": sla_pro_rules.ipa_to_ukrainian},
+)

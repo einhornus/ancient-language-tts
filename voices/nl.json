@@ -1,0 +1,162 @@
+[
+  {
+    "id": "s7Z6uboUuE4Nd8Q2nye6",
+    "name": "Hans Claesen - Professional Narrator",
+    "description": "Male Flemish voice, calm and with a warm sound. Works well for Narrations.",
+    "locale": "nl-BE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "flemish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 43.45
+  },
+  {
+    "id": "tRyB8BgRzpNUv3o2XWD4",
+    "name": "Walter - Professional Podcast Host",
+    "description": "Warm professional male voice in Dutch (Flemish from Belgium). Great for Story telling.",
+    "locale": "nl-BE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "flemish",
+      "raspy",
+      "narrative_story"
+    ],
+    "popularity": 42.19
+  },
+  {
+    "id": "ppGIZI01uUlIWI734dUU",
+    "name": "Luk Balcer - Warm, Kind and Wise",
+    "description": "A senior voice from Belgium, Limburg. Age 55 - Limburg accent. ",
+    "locale": "nl-BE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "flemish",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 34.1
+  },
+  {
+    "id": "xdzjnRtJ19GiZY2bpv4i",
+    "name": "Mario Steurs",
+    "description": "Middle-aged Male voice.",
+    "locale": "nl-BE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "flemish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 34.23
+  },
+  {
+    "id": "AgeYjqDIfXtkcA3mOcsH",
+    "name": "Gunther - Flemish Calm Narrator",
+    "description": "Warm and calm Belgian Dutch / Flemish male voice with a mature, trustworthy and conversational tone. Suitable for e-learning, corporate training, guided relaxation, meditation, audiobooks, museum audio guides, documentaries. Clear pronunciation, steady pacing and a natural, reassuring sound.",
+    "locale": "nl-BE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "flemish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 34.11
+  },
+  {
+    "id": "LoLnBvKBzvdDcAUMNbKV",
+    "name": "Rutger Vlaams - Calm & Articulate",
+    "description": "A warm, and calm Flemish Dutch male voice with a smooth, resonant tone. Ideal for narration, audiobooks, meditative content, and storytelling.",
+    "locale": "nl-BE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "flemish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 31.47
+  },
+  {
+    "id": "oBrJBCgJsPgZQkOMHL7K",
+    "name": "Philip",
+    "description": "A Flemish voice for versatile use.",
+    "locale": "nl-BE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "flemish",
+      "formal",
+      "narrative_story"
+    ],
+    "popularity": 29.44
+  },
+  {
+    "id": "ANHrhmaFeVN0QJaa0PhL",
+    "name": "Petra Vlaams - Energetic, Warm and Clear",
+    "description": "Professional Flemish female voice in Dutch with a focus on variation in the voice. Suitable for Narrations.",
+    "locale": "nl-BE",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "flemish",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 43.64
+  },
+  {
+    "id": "4Q02te4SdfFsVbcIKmbk",
+    "name": "Elenor - Flemish, Antwerp Girl",
+    "description": "Perfect for the Flenish accent.",
+    "locale": "nl-BE",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "flemish",
+      "gentle",
+      "narrative_story"
+    ],
+    "popularity": 37.29
+  },
+  {
+    "id": "wwW0aOSbbYgXMec1zRTp",
+    "name": "Dauphine - Soft, friendly, narrator",
+    "description": "Soft, calm, professional, informative, friendly, neutral but warm, youthful, Flemish (native Belgian). Authentic Flemish. Ideal for instruction videos, corporate narration, non-fiction narration, audiobooks, podcasts, e-learning, news reading, professional explainers, meditation, customer service.Sounds great in Dutch, French, German, Spanish.",
+    "locale": "nl-BE",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "flemish",
+      "neutral",
+      "narrative_story"
+    ],
+    "popularity": 33.24
+  }
+]

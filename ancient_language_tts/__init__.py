@@ -5,8 +5,10 @@ The pipeline is four functions, each usable on its own:
 
     import ancient_language_tts as alt
 
-    ipa = alt.to_ipa("Arma virumque canō", "lat", method="llm", tier="low")
-    line = alt.respell_ipa(ipa, "lat", "it", method="llm")
+    pieces = alt.to_ipa("Arma virumque canō", "lat", method="llm", tier="low")
+    # [{"text": "Arma virumque canō", "ipa": ["ˈ", "a", "r", ...]}]
+    print(alt.ipa_tokens.render(alt.chunks.join_ipa(pieces)))
+    line = alt.respell_ipa(pieces, "lat", "it", method="llm")
     line = alt.respell("Arma virumque canō", "lat", "it", method="rules")
     audio = alt.speak(line, "it", output="out/lat.mp3")
 
@@ -14,10 +16,10 @@ The pipeline is four functions, each usable on its own:
 language) or "rules" (the deterministic engine in `rule_based`).
 """
 
-from . import llm, rule_based
+from . import chunks, ipa_tokens, llm, rule_based
 from .api import METHODS, Method, respell, respell_ipa, speak, to_ipa
-from .chunks import MAX_CHARS, split
-from .config import TIER_MODELS, Settings, Tier
+from .chunks import MAX_CHARS, Chunk, split
+from .config import EFFORTS, TIER_MODELS, Effort, Settings, Tier
 from .errors import TTSError
 from .languages import ancient_languages, modern_languages
 from .llm import improve_ipa, improve_respelling, score_ipa, score_respelling
@@ -26,6 +28,9 @@ from .rules import targets
 __version__ = "0.2.0"
 
 __all__ = [
+    "Chunk",
+    "EFFORTS",
+    "Effort",
     "MAX_CHARS",
     "METHODS",
     "Method",
@@ -34,7 +39,9 @@ __all__ = [
     "TTSError",
     "Tier",
     "ancient_languages",
+    "chunks",
     "improve_ipa",
+    "ipa_tokens",
     "improve_respelling",
     "llm",
     "modern_languages",

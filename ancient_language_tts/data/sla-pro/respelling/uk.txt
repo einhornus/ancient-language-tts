@@ -1,6 +1,6 @@
 Ukrainian is a living descendant of Proto-Slavic, and its alphabet has letters for most of the Early Common Slavic system: hard consonants before е, a separate ґ for the stop [g], в that is the glide [w] before a consonant and at the end of a word, the vowel и [ɪ], the soft-vowel letters я є ю ї, the soft sign ь, the affricates дз and дж, and no devoicing of voiced consonants at the end of a word. Ukrainian vowels are not reduced when unstressed, as Russian vowels are. Use these. Do not write the Ukrainian descendant of the word: *gȏrdъ is not город, *mě̀sto is not місто, *rǫkà is not рука, *mę̑so is not м'ясо, *dь̑nь is not день, and *sъ̏lnьce is not сонце. ě is never і, ǫ is never у, ę is never я, a jer is never dropped and never becomes е or о, and g is never г.
 
-Map each IPA symbol to the Ukrainian spelling. Write lowercase Cyrillic letters and the stress mark below. Never write the IPA symbols, the asterisk, Latin letters, ъ, ы, ё, or э.
+Map each IPA symbol to the Ukrainian spelling. Write Cyrillic letters and the stress mark below. Never write the IPA symbols, the asterisk, Latin letters, ъ, ы, ё, or э.
 
 Stress
 Ukrainian has a free stress like Proto-Slavic, and ordinary spelling does not show it. Mark it the way Ukrainian dictionaries and schoolbooks do, so the voice stresses the right syllable.
@@ -54,7 +54,7 @@ Palatal consonants
 - Never ч or дж for /tʲ dʲ/. They are the East Slavic descendants.
 
 Capitals and pauses
-- Capitalize the first letter of each sentence, after a period, an exclamation mark, or a question mark, and at the start of the line. A capital keeps its stress mark: /oˈtɪ.tsɪ/ at the start is Оти́ци, /ˈmɑː.tiː/ is Ма́ті.
+- Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here, and every other word is lowercase. A capital keeps its stress mark: /oˈtɪ.tsɪ/ at the start is Оти́ци, /ˈmɑː.tiː/ is Ма́ті.
 - Keep each comma, exclamation mark, question mark, and period of the IPA.
 
 Lost in the Ukrainian reading

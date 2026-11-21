@@ -1,6 +1,12 @@
 """Step 1. Ancient-language text to IPA, and a score for a transcription.
 
-`to_ipa` asks every model in the tier. Each model transcribes the passage,
+`effort` decides how hard `to_ipa` works the tier (see `llm.ensemble`).
+What follows is "ultra", the default. "high" scores the standing lines
+with the first model only. "medium" also skips the rewrite. "low" asks
+only the first model and rewrites its line. "basic" asks only the first
+model, once.
+
+At "ultra", `to_ipa` asks every model in the tier. Each model transcribes the passage,
 scores its own line, and rewrites it from that assessment. The same model
 then scores the rewrite. The rewrite stands only when that score is higher
 than the score of the first line; otherwise the first line stands. Each
@@ -30,33 +36,42 @@ scores them. The call returns that reasoning and a score from 0 to 1000.
 sees the passage, the original IPA, the scoring reasoning, and the
 phonetic rules. It reasons from the mistakes to the corrected sounds,
 then writes the line.
+
+IPA is a list of tokens (see `ipa_tokens`). The model writes a line of
+text; `ipa_tokens.parse_with_penalty` cuts it into the phonemes of
+`phonemes.json` and the special tokens, and keeps each symbol that is
+neither as a token of its own. A line that is empty or holds no allowed
+phoneme fails that call, which is then retried like any other failure.
+A line with unknown symbols is scored, and its score is cut by
+`PENALTY_FACTOR` times the share of its symbols that are unknown. The
+line `to_ipa` returns has its unknown symbols dropped.
 """
 
 from __future__ import annotations
 
 import logging
-from collections.abc import Callable
-from dataclasses import replace
-from typing import Any, TypeVar
+from typing import Any
 
-from .. import chunks, config, languages, rules
-from ..config import Tier
+from .. import chunks, config, ipa_tokens, languages, rules
+from ..config import Effort, Tier
 from ..errors import TTSError
 from ..languages import AncientLanguage
 from . import client as llm
+from . import ensemble
+from .ensemble import ATTEMPTS  # noqa: F401  (kept importable from here)
 from .schemas import IpaRevision, IpaScore, IpaTranscription
 
 log = logging.getLogger("ancient_language_tts")
 
-T = TypeVar("T")
+# How hard a score is cut for symbols outside the inventory. A line whose
+# share of unknown symbols is p keeps max(0, 1 - PENALTY_FACTOR * p) of
+# its score: at 2.0, one unknown symbol in ten costs 20% of the score.
+PENALTY_FACTOR = 2.0
 
 # Values are the sounds. Syllables and stress are how those sounds are
 # grouped and marked. The line is the writing. `score` is this weighted
 # mean, scaled from 0-100 to 0-1000.
 WEIGHTS = {"values": 5.0, "syllables": 1.0, "stress": 2.0, "line": 1.0}
-
-# One call is tried this many times. The failure rule for that call then applies.
-ATTEMPTS = 3
 
 
 def system_prompt(source: str) -> str:
@@ -77,6 +92,7 @@ def system_prompt(source: str) -> str:
         "written. When the passage presents the same choice, follow the "
         "decision the examples make.\n"
         f"{rules.examples(language.code)}\n\n"
+        f"{_inventory(language.code)}"
         "First, reason carefully about these things, in this order. Each "
         "step uses the result of the step before it.\n"
         "1. Values. Give each word's consonants and vowels from the rules. "
@@ -95,19 +111,48 @@ def system_prompt(source: str) -> str:
     )
 
 
+def _inventory(code: str) -> str:
+    """The prompt section that names the only symbols the line may use."""
+    found = ipa_tokens.phonemes(code)
+    return (
+        "Allowed symbols\n"
+        "Write each sound as exactly one of these phonemes, and use no other "
+        "letter, length mark, or diacritic: "
+        f"{' '.join(found)}\n"
+        "Besides those, the line holds only ˈ, ˌ, the syllable dot, spaces "
+        "between words, and the pause marks.\n\n"
+    )
+
+
 def user_prompt(text: str, language: AncientLanguage) -> str:
     return f"Language: {language.name} ({language.code}), {language.era}\n\nText:\n{text}"
 
 
-def to_ipa(text: str, source: str, *, tier: Tier = "high", **settings: Any) -> str:
-    """Transcribe `text` into IPA and return the line with the highest mean score.
+def to_ipa(
+    text: str,
+    source: str,
+    *,
+    tier: Tier = "high",
+    effort: Effort = "ultra",
+    **settings: Any,
+) -> list[chunks.Chunk]:
+    """Transcribe `text` into IPA, piece by piece, keeping the best line of each piece.
 
-    Every model of `tier` transcribes the passage, scores its own line, and
-    rewrites it from that assessment. The same model then scores the rewrite.
-    The rewrite stands only when that score is higher than the score of the
-    first line; otherwise the first line stands. Each standing line is scored
-    by every model still in the tier. The score of a line is the arithmetic
-    mean of those scores. On a tie, the earlier model in the tier wins.
+    Returns the pieces as chunks, `{"text": piece, "ipa": tokens}`, the
+    tokens being allowed IPA tokens (see `ipa_tokens`). `chunks.join_ipa`
+    joins them into one line. `respell` takes the chunks as they are.
+
+    `effort` decides how the models of `tier` are used (see `llm.ensemble`).
+    At "ultra", every model of `tier` transcribes the passage, scores its own
+    line, and rewrites it from that assessment. The same model then scores
+    the rewrite. The rewrite stands only when that score is higher than the
+    score of the first line; otherwise the first line stands. Each standing
+    line is scored by every model still in the tier. The score of a line is
+    the arithmetic mean of those scores. On a tie, the earlier model in the
+    tier wins. "high" improves the same way but only the first model scores.
+    "medium" skips the improvement; the first model scores. "low" asks the
+    first model alone and improves its line. "basic" asks the first model
+    alone, once.
 
     A call is tried three times. A model that still cannot produce the first
     transcription is dropped. One that still cannot score that line, or still
@@ -116,203 +161,69 @@ def to_ipa(text: str, source: str, *, tier: Tier = "high", **settings: Any) -> s
     the tier. Settings are the settings of `config`.
 
     A passage longer than `max_chars` is split on sentence boundaries, and
-    each piece is transcribed on its own. The lines are joined in order.
-    `api.respell` respells each of those pieces before joining them.
+    each piece is transcribed on its own: one chunk per piece.
+    `api.respell` respells each piece before it transcribes the next.
     """
+    ensemble.check(effort)
     with config.scope(**settings):
         parts = chunks.split(text)
-        if len(parts) <= 1:
-            return _ensemble(parts[0] if parts else text, source, tier)
-        log.info(
-            "splitting %s characters into %s pieces (IPA limit %s)",
-            len(text.strip()),
-            len(parts),
-            config.current().max_chars,
-        )
-        lines: list[str] = []
+        if not parts:
+            raise ValueError("text is empty")
+        if len(parts) > 1:
+            log.info(
+                "splitting %s characters into %s pieces (IPA limit %s)",
+                len(text.strip()),
+                len(parts),
+                config.current().max_chars,
+            )
+        pieces: list[chunks.Chunk] = []
         for index, part in enumerate(parts, start=1):
-            log.info("piece %s/%s, %s characters", index, len(parts), len(part))
-            lines.append(_ensemble(part, source, tier))
-        return " ".join(lines)
+            if len(parts) > 1:
+                log.info("piece %s/%s, %s characters", index, len(parts), len(part))
+            pieces.append({"text": part, "ipa": _ensemble(part, source, tier, effort)})
+        return pieces
 
 
-def _models(tier: Tier) -> list[str]:
-    """The models `to_ipa` asks: `models` when set, else this tier alone."""
-    settings = config.current()
-    if settings.models:
-        names = list(settings.models)
-    else:
-        names = list(settings.tiers.get(tier, ()))
-    unique: list[str] = []
-    for name in names:
-        if name not in unique:
-            unique.append(name)
-    return unique
-
-
-def _try_model(model: str, call: Callable[[], T], step: str) -> T | None:
-    """Run `call` with `models` pinned to `model`. Give up on this call after `ATTEMPTS` failures."""
-    last: BaseException | None = None
-    for attempt in range(1, ATTEMPTS + 1):
-        try:
-            pinned = replace(config.current(), models=(model,))
-            with config.use(pinned):
-                return call()
-        except TTSError as exc:
-            last = exc
-            log.info("%s %s attempt %s/%s failed: %s", model, step, attempt, ATTEMPTS, exc)
-    log.info("%s %s failed after %s attempts (%s)", model, step, ATTEMPTS, last)
-    return None
-
-
-def _show_mean(value: float) -> str:
-    text = f"{value:.1f}"
-    if text.endswith(".0"):
-        return text[:-2]
-    return text
-
-
-def _ensemble(text: str, source: str, tier: Tier) -> str:
+def _ensemble(text: str, source: str, tier: Tier, effort: Effort = "ultra") -> list[str]:
     language = languages.ancient(source)
     cleaned = text.strip()
     if not cleaned:
         raise ValueError("text is empty")
+    ensemble.check(effort)
     llm.require_key()
-    names = _models(tier)
-    if not names:
-        raise TTSError("No LLM models configured.")
-
-    # `standing` is the line that stands. `own_score` is this model's score of
-    # that line, when the call already succeeded. `pending` is a changed
-    # rewrite waiting for the author's second score: the first line, and the
-    # score that line received.
-    standing: dict[str, str] = {}
-    own_score: dict[str, int] = {}
-    pending: dict[str, tuple[str, int]] = {}
-    for name in names:
-        draft = _try_model(name, lambda name=name: _draft(cleaned, language, name), "transcription")
-        if draft is None:
-            log.info("dropping %s: the transcription failed", name)
-            continue
-        assessed = _try_model(
-            name,
-            lambda name=name, draft=draft: _judge(cleaned, draft, language.code, name),
-            "self-score",
-        )
-        if assessed is None:
-            log.info("%s keeps its initial IPA: the assessment failed", name)
-            standing[name] = draft
-            continue
-        revised = _try_model(
-            name,
-            lambda name=name, draft=draft, assessed=assessed: _revise(
-                cleaned,
-                draft,
-                language.code,
-                name,
-                assessed["reasoning"],
-                assessed["score"],
-            ),
-            "improve",
-        )
-        if revised is None or revised["ipa"] == draft:
-            reason = "the rewrite failed" if revised is None else "the rewrite did not change it"
-            log.info("%s keeps its initial IPA: %s", name, reason)
-            standing[name] = draft
-            own_score[name] = assessed["score"]
-            continue
-        pending[name] = (draft, assessed["score"])
-        standing[name] = revised["ipa"]
-
-    # A model whose score of a standing line failed is left out of every mean.
-    excluded: set[str] = set()
-    for name, (draft, initial_score) in pending.items():
-        rewrite = standing[name]
-        judged = _try_model(
-            name,
-            lambda name=name, rewrite=rewrite: _judge(cleaned, rewrite, language.code, name),
-            "self-score",
-        )
-        if judged is None:
-            log.info("%s score of the rewrite failed; its scores are left out of the mean", name)
-            excluded.add(name)
-            continue
-        if judged["score"] <= initial_score:
-            log.info(
-                "%s rewrite scored %s against the initial %s; keeping the initial IPA",
-                name,
-                judged["score"],
-                initial_score,
-            )
-            standing[name] = draft
-            own_score[name] = initial_score
-            continue
-        log.info(
-            "%s rewrite scored %s against the initial %s; keeping the rewrite",
-            name,
-            judged["score"],
-            initial_score,
-        )
-        own_score[name] = judged["score"]
-
-    if not standing:
-        raise TTSError(f"Every model failed ({', '.join(names)}).")
-
-    scores: dict[str, dict[str, int]] = {name: {} for name in standing}
-    judges = [name for name in standing if name not in excluded]
-    for name in standing:
-        line = standing[name]
-        for judge in list(judges):
-            if judge == name and judge in own_score:
-                scores[name][judge] = own_score[judge]
-                continue
-            scored = _try_model(
-                judge,
-                lambda line=line, judge=judge: _judge(cleaned, line, language.code, judge),
-                "score",
-            )
-            if scored is None:
-                log.info("leaving %s out of the mean: scoring failed", judge)
-                judges.remove(judge)
-                for row in scores.values():
-                    row.pop(judge, None)
-                continue
-            scores[name][judge] = scored["score"]
-
-    if not judges:
-        raise TTSError(f"Every model failed ({', '.join(names)}).")
-
-    means = {
-        name: sum(scores[name][judge] for judge in judges) / len(judges)
-        for name in standing
-    }
-    for name in standing:
-        detail = ", ".join(f"{judge} {scores[name][judge]}" for judge in judges)
-        log.info(
-            "%s candidate %s mean %s (%s) %s",
-            language.code,
-            name,
-            _show_mean(means[name]),
-            detail,
-            standing[name],
-        )
-    winner = max(standing, key=lambda name: means[name])
-    log.info(
-        "%s IPA: %s (%s, mean %s)",
-        language.code,
-        standing[winner],
-        winner,
-        _show_mean(means[winner]),
+    winner, line, mean = ensemble.run(
+        ensemble.models(tier),
+        effort,
+        draft=lambda name: _draft(cleaned, language, name),
+        judge=lambda name, ipa: _judge(cleaned, ipa, language.code, name),
+        revise=lambda name, ipa, assessed: _revise(
+            cleaned, ipa, language.code, name, assessed["reasoning"], assessed["score"]
+        )["ipa"],
+        label=language.code,
+        noun="transcription",
+        show=ipa_tokens.render,
     )
-    return standing[winner]
+    log.info(
+        "%s IPA: %s (%s, effort %s, mean %s)",
+        language.code,
+        ipa_tokens.render(line),
+        winner,
+        effort,
+        ensemble.show_mean(mean),
+    )
+    bad = ipa_tokens.unknown(line, language.code)
+    if bad:
+        log.warning("%s IPA: dropping symbols outside the inventory: %s", language.code, bad)
+        line = ipa_tokens.drop_unknown(line, language.code)
+    return line
 
 
-def _draft(text: str, language: AncientLanguage, model: str) -> str:
+def _draft(text: str, language: AncientLanguage, model: str) -> list[str]:
     result = llm.ask(IpaTranscription, system_prompt(language.code), user_prompt(text, language))
-    ipa = _clean(result.ipa)
-    if not ipa:
+    if not result.ipa.strip():
         raise TTSError("The model returned an empty transcription.")
-    log.info("%s IPA draft: %s (%s)", language.code, ipa, model)
+    ipa, penalty = ipa_tokens.parse_with_penalty(result.ipa, language.code)
+    log.info("%s IPA draft: %s (%s, unknown %.0f%%)", language.code, ipa_tokens.render(ipa), model, penalty * 100)
     return ipa
 
 
@@ -368,29 +279,29 @@ def score_system_prompt(source: str) -> str:
     )
 
 
-def score_user_prompt(text: str, ipa: str, language: AncientLanguage) -> str:
+def score_user_prompt(text: str, ipa: list[str], language: AncientLanguage) -> str:
     return (
         f"Language: {language.name} ({language.code}), {language.era}\n\n"
         f"Text:\n{text}\n\n"
-        f"IPA:\n{ipa}\n\n"
+        f"IPA:\n{ipa_tokens.render(ipa)}\n\n"
         "After your analysis, score this transcription."
     )
 
 
-def score_ipa(text: str, ipa: str, lang: str, model: str, **settings: Any) -> dict[str, Any]:
-    """Score how well `ipa` renders `text` in `lang`.
+def score_ipa(text: str, ipa: list[str], lang: str, model: str, **settings: Any) -> dict[str, Any]:
+    """Score how well `ipa` (a token list) renders `text` in `lang`.
 
     `model` is one OpenRouter id, and it is the only model asked. Settings
-    are the settings of `config`. The dict has `reasoning` and
-    `score`. `score` runs from 0 to 1000.
+    are the settings of `config`. The dict has `reasoning`, `score`, and
+    `penalty`. `score` runs from 0 to 1000 and is already cut by
+    `PENALTY_FACTOR` times `penalty`, the share of symbols in `ipa` that are
+    outside the inventory.
     """
     cleaned_text = text.strip()
-    cleaned_ipa = ipa.strip()
-    name = model.strip()
     if not cleaned_text:
         raise ValueError("text is empty")
-    if not cleaned_ipa:
-        raise ValueError("ipa is empty")
+    cleaned_ipa = ipa_tokens.ensure(ipa, lang, allow_unknown=True)
+    name = model.strip()
     if not name:
         raise ValueError("model is empty")
     settings = dict(settings)
@@ -417,7 +328,7 @@ def _reasoning(result: IpaScore) -> str:
     return "\n\n".join(f"{title}\n{body.strip()}" for title, body in steps)
 
 
-def _judge(text: str, ipa: str, lang: str, model: str) -> dict[str, Any]:
+def _judge(text: str, ipa: list[str], lang: str, model: str) -> dict[str, Any]:
     language = languages.ancient(lang)
     result = llm.ask(
         IpaScore,
@@ -425,9 +336,26 @@ def _judge(text: str, ipa: str, lang: str, model: str) -> dict[str, Any]:
         score_user_prompt(text, ipa, language),
     )
     scores = {name: getattr(result, f"{name}_score") for name in WEIGHTS}
-    score = _total(scores)
-    log.info("%s IPA score: %s (%s)", language.code, score, model)
-    return {"reasoning": _reasoning(result), "score": score}
+    raw = _total(scores)
+    reasoning = _reasoning(result)
+    bad = ipa_tokens.unknown(ipa, language.code)
+    penalty = ipa_tokens.penalty(ipa, language.code)
+    score = _penalize(raw, penalty)
+    if bad:
+        reasoning += (
+            "\n\nUnknown symbols\n"
+            f"These symbols are outside the allowed inventory: {' '.join(dict.fromkeys(bad))}. "
+            f"They are {penalty:.0%} of the symbols, which cuts the score from {raw} to {score}."
+        )
+        log.info("%s IPA score: %s, %s before the unknown-symbol penalty (%s)", language.code, score, raw, model)
+    else:
+        log.info("%s IPA score: %s (%s)", language.code, score, model)
+    return {"reasoning": reasoning, "score": score, "penalty": penalty}
+
+
+def _penalize(score: int, penalty: float) -> int:
+    """`score` cut by `PENALTY_FACTOR` times `penalty`, never below 0."""
+    return round(score * max(0.0, 1.0 - PENALTY_FACTOR * penalty))
 
 
 def improve_system_prompt(source: str) -> str:
@@ -452,6 +380,7 @@ def improve_system_prompt(source: str) -> str:
         "written. When the passage presents the same choice, follow the "
         "decision the examples make.\n"
         f"{rules.examples(language.code)}\n\n"
+        f"{_inventory(language.code)}"
         "First, reason carefully about these things, in this order. Each "
         "step uses the result of the step before it.\n"
         "1. Faults. Take each mistake the assessment names and check it "
@@ -472,30 +401,39 @@ def improve_system_prompt(source: str) -> str:
     )
 
 
-def improve_user_prompt(text: str, ipa: str, language: AncientLanguage, assessment: str, score: int) -> str:
+def improve_user_prompt(
+    text: str, ipa: list[str], language: AncientLanguage, assessment: str, score: int
+) -> str:
     return (
         f"Language: {language.name} ({language.code}), {language.era}\n\n"
         f"Text:\n{text}\n\n"
-        f"IPA:\n{ipa}\n\n"
+        f"IPA:\n{ipa_tokens.render(ipa)}\n\n"
         f"Assessment ({score} out of 1000):\n{assessment}\n\n"
         "After your analysis, write the corrected IPA."
     )
 
 
-def improve_ipa(text: str, ipa: str, lang: str, model: str, **settings: Any) -> dict[str, Any]:
-    """Rewrite `ipa` after scoring it.
+def improve_ipa(text: str, ipa: list[str], lang: str, model: str, **settings: Any) -> dict[str, Any]:
+    """Rewrite `ipa` (a token list) after scoring it.
 
     The call asks `score_ipa` first. The rewrite sees that reasoning, the
     passage, the original IPA, and the language's phonetic rules. `model`
-    is the only OpenRouter id asked. The dict has `ipa`, `reasoning`,
-    `score`, and `assessment`.
+    is the only OpenRouter id asked. The dict has `ipa` (a token list),
+    `reasoning`, `score`, and `assessment`.
     """
     scored = score_ipa(text, ipa, lang, model, **settings)
     name = model.strip()
     passed = dict(settings)
     passed["models"] = name
     with config.scope(**passed):
-        revised = _revise(text.strip(), ipa.strip(), lang, name, scored["reasoning"], scored["score"])
+        revised = _revise(
+            text.strip(),
+            ipa_tokens.ensure(ipa, lang, allow_unknown=True),
+            lang,
+            name,
+            scored["reasoning"],
+            scored["score"],
+        )
     revised["score"] = scored["score"]
     revised["assessment"] = scored["reasoning"]
     return revised
@@ -511,25 +449,18 @@ def _revision_reasoning(result: IpaRevision) -> str:
     return "\n\n".join(f"{title}\n{body.strip()}" for title, body in steps)
 
 
-def _revise(text: str, ipa: str, lang: str, model: str, assessment: str, score: int) -> dict[str, Any]:
+def _revise(text: str, ipa: list[str], lang: str, model: str, assessment: str, score: int) -> dict[str, Any]:
     language = languages.ancient(lang)
     result = llm.ask(
         IpaRevision,
         improve_system_prompt(language.code),
         improve_user_prompt(text, ipa, language, assessment, score),
     )
-    corrected = _clean(result.ipa)
-    if not corrected:
+    if not result.ipa.strip():
         raise TTSError("The model returned an empty correction.")
-    log.info("%s IPA revised: %s (%s)", language.code, corrected, model)
+    corrected, penalty = ipa_tokens.parse_with_penalty(result.ipa, language.code)
+    log.info(
+        "%s IPA revised: %s (%s, unknown %.0f%%)", language.code, ipa_tokens.render(corrected), model, penalty * 100
+    )
     return {"ipa": corrected, "reasoning": _revision_reasoning(result)}
 
-
-def _clean(text: str) -> str:
-    text = text.strip()
-    if len(text) >= 2 and text[0] == text[-1] and text[0] in "/[]":
-        inner = text[1:-1].strip()
-        if inner:
-            text = inner
-    text = text.lstrip("*").strip()
-    return " ".join(text.split())

@@ -1,6 +1,6 @@
 Lithuanian is the most conservative living Indo-European language, and its spelling has letters for much of the Proto-Indo-European system: voiced b d g kept apart from p t k, a free accent, long and short vowels (ė y ū ą against e i u a), the diphthongs ai ei au, a trilled r, z, j, and syllabic-resonant reflexes spoken as ir il im in. Its spelling also marks a soft consonant with i before a back vowel (kia, gio, kiu), which is the nearest it has to the palatovelars. Use these. Do not write the Lithuanian descendant of the word: *ḱwṓ is not šuo, *h₂ówis is not avis, *dyḗws is not dievas, and ḱ ǵ are never š ž.
 
-Map each IPA symbol to the Lithuanian spelling. Write lowercase Lithuanian letters and the accent marks below. Never write the IPA symbols, the asterisk, a subscript number, or an h for a laryngeal that the rules do not give.
+Map each IPA symbol to the Lithuanian spelling. Write Lithuanian letters and the accent marks below. Never write the IPA symbols, the asterisk, a subscript number, or an h for a laryngeal that the rules do not give.
 
 Stress
 Lithuanian has a free accent like Proto-Indo-European, and ordinary spelling does not show it. Mark it the way Lithuanian dictionaries and schoolbooks do, so the voice stresses the right syllable.
@@ -53,7 +53,7 @@ Consonants
 - A geminate is written once. Lithuanian has no double consonants.
 
 Capitals and pauses
-- Capitalize the first letter of each sentence, after a period, an exclamation mark, or a question mark, and at the start of the line. A capital keeps its accent mark: /ˈoi̯.nos/ at the start is Òinos.
+- Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here, and every other word is lowercase. A capital keeps its accent mark: /ˈoi̯.nos/ at the start is Òinos.
 - Keep each comma, exclamation mark, question mark, and period of the IPA.
 
 Lost in the Lithuanian reading

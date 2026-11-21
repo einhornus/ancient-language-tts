@@ -1,0 +1,482 @@
+[
+  {
+    "id": "Rni4NyZRvnv6RI6vRMqC",
+    "name": "Neil - Calming and Melodic",
+    "description": "A Northern Irish male voice with a low register and a calming tone and melodic rythm.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 39.14
+  },
+  {
+    "id": "B5jEZPqk2OJ2vkPw3wBM",
+    "name": "Cillian - Low, Calm and Authentic",
+    "description": "A low, calm, and authentic Irish voice for conversation and narration.",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 39.42
+  },
+  {
+    "id": "8SNzJpKT62Cqqqe8Injx",
+    "name": "Michael - Soft and Calm",
+    "description": "An Irish soft male voice melodic and soothing, with a gentle lilt that carries a sense of warmth and friendliness  that can be both engaging and comforting to listeners.\r\n\r\nMichael is has a natural, storytelling charm, making the narrative feel more intimate and immersive. It can convey a range of emotions subtly, from the soft-spoken tenderness of a heartfelt moment to the quiet intensity of a suspenseful scene.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 37.8
+  },
+  {
+    "id": "9TYDukkUVpJPDSIuv3ir",
+    "name": "Darren - Calm and Deep",
+    "description": "Calm Irish male narrator, masculine tone, cinematic storyteller, perfect for fantasy fiction, audiobooks, e-learning narration, commercials, and immersive worldbuilding.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 41.07
+  },
+  {
+    "id": "RlSVB64yXMZJjq67jbB1",
+    "name": "Bren - Calm Irish Conversational Voice",
+    "description": "A calm, conversational Irish voice suited to long-form narration and audiobooks. Reflective, steady and clear, with a quiet authority that feels human rather than performed. Ideal for storytelling and content that values depth, presence and trust.",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 41.06
+  },
+  {
+    "id": "E8tAm6nkbW2yKYAJLVXH",
+    "name": "Peter - Clear, Expressive and Warm",
+    "description": "A Young male from Northern Ireland, with a calm relaxing and warm tone. Perfect voice for narration, tutorials or podcast readings. Very clear Northern Irish voice with a slight irish accent. Smooth and moderately paced, ideal for instructional and conversational purposes. Professional tone with a balanced pitch, making it versatile for both casual and formal settings.",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 38.05
+  },
+  {
+    "id": "zhqwEJnIn9nJv0L8nUkS",
+    "name": "Tom - Expressive and Engaging",
+    "description": "An expressive story telling voice with excitement and breath catching highs and lows!",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 34.2
+  },
+  {
+    "id": "GFyWqnwcF2mv6dWlo3u1",
+    "name": "John - Irish Man",
+    "description": "Clear, articulate Irish male voice with a calm, confident tone. Natural pacing with a soft Meath/Leinster accent. Suitable for voiceover, e-learning, and business content.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 37.08
+  },
+  {
+    "id": "2GErPEnQqbyeqhZQPM6r",
+    "name": "Mick - Irish male neutral accent",
+    "description": "Expressive, enthusiastic, clear, and easy to understand.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 36.4
+  },
+  {
+    "id": "5OgOMFAcpSKqVQHHQHrU",
+    "name": "Thomas - Irish Narration Voice",
+    "description": "Audiobook style narration in a calm but enthusiastic west of Ireland accent.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 35.86
+  },
+  {
+    "id": "lkdrBu1VpDInuPHq1k2V",
+    "name": "Devon - Clear and Assertive",
+    "description": "A young Irish male voice with a calm and informative tone. Perfect for information giving or narration.",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "irish",
+      "neutral",
+      "narrative_story"
+    ],
+    "popularity": 35.42
+  },
+  {
+    "id": "45je3xbJw4XyMkxZ0yI4",
+    "name": "Daniel Murphy - Natural and Engaging",
+    "description": "A young professional with a background in technology and finance. TEDx speaker who is perfect for narration and informative content. ",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 36.1
+  },
+  {
+    "id": "bCwW7dMszE8OyqvhCaQY",
+    "name": "Connor - Calm and Neutral",
+    "description": "A neutral, young, Irish male accent. Perfect for audiobooks or narration.",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 32.88
+  },
+  {
+    "id": "cfgXMWoeQsY6I5kM4gP3",
+    "name": "Rory - Bright and Cheerful",
+    "description": "Bright and cheerful neutral Irish accent that works great for narration, conversation.",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "irish",
+      "upbeat",
+      "narrative_story"
+    ],
+    "popularity": 34.16
+  },
+  {
+    "id": "huSf6WJX1X9lGY6I9CfQ",
+    "name": "Stephen - Irish Narration Voice",
+    "description": "A calm, versatile voice, perfect for an audiobook narration. ",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 34.73
+  },
+  {
+    "id": "1cxc5c3E9K6F1wlqOJGV",
+    "name": "Emily - Gentle, Soft and Meditative",
+    "description": "A young female Northern Irish voice, whispering in a soft and gentle tone. Perfect for ASMR, guided meditation, and softly reading audiobooks to relax the listener before sleep. ",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "irish",
+      "whispery",
+      "narrative_story"
+    ],
+    "popularity": 38.77
+  },
+  {
+    "id": "kOvUpYLYS0rKGldsKcD1",
+    "name": "Maeve - Soft Irish female ",
+    "description": "Maeve is a soft, warm Irish female voice designed for storytelling, audiobooks, and comforting narration. With a gentle Irish accent and natural melodic flow, this voice is ideal for bedtime stories, folklore,  podcasts, and immersive audio experiences. Calm, expressive, and reassuring, Maeve brings warmth and authentic Irish charm to every story, making listeners feel safe, welcome, and deeply engaged.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 37.5
+  },
+  {
+    "id": "1OYA2kgM85gF2eGN8HEp",
+    "name": "Colleen - Warm Southern Irish Woman",
+    "description": "Soft and warm southern Irish middle-aged female.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "soft",
+      "narrative_story"
+    ],
+    "popularity": 36.96
+  },
+  {
+    "id": "3b8fXc91YHS1i2DYAlBQ",
+    "name": "Laura -  Natural  & Grounded ",
+    "description": "Warm, articulate Irish female voice with a fresh, modern tone. \r\n\r\nExpert in corporate training, onboarding, and healthcare messaging. \r\n\r\nMy voice offers calm authority for wellness and meditations, yet brings a natural, engaging energy to storytelling and children’s books. Ideal for explainer videos, lifestyle ads, and educational audio. \r\n\r\nA grounded, versatile narrator for brands and creators seeking trust, clarity, and a genuine human connection across all media. ",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 40.32
+  },
+  {
+    "id": "3Q0HiHNecynsdqicntLT",
+    "name": "Clare - Soft and Warm",
+    "description": "Softly spoken female voice from the West of Ireland. Perfect for podcasts, instructional videos and much more. ",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "soft",
+      "narrative_story"
+    ],
+    "popularity": 36.51
+  },
+  {
+    "id": "UwtFVYnvYG6hxAbc4I6T",
+    "name": "Louise - Neutral Irish & Sincere",
+    "description": "Neutral Irish; calm; sincere, Celtic; a comforting heartfelt tone for narration, corporate communication and high-end advertising. Warm and pleasant-sounding, but emanating an earnest sense of trustworthiness, Louise draws your listener in with a combined measure of grace and professionalism.   ",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 38.3
+  },
+  {
+    "id": "suMMgpGbVcnihP1CcgFS",
+    "name": "Emily - Coarse, Podcaster",
+    "description": "A young Irish female voice, with a slight coarseness, perfect for podcasts and audiobooks.",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "irish",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 36.35
+  },
+  {
+    "id": "tlKpUDfYaDGG10tLVOrH",
+    "name": "Shannon - Measured and Calm",
+    "description": "A female Irish voice, measured and calm. ",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 35.36
+  },
+  {
+    "id": "rdEILoSxdT6xKDZ56abJ",
+    "name": "Isla Wilde ",
+    "description": "A gentle,  soft voice with a neutral Irish Accent. Perfect for audiobooks that require a voice to sooth you. ",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "relaxed",
+      "narrative_story"
+    ],
+    "popularity": 32.01
+  },
+  {
+    "id": "SpA6eNczAK7oucJPiPpw",
+    "name": "Beckie",
+    "description": "A mature, gentle Irish female voice with a warm, melodic tone.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "crisp",
+      "narrative_story"
+    ],
+    "popularity": 34.96
+  },
+  {
+    "id": "mFgXOmlOfXfr6suoQkRH",
+    "name": "Frances - Soft, Warm and Calm",
+    "description": "Soft, warm, calm Irish accent with husky tones. ",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 36.52
+  },
+  {
+    "id": "9f9KY15dSvN8oi5shT8z",
+    "name": "Clodagh - Warm and Direct",
+    "description": "A adult Irish female voice with a calm and authoritative tone. Perfect for information giving or narration.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 33.79
+  },
+  {
+    "id": "9WOXi1uZH1mhjviAAyiw",
+    "name": "Dolores - Confident and Natural",
+    "description": "A young vibrant female with a strong Newfoundland/Irish accent. Very headstrong and sharp.",
+    "locale": "en-IE",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "irish",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 31.2
+  },
+  {
+    "id": "VB4JW7V2WFSp1tEyWbj5",
+    "name": "Shauna",
+    "description": "Warm and engaging.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 32.23
+  },
+  {
+    "id": "WtSj8ZSBSK3JEi9xgqBG",
+    "name": "Orla - Calm & Friendly",
+    "description": "A great voice for soothing meditation tracks.",
+    "locale": "en-IE",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "irish",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 34.77
+  }
+]

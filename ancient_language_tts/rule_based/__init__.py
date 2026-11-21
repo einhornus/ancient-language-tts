@@ -1,15 +1,20 @@
 """Deterministic IPA and respelling, one engine per ancient language.
 
 Every ancient language has an engine with three conversions (see `base`):
-text → IPA, text → respelling, IPA → respelling. Only Ecclesiastical Latin
-(`lat-ecc`, into Italian) has real rules today; the others are mocks built
-from small grapheme tables (`is_mock` tells them apart). LLM-based steps
-live under `ancient_language_tts.llm`.
+text → IPA, text → respelling, IPA → respelling, each implementing
+`data/<code>/phonology.txt` and `data/<code>/respelling/<target>.txt`.
+LLM-based steps live under `ancient_language_tts.llm`.
+
+Each engine works on written IPA lines internally. The functions here are
+the boundary: `to_ipa` returns a list of IPA tokens (see `ipa_tokens`),
+and `respell_ipa` takes one.
 """
 
 from __future__ import annotations
 
-from .. import languages
+from collections.abc import Sequence
+
+from .. import ipa_tokens, languages
 from . import ang, eme, enm, gem_pro, grc, ine_pro, lat, lat_ecc, sla_pro
 from .base import Convert, RuleEngine
 
@@ -41,14 +46,9 @@ def has(source: str, target: str) -> bool:
     return languages.modern(target).code in engine(source).targets()
 
 
-def is_mock(source: str) -> bool:
-    """True when the engine for `source` is a placeholder, not real rules."""
-    return engine(source).mock
-
-
-def to_ipa(text: str, source: str) -> str:
-    """Rule-based IPA for `text`. Does not depend on a modern language."""
-    return engine(source).to_ipa(text)
+def to_ipa(text: str, source: str) -> list[str]:
+    """Rule-based IPA tokens for `text`. Does not depend on a modern language."""
+    return ipa_tokens.parse(engine(source).to_ipa(text), source)
 
 
 def respell(text: str, source: str, target: str) -> str:
@@ -56,9 +56,10 @@ def respell(text: str, source: str, target: str) -> str:
     return _pick(engine(source), "respell", target)(text)
 
 
-def respell_ipa(ipa: str, source: str, target: str) -> str:
-    """Rule-based respelling of an IPA line."""
-    return _pick(engine(source), "respell_ipa", target)(ipa)
+def respell_ipa(ipa: Sequence[str], source: str, target: str) -> str:
+    """Rule-based respelling of an IPA token list."""
+    line = ipa_tokens.render(ipa_tokens.ensure(ipa, source))
+    return _pick(engine(source), "respell_ipa", target)(line)
 
 
 def _pick(item: RuleEngine, kind: str, target: str) -> Convert:
@@ -79,7 +80,6 @@ __all__ = [
     "available",
     "engine",
     "has",
-    "is_mock",
     "respell",
     "respell_ipa",
     "to_ipa",

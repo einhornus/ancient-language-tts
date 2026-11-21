@@ -23,7 +23,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from . import api, languages, rule_based, rules
+from . import api, chunks, ipa_tokens, languages, rule_based, rules
+from .config import EFFORTS
 from .llm import ipa as llm_ipa
 from .llm import respelling as llm_respelling
 
@@ -45,6 +46,7 @@ def _dump(payload: dict[str, Any]) -> None:
 def _llm_settings(args: argparse.Namespace) -> dict[str, Any]:
     return {
         "tier": args.tier,
+        "effort": args.effort,
         "openrouter_api_key": args.openrouter_key,
         "models": args.models,
         "cache_dir": args.cache_dir,
@@ -53,13 +55,19 @@ def _llm_settings(args: argparse.Namespace) -> dict[str, Any]:
 
 
 def _ipa(args: argparse.Namespace) -> int:
-    print(api.to_ipa(
+    pieces = api.to_ipa(
         _load_text(args.text),
         args.source,
         args.method,
         max_chars=args.max_chars,
         **_llm_settings(args),
-    ))
+    )
+    if args.chunks:
+        print(json.dumps(pieces, ensure_ascii=False))
+    elif args.tokens:
+        print(json.dumps(chunks.join_ipa(pieces), ensure_ascii=False))
+    else:
+        print(ipa_tokens.render(chunks.join_ipa(pieces)))
     return 0
 
 
@@ -77,14 +85,37 @@ def _respell(args: argparse.Namespace) -> int:
 
 def _respell_ipa(args: argparse.Namespace) -> int:
     print(api.respell_ipa(
-        _load_text(args.ipa),
+        _ipa_chunks(args),
         args.source,
         args.target,
         args.method,
-        text=_load_text(args.text) if args.text else None,
         **_llm_settings(args),
     ))
     return 0
+
+
+def _ipa_chunks(args: argparse.Namespace) -> list[chunks.Chunk]:
+    """The chunks `ipa --chunks` printed, or chunks cut from an IPA line and `--text`."""
+    loaded = _load_text(args.ipa)
+    if loaded.lstrip().startswith("["):
+        try:
+            data = json.loads(loaded)
+        except json.JSONDecodeError:
+            data = None
+        if isinstance(data, list) and data and all(isinstance(item, dict) for item in data):
+            return chunks.ensure(data)
+    tokens = ipa_tokens.parse(loaded, args.source)
+    text = _load_text(args.text) if args.text else ""
+    pieces, aligned = chunks.from_ipa(tokens, text)
+    if text.strip() and not aligned:
+        if len(pieces) > 1:
+            logging.getLogger("ancient_language_tts").warning(
+                "--text and the IPA have different sentences; the pieces are "
+                "respelled without the text. Pass the chunks `ipa --chunks` prints instead."
+            )
+        else:
+            pieces = [{"text": text.strip(), "ipa": tokens}]
+    return pieces or [{"text": text.strip(), "ipa": tokens}]
 
 
 def _speak(args: argparse.Namespace) -> int:
@@ -107,12 +138,10 @@ def _languages(_args: argparse.Namespace) -> int:
     print("ancient")
     for item in languages.ANCIENT:
         have = ", ".join(rules.targets(item.code)) or "(none)"
-        engine = rule_based.engine(item.code)
-        kind = "mock" if engine.mock else "rules"
-        ruled = ", ".join(engine.targets()) or "(none)"
+        ruled = ", ".join(rule_based.engine(item.code).targets()) or "(none)"
         print(
             f"  {item.code:<10} {item.name:<24} {item.era:<44} "
-            f"llm: {have:<8} {kind}: {ruled}"
+            f"llm: {have:<8} rules: {ruled}"
         )
     print("modern")
     for item in languages.MODERN:
@@ -148,6 +177,14 @@ def _add_method(parser: argparse.ArgumentParser) -> None:
 def _add_llm(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--openrouter-key", help="OpenRouter key (default: OPENROUTER_API_KEY)")
     parser.add_argument("--tier", choices=("high", "medium", "low"), default="high", help="LLM cost tier")
+    parser.add_argument(
+        "--effort",
+        choices=EFFORTS,
+        default="ultra",
+        help="how the tier is used: ultra (every model, improve, cross-score), high (every model, "
+        "improve, first model scores), medium (every model, first model scores), low (first model, "
+        "improve), basic (first model only)",
+    )
     parser.add_argument("--models", help="comma-separated OpenRouter LLM ids, replacing the tier list")
     parser.add_argument("--cache-dir", help="answer and audio cache (default .cache/ancient-language-tts)")
     parser.add_argument("--no-cache", action="store_true", help="ignore and do not write the caches")
@@ -179,6 +216,8 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("ipa", help="ancient text → IPA")
     p.add_argument("text", help="the passage, or a UTF-8 .txt file")
     p.add_argument("--source", required=True, help="ancient-language code, e.g. lat")
+    p.add_argument("--tokens", action="store_true", help="print the IPA token list as JSON")
+    p.add_argument("--chunks", action="store_true", help="print the chunks ({text, ipa} per piece) as JSON, for respell-ipa")
     _add_method(p)
     _add_llm(p)
     _add_limit(p)
@@ -194,7 +233,7 @@ def main(argv: list[str] | None = None) -> int:
     p.set_defaults(run=_respell)
 
     p = sub.add_parser("respell-ipa", help="IPA → modern spelling")
-    p.add_argument("ipa", help="the IPA, or a UTF-8 .txt file")
+    p.add_argument("ipa", help="the IPA, the JSON `ipa --chunks` prints, or a UTF-8 file of either")
     p.add_argument("--source", required=True, help="ancient-language code the IPA came from")
     p.add_argument("--target", default="en", help="modern-language code (default en)")
     p.add_argument("--text", help="the original passage, for word boundaries (LLM only)")

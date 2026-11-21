@@ -24,7 +24,10 @@ _LONG = str.maketrans({
     "ā": "a", "ē": "e", "ī": "i", "ō": "o", "ū": "u", "ȳ": "y",
     "Ā": "A", "Ē": "E", "Ī": "I", "Ō": "O", "Ū": "U", "Ȳ": "Y",
 })
-_TOKEN = re.compile(r"[A-Za-zĀāĒēĪīŌōŪūȲȳÆæŒœ]+|[^\s]")
+_TOKEN = re.compile(r"[A-Za-zĀāĒēĪīŌōŪūȲȳÆæŒœÄäËëÏïÖöÜüŸÿ]+|[^\s]")
+# A diaeresis vowel is in hiatus: "|" before it blocks every digraph.
+_DIAERESIS = {"ä": "a", "ë": "e", "ï": "i", "ö": "o", "ü": "u", "ÿ": "y"}
+_AE_HIATUS = ("michael", "raphael", "israel", "ismael", "misael", "nathanael")
 
 
 class _A:
@@ -76,7 +79,10 @@ def _prep(raw: str) -> tuple[str, list[bool]]:
             continue
         long = "MACRON" in unicodedata.name(ch, "") or ch in "āēīōūȳĀĒĪŌŪȲ"
         base = ch.translate(_LONG).lower()
-        if base == "æ":
+        if base in _DIAERESIS:
+            chars += ["|", _DIAERESIS[base]]
+            longs += [False, False]
+        elif base == "æ":
             chars += ["a", "e"]
             longs += [False, False]
         elif base == "œ":
@@ -85,7 +91,12 @@ def _prep(raw: str) -> tuple[str, list[bool]]:
         else:
             chars.append(base)
             longs.append(long)
-    return "".join(chars), longs
+    s = "".join(chars)
+    if s.startswith(_AE_HIATUS):
+        k = s.index("ae") + 1
+        s = s[:k] + "|" + s[k:]
+        longs.insert(k, False)
+    return s, longs
 
 
 def _atoms(s: str, longs: list[bool]) -> list[_A]:
@@ -135,10 +146,14 @@ def _atoms(s: str, longs: list[bool]) -> list[_A]:
             out.append(_A("k"))
             out.append(_A("sc"))
             i += 2
-        elif i == 0 and pair == "ex" and (at(2) in "aeiouyh"):
+        elif i == 0 and pair == "ex" and at(2) and (at(2) in "aeiouyh|"):
             out.append(_A("e", True, longs[i]))
             out.append(_A("gs", units=2))
             i += 2
+        elif i == 0 and pair == "ex" and at(2) == "s" and at(3) and at(3) in "aeiouy":
+            out.append(_A("e", True, longs[i]))
+            out.append(_A("gs", units=2))
+            i += 3
         elif pair == "gn":
             out.append(_A("gn", units=2))
             i += 2
@@ -146,7 +161,7 @@ def _atoms(s: str, longs: list[bool]) -> list[_A]:
             out.append(_A("n"))
             out.append(_A("gu"))
             i += 3
-        elif c == "t" and d == "i" and len(at(2)) == 1 and at(2) in "aeiouy" and (i == 0 or s[i - 1] not in "stx"):
+        elif c == "t" and d == "i" and len(at(2)) == 1 and at(2) in "aeiouy" and (i == 0 or s[i - 1] not in "stx") and s[i:] != "tier":
             out.append(_A("z"))
             out.append(_A("i", True, longs[i + 1]))
             i += 2
@@ -178,9 +193,6 @@ def _atoms(s: str, longs: list[bool]) -> list[_A]:
         elif c == "k":
             out.append(_A("ch" if d in {"e", "i", "y"} else "c"))
             i += 1
-        elif c == "m" and _m_to_n(s, i):
-            out.append(_A("n"))
-            i += 1
         elif c == "s" and i > 0 and i + 1 < n and s[i - 1] in "aeiouy" and s[i + 1] in "aeiouy":
             out.append(_A("ss"))
             i += 1
@@ -192,21 +204,9 @@ def _atoms(s: str, longs: list[bool]) -> list[_A]:
     return out
 
 
-def _m_to_n(s: str, i: int) -> bool:
-    """m before c/ch/g/qu/x is [ŋ], spelled n. Soft c/g do not trigger it."""
-    if i + 1 >= len(s):
-        return False
-    d = s[i + 1]
-    if d == "x" or (d == "q" and i + 2 < len(s) and s[i + 2] == "u"):
-        return True
-    if d == "c" and i + 2 < len(s) and s[i + 2] == "h":
-        return True
-    if d in "cg":
-        return not _front(s, i + 2)
-    return False
-
-
 def _front(s: str, i: int) -> bool:
+    if i < len(s) and s[i] == "|":
+        i += 1
     return i < len(s) and (s[i] in "eiy" or s[i:i + 2] in ("ae", "oe"))
 
 

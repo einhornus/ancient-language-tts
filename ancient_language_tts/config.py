@@ -39,6 +39,7 @@ nested calls read them with `current` instead of passing them around.
 from __future__ import annotations
 
 import os
+import threading
 from collections.abc import Iterator, Mapping, Sequence
 from contextlib import contextmanager
 from contextvars import ContextVar
@@ -52,6 +53,14 @@ from .chunks import MAX_CHARS as DEFAULT_MAX_CHARS
 
 Tier = Literal["high", "medium", "low"]
 TIERS: tuple[Tier, ...] = get_args(Tier)
+
+# How hard `to_ipa` and `respell` work the tier (see `llm.ensemble`).
+# "ultra": every model writes and improves, every model scores every line.
+# "high": every model writes and improves, the first model scores.
+# "medium": every model writes, the first model scores.
+# "low": the first model writes and improves. "basic": the first model writes.
+Effort = Literal["ultra", "high", "medium", "low", "basic"]
+EFFORTS: tuple[Effort, ...] = get_args(Effort)
 
 # OpenRouter models for each cost tier, first choice first. `to_ipa` and
 # `respell` each ask every model of the tier you name. `ask` tries the next
@@ -259,6 +268,7 @@ def _unit(name: str, raw: float | str, default: float) -> float:
 
 
 _env_loaded = False
+_env_lock = threading.Lock()
 
 
 def load_env() -> None:
@@ -269,10 +279,15 @@ def load_env() -> None:
     global _env_loaded
     if _env_loaded:
         return
-    _env_loaded = True
-    path = find_dotenv(usecwd=True)
-    if path:
-        load_dotenv(path, override=False)
+    # Threads (the test harness transcribes in parallel) must wait for the
+    # first load to finish, not see the flag early and read an empty env.
+    with _env_lock:
+        if _env_loaded:
+            return
+        path = find_dotenv(usecwd=True)
+        if path:
+            load_dotenv(path, override=False)
+        _env_loaded = True
 
 
 def _chain(models: str | Sequence[str]) -> tuple[str, ...]:

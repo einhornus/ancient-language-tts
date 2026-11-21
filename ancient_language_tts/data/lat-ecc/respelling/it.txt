@@ -18,17 +18,19 @@ Vowels
 
 An unstressed /ɛ/ or /ɔ/ is e or o. The voice has open e and open o only in a stressed syllable, so an unstressed one comes out close.
 
+An unstressed /ɛ/ after the stressed syllable and directly before another vowel is è, although it carries no stress. Written e there, the voice glides it to [j]: àlea comes out [ˈalja]. /ˈa.lɛ.a/ is àlèa. /ˈi.dɛ.ɔ/ is ìdèo. /ˈtran.sɛ.ant/ is trànsèant. This applies only after the stress. An /ɛ/ before the stressed syllable stays e.
+
 Consonants
 - /tʃ/ → c before e or i. /ˈtʃɛ.lum/ is cèlum. /ˈtʃi.bus/ is cìbus.
 - /dʒ/ → g before e or i. /rɛˈdʒi.na/ is regìna.
-- /ʃ/ → sc before e or i. /dɛˈʃɛn.dit/ is descèndit. /siˈlɛ.ʃit/ is silèscit.
+- /ʃ/ /ʃ.ʃ/ → sc before e or i. One sc. The voice already makes it long between vowels. /dɛʃˈʃɛn.dit/ is descèndit. /siˈlɛʃ.ʃit/ is silèscit.
 - /k/ → c before a, o, u, a consonant, or the end of a word. ch before e or i. /ˈmi.ki/ is mìchi. /ˈɛk/ is èc.
 - /k/ immediately before /ʃ/ → k, so the following sc stays [ʃ]. /ɛkˈʃɛl.sis/ is ekscèlsis.
 - /g/ → g before a, o, u, or a consonant. gh before e or i.
 - /s/ plus /k/ before e or i → sch. sc before e or i would be /ʃ/. /ˈskɛ.ma/ is schèma.
 - /g/ plus /l/ plus /i/ → ghli. The voice reads gli as the palatal /ʎ/.
-- /ts/ → z. The z is the whole affricate. Do not also write a t. /ˈgra.tsi.a/ is gràzia. /lɛˈti.tsi.a/ is letìzia. /ɛ.kʷi.nɔk.tsiˈa.lis/ is equinocziàlis. /ˈɛt.tʃɛ/ is ècce, because that one is a real /t/ plus /tʃ/.
-- /dz/ → z. /ˈdzɛ.lus/ is zèlus. z is also the spelling of /ts/, and the voice may not keep [dz] and [ts] apart.
+- /ts/ /t.ts/ → z. One z. The z is the whole affricate, and the voice already makes it long between vowels. Do not also write a t, and do not write zz. /ˈgrat.tsi.a/ is gràzia. /lɛˈtit.tsi.a/ is letìzia. /ɛ.kʷi.nɔk.tsiˈa.lis/ is equinocziàlis. /ˈɛt.tʃɛ/ is ècce: /t.tʃ/ is the geminate of c.
+- /dz/ /d.dz/ → z. One z. /ˈdzɛ.lus/ is zèlus. /ˈgad.dza/ is gàza. z is also the spelling of /ts/, and the voice may not keep [dz] and [ts] apart.
 - /z/ → s. This is the voiced s of word-initial ex-. /ɛgˈzau.di/ is egsàudi. The voice may say [s].
 - /ks/ /k.s/ → x, read [ks]. /ˈfɛ.liks/ is fèlix. /miksˈtu.ra/ is mixtùra. /ˈfiŋk.sit/ is fìnxit.
 - /kʷ/ → qu, read [kw].
@@ -36,12 +38,14 @@ Consonants
 - /v/ → v.
 - /j/ → i before a vowel. /ˈjam/ is iàm. /ˈma.jɔr/ is màior.
 - /ɲ/ /ɲ.ɲ/ → gn. One gn. The voice already lengthens it. /ˈmaɲ.ɲum/ is màgnum. /ˈaɲ.ɲus/ is àgnus. Write gn. The general spelling rules that forbid gn do not apply to this pair.
-- /ŋ/ before /k/ or /g/ → n.
+- /ŋ/ before /k/ or /g/ → n. /ɱ/ before /f/ or /v/ → n. /ˈiɱ.fans/ is ìnfans.
+- /m/ is always m, before /k/ and /kʷ/ too. /viˈrum.kʷɛ/ is virùmque. /ˈnum.kʷam/ is nùmquam.
 - /s/ between vowels → ss. A single s between vowels may be said [z]. ss keeps [s], and the consonant is longer. /ˈtʃɛ.sar/ is cèssar. /diˈvi.sa/ is divìssa.
 - /s/ elsewhere → s.
 - /f/ → f. This includes the sound that was written ph.
 - /p/ /b/ /t/ /d/ /m/ /n/ /r/ /l/ → the same letters.
 - A geminate, the same consonant on both sides of a syllable break, is a doubled letter. /k.k/ is cc, or cch before e or i. /t.tʃ/ before e or i is cc. /d.dʒ/ before e or i is gg. /ˈɛt.tʃɛ/ is ècce. /pɛkˈka.ta/ is peccàta.
+- A word that ends in a vowel and one consonant, followed with no pause by a word that starts with the same consonant, ends in that consonant written double. With one letter on each side the voice merges the two into one short consonant. /kʷam ˈmi.ni.mum/ is quamm mìnimum. /in ˈnɔ.mi.nɛ/ is inn nòmine. /sɛd ˈdik/ is sedd dìc. /ˈnul.lum ˈmaɲ.ɲum/ is nùllumm màgnum. /k/ doubles as cc: /ˈɛk ˈkau.sa/ is ècc càussa. A comma or other pause between the words stops this.
 
 The voice lengthens a stressed vowel in an open syllable that is not the last syllable of the word. That is the Italian rhythm. Do not double the vowel to mark it.
 An unstressed i or u before a vowel glides. gàllia may lose a syllable, and pòtuit may become [twit].

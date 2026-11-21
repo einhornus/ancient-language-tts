@@ -1,0 +1,481 @@
+[
+  {
+    "id": "W71zT1VwIFFx3mMGH2uZ",
+    "name": "MarcoTrox - Warm, Balanced and Polished",
+    "description": "Middle-aged Italian, professional voice actor. Ideal for audiobooks, storytelling and narration.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "intense",
+      "narrative_story"
+    ],
+    "popularity": 50.74
+  },
+  {
+    "id": "13Cuh3NuYvWOVQtLbRN8",
+    "name": "Marco - Deep, Rich and Reflective",
+    "description": "Italian Middle Aged Voice Actor - warm, convincing, and fascinating voice.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "classy",
+      "narrative_story"
+    ],
+    "popularity": 48.92
+  },
+  {
+    "id": "uScy1bXtKz8vPzfdFsFw",
+    "name": "Antonio Farina - Expressive and Warm",
+    "description": "Middle-aged man - soft, charming voice, ideal for storytelling and audiobooks.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "classy",
+      "narrative_story"
+    ],
+    "popularity": 47.72
+  },
+  {
+    "id": "UlwxMDtxqMDYmG6pk2q6",
+    "name": "Luca Brasi - Potente, Deep and Low",
+    "description": "A weighty but kind narrative. With a little touch of sympathy. Ideal for audiobooks.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "gentle",
+      "narrative_story"
+    ],
+    "popularity": 42.82
+  },
+  {
+    "id": "JfjzwHPmCw6p6fdGVt4Y",
+    "name": "Luca Brasi - Intimate and Weighty",
+    "description": "A weighty but intimate and warm narrative. Sometimes almost whispered.\r\nIdeal for audiobooks.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "whispery",
+      "narrative_story"
+    ],
+    "popularity": 42.61
+  },
+  {
+    "id": "fzDFBB4mgvMlL36gPXcz",
+    "name": "Giovanni Rossi - Deep and Sympathetic",
+    "description": "Young and serious Male voice. Perfect for audiobooks.",
+    "locale": "it-IT",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "serious",
+      "narrative_story"
+    ],
+    "popularity": 46.1
+  },
+  {
+    "id": "sKbNSlHXq99bttvf8rRF",
+    "name": "Nicola Lorusso - Balanced and Mature",
+    "description": "Middle Age Italian Pro Talent, perfect for Audiobooks.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 43.28
+  },
+  {
+    "id": "rgL0xVDlz05Kid06YUgx",
+    "name": "Luca Brasi - Deep, Profound and Low",
+    "description": "A narrative with depth and weight. With a little touch of darkness. Ideal for audiobooks.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 41.01
+  },
+  {
+    "id": "DLMxnwJE0a28JQLTMJPJ",
+    "name": "Andy - Warm, Nuanced and Mature",
+    "description": "Italian mature, expressive professional speaker with warm tones and shades, suitable for readings, voice-over for multimedia, commercial and corporate films and presentations , audio books, documentaries, podcasts,trailer, news, tv -radio.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 44.96
+  },
+  {
+    "id": "pWHqWjkaSNybDOvgMt58",
+    "name": "Carmelo La Rosa - Balanced and Deep",
+    "description": "Middle-aged male voice. Great for Narrations.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "classy",
+      "narrative_story"
+    ],
+    "popularity": 44.68
+  },
+  {
+    "id": "J098KweijcPPrlgo1irz",
+    "name": "Corrado Noventa - Mature, Deep and Rough",
+    "description": "Professional Italian voice, middle-aged male with deep and low tones.\r\nPerfect for audiobook readings. Dramatic, sentimental, highly expressive.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 43.15
+  },
+  {
+    "id": "TdZgLZ1h5vbFJrgh8QqK",
+    "name": "Vito Pepe - Profound and Confident",
+    "description": "Italian versatile and expressive voice, perfect for narration, voice acting, and bringing diverse characters to life.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 39.34
+  },
+  {
+    "id": "CITWdMEsnRduEUkNWXQv",
+    "name": "Thomas - Energetic, Upbeat and Firm",
+    "description": "A warm, clear and expressive Italian voice, ideal for documentaries, narrations, an audiobook and storytelling. Thomas A. delivers a natural and professional tone that brings depth, emotion and authenticity to every project.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "professional",
+      "narrative_story"
+    ],
+    "popularity": 42.51
+  },
+  {
+    "id": "ByVILX2H5wPAwDiNVKAR",
+    "name": "Jimmy - Plummy, Theatrical and Lively",
+    "description": "A middle aged Italian male deep voice. Works well for Narrations.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 42.45
+  },
+  {
+    "id": "g1X9mrbeBlMAWtcs2Dfp",
+    "name": "Chris Basetta - Deep, Low and Engaging",
+    "description": "Deep and low tone, ideal for Faceless YouTube videos dedicated to sensational and impactful stories.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 40.82
+  },
+  {
+    "id": "gfKKsLN1k0oYYN9n2dXX",
+    "name": "Violetta - Ringing, Bright and Joyful",
+    "description": "A warm, clear, and engaging middle-aged Italien female voice. With a smooth, natural tone, this voice is perfect for narrations, audiobooks, or informative audio content. Its expressive quality makes it ideal for storytelling, while remaining professional and easy to follow.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "professional",
+      "narrative_story"
+    ],
+    "popularity": 50.09
+  },
+  {
+    "id": "3DPhHWXDY263XJ1d2EPN",
+    "name": "Linda Fiore - Prickly, Cheerful and Full",
+    "description": "A young, dynamic and cheerful woman's voice. Perfect for audiobooks, advertising, podcasts.",
+    "locale": "it-IT",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "gentle",
+      "narrative_story"
+    ],
+    "popularity": 44.56
+  },
+  {
+    "id": "fNmw8sukfGuvWVOp33Ge",
+    "name": "Tosca - Mature, Whispery and Seductive",
+    "description": "Deep Italian female voice. Mature, calm. Perfect for audiobook, storytelling, podcast, and dubbing.",
+    "locale": "it-IT",
+    "age": "old",
+    "gender": "female",
+    "tags": [
+      "female",
+      "old",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 43.53
+  },
+  {
+    "id": "fQmr8dTaOQq116mo2X7F",
+    "name": "Samanta - Reassuring, Warm and Deep",
+    "description": "An adult, warm and deep Italian female voice, clear, reassuring and vibrant. Perfect for audio books, ads, podcasts, late night radio, narratives, stories...",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 45.64
+  },
+  {
+    "id": "kAzI34nYjizE0zON6rXv",
+    "name": "Sami - Energetic, Expressive and Smiley",
+    "description": "Italian female voice, soft or energetic, young or mature, smiling and stern.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "classy",
+      "narrative_story"
+    ],
+    "popularity": 43.32
+  },
+  {
+    "id": "zFA34HbdHBvF8WhlSusK",
+    "name": "Nora - Bright Italian Female Narrator",
+    "description": "A bright Italian female voice with a clear, lively, and expressive tone. Ideal for storytelling, Social Media videos, podcasts, audiobooks, and digital content. The voice is energetic, engaging, and easy to understand, making it perfect for dynamic narration and creative projects.",
+    "locale": "it-IT",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "crisp",
+      "narrative_story"
+    ],
+    "popularity": 42.12
+  },
+  {
+    "id": "Ap2b3ZnSIW7h0QbBbxCq",
+    "name": "Alessandra - Elegant and Versatile",
+    "description": "(ENG)Alessandra  is a professional Italian voice-over artist and actor, with extensive experience in advertising, audiobooks and narration. Her voice combines warmth, clarity and versatility, making it ideal for commercials, documentaries, e-learning modules and narration projects. Authentic Italian tone, capable of both neutral delivery and expressive performance — always at a high professional level.\n",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "professional",
+      "narrative_story"
+    ],
+    "popularity": 42.27
+  },
+  {
+    "id": "YQ36DZjvxVXPUHeSwvFK",
+    "name": "Valentina - Diplomatic, Full and Warm",
+    "description": "Young Fresh Italian female voice.",
+    "locale": "it-IT",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 40.71
+  },
+  {
+    "id": "oVJbgLwL0s5pk9e2U6QH",
+    "name": "Manuela - Warm, Energetic and Swift",
+    "description": "Warm, clear and versatile Italian real PRO actress voice, perfect for narration, commercials, e-learning and conversational voiceovers. \r\nVoice characteristics: Female, Italian, warm, clear, professional, friendly, versatile, engaging, smooth, trustworthy, actress, narrator, commercial, conversational.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 42.85
+  },
+  {
+    "id": "Dzlw1nIlAqiOOW6J7qo1",
+    "name": "Chiara - Soft, Silky and Inviting",
+    "description": "Chiara’s voice hits with emotion and precision. Her delivery is smooth but powerful, ideal for storytelling, branding, and voiceovers that need real presence — not just sound, but feeling.",
+    "locale": "it-IT",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "cute",
+      "narrative_story"
+    ],
+    "popularity": 40.66
+  },
+  {
+    "id": "ko0CPqOV7GGUcPkJMPej",
+    "name": "Vera - Calm, Influential and Balanced",
+    "description": "Calm, warm and conversational female Italian with charming and captivating tone. Age 32, ideal for conversations and narrative. ",
+    "locale": "it-IT",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "milanese",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 39.46
+  },
+  {
+    "id": "DrXMEEZ3ZiRzhi81CK7I",
+    "name": "Valeria – Warm, Expressive, Authentic",
+    "description": "Professional Italian female voice with warm, mature tone and authentic emotional depth. Native Italian speaker with clear multilingual capabilities. Intimate, conversational delivery perfect for: Audiobooks & storytelling, Documentary & narration, Corporate presentations & e-learning, Meditation & wellness content, Character-driven scripts, Commercial voiceovers. Versatile range from reflective to engaging, with natural expressiveness and professional clarity.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 38.22
+  },
+  {
+    "id": "QQpLisLueobAksl21CaK",
+    "name": "Vanna Isaia - Raspy, Creaky and Smoky",
+    "description": "A female Italian voice suitable for narration. Round and understandable",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "intense",
+      "narrative_story"
+    ],
+    "popularity": 36.36
+  },
+  {
+    "id": "201hPjDVu4Q5DUV7tMQJ",
+    "name": "Marcella - Bright and Confident",
+    "description": "Professional Italian female voice. Great for Narrations.",
+    "locale": "it-IT",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 39.25
+  },
+  {
+    "id": "VF9jh6iUlVsOIpSPkT8P",
+    "name": "Mary - Expressive, Relaxed and Balanced",
+    "description": "Italian young female expressive and captivating voice!",
+    "locale": "it-IT",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "romanesco",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 34.88
+  }
+]

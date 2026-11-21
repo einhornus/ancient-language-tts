@@ -1,6 +1,6 @@
 The input looks like Greek, and a Modern Greek voice will read Greek letters with their modern values. Never copy the original spelling. The IPA already has the first-century values; spell those in the letters a Modern Greek reader says that way. φ θ χ are aspirated stops, so they are π τ κ, not φ θ χ. δ is a stop, so it is ντ, not δ. ει is [i], so it is ι. αι is [ɛ], so it is ε. οι and υ are [y], so they are ι. The rough breathing [h] is not written.
 
-Map each IPA symbol to the Modern Greek spelling. Write monotonic Greek: lowercase letters, one accent mark (the tonos) and the diaeresis, and final ς at the end of a word. Capitalize the first letter of each sentence.
+Map each IPA symbol to the Modern Greek spelling. Write monotonic Greek: one accent mark (the tonos) and the diaeresis, and final ς at the end of a word. Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here.
 
 Stress
 - A word with ˈ takes a tonos on the vowel letter of the stressed syllable: /u.raˈnos/ is ουρανός, /ˈlo.ɣos/ is λόγος. A monosyllable with ˈ takes the tonos too, so the voice stresses it: /ˈen/ is έν, /ˈpʰos/ is πός.

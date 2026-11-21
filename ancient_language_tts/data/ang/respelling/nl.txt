@@ -1,0 +1,66 @@
+Old English and Dutch share the fricative g between vowels and after l and r, the ch of niht and eahta, the rounded front vowel of y, the oe of u, the diphthong ei of dæġ, and stress on the first syllable of a native word. Use them. Do not use Dutch spelling for what it means in Dutch: Dutch ij is [ɛi], so Old English /ij/ is never written ij, and a Dutch e at the end of a word is a schwa.
+
+Map each IPA symbol to the Dutch spelling. A word whose ˈ is on its first syllable, and a word with no ˈ, takes no accent. A word whose ˈ is on a later syllable takes an acute accent on every letter of the stressed vowel: /jeˈfɑ.rɑn/ is jeffárran, /jeˈfruː.non/ is jeffróénon, /onˈstæɑ̯l.de/ is onstéálde, /toː.beˈku.me/ is tobekkóéme.
+- Inside a compound the parts stay joined and the second part takes no accent: /ˈmoːd.je.θɑŋk/ is moodjettank, /ˈθeːo̯d.ky.niŋ.gɑ/ is teodkuningga.
+
+Long vowels
+- /ɑː/ → a when its IPA syllable ends in the vowel and another syllable follows: /ˈhɑː.lij/ is halie. Elsewhere aa, also at the end of a word: /ˈl̥ɑːf/ is hlaaf, /θɑː/ is taa, /swɑː/ is swaa.
+- /eː/ → e when its IPA syllable ends in the vowel and another syllable follows: /ˈkeː.ne/ is kene. Elsewhere ee, also at the end of a word: /ˈweː/ is wee.
+- /oː/ → o when its IPA syllable ends in the vowel, and at the end of a word: /toː/ is to. Elsewhere oo: /ˈgoːd/ is good, /ˈoːr/ is oor.
+- /yː/ → u when its IPA syllable ends in the vowel and another syllable follows: /ˈhyː.rɑn/ is huran. Elsewhere uu: /ˈfyːr/ is fuur.
+- Before tsj, dzj, sj, or ch, Dutch closes the syllable, so a, e, o, and u there are written double: /ˈeː.tʃe/ is eetsje.
+- /æː/ → ê in every position: /ˈdæːd/ is dêd.
+- /iː/ → ie: /ˈriː.tʃe/ is rietsje, /θiːn/ is tien.
+- /uː/ → oe: /ˈhuːs/ is hoes, /ˈuː.re/ is oere.
+
+Short vowels
+- /ɑ/ → a. /æ/ → e. /e/ → e. /i/ → i. /o/ → o. /u/ → oe. Dutch has no [æ], and e [ɛ] is the nearest.
+- /y/ → u in every position, stressed and unstressed alike: /ˈky.niŋg/ is kuning, /ˈθrym/ is trum, /ˈkyn.nes/ is kunnes. Dutch reads u as [y] in an open syllable and as [ʏ] in a closed one, and both are short.
+- A stressed /ɑ/, /æ/, /e/, /i/, or /o/ must stand in a closed Dutch syllable. When its IPA syllable ends in the vowel, double the first consonant after it: /ˈnɑ.mɑ/ is namma, /ˈdɑ.ɣɑs/ is daggas, /ˈfæ.der/ is fedder, /ˈsmi.ðɑs/ is smiddas, /ˈo.ver/ is ovver.
+- An unstressed /e/ or /æ/ in an open syllable doubles the next consonant too, or Dutch reads it as a schwa: /ˈæ.ðe.liŋ.gɑs/ is eddellinggas, /ˈfre.me.don/ is fremmeddon, /jeˈfɑ.rɑn/ is jeffárran.
+- Any other unstressed short vowel in an open syllable is the plain letter: /ˈheo̯.vo.num/ is heovonoem, /ˈtʃi.ri.tʃe/ is tsjirritsje. Dutch shortens unstressed vowels on its own.
+- Never double h, j, or w, or a consonant after oe, ie, u, uu, ê, a long vowel, or a diphthong, except for a geminate. Before h, j, or w the vowel stays the plain letter: /jeˈhɑːl.ɣod/ is jeháálgod, /jeˈwur.ðe/ is jewóérde.
+- An unstressed /e/ at the end of a word, or in a last syllable closed by a consonant, is e: /ˈsun.ne/ is soenne, /ˈmeo̯.to.des/ is meotodes. Dutch reads it as a schwa. No Dutch spelling keeps it full there.
+
+Vowels next to vowels
+- A vowel letter that would make a Dutch digraph with the vowel letter before it takes a diaeresis: /i/ plus /e/ is ië, /ɑ/ plus /i/ is aï, /o/ plus /e/ is oë. /ˈhe.ri.ɑn/ is herrian, with no diaeresis, because Dutch reads ia as two vowels.
+
+Diphthongs
+- /æɑ̯/ /æːɑ̯/ → ea: /ˈæɑ̯x.tɑ/ is eachta, /ˈwæɑ̯rd/ is weard, /ˈæːɑ̯.ɣe/ is eage.
+- /eo̯/ /eːo̯/ → eo: /ˈeo̯r.ðe/ is eorde, /ˈθeːo̯d/ is teod, /ˈheo̯.von/ is heovon.
+- A vowel plus /j/ before a consonant or at the end of a word: /æj/ /æːj/ /ej/ /eːj/ → ei, the Dutch diphthong [ɛi]: /ˈdæj/ is dei, /ˈwej/ is wei, /ˈmæj.den/ is meiden. /ij/ → ie: /ˈhɑː.lij/ is halie, /ˈmæ.nij/ is mennie.
+- /æ/ or /e/ before /j/ and a vowel → eij: /ˈdæ.jes/ is deijes.
+
+Consonants
+- /p t k b d m n l r s/ → the same letters. /s/ is s between vowels too, because Dutch s stays voiceless there.
+- /g/ → g: /ˈgoːd/ is good, /ˈgɑːr.de.nɑ/ is gaardenna. Dutch says its fricative. No Dutch letter is closer.
+- /ɣ/ → g. Dutch g is that fricative: /ˈdɑ.ɣɑs/ is daggas, /ˈæːɑ̯.ɣe/ is eage.
+- /x/ /ç/ → ch: /ˈniçt/ is nicht, /ˈleːo̯xt/ is leocht, /ˈburx/ is boerch, /ˈdriç.ten/ is drichten.
+- /h/ → h, only at the start of a syllable before a vowel: /ˈhuːs/ is hoes.
+- /j/ → j: /ˈjy.vɑn/ is juvan, /ˈjæːɑ̯r/ is jear.
+- /w/ → w. /ʍ/ → hw: /ˈʍæt/ is hwet.
+- /l̥/ → hl, /r̥/ → hr, /n̥/ → hn: /ˈl̥ɑːf/ is hlaaf.
+- /f/ → f. /v/ → v: /ˈheo̯.von/ is heovon. /z/ → z: /ˈriː.zɑn/ is riezan.
+- /θ/ → t. /ð/ → d. Dutch has neither sound, and a Dutch speaker says t and d for them: /ˈθuː/ is toe, /ˈeo̯r.ðe/ is eorde, /ˈsmiθ/ is smit.
+- /tʃ/ → tsj: /ˈtʃild/ is tsjild, /ˈriː.tʃe/ is rietsje. /t.tʃ/ is ttsj.
+- /dʒ/ → dzj: /ˈbrydʒ/ is brudzj. /d.dʒ/ is ddzj: /ˈsed.dʒɑn/ is seddzjan.
+- /ʃ/ → sj: /ˈʃip/ is sjip, /ˈʃu.lon/ is sjoelon. /ʃ.ʃ/ is sj: /ˈfiʃ.ʃe.re/ is fisjerre.
+- /ŋ/ before /k/ → n: /ˈθɑŋk/ is tank.
+- /ŋ/ plus /g/ at the end of a word → ng: /ˈky.niŋg/ is kuning. Between vowels → ngg, so the g is heard: /ˈæ.ðe.liŋ.gɑs/ is eddellinggas.
+- /kn/, /gn/, /wr/, and /wl/ keep both consonants.
+- /ks/ /k.s/ → ks.
+- A geminate, the same consonant on both sides of a syllable break, is a doubled letter: /ˈsun.ne/ is soenne, /ˈwil.lɑ/ is willa, /ˈel.len/ is ellen. /θ.θ/ is tt, /x.x/ and /ç.ç/ are ch.
+
+Capitals and pauses
+- Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here, and every other word is lowercase.
+- Keep each comma, exclamation mark, question mark, and period of the IPA.
+
+Lost in the Dutch reading
+- The full unstressed /e/ at the end of a word and in a closed last syllable. Dutch says a schwa: rīċe, sunne, fæder, meotodes.
+- The stop /g/. Dutch g is a fricative, so gōd begins like dagas, and a final ng loses its g.
+- /θ/ and /ð/, which become t and d.
+- The voicelessness of hl, hr, and hn. Dutch says an h, then the consonant.
+- The diphthongs ea and eo. Dutch says two vowels in a row.
+- The difference between /æ/ and /e/ when short, between /u/ and /uː/, and the length of /y/.
+- Gemination. Dutch says a doubled letter as one consonant, and a doubled letter also only marks a short vowel.
+- /w/ becomes the labiodental Dutch w. A final /d/, /v/, or /z/ is devoiced.

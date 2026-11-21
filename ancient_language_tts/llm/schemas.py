@@ -202,7 +202,7 @@ class RespelledText(BaseModel):
     rules: str = Field(
         description=(
             "Directed reasoning before any word is spelled out. Apply the "
-            "spelling rules and the pair rules to this IPA as a whole: "
+            "pair rules to this IPA as a whole: "
             "which spelling each sound takes, where stress is marked, and "
             "which letters the rules allow. No line in this field."
         )
@@ -220,10 +220,10 @@ class RespelledText(BaseModel):
             "The line, written after that reasoning, in the stated shape. "
             "Ordinary text in the target spelling: each word is one "
             "unbroken word, a space separates words, stress is an accent on "
-            "the stressed vowel, and letters are lowercase except the first "
-            "letter of a sentence. No hyphen inside a word. No capital "
-            "letters used to mark a stressed syllable. No IPA, no notes, "
-            "no markdown."
+            "the stressed vowel, and a word begins with a capital exactly "
+            "where the original text capitalizes it. No hyphen inside a "
+            "word. No capital letters used to mark a stressed syllable. No "
+            "IPA, no notes, no markdown."
         )
     )
 
@@ -252,9 +252,9 @@ class RespellScore(BaseModel):
         description=(
             "Directed reasoning from the stress of the previous step, "
             "before any score. Cover, in order: each word unbroken, spaces "
-            "between words, an accent on the stressed vowel, lowercase "
-            "letters, a capital only at the start of a sentence, and pause "
-            "marks; whether the words match the IPA; anything present that "
+            "between words, an accent on the stressed vowel, a capital "
+            "exactly where the original text has one, and pause marks; "
+            "whether the words match the IPA; anything present that "
             "is not the line. No score in this field."
         )
     )
@@ -286,7 +286,8 @@ class RespellScore(BaseModel):
             "How closely the line follows the stated shape, 0-100, scored "
             "after the stress score. 100 means the writing matches. Below "
             "30 means a hyphen inside a word, a capital used to mark "
-            "stress, a missing word, an added word, leftover IPA, or "
+            "stress, capitalization that differs from the original text, "
+            "a missing word, an added word, leftover IPA, or "
             "something that is not the line."
         ),
     )
@@ -303,8 +304,8 @@ class RespellRevision(BaseModel):
         description=(
             "Directed reasoning before any corrected stress is chosen. "
             "Cover, in order: each phonetic mistake the assessment names; "
-            "whether the spelling rules and the pair rules agree that it "
-            "is a mistake; for each sound, the spelling that makes the "
+            "whether the pair rules confirm that it is a mistake; "
+            "for each sound, the spelling that makes the "
             "voice produce the IPA, including the substitute the pair "
             "rules name when the target language has no letter for that "
             "sound; which sounds the assessment leaves standing. Where a "
@@ -317,7 +318,7 @@ class RespellRevision(BaseModel):
             "Directed reasoning from the spellings of the previous step, "
             "before the line's shape is settled. Cover, in order: for "
             "each word, the syllable the IPA stress mark selects and the "
-            "accent the spelling rules place on that vowel, with each "
+            "accent the pair rules place on that vowel, with each "
             "confirmed fault corrected and each stress the assessment "
             "leaves standing kept. No line in this field."
         )
@@ -327,8 +328,8 @@ class RespellRevision(BaseModel):
             "Directed reasoning from the stress of the previous step, "
             "before the line is written. Cover, in order: each word "
             "unbroken, spaces between words, the accent on the stressed "
-            "vowel, lowercase letters, a capital only at the start of a "
-            "sentence, and the pause marks the IPA uses, with each "
+            "vowel, a capital exactly where the original text has one, "
+            "and the pause marks the IPA uses, with each "
             "confirmed format fault corrected. No line in this field."
         )
     )
@@ -337,9 +338,9 @@ class RespellRevision(BaseModel):
             "The corrected line, written after that reasoning, from the "
             "format of the previous step. Ordinary text in the target "
             "spelling: each word is one unbroken word, a space separates "
-            "words, stress is an accent on the stressed vowel, and letters "
-            "are lowercase except the first letter of a sentence. No "
-            "hyphen inside a word. No capital letters used to mark a "
+            "words, stress is an accent on the stressed vowel, and a word "
+            "begins with a capital exactly where the original text "
+            "capitalizes it. No hyphen inside a word. No capital letters used to mark a "
             "stressed syllable. No IPA, no notes, no markdown."
         )
     )

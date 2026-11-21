@@ -7,9 +7,8 @@ Each ancient language has three deterministic conversions:
     respell_ipa[target](ipa)  IPA → modern spelling.
 
 The last two depend on the modern language, so they are keyed by its code.
-`mock` is True for engines that are placeholders: a small grapheme table,
-no stress, no syllables. They run and give a rough line, but they are not
-the rules in `data/<code>/phonology.txt`.
+Here IPA is a written line (a string). `rule_based.to_ipa` and
+`rule_based.respell_ipa` turn it into, and back from, a token list.
 """
 
 from __future__ import annotations
@@ -26,7 +25,6 @@ class RuleEngine:
     to_ipa: Convert
     respell: Mapping[str, Convert] = field(default_factory=dict)
     respell_ipa: Mapping[str, Convert] = field(default_factory=dict)
-    mock: bool = False
 
     def targets(self) -> list[str]:
         """Modern languages this engine can respell into (from text or IPA)."""

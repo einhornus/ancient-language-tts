@@ -8,8 +8,8 @@ It's BYOK. An [OpenRouter](https://openrouter.ai) key pays for the LLM calls, ma
 import ancient_language_tts as alt
 
 text = "Arma virumque canō, Troiae quī prīmus ab ōrīs."
-ipa = alt.to_ipa(text, "lat", method="llm", tier="low")       # ancient text → IPA
-line = alt.respell_ipa(ipa, "lat", "it", method="llm", text=text)  # IPA → Italian spelling
+pieces = alt.to_ipa(text, "lat", method="llm", tier="low")   # ancient text → [{"text", "ipa"}, ...]
+line = alt.respell_ipa(pieces, "lat", "it", method="llm")     # IPA → Italian spelling
 audio = alt.speak(line, "it", output="out/lat.mp3")             # Italian voice reads it
 ```
 
@@ -32,9 +32,11 @@ To work on it, install it in editable mode, so your edits take effect without re
 ```bash
 git clone https://github.com/einhornus/ancient-language-tts
 cd ancient-language-tts
-pip install -e .
-python examples/quickstart.py
+pip install -e '.[check]'
+pytest tests/test_lat_ecc.py      # one language end to end (paid: OpenRouter + ElevenLabs)
 ```
+
+There is one test per ancient language, `tests/test_<code>.py`, on the shared backbone `tests/harness.py`. Each transcribes and respells the first `SENTENCES` lines of `data/<code>/texts.json` with the LLM, speaks each respelling with the first `VOICES_PER_GENDER` male and female voices of `voices/<target>.json`, hears every take back with the local phoneme recognizer, and reports the mismatch (weighted phoneme edit distance per expected phoneme) overall, by voice, by sentence, and by mistake. The constants sit at the top of each file; the full report goes to `out/tests/<code>.<target>.json`. A language without `texts.json` is skipped.
 
 You can also run it without installing the script, from this folder: `python -m ancient_language_tts`.
 
@@ -46,10 +48,10 @@ There is no single "do everything" call. Each step is its own function, and `met
 |---|---|---|---|
 | ancient text → IPA | `to_ipa(text, source, method)` | the tier transcribes (step 1 below) | the language's rule engine; does not depend on a modern language |
 | ancient text → modern spelling | `respell(text, source, modern_lang, method)` | `to_ipa` then `respell_ipa`, piece by piece | direct spelling rules, no IPA step |
-| IPA → modern spelling | `respell_ipa(ipa, source, modern_lang, method)` | the tier respells (step 2 below) | the rule engine's IPA table |
+| IPA → modern spelling | `respell_ipa(pieces, source, modern_lang, method)` | the tier respells (step 2 below) | the rule engine's IPA table |
 | modern spelling → audio | `speak(respelled_text, modern_lang, voice)` | ElevenLabs (step 3 below) | — |
 
-The LLM pipeline is the same for every language: text → IPA → respelling. Every ancient language also has a rule engine (`ancient_language_tts.rule_based`) with the three rule-based conversions. Only Ecclesiastical Latin → Italian (`lat-ecc` → `it`) has real rules today. The others are **mocks**: small grapheme tables with no stress or syllables, there so the API is uniform and so they can be replaced one at a time. `rule_based.is_mock(source)` tells them apart, and `ancient-language-tts languages` lists them.
+The LLM pipeline is the same for every language: text → IPA → respelling. Every ancient language also has a rule engine (`ancient_language_tts.rule_based`) with the three rule-based conversions. Each engine implements that language's `data/<code>/phonology.txt` (text → IPA, with syllables and stress) and its `respelling/<target>.txt` files, and is checked against the bundled examples. Each language's rules live in a package `rule_based/<code>_rules/` (Ecclesiastical Latin: `rule_based/lat_ecc_it/`).
 
 ## How the LLM steps work
 
@@ -57,7 +59,7 @@ The LLM calls use guided chain-of-thought, described in the next section. The ca
 
 A passage longer than 1000 characters is split before those calls. The limit is `max_chars` (`ANCIENT_TTS_MAX_CHARS`). A sentence ends at `. `, `? `, or `! `. The cut is the sentence boundary closest to the middle, and both sides are split the same way until each piece fits. One sentence is left whole. Each piece is transcribed and then respelled on its own. The pieces are joined, and the voice reads that one line.
 
-1. **IPA.** Every model in the tier transcribes the passage on its own. The system prompt is the phonetic rules of that language (`ancient_language_tts/data/<code>/phonology.txt`) plus worked examples of the same transformation (`ancient_language_tts/data/<code>/examples.txt`): Classical Latin with /w/ for *v*, first-century Koine with ει as /i/ and υ still /y/, Chaucer's vowels before the Great Vowel Shift, and so on. The model is told to learn the decisions those examples make and apply them. That same model scores its line, then rewrites it from the assessment. It scores the rewrite next. The rewrite stands only when that score is higher than the score of the first line; otherwise the first line stands. Each standing line is scored by every model still in the tier. The score of a line is the arithmetic mean of those scores. `to_ipa` returns the line with the highest mean. On a tie, the earlier model in the tier wins. A call is tried three times. If the first transcription still fails, the model is dropped. If the assessment or the rewrite still fails, the first line stands. If a score of a standing line still fails, that model's scores are left out of the mean.
+1. **IPA.** At the default `effort="ultra"` (see [Settings](#settings-arguments-or-env) for the other levels), every model in the tier transcribes the passage on its own. The system prompt is the phonetic rules of that language (`ancient_language_tts/data/<code>/phonology.txt`) plus worked examples of the same transformation (`ancient_language_tts/data/<code>/examples.txt`): Classical Latin with /w/ for *v*, first-century Koine with ει as /i/ and υ still /y/, Chaucer's vowels before the Great Vowel Shift, and so on. The model is told to learn the decisions those examples make and apply them. That same model scores its line, then rewrites it from the assessment. It scores the rewrite next. The rewrite stands only when that score is higher than the score of the first line; otherwise the first line stands. Each standing line is scored by every model still in the tier. The score of a line is the arithmetic mean of those scores. `to_ipa` returns the line with the highest mean. On a tie, the earlier model in the tier wins. A call is tried three times. If the first transcription still fails, the model is dropped. If the assessment or the rewrite still fails, the first line stands. If a score of a standing line still fails, that model's scores are left out of the mean.
 2. **Respelling.** A second LLM turns that IPA into spelling a modern voice will actually say. The system prompt depends on both languages: how the modern spelling is read (`data/<target>/phonology.txt`), which of those spellings stands in for each sound of the source (`data/<source>/respelling/<target>.txt`), and worked examples of that mapping (`data/<source>/respelling/<target>.examples.txt`). English has no letter for a Greek upsilon, and Lithuanian none for a PIE glottal laryngeal; the pair file names the substitute.
 3. **Speech.** ElevenLabs speaks the respelling with a voice of the modern language. Text normalization is off, so the service does not rewrite the spelling into ordinary words. `language_code` is sent when the model accepts it. Stability defaults to 1, so the reading stays on one baseline.
 
@@ -120,7 +122,19 @@ alt.to_ipa(
 )
 ```
 
-`tier="medium"` is the medium list. The IPA step and the respelling step each ask every model on that list. `ancient_language_tts.TIER_MODELS` holds the built-in lists. `tier` is ignored when `method="rules"`.
+`tier="medium"` is the medium list. `ancient_language_tts.TIER_MODELS` holds the built-in lists.
+
+`effort` decides how the IPA step and the respelling step use that list. "First model" is the first model of the tier.
+
+| `effort` | who writes a line | improve (self-score, rewrite, rescore) | who scores the standing lines |
+|---|---|---|---|
+| `"ultra"` (default) | every model of the tier | yes | every model, cross-scored |
+| `"high"` | every model of the tier | yes | the first model |
+| `"medium"` | every model of the tier | no | the first model |
+| `"low"` | the first model | yes | nobody: one line stands |
+| `"basic"` | the first model | no | nobody: one line stands |
+
+At `"low"` and `"basic"`, if the first model still fails after three attempts, the next model of the tier writes instead. At `"high"` and `"medium"`, if the first model cannot score every line, the next model scores. `tier` and `effort` are ignored when `method="rules"`.
 
 ## Reruns are cheap
 
@@ -131,10 +145,14 @@ LLM answers are cached under `.cache/ancient-language-tts/llm/`, and the audio u
 ```bash
 ancient-language-tts ipa "φίλος" --source grc                                  # LLM (default)
 ancient-language-tts ipa "φίλος" --source grc --method rules
+ancient-language-tts ipa "φίλος" --source grc --tokens                        # the token list as JSON
+ancient-language-tts ipa "φίλος" --source grc --tier low --effort basic       # one LLM call
 ancient-language-tts respell "Caesar" --source lat-ecc --target it --method rules
+ancient-language-tts ipa text.txt --source grc --chunks > chunks.json        # {text, ipa} per piece
+ancient-language-tts respell-ipa chunks.json --source grc --target el         # each piece with its own text
 ancient-language-tts respell-ipa "ˈpʰi.los" --source grc --target el --text "φίλος"
 ancient-language-tts speak "Cèssar" --target it --out out/caesar.mp3
-ancient-language-tts languages              # codes, LLM pair files, rule engines (real or mock)
+ancient-language-tts languages              # codes, LLM pair files, rule engines
 ancient-language-tts rules lat              # the IPA system prompt
 ancient-language-tts rules lat it           # the respelling system prompt
 ```
@@ -144,28 +162,42 @@ ancient-language-tts rules lat it           # the respelling system prompt
 ## Python API
 
 ```python
-alt.to_ipa(text, source, method="llm", *, tier="high", **settings) -> str
-alt.respell(text, source, modern_lang="en", method="llm", *, tier="high", **settings) -> str
-alt.respell_ipa(ipa, source, modern_lang="en", method="llm", *, text=None, tier="high", **settings) -> str
+alt.to_ipa(text, source, method="llm", *, tier="high", effort="ultra", **settings) -> list[Chunk]
+alt.respell(text, source, modern_lang="en", method="llm", *, tier="high", effort="ultra", **settings) -> str
+alt.respell_ipa(pieces: list[Chunk], source, modern_lang="en", method="llm", *, tier="high", effort="ultra", **settings) -> str
 alt.speak(respelled_text, modern_lang="en", voice=None, *, output=None, seed=None, **settings) -> bytes
 ```
 
 - `source` is an ancient-language code: `lat`, `lat-ecc`, `grc`, `eme`, `enm`, `ang`, `gem-pro`, `ine-pro`, `sla-pro`.
 - `method` is `"llm"` or `"rules"`. `"rules"` makes no OpenRouter call.
-- `respell_ipa(..., text=...)` is the original passage, used by the LLM for word boundaries only.
+- `effort` is `"ultra"`, `"high"`, `"medium"`, `"low"`, or `"basic"` (see the table above).
+- IPA is always a list of tokens (see [IPA tokens](#ipa-tokens)). `score_ipa` and `improve_ipa` take one.
+- `to_ipa` returns the passage as chunks, one per piece it was cut into (see `max_chars`): `[{"text": "Arma virumque canō.", "ipa": ["ˈ", "a", "r", ...]}, ...]`. `respell_ipa` takes that list, so each piece of IPA is respelled with the text it came from; the LLM uses the text for word boundaries only. `alt.chunks.join_ipa(pieces)` joins the chunks into one token list.
+- `respell_ipa` also takes a bare token list. It is cut on sentence boundaries and respelled without text. `alt.chunks.from_ipa(tokens, text)` pairs a token list with its text where the sentences line up.
 - `speak` returns the audio bytes and writes them to `output` when set. `voice` is an ElevenLabs voice id; it defaults to `ELEVENLABS_VOICE_ID`, then the language's bundled voice.
 - `**settings` are the keys of `config`: `openrouter_api_key`, `elevenlabs_api_key`, `models`, `tier_models`, `elevenlabs_model`, `output_format`, `stability`, `similarity_boost`, `cache_dir`, `cache`, `max_tokens`, `max_chars`.
 
 The rule engines can be used directly too:
 
 ```python
-alt.rule_based.to_ipa(text, source)
+alt.rule_based.to_ipa(text, source)              # -> list[str]
 alt.rule_based.respell(text, source, target)
-alt.rule_based.respell_ipa(ipa, source, target)
-alt.rule_based.engine(source)   # RuleEngine(to_ipa, respell={...}, respell_ipa={...}, mock=...)
+alt.rule_based.respell_ipa(ipa, source, target)   # ipa: list[str]
+alt.rule_based.engine(source)   # RuleEngine(to_ipa, respell={...}, respell_ipa={...})
 ```
 
-To replace a mock, write a module like `rule_based/lat_ecc_it/` and point that language's `rule_based/<code>.py` `ENGINE` at it with `mock=False`.
+### IPA tokens
+
+```python
+ipa = alt.to_ipa("Caesar", "lat-ecc", method="rules")[0]["ipa"]
+# ['ˈ', 'tʃ', 'ɛ', '.', 's', 'a', 'r']
+alt.ipa_tokens.render(ipa)                     # 'ˈtʃɛ.sar'
+alt.ipa_tokens.parse("ˈtʃɛ.sar", "lat-ecc")    # back to the list; IpaParseError if it can't
+```
+
+A token is a phoneme from `data/<code>/phonemes.json`: one phone with its diacritics and length (`pʰ`, `aː`, `i̯`); a diphthong or affricate is two tokens (`a` `u̯`, `t` `ʃ`), or a special token: `ˈ`, `ˌ`, the syllable dot `.`, a space, a line break, or one of `ipa_tokens.PUNCTUATION` (`. , ? ! ; : … - – — ( ) " « » “ ” „ ‘ ’ ¿ ¡ | ‖`). The syllable dot and the period are the same token `.`.
+
+The model still writes a line of text. `ipa_tokens.parse` reads it by longest match against those tokens. It drops /…/ brackets and leading asterisks, and folds whitespace. It reads `ɡ` as `g` (or the other way round) and an apostrophe as `ˈ` when the inventory uses only the other form, and drops tie bars it does not list. A line with any other leftover character fails that call, and the call is retried like any other failure. When an inventory exists, the IPA prompt lists it.
 
 Progress goes to the `ancient_language_tts` logger. Set `ancient_language_tts.llm` to `DEBUG` to see every prompt and answer.
 
@@ -177,14 +209,16 @@ Progress goes to the `ancient_language_tts` logger. Set `ancient_language_tts.ll
 |---|---|
 | `data/<code>/phonology.txt` | How to turn that ancient language into IPA. For a modern language, how its voice reads spelling. |
 | `data/<code>/examples.txt` | Worked passages in that ancient language and the IPA the rules require. The IPA prompt tells the model to learn the decisions they make and apply them. |
+| `data/<code>/phonemes.json` | A JSON list of that language's phonemes, the only sounds an IPA token may be (the `Symbols` section of `phonology.txt`). The IPA prompt lists them. |
+| `data/<code>/zipa.json` | How the phone recognizer's tokens (`data/zipa_tokens.json`) map onto that language's phonemes, for `check.hear`. |
 | `data/<code>/respelling/<modern>.txt` | Which of the modern spellings stands in for each sound of `<code>`. |
 | `data/<code>/respelling/<modern>.examples.txt` | Worked lines: the original text, then the IPA, then the respelling those pair rules require. |
 
-To add a modern language, add a `ModernLanguage` in `ancient_language_tts/languages.py` (its ElevenLabs language code and a voice id), add `data/<code>/phonology.txt`, and add a pair file and an examples file for each ancient language it should read. To add an ancient language, add `data/<code>/phonology.txt` and `data/<code>/examples.txt`, and a pair file plus examples for each modern language that should read it.
+To add a modern language, add a `ModernLanguage` in `ancient_language_tts/languages.py` (its ElevenLabs language code and a voice id), add `data/<code>/phonology.txt`, and add a pair file and an examples file for each ancient language it should read. To add an ancient language, add `data/<code>/phonology.txt`, `data/<code>/examples.txt`, and `data/<code>/phonemes.json`, and a pair file plus examples for each modern language that should read it.
 
 ## Cost
 
-The IPA step asks every model in the tier to transcribe, score its own line, and rewrite it. The same model scores the rewrite, and the rewrite stands only when that score is higher. Every model still scoring then scores every standing line. The respelling step does the same for that piece, and the speech is one request for the joined line. A passage over `max_chars` repeats the IPA step and the respelling step once per piece. A call that still fails on the third attempt follows the rule for that step: a failed transcription drops the model, a failed rewrite keeps the first line, and a failed score leaves that model out of the mean. A rerun of the same passage is free while the cache is on. `--tier low` is the cheap way to try a rules change: fewer models, fewer calls. After you edit a rules file or an examples file the prompts no longer match, so the next call is paid.
+At the default `effort="ultra"`, the IPA step asks every model in the tier to transcribe, score its own line, and rewrite it. The same model scores the rewrite, and the rewrite stands only when that score is higher. Every model still scoring then scores every standing line. The respelling step does the same for that piece, and the speech is one request for the joined line. A passage over `max_chars` repeats the IPA step and the respelling step once per piece. A call that still fails on the third attempt follows the rule for that step: a failed transcription drops the model, a failed rewrite keeps the first line, and a failed score leaves that model out of the mean. A rerun of the same passage is free while the cache is on. `--tier low` and `--effort basic` are the cheap way to try a rules change: one model, one call per step. After you edit a rules file or an examples file the prompts no longer match, so the next call is paid.
 
 ## Environment
 

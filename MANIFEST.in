@@ -1,1 +1,1 @@
-recursive-include ancient_language_tts/data *.txt
+recursive-include ancient_language_tts/data *.txt *.json

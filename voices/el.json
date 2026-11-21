@@ -1,0 +1,290 @@
+[
+  {
+    "id": "n0vzWypeCK1NlWPVwhOc",
+    "name": "Theos - Narrational, Assertive and Warm",
+    "description": "Greek male voice artist for Broadcast TV, documentary, audiobooks, advertisement, social media, jingles, and trailers.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "professional",
+      "narrative_story"
+    ],
+    "popularity": 46.91
+  },
+  {
+    "id": "20zUtLxCwVzsFDWub4sB",
+    "name": "Stefanos - Calm, Narrational and Soft",
+    "description": " A calm youthful voice, most suitable for narration. Gentle and easy going, this voice is perfect for narration.",
+    "locale": "el-GR",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "athenian",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 42.73
+  },
+  {
+    "id": "5DAtyqt3LGjv9jkjNVFd",
+    "name": "Eugene - Expressove, Calm and Brisk",
+    "description": "Expressive and calm Greek male voice for audiobooks, stories, podcasts, fairytales, and voiceovers.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 41.18
+  },
+  {
+    "id": "cuab90umcstNgL8U7orz",
+    "name": "Fatsis - Narrational, Warm and Crisp",
+    "description": "A pleasant middle aged male Greek Voice. Great for Narration.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "athenian",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 38.42
+  },
+  {
+    "id": "ejJ1ETWS2ohLMMeCu1H3",
+    "name": "Atlas - Expressive, Narrational and Warm",
+    "description": "A mature, versatile Greek male voice, aged 57, with a refined metallic tone and exceptional expressiveness. Forged through years of radio broadcasting, this voice carries authority, warmth, and storytelling depth. Ideal for narration, commercials, documentaries, and professional presentations where clarity, emotion, and trustworthiness are essential.",
+    "locale": "el-GR",
+    "age": "old",
+    "gender": "male",
+    "tags": [
+      "male",
+      "old",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 39.03
+  },
+  {
+    "id": "PaZ8laODC1yRxHTPYJFh",
+    "name": "Christos - Casual, Calm and Serious",
+    "description": "Greek, steady, middle-aged male voice. Excellent for Narration, Audiobooks, E-learning, Advertisement, Documentaries & Storytelling.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 40.84
+  },
+  {
+    "id": "gFpOFEriJA3T1VbGi2Be",
+    "name": "Theon - Natural Narrator",
+    "description": "Warm, natural male voice for audiobooks, documentaries, commercials, social media, e-learning, Greek and English narration.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 37.68
+  },
+  {
+    "id": "QpnXVbX7RkmUGDwpJh5v",
+    "name": "Talos",
+    "description": "A deep, male voice with a warm, friendly tone and a distinctive Greek accent. Its calm, narrative style is perfect for storytelling, audio-books, relaxation content, and immersive guides.",
+    "locale": "el-GR",
+    "age": "old",
+    "gender": "male",
+    "tags": [
+      "male",
+      "old",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 34.6
+  },
+  {
+    "id": "BbaKfkUxNfvcfAmNo76e",
+    "name": "Panos - Confident Greek Narrator",
+    "description": "Natural Greek adult male voice with a warm, clear and confident tone. Authoritative when needed while remaining conversational and approachable. Ideal for narration, documentaries, sports, corporate content, educational material, advertising and conversational projects.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "athenian",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 36.37
+  },
+  {
+    "id": "HXOQciguVdtIpvH2gB8g",
+    "name": "Giassiranis Dimitrios",
+    "description": "Middle-aged male with a Warm voice and nice pauses, suitable for narrating long texts.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 32.34
+  },
+  {
+    "id": "DMrXvkhaNPEmPbI3ABs8",
+    "name": "Kostas - Voluble, Narrational and Calm",
+    "description": "A Greek-accented voice with a calm, neutral tone and clear pronunciation, suitable for a variety of narration.",
+    "locale": "el-GR",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 34.85
+  },
+  {
+    "id": "QnPbsq4pmOZkrE4RQQCA",
+    "name": "Nikos - Deep and resonant",
+    "description": "A rich, full voice of a male with a deep, authoritative tone.",
+    "locale": "el-GR",
+    "age": "old",
+    "gender": "male",
+    "tags": [
+      "male",
+      "old",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 0.0
+  },
+  {
+    "id": "2KCRgZhHPaecTJfl6gAl",
+    "name": "Yiannis - Friendly and warm",
+    "description": "A bright, approachable voice of a Greek male with a open, cheerful tone.",
+    "locale": "el-GR",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 0.0
+  },
+  {
+    "id": "yIu7mbQog7oMPZBvUQA2",
+    "name": "Georgios - Rich Bass & Deep",
+    "description": "A naturally deep, rich bass voice with a warm, powerful tone and a charismatic personality. Known for its distinctive sound. Perfect for gaming, storytelling, humor, and entertaining conversations.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "athenian",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 33.98
+  },
+  {
+    "id": "oM0rTT4KZZcrSuEN0UnQ",
+    "name": "Dimitris - Deep and powerful",
+    "description": "A rich, deep voice of a young Greek male with a resonant, commanding tone.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 0.0
+  },
+  {
+    "id": "aTP4J5SJLQl74WTSRXKW",
+    "name": "Eleni - Soft, Narrational and Calm",
+    "description": " A calm female youthful voice. Best for narration or testimonials.",
+    "locale": "el-GR",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "athenian",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 46.54
+  },
+  {
+    "id": "t7C9cEkpMwHG1IMZlJJ5",
+    "name": "Katerina - Confident and poised",
+    "description": "A strong, clear voice of a Greek female with a self-assured, articulate tone.",
+    "locale": "el-GR",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 0.0
+  },
+  {
+    "id": "ZvNtavtkYB5WSlSIOcoj",
+    "name": "Maria - Athenian",
+    "description": "Athenian, confident, and modern.",
+    "locale": "el-GR",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "athenian",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 29.9
+  }
+]

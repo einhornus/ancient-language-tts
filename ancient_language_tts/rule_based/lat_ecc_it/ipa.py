@@ -42,15 +42,25 @@ _J_STEMS = (
 # Final-stress contracted forms.
 _FINAL_STRESS = frozenset({"illic", "adhuc", "istic", "illuc", "illac", "istic"})
 
-_FRONT = frozenset({"e", "i", "y", "ae", "oe", "æ", "œ"})
+# Hebrew names whose ae is two syllables (Michael, Israel, …).
+_AE_HIATUS = ("michael", "raphael", "israel", "ismael", "misael", "nathanael")
 
-_VOWEL_LETTERS = frozenset("aeiouyæœ")
+# A vowel with a diaeresis is a vowel in hiatus (poëta, aër).
+_DIAERESIS = {"ä": "a", "ë": "e", "ï": "i", "ö": "o", "ü": "u", "ÿ": "y"}
+
+_FRONT = frozenset({"e", "i", "y", "ae", "oe", "æ", "œ", "ë", "ï", "ÿ"})
+
+_VOWEL_LETTERS = frozenset("aeiouyæœäëïöüÿ")
+
+# Consonants that Italian always makes long between vowels, and the first
+# half written before them. ɲ is handled with gn.
+_LONG_BETWEEN_VOWELS = {"ʃ": "ʃ", "ts": "t", "dz": "d"}
 # Mute + liquid (and f + liquid) stay as an onset.
 _ONSET_CLUSTER = frozenset({"p", "t", "k", "b", "d", "g", "f"})
 _LIQUIDS = frozenset({"l", "r"})
 
 _PAUSE_KEEP = frozenset(",!?")
-_WORD_RE = re.compile(r"[A-Za-zĀāĒēĪīŌōŪūȲȳÆæŒœŸÿ]+|[^\s]", re.UNICODE)
+_WORD_RE = re.compile(r"[A-Za-zĀāĒēĪīŌōŪūȲȳÆæŒœŸÿÄäËëÏïÖöÜü]+|[^\s]", re.UNICODE)
 
 _LONG_MAP = str.maketrans({
     "ā": "a", "ē": "e", "ī": "i", "ō": "o", "ū": "u", "ȳ": "y",
@@ -60,11 +70,16 @@ _LONG_MAP = str.maketrans({
 
 @dataclass(frozen=True)
 class Seg:
-    """One IPA segment. `long` is historical length (vowels only)."""
+    """One IPA segment. `long` is historical length (vowels only).
+
+    `weightless` marks the first half of an Italian long [t.ts] / [d.dz]:
+    it closes the syllable but does not make it heavy for stress.
+    """
 
     ipa: str
     kind: str  # "v" | "c" | "d" (diphthong)
     long: bool = False
+    weightless: bool = False
 
 
 def to_ipa(text: str) -> str:
@@ -96,7 +111,7 @@ def _word_ipa(raw: str) -> str:
     bare = _bare(lower)
     long_mask = _long_mask(surface)
     graphemes = _graphemes(lower)
-    segs = _segments(graphemes, bare, long_mask)
+    segs = _lengthen(_segments(graphemes, bare, long_mask))
     if not segs:
         return ""
     syllables = _syllabify(segs)
@@ -167,8 +182,13 @@ def _graphemes(lower: str) -> list[str]:
         bare.append(ch.translate(_LONG_MAP).lower())
     s = "".join(bare).replace("æ", "ae").replace("œ", "oe")
     out: list[str] = []
+    hiatus = s.startswith(_AE_HIATUS)
     i = 0
     while i < len(s):
+        if hiatus and s[i:i + 2] == "ae":
+            out.append("a")
+            i += 1
+            continue
         if s[i:i + 2] in ("ae", "oe", "au", "eu", "ei", "ch", "ph", "th", "rh", "qu", "gn", "sc", "xc", "bs", "bt"):
             # Most digraphs are decided later; keep letters separate except ae/oe.
             if s[i:i + 2] in ("ae", "oe"):
@@ -280,14 +300,20 @@ def _segments(graphemes: list[str], bare: str, long_mask: list[bool]) -> list[Se
             i += 2
             continue
 
-        # Word-initial ex- before vowel or h → [ɛgz]
+        # Word-initial ex- before vowel or h → [ɛgz]; exs + vowel → [ɛgz] too.
         if g == "e" and i == 0 and nxt == "x":
             after = graphemes[i + 2] if i + 2 < len(graphemes) else ""
+            after2 = graphemes[i + 3] if i + 3 < len(graphemes) else ""
+            skip = 0
             if after and (after[0] in _VOWEL_LETTERS or after in ("ae", "oe") or after == "h"):
+                skip = 2
+            elif after == "s" and after2 and (after2[0] in _VOWEL_LETTERS or after2 in ("ae", "oe")):
+                skip = 3
+            if skip:
                 segs.append(Seg("ɛ", "v", longs[i] if i < len(longs) else False))
                 segs.append(Seg("g", "c"))
                 segs.append(Seg("z", "c"))
-                i += 2
+                i += skip
                 continue
 
         if g == "x":
@@ -299,6 +325,8 @@ def _segments(graphemes: list[str], bare: str, long_mask: list[bool]) -> list[Se
         if g == "t" and nxt == "i":
             after_i = graphemes[i + 2] if i + 2 < len(graphemes) else ""
             preceded = prev in ("s", "t", "x")
+            if graphemes[i:] == ["t", "i", "e", "r"]:
+                preceded = True  # old passive infinitive -tier: [ti]
             if after_i and (after_i[0] in _VOWEL_LETTERS or after_i in ("ae", "oe")) and not preceded:
                 segs.append(Seg("ts", "c"))
                 segs.append(Seg("i", "v", longs[i + 1] if i + 1 < len(longs) else False))
@@ -350,12 +378,15 @@ def _segments(graphemes: list[str], bare: str, long_mask: list[bool]) -> list[Se
             i += 1
             continue
 
-        # n/m → ŋ before hard c/ch/g/qu/x (not before soft c/g).
-        if g in ("n", "m"):
+        # n → ŋ before hard c/ch/g/qu/x (not before soft c/g); n → ɱ before
+        # f/ph/v. m never assimilates (Canepari).
+        if g == "n":
             if _nasal_velar(graphemes, i):
                 segs.append(Seg("ŋ", "c"))
+            elif _nasal_labiodental(graphemes, i):
+                segs.append(Seg("ɱ", "c"))
             else:
-                segs.append(Seg("n" if g == "n" else "m", "c"))
+                segs.append(Seg("n", "c"))
             i += 1
             continue
 
@@ -392,6 +423,12 @@ def _segments(graphemes: list[str], bare: str, long_mask: list[bool]) -> list[Se
             i += 1
             continue
 
+        if g in _DIAERESIS:
+            base = _DIAERESIS[g]
+            segs.append(Seg({"e": "ɛ", "o": "ɔ", "y": "i"}.get(base, base), "v", longs[i] if i < len(longs) else False))
+            i += 1
+            continue
+
         if g in ("a", "e", "i", "o", "u") or g in ("ae", "oe"):
             ipa = {"a": "a", "e": "ɛ", "i": "i", "o": "ɔ", "u": "u", "ae": "ɛ", "oe": "ɛ"}[g]
             segs.append(Seg(ipa, "v", longs[i] if i < len(longs) else (g in ("ae", "oe"))))
@@ -407,8 +444,33 @@ def _segments(graphemes: list[str], bare: str, long_mask: list[bool]) -> list[Se
     return segs
 
 
+def _lengthen(segs: list[Seg]) -> list[Seg]:
+    """Italian long [ʃ], [ts], [dz] between vowels: write them as geminates."""
+    out: list[Seg] = []
+    for k, seg in enumerate(segs):
+        first = _LONG_BETWEEN_VOWELS.get(seg.ipa)
+        if (
+            first
+            and k > 0
+            and segs[k - 1].kind in ("v", "d")
+            and k + 1 < len(segs)
+            and segs[k + 1].kind in ("v", "d")
+        ):
+            out.append(Seg(first, "c", weightless=seg.ipa != "ʃ"))
+        out.append(seg)
+    return out
+
+
+def _nasal_labiodental(graphemes: list[str], i: int) -> bool:
+    """True when n at `i` is [ɱ]: before f, ph, or v."""
+    nxt = graphemes[i + 1] if i + 1 < len(graphemes) else ""
+    if nxt in ("f", "v"):
+        return True
+    return nxt == "p" and i + 2 < len(graphemes) and graphemes[i + 2] == "h"
+
+
 def _nasal_velar(graphemes: list[str], i: int) -> bool:
-    """True when n/m at `i` assimilates to [ŋ]. Soft c/g do not trigger it."""
+    """True when n at `i` assimilates to [ŋ]. Soft c/g do not trigger it."""
     nxt = graphemes[i + 1] if i + 1 < len(graphemes) else ""
     if nxt == "x":
         return True
@@ -547,7 +609,7 @@ def _is_heavy(syllable: list[Seg], is_penult: bool) -> bool:
         if s.kind in ("v", "d"):
             after = True
             continue
-        if after:
+        if after and not s.weightless:
             # coda consonant — but stop+liquid in same syllable don't close
             # for weight; they're onset of next in Classical, already split.
             return True

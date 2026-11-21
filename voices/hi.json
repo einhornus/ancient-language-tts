@@ -1,0 +1,482 @@
+[
+  {
+    "id": "zgqefOY5FPQ3bB7OZTVR",
+    "name": "Niraj - Romantic and Smooth",
+    "description": " Niraj is the pen name of a veteran Indian actor. The base and variations of this voice make it great for narrative work, documentaries, and social media.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 51.85
+  },
+  {
+    "id": "P1bg08DkjqiVEzOn76yG",
+    "name": "Viraj - Rich and Soft",
+    "description": "Viraj’s voice brings depth and intrigue, perfect for suspense and horror storytelling. With a slow, deliberate pace and a rich, breathy tone, his delivery creates a haunting, immersive atmosphere. Ideal for chilling narratives, his booming presence draws listeners into a world of mystery and tension.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "serious",
+      "narrative_story"
+    ],
+    "popularity": 50.37
+  },
+  {
+    "id": "FmBhnvP58BK0vz65OOj7",
+    "name": "Viraj - Energetic, Clear Narrator",
+    "description": "With his youthful energy and strong command of language, Viraj is an ideal choice for a wide range of applications, including social media content, educational videos, corporate presentations, and more.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 50.85
+  },
+  {
+    "id": "Sxk6njaoa7XLsAFT7WcN",
+    "name": "Amit Gupta - Warm and Sympathetic",
+    "description": "A young Indian male with a naturally warm and young base voice, perfect for Hindi narration and storytelling. Perfect for storytelling, and ideal for audiobooks, advertisements, documentaries, social media and conversational content.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 47.03
+  },
+  {
+    "id": "vIdhHAZdn1bGjKe1dFw8",
+    "name": "Rudra - Intense Documentary Narrator",
+    "description": "Rudra carries the kind of voice that makes silence feel intentional. Deep, clear, and unhurried — his tone builds weight before a single word lands dramatically. Built for crime documentaries, true crime podcasts, thriller narration, horror storytelling, and cinematic long-form content. His measured delivery and natural authority make complex stories feel inevitable. Ideal for OTT platforms, documentary studios, podcast producers, and YouTube channels.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "serious",
+      "narrative_story"
+    ],
+    "popularity": 48.51
+  },
+  {
+    "id": "ypnkIsDASPgHZuanrF0q",
+    "name": "Rudra - Warm, Calm and Natural",
+    "description": "Rudra is a professional voice artist with a deep, commanding voice that exudes authenticity and trust. His tone strikes a perfect balance between authority and warmth, captivating listeners and leaving a lasting impression. Whether narrating stories, delivering powerful messages, or creating engaging voiceovers, Rudra’s voice has a natural ability to connect with audiences, making them eager to hear more.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 45.99
+  },
+  {
+    "id": "F8IvasoAdpDhOjLm5YBm",
+    "name": "Viraj - Deep, Suspenseful and Mysterious",
+    "description": "Viraj’s voice is a perfect match for thriller, suspense, and mystery audiobooks - gripping, well-modulated, and immersive. His delivery brings out the intensity in high-stakes narratives, making him ideal for dramatic storytelling and stories with dialogue. This voice is best suited for audiobook apps.\n",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "intense",
+      "narrative_story"
+    ],
+    "popularity": 46.62
+  },
+  {
+    "id": "4BoDaQ6aygOP6fpsUmJe",
+    "name": "Raghav - Calm, Confident and Engaging",
+    "description": "A steady and composed voice crafted for storytelling, explainers, and thoughtful narration.\n\nRaghav’s tone blends calm authority with warmth, making him perfect for delivering long-form content. Whether it’s a brand story, podcast intro, or documentary narration, his voice keeps listeners engaged and at ease.\n\nIdeal for YouTube explainers, audiobooks, training videos, and informative reels across platforms like Spotify, Audible, and LinkedIn.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 47.28
+  },
+  {
+    "id": "KSsyodh37PbfWy29kPtx",
+    "name": "Kishan - Clear and Steady",
+    "description": "A grounded, articulate Hindi voice designed to bring clarity and confidence to structured storytelling and educational content.\n\nKishan’s tone is steady, expressive, and trustworthy—ideal for audiobooks, exam prep, e-learning modules, and spoken explainers. Perfect for platforms like Audible, Spotify, YouTube Edu, and apps like Unacademy or Byju’s, his voice keeps listeners engaged while delivering information with ease and precision.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 43.51
+  },
+  {
+    "id": "dxhwlBCxCrnzRlP4wDeE",
+    "name": "Arjun - Gentle Audiobook Narrator",
+    "description": "Warm, smooth, and deeply immersive — Arjun brings a rich Hindi voice that makes every audiobook feel like a story worth losing yourself in. His calm, well-paced delivery moves through characters, emotions, and narrative arcs with a natural ease that keeps listeners absorbed from the first chapter to the last. Perfect for Hindi audiobook publishers, indie authors, and content creators building audio experiences on Audio platforms.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "soft",
+      "narrative_story"
+    ],
+    "popularity": 44.27
+  },
+  {
+    "id": "yRis6UiS4dtT4Aqv72DC",
+    "name": "Ranbir - Deep, Magnetic and Engaging",
+    "description": "Trusted by top brands across diverse industries, Ranbhir’s voice has become a go-to choice for impactful narration in audiobooks, insightful articles, and dynamic social media content. \r\n\r\nHis English voice is already loved by thousands of people. Give it a try, and you'll understand why so many are captivated by his powerful and memorable voice.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 44.46
+  },
+  {
+    "id": "wbOlq3nIga8HKqcDhASI",
+    "name": "Shivank - Deep, Breathy and Suspense",
+    "description": "A deep and intense Indian male voice that instantly creates an atmosphere of tension and mystery.\r\n\r\nShivank S is the kind of storyteller whose slow, deliberate pacing and low register make every word feel chilling. Whether it’s horror fiction, paranormal tales, or suspenseful mysteries, his voice pulls listeners into the dark with just the right emotional weight.\r\n\r\nPerfect for horror podcasts on Spotify, thriller stories on Pocket FM and Kuku FM, mythology content on YouTube India, & Audible.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 46.42
+  },
+  {
+    "id": "trxRCYtDC6qFREKq6Ek2",
+    "name": "Sourabh - Friendly and Smooth",
+    "description": "A calm and clear Hindi narration voice with a warm tone, ideal for audiobooks, documentaries, and storytelling.\n",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 44.51
+  },
+  {
+    "id": "XNJDyPyJ8r4J7de0WJwB",
+    "name": "Sudhir - Warm & Expressive Hindi Voice",
+    "description": "Engaging, deeply expressive, and rooted in rich, natural Hindi, Sudhir brings a warm, middle-aged storytelling presence that makes every narrative feel lived-in and genuinely felt. His audiobook-friendly delivery flows effortlessly between emotion and clarity, keeping listeners absorbed from the very first word. Built for Hindi audiobooks, fiction narration, short story content, and long-form storytelling. Ideal for audio platforms, regional fiction platforms, and content creators.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "modulated",
+      "narrative_story"
+    ],
+    "popularity": 45.74
+  },
+  {
+    "id": "fKe9ZDqkOtN9VMLdbWJ5",
+    "name": "Anand - Steady, Neutral and Narrative",
+    "description": "An Indian Middle Aged Narrator. Best for story telling in Hindi and English. Deep casual with modulation. This voice is suitable for Hindi and Indian accent English.\nFor Story Telling and YouTube Stories Narration in Hindi.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 42.73
+  },
+  {
+    "id": "FFmp1h1BMl0iVHA0JxrI",
+    "name": "Tarini - Soft, Cheerful and Expressive",
+    "description": "Tarini, the pen name of a talented script Supervisor and director from Mumbai, is a multi-talented individual. Her abilities shine through her voice, showcasing remarkable modulation, variation, and loving energy. Give it a try and you will love it. ",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "modulated",
+      "narrative_story"
+    ],
+    "popularity": 46.25
+  },
+  {
+    "id": "EGQM7bHbTHTb7VUEcOHG",
+    "name": "Shakuntala - Clear and Encouraging",
+    "description": "Shakuntala is a pen name of a very famous voice over artist. This voice has very clear modulation and a voice that will keep you listening again and again. Do try the voice and we are sure you will love it.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "modulated",
+      "narrative_story"
+    ],
+    "popularity": 43.86
+  },
+  {
+    "id": "xccfcojYYGnqTTxwZEDU",
+    "name": "Kanika - Soft and Vibrant",
+    "description": "A captivating voice for narrating mythological tales and ancient legends.\n\nKanika’s rich, dramatic tone is ideal for telling epic stories like the Ramayana, Mahabharata, and other legendary myths. With her engaging and immersive storytelling style, she brings these ancient tales to life. A famous voice on ElevenLabs, Kanika’s other voice profiles have seen great success. Perfect for platforms like Audible, Spotify, YouTube, and podcasts. ",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "modulated",
+      "narrative_story"
+    ],
+    "popularity": 44.9
+  },
+  {
+    "id": "HSdLdxNgP1KF3yQK3IkB",
+    "name": "Vidya - News Reporter",
+    "description": "Voice tailored for news reading, political analysis, and current affairs reporting.\n\nVidya's voice is authoritative, precise, and highly engaging, ensuring clarity and credibility in every report. With a well-paced, articulate delivery, she captures attention while maintaining neutrality and professionalism. Perfect for news podcasts, YouTube bulletins, and radio updates, Meera brings reliability to every headline. Trusted by media brands and journalists. ",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 44.76
+  },
+  {
+    "id": "VG7gYikNQ71LJ52W9fAD",
+    "name": "Anvi - Smooth Seductive Romantic",
+    "description": "Anvi brings a romantic, intimate, and soothing tone, making her the perfect voice for late night radio shows, companion AI, or love-themed audio storytelling. Her gentle yet emotive delivery evokes closeness, ideal for listeners seeking comfort, connection, or heartfelt stories at night. Whether it’s poetry, confessions, ASMR-style messages, or romantic chat, Anvi's voice captures the mood effortlessly. Perfect for use on late-night FM shows.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 40.3
+  },
+  {
+    "id": "S5P5Y6sMPfFCbxqUJ3F4",
+    "name": "Kanika - Soothing & Guided Meditation",
+    "description": "Kanika delivers a deep, soothing Hindi tone designed for immersive guided meditation and mindfulness sessions. Her steady pacing and grounded presence create a calming atmosphere ideal for breathwork, sleep routines, spiritual reflection, and relaxation practices. A popular voice on ElevenLabs, her profiles have generated over 1.5 billion characters. Ideal for wellness platforms and meditation content.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "meditative",
+      "narrative_story"
+    ],
+    "popularity": 41.48
+  },
+  {
+    "id": "CtsswjMPVCOJeWrOc8lS",
+    "name": "Bhoomika - Suspenseful, Dramatic Voice",
+    "description": "A vibrant, expressive voice made for fun, energetic, and emotionally rich storytelling.\r\n\r\nBhoomika’s dynamic tone brings characters to life—ideal for children’s tales, animated narrations, folk stories, and regional fiction. Her spirited delivery keeps listeners hooked across YouTube, Spotify, audible audiobooks, and e-learning platforms. Whether she’s voicing a playful tale or a heartfelt fable, Bhoomika adds color, rhythm, and excitement to every story she tells.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "modulated",
+      "narrative_story"
+    ],
+    "popularity": 38.97
+  },
+  {
+    "id": "sJGSzrOOtoYSYJarCtSZ",
+    "name": "Sharvari - Deep, Soft and Suspenseful",
+    "description": "This voice is tailor-made for Hindi suspense audiobooks, bringing mystery and intrigue to life. \r\n\r\nWith a naturally sweet and melodious tone, it adds an eerie charm to every twist and turn. Expressive and immersive, it grips listeners, making them feel every thrill, whisper, and moment of suspense.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "modulated",
+      "narrative_story"
+    ],
+    "popularity": 37.7
+  },
+  {
+    "id": "LWUgWFxGgMLZlNkiFd3F",
+    "name": "Kanika – Romantic, Intimate & Relatable",
+    "description": "Kanika’s voice is soft, intimate, and deeply relatable—perfect for heartfelt storytelling, emotional social media content, and romantic scripts. This is one of the most used Indian voices on ElevenLabs, with over 900 million characters generated across all her profiles. Whether it’s for reels, YouTube narration, or relationship-based content, Kanika delivers a strong connection with authenticity and warmth.\n",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 38.64
+  },
+  {
+    "id": "csPuxct3x4tABDZeKliZ",
+    "name": "Gudiya - Very Young & Sweet Storyteller",
+    "description": "Gudiya delivers a very young, sweet, and expressive storytelling tone that feels fresh, light, and emotionally innocent. She is the daughter of Anika, one of the most recognized voices on ElevenLabs with over 6 billion characters generated across profiles, continuing that trusted legacy with a next-generation storytelling presence. Ideal for light fiction, moral tales, animated narration, and youth-focused storytelling.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "cute",
+      "narrative_story"
+    ],
+    "popularity": 39.47
+  },
+  {
+    "id": "yLldDJzoAIYirDpSiBvy",
+    "name": "Tripti - Warm and Captivating",
+    "description": "Tripti’s voice is soothing, expressive, and gently modulated—perfectly crafted for bedtime storytelling and calming audio content.\n\nHer tone brings warmth and imagination, making her a great fit for peaceful narratives that help both kids and adults wind down.\n\nThis voice is ideal for sleep stories, relaxation apps, parenting content, bedtime podcasts, and audio series. Tripti adds a touch of comfort that resonates across platforms like YouTube Kids, Spotify Kids, Calm, Headspace, and more.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "gentle",
+      "narrative_story"
+    ],
+    "popularity": 39.69
+  },
+  {
+    "id": "AQG24GkRyuUUm3KHVSaN",
+    "name": "Samayra - Velvety Romantic Narrator",
+    "description": "Intimate, soothing & emotionally rich, Samayra brings a warm Hindi delivery that makes every romantic story feel personal and deeply felt. Her expressive, well-paced narration moves through love stories, emotional arcs, and tender moments with the kind of immersive quality that keeps listeners hooked chapter after chapter. Perfect for Hindi romance audiobooks, love story podcasts, and emotional fiction.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "pleasant",
+      "narrative_story"
+    ],
+    "popularity": 38.13
+  },
+  {
+    "id": "pWnnC09aJXL5Wmv6kiRS",
+    "name": "Keshavi - Warm, Tender, In Love",
+    "description": "Soft, dreamy, and quietly enchanted — Keshavi sounds like someone still living inside her own love story, every line carrying real ache and wonder. Her gentle modulation lingers on feeling rather than fact, drawn from the same Ishq and Mohabbat tradition that runs through Hindi-Urdu shayari. Built for romantic narration and ghazal-style content. Ideal for platforms and creators who want love to sound felt, not performed.",
+    "locale": "hi-IN",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "relaxed",
+      "narrative_story"
+    ],
+    "popularity": 37.49
+  },
+  {
+    "id": "OUx0z7RTt92glw2BYS4R",
+    "name": "Tripti – Dramatic, Intense Myth Narrator",
+    "description": "Tripti brings sacred intensity to Hindu mythology narration. Her voice moves between drama and devotion naturally — expressive enough to bring characters to life, measured enough to honour the weight of the texts. Built for stories from the Vedas, Puranas, Ramayana, Mahabharata, and beyond. Ideal for mythology podcasts, devotional audio apps, audiobook studios, channels, and OTT platforms building immersive Hindu scripture and mythological storytelling experiences.\n",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "modulated",
+      "narrative_story"
+    ],
+    "popularity": 39.34
+  },
+  {
+    "id": "7y08zcZtSuqXynKAr63n",
+    "name": "Amrita - Calm and Soft",
+    "description": "My voice is warm, expressive, and versatile — ideal for narration, storytelling, and brand communication. With a natural Hindi-Indian accent and neutral English fluency, I bring clarity, emotion, and authenticity to every script. From soft and empathetic to powerful and energetic, my voice adapts to any style — perfect for audiobooks, ads, e-learning, or spiritual content.",
+    "locale": "hi-IN",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 34.03
+  }
+]

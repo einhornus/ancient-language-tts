@@ -1,24 +1,13 @@
-"""Proto-Indo-European. MOCK engine: grapheme tables only, no stress."""
+"""Proto-Indo-European: the full rule engine (see `ine_pro_rules`)."""
 
 from __future__ import annotations
 
-from . import _mock
+from . import ine_pro_rules
+from .base import RuleEngine
 
-GRAPHEMES = {
-    "h₁": "h", "h₂": "χ", "h₃": "ɣʷ", "hₓ": "h",
-    "ǵʰ": "ɟʱ", "gʷʰ": "gʷʱ", "bʰ": "bʱ", "dʰ": "dʱ", "gʰ": "gʱ",
-    "ḱ": "c", "ǵ": "ɟ",
-    "r̥": "r̩", "l̥": "l̩", "m̥": "m̩", "n̥": "n̩",
-    "ā": "aː", "ē": "eː", "ī": "iː", "ō": "oː", "ū": "uː",
-    "y": "j",
-}
-
-TO_LITHUANIAN = {
-    "χ": "ch", "ɣʷ": "gv", "ɟʱ": "gj", "gʷʱ": "gv", "gʷ": "gv", "kʷ": "kv",
-    "bʱ": "b", "dʱ": "d", "gʱ": "g", "c": "kj", "ɟ": "gj",
-    "r̩": "ir", "l̩": "il", "m̩": "im", "n̩": "in",
-    "eː": "ė", "oː": "o", "aː": "a", "iː": "y", "uː": "ū",
-    "ə": "e", "w": "v",
-}
-
-ENGINE = _mock.engine("ine-pro", GRAPHEMES, {"lt": TO_LITHUANIAN})
+ENGINE = RuleEngine(
+    source="ine-pro",
+    to_ipa=ine_pro_rules.to_ipa,
+    respell={"lt": ine_pro_rules.to_lithuanian},
+    respell_ipa={"lt": ine_pro_rules.ipa_to_lithuanian},
+)

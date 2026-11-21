@@ -57,7 +57,7 @@ Icelandic says some doubled letters as other sounds. Double a letter only where 
 - /j.j/ → j. /w.w/ → v.
 
 Capitals and pauses
-- Write lowercase letters. Capitalize the first letter of each sentence, after a period, an exclamation mark, or a question mark, and at the start of the line.
+- Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here, and every other word is lowercase.
 - Keep each comma, exclamation mark, question mark, and period of the IPA.
 
 Lost in the Icelandic reading

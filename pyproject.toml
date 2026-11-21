@@ -19,6 +19,22 @@ dependencies = [
     "python-dotenv>=1.0",
 ]
 
+[project.optional-dependencies]
+# Local phoneme recognition for checking generated audio (ancient_language_tts.check).
+check = [
+    "numpy>=1.24",
+    "onnxruntime>=1.16",
+    "lhotse>=1.20",
+    "torch>=2.0",
+    "huggingface_hub>=0.20",
+    "soundfile>=0.12",
+    "scipy>=1.10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-s"  # print each language's report
+
 [project.urls]
 Homepage = "https://github.com/einhornus/ancient-language-tts"
 
@@ -39,4 +55,4 @@ version = { attr = "ancient_language_tts.__version__" }
 include = ["ancient_language_tts*"]
 
 [tool.setuptools.package-data]
-ancient_language_tts = ["data/*/*.txt", "data/*/respelling/*.txt"]
+ancient_language_tts = ["data/*.json", "data/*/*.txt", "data/*/*.json", "data/*/respelling/*.txt"]

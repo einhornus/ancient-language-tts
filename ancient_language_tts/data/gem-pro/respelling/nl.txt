@@ -1,0 +1,76 @@
+Proto-Germanic and Dutch share the fricative g, at the start of a word too, the ch of /x/, the trilled r, the clusters kn, gn, and wr, and stress on the first syllable. Use them. Do not write the Dutch or Old Dutch descendant of the word: *dagaz is not dag, *gastiz is not gast, *wulfaz is not wolf, and the final /z/ is z, never r and never dropped. Do not use Dutch spelling for what it means in Dutch: Dutch ij is [ɛi] and Dutch eu is [øː], so /i.j/ is never written ij and /eu̯/ is never written eu.
+
+Map each IPA symbol to the Dutch spelling.
+
+Stress
+- A word whose ˈ is on its first syllable, and a word with no ˈ, takes no accent.
+- A word whose ˈ is on a later syllable starts with an unstressed prefix. Keep it one word and put an acute accent on every letter of the stressed vowel: /ɣɑˈmɑi̯.niz/ is gamáíniz, /ɣɑˈbin.dɑ.nɑ̃/ is gabíndana, /uzˈliː.sɑ.nɑ̃/ is oezlíésana. ê and ô keep their circumflex and take no acute.
+- Inside a compound the parts stay joined and the second part takes no accent: /ˈhle.wɑ.ɣɑs.tiz/ is hlewagastiz.
+
+Long vowels
+- /ɑː/ /ɑ̃ː/ → a when its IPA syllable ends in the vowel and another syllable follows. Elsewhere aa, also at the end of a word.
+- /eː/ → e when its IPA syllable ends in the vowel and another syllable follows. Elsewhere ee, also at the end of a word: /ˈheːr/ is heer.
+- Before ch, sj, tsj, or dzj, Dutch closes the syllable, so a and e there are written double: /ˈɸɑ̃ː.xɑ.nɑ̃/ is faachana.
+- /ɛː/ /ɛːː/ → ê in every position: /ˈɸɑ.ðɛːr/ is faddêr, /ˈbrɔː.θɛːr/ is brôtêr.
+- /ɔː/ /ɔːː/ /ɔ̃ː/ /ɔ̃ːː/ → ô in every position. Dutch ô is the open [ɔː], the quality of Proto-Germanic ō: /ˈrɑz.dɔː/ is razdô, /ˈnɑ.mɔːː/ is nammô, /ˈtuŋ.gɔ̃ː/ is toenggô. Never o or oo, which Dutch reads as the close [oː].
+- /iː/ /ĩː/ → ie: /ˈθriːz/ is triez, /ˈtiː.wɑz/ is tiewaz.
+- /uː/ /ũː/ → oe: /ˈθuː/ is toe.
+
+Short vowels
+- /ɑ/ → a. /e/ → e. /i/ → i. /u/ → oe, stressed and unstressed alike: /ˈsu.nuz/ is soenoez. Dutch u is the front [y], so it is never written.
+- A stressed /ɑ/, /e/, or /i/ must stand in a closed Dutch syllable. When its IPA syllable ends in the vowel, double the first consonant after it: /ˈdɑ.ɣɑz/ is daggaz, /ˈɣe.βɑ.nɑ̃/ is gevvana, /ˈkʷe.nɔː/ is kwennô, /ˈhi.mi.nɑi̯/ is himminai. ch is never doubled. It closes the syllable already: /ˈse.xʷɑ.nɑ̃/ is sechwana.
+- An unstressed /e/ in an open syllable doubles the next consonant too, or Dutch reads it as a schwa: /ˈun.se.rɑz/ is oenserraz.
+- Any other unstressed short vowel in an open syllable is the plain letter: /ˈku.niŋ.gɑz/ is koeninggaz, /ˈtɑ.wi.ðɔː/ is tawidô. Dutch shortens unstressed vowels on its own.
+- Never double h, j, or w, or a consonant after oe, ie, ê, ô, a long vowel, or a diphthong, except for a geminate. Before h, j, or w the vowel stays the plain letter: /ˈhle.wɑ.ɣɑs.tiz/ is hlewagastiz, /ˈtɑ.wi.ðɔː/ is tawidô.
+- An unstressed /e/ at the end of a word is e. Dutch reads it as a schwa. No Dutch spelling keeps it full there.
+
+Nasal vowels
+Dutch has no nasal vowels. Write the oral vowel and nothing after it. Do not add an n.
+- /ɑ̃/ → a: /ˈwur.ðɑ̃/ is woerda, /ˈdɑ.ɣɑ̃/ is dagga. /ĩ/ → i. /ũ/ → oe. The long ones follow the long vowels above.
+
+Vowels next to vowels
+- /i/ before /j/ → ie, so Dutch does not read ij: /ˈhul.ti.jɑz/ is hoeltiejaz, /ˈɸri.jɔːndz/ is friejôndz.
+- A vowel letter that would make a Dutch digraph with the vowel letter before it takes a diaeresis: /i/ plus /e/ is ië, /e/ plus /i/ is eï, /ɑ/ plus /i/ is aï.
+
+Diphthongs
+- /ɑi̯/ → ai, the Dutch [ɑi] of mais: /ˈhlɑi̯.βɑz/ is hlaivaz, /ˈtiː.wɑi̯/ is tiewai. aj before a vowel.
+- /ɑu̯/ → au, and auw before a vowel: /ˈɑu̯.ɣɔːː/ is augô.
+- /eu̯/ → eeuw: /ˈθeu̯.ðɔː/ is teeuwdô. Dutch has no [eu], and eeuw [eːu] is the nearest.
+- /iu̯/ → ieuw: /ˈliu̯x.tɑ̃/ is lieuwchta.
+- /ɔːu̯/ → ôw: /ˈɑx.tɔːu̯/ is achtôw. Never ou, which Dutch reads as [ɑu].
+- /ɔːi̯/ → ooi. /ɛːi̯/ → ei.
+
+Consonants
+- /p t k b d m n l r s/ → the same letters. /s/ is s between vowels too, because Dutch s stays voiceless there.
+- /ɣ/ → g, in every position. Dutch g is that fricative, at the start of a word too: /ˈɣɑs.tiz/ is gastiz, /ˈber.ɣɑz/ is bergaz.
+- /g/ → g. Dutch has no stop g, and no Dutch letter is closer. /ŋ/ plus /g/ between vowels → ngg, so the g is heard: /ˈku.niŋ.gɑz/ is koeninggaz, /ˈtuŋ.gɔ̃ː/ is toenggô. At the end of a word → ng.
+- /ŋ/ before /k/ → n: /ˈdriŋ.kɑn.di/ is drinkandi.
+- /β/ → v: /ˈɣe.βɑ.nɑ̃/ is gevvana, /ˈhɑβ.jɑ.nɑ̃/ is havjana, /ˈɣɑβ/ is gav. Never b or w.
+- /ɸ/ → f: /ˈwul.ɸɑz/ is woelfaz.
+- /θ/ → t. /ð/ → d. Dutch has neither sound, and a Dutch speaker says t and d for them: /ˈθriːz/ is triez, /ˈbrɔː.θɛːr/ is brôtêr, /ˈwur.ðɑ̃/ is woerda, /ˈɸɑ.ðɛːr/ is faddêr.
+- /z/ → z, in every position: /ˈdɑ.ɣɑz/ is daggaz, /ˈrɑz.dɔː/ is razdô. Never s and never r.
+- /x/ → ch: /ˈnɑxts/ is nachts, /ˈjɑx/ is jach, /ˈwiːx.nɑi̯/ is wiechnai.
+- /h/ → h, only at the start of a syllable before a vowel: /ˈhun.dɑz/ is hoendaz.
+- /hl/ → hl, /hr/ → hr, /hn/ → hn: /ˈhlɑi̯.βɑz/ is hlaivaz.
+- /hʷ/ → hw: /ˈhʷɑt/ is hwat. /xʷ/ → chw: /ˈse.xʷɑ.nɑ̃/ is sechwana.
+- /kʷ/ → kw: /ˈkʷe.nɔː/ is kwennô. /gʷ/ → gw, and ggw after /ŋ/ between vowels: /ˈsiŋ.gʷɑ.nɑ̃/ is singgwana. /ɣʷ/ → gw.
+- /w/ → w. /j/ → j: /ˈjɑx/ is jach.
+- /kn/, /gn/, /wr/, and /wl/ keep both consonants.
+- A geminate, the same consonant on both sides of a syllable break, is a doubled letter: /ˈɸul.lɑz/ is foellaz, /ˈkun.nɑ.nɑ̃/ is koennana, /ˈtwɑj.jɔ̃ːː/ is twajjô. /θ.θ/ is tt. /x.x/ is ch.
+
+Capitals and pauses
+- Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here, and every other word is lowercase.
+- Keep each comma, exclamation mark, question mark, and period of the IPA.
+
+Lost in the Dutch reading
+- Vowel length of the short and long i and u: ie and oe are both short in Dutch, so /i/ before /j/ and /iː/ sound alike, and so do /u/ and /uː/.
+- Overlength. namô and a long ō would sound alike.
+- Nasal vowels. dagą and daga would sound alike.
+- The difference between /ɛː/ and /eː/ is kept by ê and ee, but a short /e/ in an open syllable before h, j, or w comes out long: hlewagastiz.
+- The stops [b] [d] [g] at the end of a word, and /z/, /β/, and /ð/ there, come out voiceless: daggaz ends in [s], gav in [f].
+- /θ/ and /ð/, which become t and d.
+- The stop /g/ after ng. Dutch g is a fricative.
+- The bilabial /ɸ/ and /β/ come out as labiodental f and v. /w/ becomes the labiodental Dutch w.
+- The voicelessness of hl, hr, and hn. Dutch says an h, then the consonant.
+- /eu̯/ comes out with a long e, and /ɔːu̯/ is not a Dutch diphthong.
+- Gemination. Dutch says a doubled letter as one consonant, and a doubled letter also only marks a short vowel.
