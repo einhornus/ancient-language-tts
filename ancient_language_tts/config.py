@@ -3,9 +3,10 @@
 Bring your own keys. `OPENROUTER_API_KEY` pays for the LLM calls (through
 Pydantic AI). `ELEVENLABS_API_KEY` pays for the speech.
 
-Every setting passed to `speak` wins. A missing one is read from the
-environment, then from the nearest `.env` file at or above the current
-folder, then the built-in default:
+Every setting passed to a step function (`to_ipa`, `respell`,
+`respell_ipa`, `speak`) wins. A missing one is read from the environment,
+then from the nearest `.env` file at or above the current folder, then
+the built-in default:
 
     OPENROUTER_API_KEY          the LLM key
     ELEVENLABS_API_KEY          the speech key
@@ -31,7 +32,7 @@ folder, then the built-in default:
                                 on sentence boundaries; each piece is
                                 transcribed and respelled on its own.
 
-`speak` resolves these once and installs them for the run with `use`, so
+A step function resolves these once and installs them for the run with `use`, so
 nested calls read them with `current` instead of passing them around.
 """
 
@@ -312,7 +313,7 @@ def scope(**kwargs: object) -> Iterator[Settings]:
 
     A keyword left as None is read from the environment. When every keyword
     is None and a settings object is already installed, that object stays:
-    `speak` can call the step functions and they keep its keys.
+    an outer call can call the inner steps and they keep its keys.
     """
     unknown = sorted(set(kwargs) - _SETTING_KEYS)
     if unknown:

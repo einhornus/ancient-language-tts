@@ -1,12 +1,12 @@
-"""Command line.
+"""Command line. One subcommand per step of the pipeline.
 
-    ancient-language-tts speak "Arma virumque cano" --source lat --out out/lat.mp3
-    ancient-language-tts ipa "Arma virumque cano" --source lat
-    ancient-language-tts respell "Arma virumque cano" --ipa "ˈar.ma wɪˈrʊm.kwe ˈka.noː" --source lat --target en
-    ancient-language-tts tts "AHR-mah" --target en --out out/arma.mp3
+    ancient-language-tts ipa "Arma virumque cano" --source lat --method llm
+    ancient-language-tts respell "Caesar" --source lat-ecc --target it --method rules
+    ancient-language-tts respell-ipa "ˈpʰi.los" --source grc --target el --method llm
+    ancient-language-tts speak "Cèssar" --target it --out out/caesar.mp3
     ancient-language-tts languages
     ancient-language-tts rules lat
-    ancient-language-tts rules lat en
+    ancient-language-tts rules lat it
 
 A positional argument that is a path to a file is read as UTF-8. Anything
 else is the text itself. The nearest `.env` at or above the current folder
@@ -23,9 +23,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from . import ipa as ipa_step
-from . import languages, respelling as respell_step, rules, tts
-from .speak import speak
+from . import api, languages, rule_based, rules
+from .llm import ipa as llm_ipa
+from .llm import respelling as llm_respelling
 
 
 def _load_text(value: str) -> str:
@@ -42,63 +42,57 @@ def _dump(payload: dict[str, Any]) -> None:
     print(json.dumps(payload, indent=2, ensure_ascii=False))
 
 
-def _speak(args: argparse.Namespace) -> int:
-    result = speak(
-        _load_text(args.text),
-        args.source,
-        args.target,
-        args.out,
-        voice_id=args.voice,
-        openrouter_api_key=args.openrouter_key,
-        elevenlabs_api_key=args.elevenlabs_key,
-        tier=args.tier,
-        models=args.models,
-        cache_dir=args.cache_dir,
-        cache=False if args.no_cache else None,
-        seed=args.seed,
-        max_chars=args.max_chars,
-        use_rules=args.use_rules,
-        through_ipa=args.through_ipa,
-    )
-    _dump(result.summary())
-    return 0
+def _llm_settings(args: argparse.Namespace) -> dict[str, Any]:
+    return {
+        "tier": args.tier,
+        "openrouter_api_key": args.openrouter_key,
+        "models": args.models,
+        "cache_dir": args.cache_dir,
+        "cache": False if args.no_cache else None,
+    }
 
 
 def _ipa(args: argparse.Namespace) -> int:
-    print(ipa_step.to_ipa(
+    print(api.to_ipa(
         _load_text(args.text),
         args.source,
-        tier=args.tier,
-        openrouter_api_key=args.openrouter_key,
-        models=args.models,
-        cache_dir=args.cache_dir,
-        cache=False if args.no_cache else None,
+        args.method,
         max_chars=args.max_chars,
+        **_llm_settings(args),
     ))
     return 0
 
 
 def _respell(args: argparse.Namespace) -> int:
-    print(respell_step.respell(
+    print(api.respell(
         _load_text(args.text),
-        _load_text(args.ipa),
         args.source,
         args.target,
-        tier=args.tier,
-        openrouter_api_key=args.openrouter_key,
-        models=args.models,
-        cache_dir=args.cache_dir,
-        cache=False if args.no_cache else None,
+        args.method,
+        max_chars=args.max_chars,
+        **_llm_settings(args),
     ))
     return 0
 
 
-def _tts(args: argparse.Namespace) -> int:
-    audio = tts.synthesize(
+def _respell_ipa(args: argparse.Namespace) -> int:
+    print(api.respell_ipa(
+        _load_text(args.ipa),
+        args.source,
+        args.target,
+        args.method,
+        text=_load_text(args.text) if args.text else None,
+        **_llm_settings(args),
+    ))
+    return 0
+
+
+def _speak(args: argparse.Namespace) -> int:
+    audio = api.speak(
         _load_text(args.text),
         args.target,
-        args.out,
-        voice_id=args.voice,
+        args.voice,
+        output=args.out,
         seed=args.seed,
         elevenlabs_api_key=args.elevenlabs_key,
         elevenlabs_model=args.elevenlabs_model,
@@ -113,7 +107,13 @@ def _languages(_args: argparse.Namespace) -> int:
     print("ancient")
     for item in languages.ANCIENT:
         have = ", ".join(rules.targets(item.code)) or "(none)"
-        print(f"  {item.code:<10} {item.name:<24} {item.era:<44} targets: {have}")
+        engine = rule_based.engine(item.code)
+        kind = "mock" if engine.mock else "rules"
+        ruled = ", ".join(engine.targets()) or "(none)"
+        print(
+            f"  {item.code:<10} {item.name:<24} {item.era:<44} "
+            f"llm: {have:<8} {kind}: {ruled}"
+        )
     print("modern")
     for item in languages.MODERN:
         print(f"  {item.code:<10} {item.name:<24} voice: {item.voice_name} ({item.voice_id})")
@@ -122,9 +122,9 @@ def _languages(_args: argparse.Namespace) -> int:
 
 def _rules(args: argparse.Namespace) -> int:
     if args.target:
-        print(respell_step.system_prompt(args.source, args.target))
+        print(llm_respelling.system_prompt(args.source, args.target))
     else:
-        print(ipa_step.system_prompt(args.source))
+        print(llm_ipa.system_prompt(args.source))
     return 0
 
 
@@ -133,6 +133,15 @@ def _add_limit(parser: argparse.ArgumentParser) -> None:
         "--max-chars",
         type=int,
         help="source characters one IPA call may see (default 1000)",
+    )
+
+
+def _add_method(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "--method",
+        choices=api.METHODS,
+        default="llm",
+        help="llm (default) or rules: the deterministic engine, no LLM calls",
     )
 
 
@@ -167,51 +176,39 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("-v", "--verbose", action="count", default=0, help="-v for each step, -vv for every prompt")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    p = sub.add_parser("speak", help="transcribe, respell, and speak one passage")
+    p = sub.add_parser("ipa", help="ancient text → IPA")
     p.add_argument("text", help="the passage, or a UTF-8 .txt file")
     p.add_argument("--source", required=True, help="ancient-language code, e.g. lat")
-    p.add_argument("--target", default="en", help="modern-language code (default en)")
-    p.add_argument("--out", required=True, help="audio file to write")
-    p.add_argument("--elevenlabs-key", help="ElevenLabs key (default: ELEVENLABS_API_KEY)")
-    p.add_argument("--voice", help="ElevenLabs voice id")
-    p.add_argument("--seed", type=int, help="best-effort repeatable take")
-    _add_llm(p)
-    _add_limit(p)
-    p.add_argument(
-        "--use-rules",
-        action="store_true",
-        help="use the rule-based IPA+respelling engine when one exists for this pair",
-    )
-    p.add_argument(
-        "--through-ipa",
-        action=argparse.BooleanOptionalAction,
-        default=True,
-        help="transcribe via IPA (default), or --no-through-ipa to respell Latin directly",
-    )
-    p.set_defaults(run=_speak)
-
-    p = sub.add_parser("ipa", help="transcribe one passage into IPA")
-    p.add_argument("text", help="the passage, or a UTF-8 .txt file")
-    p.add_argument("--source", required=True, help="ancient-language code")
+    _add_method(p)
     _add_llm(p)
     _add_limit(p)
     p.set_defaults(run=_ipa)
 
-    p = sub.add_parser("respell", help="respell IPA into a modern spelling")
-    p.add_argument("text", help="the source passage, or a UTF-8 .txt file")
-    p.add_argument("--ipa", required=True, help="the IPA, or a UTF-8 .txt file")
-    p.add_argument("--source", required=True, help="ancient-language code the IPA came from")
+    p = sub.add_parser("respell", help="ancient text → modern spelling")
+    p.add_argument("text", help="the passage, or a UTF-8 .txt file")
+    p.add_argument("--source", required=True, help="ancient-language code")
     p.add_argument("--target", default="en", help="modern-language code (default en)")
+    _add_method(p)
     _add_llm(p)
+    _add_limit(p)
     p.set_defaults(run=_respell)
 
-    p = sub.add_parser("tts", help="speak text that is already in a modern spelling")
+    p = sub.add_parser("respell-ipa", help="IPA → modern spelling")
+    p.add_argument("ipa", help="the IPA, or a UTF-8 .txt file")
+    p.add_argument("--source", required=True, help="ancient-language code the IPA came from")
+    p.add_argument("--target", default="en", help="modern-language code (default en)")
+    p.add_argument("--text", help="the original passage, for word boundaries (LLM only)")
+    _add_method(p)
+    _add_llm(p)
+    p.set_defaults(run=_respell_ipa)
+
+    p = sub.add_parser("speak", help="speak text that is already in a modern spelling")
     p.add_argument("text", help="the modern-language spelling, or a UTF-8 .txt file")
     p.add_argument("--target", default="en", help="modern-language code (default en)")
     p.add_argument("--out", required=True, help="audio file to write")
     p.add_argument("--elevenlabs-model", help="ElevenLabs model (default eleven_v4)")
     _add_speech(p)
-    p.set_defaults(run=_tts)
+    p.set_defaults(run=_speak)
 
     p = sub.add_parser("languages", help="list language codes, eras, and bundled targets")
     p.set_defaults(run=_languages)

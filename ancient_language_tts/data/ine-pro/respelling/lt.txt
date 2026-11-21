@@ -1,0 +1,70 @@
+Lithuanian is the most conservative living Indo-European language, and its spelling has letters for much of the Proto-Indo-European system: voiced b d g kept apart from p t k, a free accent, long and short vowels (ė y ū ą against e i u a), the diphthongs ai ei au, a trilled r, z, j, and syllabic-resonant reflexes spoken as ir il im in. Its spelling also marks a soft consonant with i before a back vowel (kia, gio, kiu), which is the nearest it has to the palatovelars. Use these. Do not write the Lithuanian descendant of the word: *ḱwṓ is not šuo, *h₂ówis is not avis, *dyḗws is not dievas, and ḱ ǵ are never š ž.
+
+Map each IPA symbol to the Lithuanian spelling. Write lowercase Lithuanian letters and the accent marks below. Never write the IPA symbols, the asterisk, a subscript number, or an h for a laryngeal that the rules do not give.
+
+Stress
+Lithuanian has a free accent like Proto-Indo-European, and ordinary spelling does not show it. Mark it the way Lithuanian dictionaries and schoolbooks do, so the voice stresses the right syllable.
+- A word with ˈ takes one accent mark on the stressed syllable.
+- A short stressed vowel takes the grave: à è ì ò ù. /ˈʔes.ti/ is èsti, /ˈχo.wis/ is chòvis, /juˈgom/ is jugòm.
+- A long stressed vowel takes the acute: ó ý. ė, ū, and ą take a combining acute (U+0301): ė́, ū́, ą́. /pəχˈteːr/ is pachtė́r, /ˈkʲwoː/ is kvó.
+- A stressed diphthong takes the mark on its first letter: grave on a short first element, acute on a long one: /ˈoi̯.nos/ is òinos, /ˈdjeːu̯s/ is djė́us, /ˈgʷoːu̯s/ is gvóus.
+- A stressed syllabic resonant is written with i, below. It takes the grave on that i: /ˈwl̩.kʷos/ is vìlkvos, /sepˈtm̩/ is septìm.
+- A word with no ˈ takes no mark: /ne/ is ne.
+- Only the stressed syllable takes a mark. Every other vowel is written plain.
+
+Vowels
+- /a/ → a. /aː/ → ą, a long [aː] in Lithuanian, not nasal.
+- /e/ → e: /ˈbʱe.re.ti/ is bhèreti. /eː/ → ė, the close long [eː]: /ˈmaχ.teːr/ is màchtėr.
+- /i/ → i. /iː/ → y: Lithuanian y is long [iː], never a consonant.
+- /o/ /oː/ → o. Lithuanian o is long [oː] in native words, and o is still the only spelling of the quality: /ˈwo.dr̩/ is vòdir, /ˈgʲʱe.joːm/ is ghèjom.
+- /u/ → u. /uː/ → ū.
+- /ə/ → a. Lithuanian has no schwa, and unstressed a is its most central vowel [ɐ]: /pəχˈteːr/ is pachtė́r, /ˈgʲe.nəʔ.toːr/ is gènator, /əʔˈno.mn̩/ is anòmin.
+- Two vowels in two syllables are written as they stand. Lithuanian ie and uo are diphthongs, so a hiatus of i + e or u + o is written with j or v between: /i.e/ is ije, /u.o/ is uvo.
+
+Diphthongs
+- /ai̯/ → ai. /ei̯/ → ei. /au̯/ → au. These are Lithuanian diphthongs.
+- /eu̯/ → eu. /ou̯/ → ou. /oi̯/ → oi. Lithuanian reads these as two vowels in one glide, as in Europa, and that is the nearest it has.
+- /eːi̯/ → ėi. /eːu̯/ → ėu. /oːi̯/ → oi. /oːu̯/ → ou.
+- Never ie or uo for a Proto-Indo-European diphthong. They are [iɛ] and [uɔ] in Lithuanian.
+
+Syllabic resonants
+- /r̩/ → ir. /l̩/ → il. /m̩/ → im. /n̩/ → in. Lithuanian keeps these as the reflex of the syllabic resonants, and a short [ɪ] before the resonant is the closest a Lithuanian voice will say: /ˈwo.dr̩/ is vòdir, /kʲm̩ˈtom/ is kimtòm, /ˈχr̩t.kʲos/ is chìrtkios, /əʔˈno.mn̩/ is anòmin.
+- The i belongs to the resonant's syllable. Do not add another vowel.
+
+Laryngeals
+- /ʔ/ → nothing. Lithuanian has no letter for a glottal stop. A word that starts with a vowel already starts with one: /ˈʔes.ti/ is èsti, /ˈdwoʔ/ is dvò.
+- /χ/ → ch. Lithuanian ch is the velar fricative [x]: /ˈχo.wis/ is chòvis, /ˈstaχ/ is stàch, /ˈmaχ.teːr/ is màchtėr.
+- /ɣʷ/ → h. Lithuanian h is the voiced fricative [ɣ] or [ɦ], the nearest it has: /ˈɣʷo.roː/ is hòro, /ˈdoɣʷ/ is dòh.
+- A syllabic laryngeal is /ə/ plus the laryngeal: /əʔ/ → a, /əχ/ → ach, /əɣʷ/ → ah: /ˈme.gʲəχs/ is mègiachs, /əχ.wl̩ʔˈnaχ/ is achvilnàch.
+
+Consonants
+- /p t k b d g s z m n l r/ → the same letters. Lithuanian b d g are fully voiced, like Proto-Indo-European, and r is a trill.
+- /ŋ/ → n. Lithuanian n is [ŋ] before k and g on its own: /ˈpeŋ.kʷe/ is pènkve.
+- /j/ → j: /ˈtre.jes/ is trèjes, /juˈgom/ is jugòm.
+- /w/ → v. Lithuanian v is the approximant [ʋ], the nearest to [w]: /ˈχo.wis/ is chòvis, /ˈswekʲs/ is svèks, /ˈdwoʔ/ is dvò. In a diphthong /u̯/ is u, above.
+- /kʷ/ → kv. /gʷ/ → gv. /gʷʱ/ → ghv: /ˈkʷekʷ.los/ is kvèkvlos, /gʷr̩ˈχum/ is gvirchùm, /ˈgʷʱen/ is ghvèn. Lithuanian kv and gv are ordinary clusters, as in kvapas and gvazdikas.
+- /bʱ/ → bh. /dʱ/ → dh. /gʱ/ → gh. Lithuanian h after a voiced stop gives a voiced breathy release, the nearest to an aspirate: /ˈbʱe.re.ti/ is bhèreti, /dʱuχˈmos/ is dhuchmòs. Never ph, th, or kh: Lithuanian would read them voiceless.
+- /kʲ/ → k, and /gʲ/ → g, before e, ė, i, y, and before a consonant or at the end of a word. Lithuanian softens k and g before a front vowel on its own: /ˈde.kʲm̩/ is dèkim, /ˈʔekʲ.wos/ is èkvos, /ˈswekʲs/ is svèks.
+- /kʲ/ → ki, and /gʲ/ → gi, before a, ą, o, u, ū, ə, and the back diphthongs. That i is the Lithuanian softness mark and is not a vowel: /ˈχagʲ.ros/ is chàgros, but /ˈχr̩t.kʲos/ is chìrtkios and /ˈme.gʲəχs/ is mègiachs.
+- /gʲʱ/ → gh before a front vowel and ghi before a back vowel: /ˈgʲʱe.joːm/ is ghèjom, /ˈdʱe.gʲʱoːm/ is dhèghiom.
+- A plain /k/ or /g/ before a front vowel is written k or g too. Lithuanian cannot keep it hard there.
+- /ts/ → ts, never c: /ˈnokʷts/ is nòkvts.
+- Never č, š, ž, or dž. Lithuanian reads them as [tʃ ʃ ʒ dʒ], which is the satem reflex, not the Proto-Indo-European sound.
+- A geminate is written once. Lithuanian has no double consonants.
+
+Capitals and pauses
+- Capitalize the first letter of each sentence, after a period, an exclamation mark, or a question mark, and at the start of the line. A capital keeps its accent mark: /ˈoi̯.nos/ at the start is Òinos.
+- Keep each comma, exclamation mark, question mark, and period of the IPA.
+
+Lost in the Lithuanian reading
+- The pitch accent. Lithuanian has its own two tones on long syllables; the voice will use one of them, and the marks above only place the stress.
+- /ʔ/. h₁ is silent, so *dʰeh₁- and a bare *dʰe- sound alike.
+- The rounding of /ɣʷ/, and the difference between /ɣʷ/ and [ɦ].
+- /ə/ comes out as Lithuanian a. pachtė́r and a word with a real a sound alike there.
+- The difference between plain and palatal velars before a front vowel: *ke and *ḱe both come out soft. Before a consonant /kʲ/ comes out hard.
+- Short /o/. Lithuanian o is long in every native word.
+- Lithuanian lengthens a stressed a or e in an open syllable: chàvis may come out with a long a.
+- Lithuanian softens every consonant before e, ė, i, and y, so the d of dèkim and the t of septìm are palatalized.
+- Lithuanian devoices a voiced stop at the end of a word and before a voiceless one: *nisdós keeps z and d, but a final -d comes out [t].
+- /w/ comes out as the labiodental [ʋ].
+- Aspiration of the voiced aspirates may come out as a separate [ɣ] after the stop.

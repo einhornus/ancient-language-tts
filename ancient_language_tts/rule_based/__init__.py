@@ -1,86 +1,86 @@
-"""Deterministic IPA and respelling, when a pair has a rule engine.
+"""Deterministic IPA and respelling, one engine per ancient language.
 
-Rule modules live under this package. LLM-based steps live under
-`ancient_language_tts.llm`. Call `available` / `has` to see which pairs
-are implemented here.
+Every ancient language has an engine with three conversions (see `base`):
+text → IPA, text → respelling, IPA → respelling. Only Ecclesiastical Latin
+(`lat-ecc`, into Italian) has real rules today; the others are mocks built
+from small grapheme tables (`is_mock` tells them apart). LLM-based steps
+live under `ancient_language_tts.llm`.
 """
 
 from __future__ import annotations
 
-from typing import Callable
+from .. import languages
+from . import ang, eme, enm, gem_pro, grc, ine_pro, lat, lat_ecc, sla_pro
+from .base import Convert, RuleEngine
 
-from . import lat_ecc_it
-
-# (source, target) → (to_ipa, respell_from_ipa, latin_to_italian)
-_PAIRS: dict[tuple[str, str], tuple[Callable[[str], str], Callable[[str], str], Callable[[str], str]]] = {
-    (lat_ecc_it.SOURCE, lat_ecc_it.TARGET): (
-        lat_ecc_it.to_ipa,
-        lat_ecc_it.respell,
-        lat_ecc_it.to_italian,
-    ),
+_ENGINES: dict[str, RuleEngine] = {
+    module.ENGINE.source: module.ENGINE
+    for module in (lat, lat_ecc, grc, eme, enm, ang, gem_pro, ine_pro, sla_pro)
 }
 
 
+def engine(source: str) -> RuleEngine:
+    """The rule engine for one ancient language."""
+    code = languages.ancient(source).code
+    try:
+        return _ENGINES[code]
+    except KeyError:
+        have = ", ".join(sorted(_ENGINES))
+        raise ValueError(f"no rule engine for {code}. Engines: {have}.") from None
+
+
 def available() -> list[tuple[str, str]]:
-    """Language pairs that have a rule-based pipeline."""
-    return sorted(_PAIRS)
+    """Every `(source, target)` pair a rule engine can respell."""
+    return sorted(
+        (code, target) for code, item in _ENGINES.items() for target in item.targets()
+    )
 
 
 def has(source: str, target: str) -> bool:
-    """True when `(source, target)` has a rule-based IPA + respelling path."""
-    from .. import languages
-
-    src = languages.ancient(source).code
-    tgt = languages.modern(target).code
-    return (src, tgt) in _PAIRS
+    """True when `source` has rule-based respelling into `target`."""
+    return languages.modern(target).code in engine(source).targets()
 
 
-def to_ipa(text: str, source: str, target: str) -> str:
-    """Rule-based IPA for `text`. Raises if the pair has no rule engine."""
-    ipa_fn, _, _ = _pair(source, target)
-    return ipa_fn(text)
+def is_mock(source: str) -> bool:
+    """True when the engine for `source` is a placeholder, not real rules."""
+    return engine(source).mock
 
 
-def respell(ipa: str, source: str, target: str) -> str:
-    """Rule-based respelling of `ipa`. Raises if the pair has no rule engine."""
-    _, respell_fn, _ = _pair(source, target)
-    return respell_fn(ipa)
+def to_ipa(text: str, source: str) -> str:
+    """Rule-based IPA for `text`. Does not depend on a modern language."""
+    return engine(source).to_ipa(text)
 
 
-def direct(text: str, source: str, target: str) -> str:
-    """Latin spelling → modern spelling, with no IPA step."""
-    _, _, direct_fn = _pair(source, target)
-    return direct_fn(text)
+def respell(text: str, source: str, target: str) -> str:
+    """Rule-based respelling of the source spelling, with no IPA step."""
+    return _pick(engine(source), "respell", target)(text)
 
 
-def convert(text: str, source: str, target: str) -> tuple[str, str]:
-    """Return `(ipa, respelling)` using the rule engine for this pair."""
-    ipa_fn, respell_fn, _ = _pair(source, target)
-    ipa = ipa_fn(text)
-    return ipa, respell_fn(ipa)
+def respell_ipa(ipa: str, source: str, target: str) -> str:
+    """Rule-based respelling of an IPA line."""
+    return _pick(engine(source), "respell_ipa", target)(ipa)
 
 
-def _pair(
-    source: str, target: str
-) -> tuple[Callable[[str], str], Callable[[str], str], Callable[[str], str]]:
-    from .. import languages
-
-    src = languages.ancient(source).code
-    tgt = languages.modern(target).code
+def _pick(item: RuleEngine, kind: str, target: str) -> Convert:
+    code = languages.modern(target).code
+    table = getattr(item, kind)
     try:
-        return _PAIRS[(src, tgt)]
+        return table[code]
     except KeyError:
-        have = ", ".join(f"{s}→{t}" for s, t in available()) or "(none)"
+        have = ", ".join(sorted(table)) or "(none)"
         raise ValueError(
-            f"no rule-based solution for {src} → {tgt}. Available: {have}."
+            f"no rule-based {kind} for {item.source} → {code}. "
+            f"Targets for {item.source}: {have}."
         ) from None
 
 
 __all__ = [
+    "RuleEngine",
     "available",
-    "convert",
-    "direct",
+    "engine",
     "has",
+    "is_mock",
     "respell",
+    "respell_ipa",
     "to_ipa",
 ]

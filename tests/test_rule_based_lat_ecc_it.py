@@ -10,7 +10,7 @@ from ancient_language_tts import rule_based
 from ancient_language_tts.rule_based.lat_ecc_it import direct as direct_mod
 from ancient_language_tts.rule_based.lat_ecc_it import ipa as ipa_mod
 from ancient_language_tts.rule_based.lat_ecc_it import respelling as respell_mod
-from ancient_language_tts.speak import speak
+import ancient_language_tts as alt
 
 _DATA = Path(__file__).resolve().parents[1] / "ancient_language_tts" / "data" / "lat-ecc"
 
@@ -63,44 +63,44 @@ class RuleBasedRegistryTests(unittest.TestCase):
     def test_lat_ecc_it_is_available(self) -> None:
         self.assertTrue(rule_based.has("lat-ecc", "it"))
         self.assertIn(("lat-ecc", "it"), rule_based.available())
+        self.assertFalse(rule_based.is_mock("lat-ecc"))
 
-    def test_unknown_pair_raises(self) -> None:
+    def test_unknown_target_raises(self) -> None:
         with self.assertRaises(ValueError):
-            rule_based.convert("arma", "lat", "en")
+            rule_based.respell("arma", "lat", "en")
 
-    def test_convert_round_trip_short(self) -> None:
-        ipa, spelling = rule_based.convert("Caesar", "lat-ecc", "it")
+    def test_round_trip_short(self) -> None:
+        ipa = rule_based.to_ipa("Caesar", "lat-ecc")
         self.assertEqual(ipa, "ˈtʃɛ.sar")
-        self.assertEqual(spelling.lower(), "cèssar")
+        self.assertEqual(rule_based.respell_ipa(ipa, "lat-ecc", "it").lower(), "cèssar")
+        self.assertEqual(rule_based.respell("Caesar", "lat-ecc", "it").lower(), "cèssar")
 
 
-class SpeakRulesTests(unittest.TestCase):
-    def test_use_rules_skips_llm(self) -> None:
+class ApiRulesTests(unittest.TestCase):
+    def test_rules_methods_skip_llm(self) -> None:
         with (
-            mock.patch("ancient_language_tts.speak.ipa_step.to_ipa") as llm_ipa,
-            mock.patch("ancient_language_tts.speak.respell_step.respell") as llm_respell,
-            mock.patch("ancient_language_tts.speak.tts.synthesize", return_value=b"audio"),
+            mock.patch("ancient_language_tts.api.llm_steps.to_ipa") as llm_ipa,
+            mock.patch("ancient_language_tts.api.llm_steps.respell") as llm_respell,
         ):
-            speech = speak("Caesar", source="lat-ecc", target="it", use_rules=True)
+            ipa = alt.to_ipa("Caesar", "lat-ecc", method="rules")
+            via_ipa = alt.respell_ipa(ipa, "lat-ecc", "it", method="rules")
+            direct = alt.respell("Caesar", "lat-ecc", "it", method="rules")
         llm_ipa.assert_not_called()
         llm_respell.assert_not_called()
-        self.assertEqual(speech.ipa, "ˈtʃɛ.sar")
-        self.assertEqual(speech.respelling.lower(), "cèssar")
-        self.assertEqual(speech.audio, b"audio")
+        self.assertEqual(ipa, "ˈtʃɛ.sar")
+        self.assertEqual(via_ipa.lower(), "cèssar")
+        self.assertEqual(direct.lower(), "cèssar")
 
-    def test_use_rules_without_engine_raises(self) -> None:
+    def test_bad_method_raises(self) -> None:
         with self.assertRaises(ValueError):
-            speak("hello", source="ang", target="en", use_rules=True)
+            alt.to_ipa("Caesar", "lat-ecc", method="magic")  # type: ignore[arg-type]
 
-    def test_direct_flag_skips_ipa(self) -> None:
-        with (
-            mock.patch("ancient_language_tts.speak.rule_based.to_ipa") as to_ipa,
-            mock.patch("ancient_language_tts.speak.tts.synthesize", return_value=b"audio"),
-        ):
-            speech = speak("Caesar", source="lat-ecc", target="it", through_ipa=False)
-        to_ipa.assert_not_called()
-        self.assertEqual(speech.ipa, "")
-        self.assertEqual(speech.respelling.lower(), "cèssar")
+    def test_speak_passes_voice(self) -> None:
+        with mock.patch("ancient_language_tts.api.tts.synthesize", return_value=b"audio") as synth:
+            audio = alt.speak("Cèssar", "it", "voice123")
+        self.assertEqual(audio, b"audio")
+        self.assertEqual(synth.call_args.kwargs["voice_id"], "voice123")
+        self.assertEqual(synth.call_args.args[:2], ("Cèssar", "it"))
 
 
 if __name__ == "__main__":

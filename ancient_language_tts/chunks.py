@@ -9,8 +9,8 @@ A sentence ends at `". "`, `"? "`, or `"! "`. The punctuation stays with
 the sentence. One sentence is left whole, even when it is longer than the
 limit: there is no boundary left to cut on.
 
-`speak` transcribes each piece and respells that piece before the next
-one. The pieces are joined again for the voice.
+`respell(method="llm")` transcribes each piece and respells that piece before the next
+one. The pieces are joined again.
 """
 
 from __future__ import annotations

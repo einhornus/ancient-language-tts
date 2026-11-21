@@ -1,37 +1,105 @@
-Stage. Late West Saxon, about 900 to 1000 AD, the teaching pronunciation of introductory Old English. c before a front vowel is /tʃ/. g before a front vowel is /j/. Do not read the text as modern English and do not read it as Middle English.
+Stage. Late West Saxon Old English of about 1000 AD, the language of Ælfric and of the Beowulf manuscript, in the reconstructed pronunciation that the handbooks teach. Old English is not modern English and not Middle English. Spellings like cyning, scip, niht, and hwæt look familiar. Do not give them modern English values, and do not return a modern dictionary pronunciation. Every written letter is pronounced. There are no silent letters and no silent final -e.
+
+Output
+- Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
+- Separate syllables with a dot and words with a space. Drop capitals. The pause marks are a comma, an exclamation mark, a question mark, and a period. A comma is a short pause. An exclamation mark and a question mark stay as they are. A period is a long pause and the end of a sentence. A semicolon or a colon is a long pause: write a period. Drop parentheses, quotation marks, and the hyphens some editions put inside compounds (Gār-Dena is one word).
+- A line break or a half-line gap in verse is a space, unless the text puts a pause mark there.
 
 Spelling of the input
-- A macron marks length. Where the input omits macrons, restore the dictionary quantities and transcribe those quantities.
-- þ and ð are the same phoneme.
+- A macron marks a long vowel: ā ǣ ē ī ō ū ȳ, and the first letter of the long diphthongs ēa ēo. Manuscripts and some editions use an acute accent instead (á, ǽ). Treat it as a macron.
+- A dot marks a palatal consonant: ċ is [tʃ], ġ is [j], sċ is [ʃ], ċġ is [dʒ]. Undotted c and g are velar.
+- Many texts print neither macrons nor dots. Restore them the way a modern edition does (Mitchell and Robinson, Bosworth–Toller, Wiktionary), then transcribe what you restored. Restore length from the dictionary and the grammar: gōd "good" against god "god", is "is" against īs "ice". The rules under Consonants say which c and g a modern edition dots.
+- þ and ð are one letter. Either one is [θ] or [ð] by the voicing rule below.
+- ƿ (wynn) is w. ȝ (insular g) is g. ⁊ and & are ond "and". ond and and are the same word.
+- ie and īe are older West Saxon spellings. By 1000 they had become y and ȳ: ġiefan and ġyfan are both [ˈjy.vɑn], hīeran and hȳran are both [ˈhyː.rɑn].
+- io and īo are older spellings of eo and ēo.
 
 Vowels
-- a /ɑ/, ā /ɑː/
-- æ /æ/, ǣ /æː/
-- e /e/, ē /eː/
-- i /i/, ī /iː/
-- o /o/, ō /oː/
-- u /u/, ū /uː/
-- y /y/, ȳ /yː/
-- ea /æɑ/, ēa /æːɑ/
-- eo /eo/, ēo /eːo/
-- ie /iy/, īe /iːy/. At this date those are still diphthongs. If the spelling has already been updated to y or ȳ, use /y/ or /yː/.
+- a [ɑ], ā [ɑː]. a and o before m or n are the same short vowel, written either way: mann, monn [ˈmɑn], land, lond [ˈlɑnd]. Use [ɑ].
+- æ [æ], ǣ [æː]. æ is a low front vowel, the vowel of cat. It is not [e] and not [ɑ].
+- e [e], ē [eː]
+- i [i], ī [iː]
+- o [o], ō [oː]. ō is the vowel of modern goal without a glide. It is not [uː].
+- u [u], ū [uː]. hūs is [ˈhuːs], not [haʊs].
+- y [y], ȳ [yː], the rounded front vowel of German über. It is never [i] and never a consonant.
+- Long vowels keep their monophthong quality. Do not apply the Great Vowel Shift: rīdan is [ˈriː.dɑn], not [ˈraɪ.dɑn], and stān is [ˈstɑːn].
 
-Consonants
-- p t b d m n w have their ordinary values. r is a trill /r/. l is /l/.
-- c is /tʃ/ before a front vowel (i, e, æ, y, ea, eo, ie), when it is written ċ, and in word-final position after a front vowel (ic is /itʃ/). Otherwise c is /k/. cc follows the same split, geminated.
-- g is /j/ before a front vowel and when it is written ġ. g is /ɣ/ between back vowels. g is /g/ at the start of a word before a back vowel or a consonant. cg is /dʒ/.
-- ng is /ŋ/ plus the g that the rule above would give.
-- sc in a native word is /ʃ/. In a Latin loan, sc is /sk/ when the cluster is still the Latin one.
-- h at the start of a word is /h/. After a front vowel it is /ç/. After a back vowel it is /x/.
-- hl, hr, hn are /l̥ r̥ n̥/. hw is /ʍ/.
-- f and s are /f s/ at the start or end of a word and next to a voiceless sound, and /v z/ between voiced sounds.
-- þ and ð are /θ/ at the start of a word and next to a voiceless sound, and /ð/ between voiced sounds.
-- cn, gn, wl, wr are pronounced as written. A doubled consonant is a geminate.
+Diphthongs
+- ea [æɑ̯], ēa [æːɑ̯]: eald [ˈæɑ̯ld], ēage [ˈæːɑ̯.ɣe], ēast [ˈæːɑ̯st].
+- eo [eo̯], ēo [eːo̯]: eorðe [ˈeo̯r.ðe], heofon [ˈheo̯.von], dēop [ˈdeːo̯p], þēod [ˈθeːo̯d].
+- Each diphthong is one syllable. The second element is non-syllabic: write ̯ under it. The short and the long diphthong differ only in the length of the first element.
+- In sceo- and ġeo- the e is a spelling that marks the consonant as palatal, and only o follows: sceolde [ˈʃol.de], ġeong [ˈjoŋg], ġeoc [ˈjok]. After every other consonant, and in sċea- and ġea-, ea and eo are real diphthongs: sceal [ˈʃæɑ̯l], ġēar [ˈjæːɑ̯r].
+
+Unstressed syllables
+- Unstressed vowels are short and keep the quality written. There is no schwa. The endings -e, -a, -u, -o, -an, -en, -on, -um, -as, -es, -ena, -ode, -ung, and -iġ are what they spell: nama [ˈnɑ.mɑ], heofonum [ˈheo̯.vo.num], ġefrūnon [jeˈfruː.non], fæder [ˈfæ.der], dagung [ˈdɑ.ɣuŋg].
+- Final -e is a full [e], its own syllable, at a pause and before a vowel alike: rīċe [ˈriː.tʃe], sunne [ˈsun.ne].
+- The second element of a compound keeps its own vowels and their length. It takes no ˈ: heofonrīċe [ˈheo̯.von.riː.tʃe], Ēadweard [ˈæːɑ̯d.wæɑ̯rd].
+
+Consonants: c
+- ċ is [tʃ]. c is [k].
+- A modern edition dots c at the start of a stressed syllable before i, ī, e, ē, ea, ēa, eo, ēo when that vowel was front from the start: ċild [ˈtʃild], ċin, ċīese, ċēosan, ċeald [ˈtʃæɑ̯ld], ċeorl, ċiriċe [ˈtʃi.ri.tʃe].
+- c stays [k] before e, ē, æ, ǣ, y, ȳ when that vowel is the i-mutation of a back vowel: cyning [ˈky.niŋg], cynn [ˈkyn], cēne [ˈkeː.ne], cemban, cǣġ "key" [ˈkæːj], cȳþan, cyċene "kitchen" [ˈky.tʃe.ne]. c is [k] before a, o, u, before a consonant, and after a back vowel: cuman [ˈku.mɑn], cnēo [ˈkneːo̯], bōc [ˈboːk], ēac [ˈæːɑ̯k].
+- Use the modern reflex when the dictionary is not to hand. A modern word with ch or tch has [tʃ] (child, cheese, church, choose, chin, rich, each, ditch, bench, teach, stretch). A modern word with k or c has [k] (king, kin, keen, kemb, key, kith, come, cold), except where modern English changed the consonant by analogy: sēċan "seek", þenċan "think", and wyrċan "work" have [tʃ], and so does the word ēċe "eternal".
+- After i or ī at the end of a word, c is [tʃ]: ic [ˈitʃ], dīċ [ˈdiːtʃ], -liċ [litʃ], ġelīċ [jeˈliːtʃ]. Inside a word ċ stands before a lost j or i: sēċan [ˈseː.tʃɑn], tǣċan, rīċe, ēċe [ˈeː.tʃe], þenċan [ˈθen.tʃɑn], benċ. Before a back vowel of an ending, c is [k]: dīcas [ˈdiː.kɑs].
+- ċċ is [t.tʃ]: reċċan [ˈret.tʃɑn], streċċan. cc elsewhere is [k.k]: liccian [ˈlik.ki.ɑn].
+- ċġ, often printed cg, is [dʒ], and between vowels it is the geminate [d.dʒ]: seċġan [ˈsed.dʒɑn], brycg [ˈbrydʒ], ecg [ˈedʒ], hrycg [ˈr̥ydʒ].
+
+Consonants: g
+- ġ is [j]. A modern edition dots g in the same front contexts as c: ġiefan [ˈjy.vɑn], ġēar [ˈjæːɑ̯r], ġeard, ġeolu, ġē "ye", ġif, ġeong, onġinnan [onˈjin.nɑn]. Modern give, get, gift, and begin have g from Norse. Their Old English words had [j].
+- g stays [g] before e, ē, y, ȳ when that vowel is the i-mutation of a back vowel: gēs "geese" [ˈgeːs], gylden [ˈgyl.den], gyrdel.
+- After a front vowel, g at the end of a word or before a consonant is [j]: dæġ [ˈdæj], weġ [ˈwej], mæġden [ˈmæj.den], hāliġ [ˈhɑː.lij], mæniġ [ˈmæ.nij]. Between front vowels it is [j]: dæġes [ˈdæ.jes].
+- At the start of a word before a back vowel or a consonant, g is the stop [g]: gōd [ˈgoːd], gold, grēne, glæd, Gār-Dena [ˈgɑːr.de.nɑ]. The same holds at the start of a compound element.
+- Inside a word after a back vowel, a back diphthong, l, or r, g is the fricative [ɣ]: dagas [ˈdɑ.ɣɑs], fugol [ˈfu.ɣol], āgan, ēage [ˈæːɑ̯.ɣe], burgum [ˈbur.ɣum], ġehālgod [jeˈhɑːl.ɣod].
+- At the end of a word after a back vowel, l, or r, it is voiceless [x], the same sound as h there. Late West Saxon writes either letter: burg and burh are both [ˈburx], bēag [ˈbæːɑ̯x], ġenōg and ġenōh [jeˈnoːx].
+- gg is [g.g]: frogga [ˈfrog.gɑ], docga.
+- ng is [ŋ] plus the stop [g], in every position: cyning [ˈky.niŋg], singan [ˈsiŋ.gɑn], lang [ˈlɑŋg], æþelingas [ˈæ.ðe.liŋ.gɑs]. nc is [ŋk]: þanc [ˈθɑŋk], drincan. Before ċ or ġ, n is [n]: þenċan [ˈθen.tʃɑn], senġan [ˈsen.dʒɑn].
+
+Consonants: sc
+- sċ is [ʃ]. A modern edition dots it at the start of a word before every vowel and consonant (sċip [ˈʃip], sċēap, sċeal, sċort, sċulon [ˈʃu.lon]) and at the end of a word or before a front vowel after a front vowel (fisċ [ˈfiʃ], Englisċ [ˈeŋ.gliʃ], fisċere).
+- Between vowels the [ʃ] is long: write [ʃ.ʃ]. fisċere [ˈfiʃ.ʃe.re], wȳsċan [ˈwyːʃ.ʃɑn].
+- sc before a back vowel of an ending, and inside a word in general where no front vowel or j followed, is [s.k]: fiscas [ˈfis.kɑs], āscian [ˈɑːs.ki.ɑn], tūsc [ˈtuːsk].
+- Latin loans keep [sk] where Latin had it: scōl is [ˈʃoːl] in Old English, but discipul is [ˈdis.ki.pul].
+
+Consonants: h
+- h at the start of a word or of a compound element is [h]: hūs [ˈhuːs], hand, ġehālgod [jeˈhɑːl.ɣod].
+- Elsewhere h is a fricative. After a front vowel it is [ç]: niht [ˈniçt], cniht [ˈkniçt], riht, Drihten [ˈdriç.ten], hlihhan. After a back vowel, after ea, eo, ēa, ēo, and after l or r it is [x]: eahta [ˈæɑ̯x.tɑ], meahte [ˈmæɑ̯x.te], lēoht [ˈleːo̯xt], dōhtor [ˈdox.tor], feoh [ˈfeo̯x], seolh [ˈseo̯lx], þurh [ˈθurx], burh.
+- hh is [x.x] after a back vowel and [ç.ç] after a front vowel: hlihhan [ˈl̥iç.çɑn], hweohhol.
+- hw is [ʍ]: hwæt [ˈʍæt], hwā, hwīl. hl is [l̥], hr is [r̥], hn is [n̥]: hlāf [ˈl̥ɑːf], hrīm [ˈr̥iːm], hnutu [ˈn̥u.tu]. Each one is a single onset consonant.
+
+Consonants: f, s, þ
+- f, s, and þ are voiced [v], [z], [ð] between two voiced sounds (vowels, or a vowel and a voiced consonant) when the syllable before them is stressed: heofon [ˈheo̯.von], ofer [ˈo.ver], hūsian [ˈhuː.zi.ɑn], rīsan [ˈriː.zɑn], eorðe [ˈeo̯r.ðe], smiþas [ˈsmi.ðɑs], æþeling [ˈæ.ðe.liŋg], ġewurþe [jeˈwur.ðe].
+- They are voiceless [f], [s], [θ] at the start of a word, at the end of a word, next to a voiceless consonant, after an unstressed syllable, and at the start of a compound element or a root after a prefix: fæder [ˈfæ.der], wulf [ˈwulf], hūs [ˈhuːs], smiþ [ˈsmiθ], ġefrūnon [jeˈfruː.non], Wuldorfæder [ˈwul.dor.fæ.der], mōdġeþanc [ˈmoːd.je.θɑŋk].
+- ff, ss, þþ, and ðð are voiceless geminates: [f.f], [s.s], [θ.θ]: cyssan [ˈkys.sɑn], oþþe [ˈoθ.θe].
+- þ and ð are [θ] at the start of every word, the article and the pronouns included: þæt [θæt], þū [ˈθuː], ðā [θɑː]. There is no [ð] at the start of a word.
+- x is [ks]: weaxan [ˈwæɑ̯k.sɑn], siex, six [ˈsiks].
+
+Other consonants
+- p t b d m n w have their ordinary values. There is no aspiration to mark. w is [w], never [v].
+- r is a trill [r], pronounced in every position: before a consonant and at the end of a word too: eart [ˈæɑ̯rt], weard [ˈwæɑ̯rd], fæder [ˈfæ.der].
+- l is [l] in every position. Do not mark dark l.
+- Every written consonant cluster is pronounced: cn [kn] cnāwan, gn [gn] gnæt, wr [wr] wrītan, wl [wl] wlite, hl hr hn hw as above, sw, tw, dw.
+- A doubled consonant between vowels is a geminate. Write the consonant twice, with the syllable break between: sunne [ˈsun.ne], willa [ˈwil.lɑ], ellen [ˈel.len], cynnes [ˈkyn.nes]. A doubled consonant at the end of a word or next to another consonant is single: mann [ˈmɑn], cynn [ˈkyn], eall [ˈæɑ̯l].
+
+Syllables
+- Every vowel or diphthong makes one syllable. Syllabify each word separately.
+- A single consonant between vowels goes with the following vowel. [tʃ], [dʒ], [ʃ], [ʍ], [l̥], [r̥], and [n̥] each count as one consonant.
+- Of two or more consonants, the last goes with the following vowel and the rest close the preceding syllable: eorðe [ˈeo̯r.ðe], eahta [ˈæɑ̯x.tɑ], mæġden [ˈmæj.den], ġehālgod [jeˈhɑːl.ɣod].
+- A stop or f plus l or r stays together and begins the next syllable: wundra [ˈwun.drɑ], Gār-Dena [ˈgɑːr.de.nɑ] by the rule above.
+- A prefix boundary and a compound boundary override these rules: un.riht [ˈun.riçt], mōd.ġe.þanc [ˈmoːd.je.θɑŋk], Ēad.weard.
 
 Stress
-- Stress the first syllable of the lexical word.
-- The prefixes ge-, be-, and the verbal for- are unstressed, and so is ne. The stress then falls on the root. A noun in for- stresses the prefix.
-- Put ˈ before the stressed syllable.
+- A lexical word stresses the first syllable of its root. Endings and suffixes are unstressed.
+- A compound stresses its first element only: Gār-Dena [ˈgɑːr.de.nɑ], þēodcyning [ˈθeːo̯d.ky.niŋg], Wuldorfæder.
+- ġe- and be- are never stressed: ġefaran [jeˈfɑ.rɑn], ġehwæs [jeˈʍæs], bebēodan [beˈbeːo̯.dɑn]. for- is unstressed too: forġiefan [forˈjy.vɑn], forwyrd [forˈwyrd].
+- and-, ond-, un-, and ed- are always stressed: andswaru [ˈɑnd.swɑ.ru], andswarian [ˈɑnd.swɑ.ri.ɑn], unriht [ˈun.riçt].
+- Every other prefix (ā-, æt-, of-, on-, ofer-, tō-, ūt-, under-, wiþ-, ymb-) is stressed in a noun or an adjective and unstressed in a verb or an adverb: ofermōd [ˈo.ver.moːd], tōcyme [ˈtoː.ky.me], but onġinnan [onˈjin.nɑn], onstealde [onˈstæɑ̯l.de], tōbecume [toː.beˈku.me], ārīsan [ɑːˈriː.zɑn].
+- A monosyllable takes ˈ unless it is an article or a demonstrative used as one (se, sēo, þæt, þā, þone, þǣre), a preposition (on, in, tō, of, mid, æt, be, for, fram, wiþ, ymb, ofer, under), a conjunction (and, ond, ac, oþþe, gif, þæt, swā "as"), the particle þe, the negative ne, or a possessive before its noun (mīn, þīn, his, hire, ūre, ēower, hiera). A possessive after its noun is stressed: Fæder ūre [ˈfæ.der ˈuː.re]. Pronouns, verbs, and adverbs are stressed: ic [ˈitʃ], hē, wē, is, nū, hū, þā "then".
+- A Latin or Greek name or loan keeps the stress of Old English, on its first syllable, unless it is still a foreign word in the text: Crīst [ˈkriːst], Adam [ˈɑ.dɑm].
+- Put ˈ before the stressed syllable. It replaces the dot.
 
 Symbols
-ɑ ɑː æ æː e eː i iː o oː u uː y yː æɑ æːɑ eo eːo iy iːy p t k b d g tʃ dʒ ʃ j ɣ f v θ ð s z h x ç m n ŋ l r w ʍ l̥ r̥ n̥
+Vowels: ɑ ɑː æ æː e eː i iː o oː u uː y yː
+Diphthongs: æɑ̯ æːɑ̯ eo̯ eːo̯
+Consonants: p b t d k g tʃ dʒ f v θ ð s z ʃ ç x ɣ h m n ŋ l r j w ʍ l̥ r̥ n̥
+Marks: ˈ .
+Pauses: , ! ? .

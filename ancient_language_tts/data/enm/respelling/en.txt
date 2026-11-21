@@ -1,4 +1,4 @@
-Do not apply the Great Vowel Shift. /iː/ is ee, so a Middle English "time" is teem, not teyem. /uː/ is oo, so hous is hoos, not hows. /x/ and /ç/ are pronounced.
+Do not apply the Great Vowel Shift. /iː/ is ee, so a Middle English tyme is teemuh, not teyemuh. /uː/ is oo, so hous is hoos, not hows. /x/ and /ç/ are pronounced.
 
 Vowels
 - /a/ /aː/ → ah
@@ -25,7 +25,8 @@ Consonants
 - /ʃ/ → sh
 - /tʃ/ → ch
 - /dʒ/ → j
-- /ŋ/ plus /g/ in the same syllable → ng
+- /ŋ/ plus /g/ in the same syllable → ng. Across a syllable break, /ŋ.g/ → ngg: /ˈjʊŋ.gə/ is yuhngguh
 - /x/ /ç/ → kh
 - /ʍ/ → hw
 - /kn/, /gn/, and /wr/ keep both consonants.
+- A geminate, the same consonant on both sides of a syllable break, is a doubled letter: /ˈsʊn.nə/ is suhnnuh.

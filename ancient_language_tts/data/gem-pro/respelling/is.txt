@@ -1,0 +1,74 @@
+Proto-Germanic and Icelandic share the letters þ and ð and the sounds behind them, the trilled r, the fricative g between vowels, the voiceless hl, hr, and hn, and stress on the first syllable. Icelandic spelling also has letters for two Proto-Germanic diphthongs: æ is [ai] and á is [au] in Icelandic. Use them. Do not write the Old Norse or Icelandic descendant of the word: *dagaz is not dagur, *gastiz is not gestur, and the final /z/ is s, never r or ur.
+
+Map each IPA symbol to the Icelandic spelling. Icelandic stresses the first syllable of every word, so no accent marks stress. An Icelandic accent changes the vowel: í, ú, ó, and á below are vowel letters, not stress marks.
+
+Stress
+- A word whose ˈ is on its first syllable, and a word with no ˈ, is written as one word.
+- A word whose ˈ is on a later syllable starts with an unstressed prefix. Write that prefix as a separate short word before the rest, the way Icelandic writes að or í before a verb: /ɣɑˈmɑi̯.niz/ is ga mænis, /ɣɑˈbin.dɑ.nɑ̃/ is ga bindana, /uzˈliː.sɑ.nɑ̃/ is us lísana. Each prefix written apart is one word.
+- Inside a compound the parts stay joined: /ˈhle.wɑ.ɣɑs.tiz/ is hlevagastis.
+
+Vowels
+Icelandic makes a stressed vowel long before one consonant and short before two. Proto-Germanic length is not spelled. Write the quality and let the Icelandic syllable decide the length.
+- /ɑ/ /ɑː/ → a: /ˈdɑ.ɣɑz/ is dagas.
+- /e/ /eː/ /ɛː/ /ɛːː/ → e: /ˈɣe.βɑ.nɑ̃/ is gevana, /ˈɸɑ.ðɛːr/ is faðer, /ˈmeː.ðɔː/ is meðo.
+- /i/ → i: /ˈɣɑs.tiz/ is gastis.
+- /iː/ → í: /ˈθriːz/ is þrís, /ˈtiː.wɑz/ is tívas.
+- /ɔː/ /ɔːː/ → o. Icelandic o is the open [ɔ], the same quality as Proto-Germanic ō: /ˈbrɔː.θɛːr/ is broþer, /ˈnɑ.mɔːː/ is namo. Never ó, which is the diphthong [ou] in Icelandic.
+- /u/ /uː/ → ú, stressed and unstressed alike: /ˈsu.nuz/ is súnús, /ˈθuː/ is þú. Icelandic u is the front vowel [ʏ], so it is never written.
+
+Nasal vowels
+Icelandic has no nasal vowels. Write the oral vowel and nothing after it. Do not add an n.
+- /ɑ̃/ /ɑ̃ː/ → a: /ˈwur.ðɑ̃/ is vúrða, /ˈɸɑ̃ː.xɑ.nɑ̃/ is fagana.
+- /ĩ/ /ĩː/ → i. /ũ/ /ũː/ → ú.
+- /ɔ̃ː/ /ɔ̃ːː/ → o: /ˈtuŋ.gɔ̃ː/ is túngo.
+
+Diphthongs
+- /ɑi̯/ → æ: /ˈhlɑi̯.βɑz/ is hlævas, /ˈtiː.wɑi̯/ is tívæ.
+- /ɑu̯/ → á: /ˈɑu̯.ɣɔːː/ is ágo.
+- /eu̯/ → eú: /ˈθeu̯.ðɔː/ is þeúðo. Icelandic has no [eu], and e plus ú is the nearest.
+- /iu̯/ → jú: /ˈliu̯x.tɑ̃/ is ljúgta. Icelandic jú [ju] puts the weight on the second element, the way the descendants of these words do.
+- /ɔːu̯/ → ó, the Icelandic diphthong [ou]: /ˈɑx.tɔːu̯/ is agtó.
+- /ɔːi̯/ → oj. /ɛːi̯/ → ei.
+
+Consonants
+- /p t k b d m n s l/ → the same letters. Icelandic b, d, and g are voiceless unaspirated stops. That is the nearest it has to the Proto-Germanic stops.
+- /g/ after /ŋ/ → the g of ng: /ˈku.niŋ.gɑz/ is kúningas, /ˈtuŋ.gɔ̃ː/ is túngo. /ŋk/ → nk: /ˈdriŋ.kɑn.di/ is drinkandi.
+- /ɣ/ → g. Icelandic reads g between vowels and at the end of a word after a vowel as [ɣ]: /ˈdɑ.ɣɑz/ is dagas, /ˈber.ɣɑz/ is bergas. At the start of a word Icelandic g is a stop. Write g there too: /ˈɣɑs.tiz/ is gastis.
+- /β/ → v: /ˈɣe.βɑ.nɑ̃/ is gevana, /ˈhɑβ.jɑ.nɑ̃/ is havjana. Never f, which Icelandic reads as [p] before l or n.
+- /ɸ/ → f: /ˈɸɑ.ðɛːr/ is faðer, /ˈwul.ɸɑz/ is vúlfas.
+- /θ/ → þ in every position, also inside and at the end of a word: /ˈbrɔː.θɛːr/ is broþer.
+- /ð/ → ð: /ˈwur.ðɑ̃/ is vúrða, /ˈtɑ.wi.ðɔː/ is taviðo.
+- /z/ → s, in every position: /ˈku.niŋ.gɑz/ is kúningas, /ˈrɑz.dɔː/ is rasdo. Icelandic has no [z]. Never r.
+- /x/ → g. Icelandic reads g before t or s as [x]: /ˈnɑxts/ is nagts, /ˈɑx.tɔːu̯/ is agtó. Between vowels and at the end of a word too: /ˈjɑx/ is jag, /ˈwiːx.nɑi̯/ is vígnæ.
+- /h/ → h, only at the start of a syllable before a vowel: /ˈhun.dɑz/ is húndas.
+- /hl/ → hl, /hr/ → hr, /hn/ → hn. Icelandic says all three voiceless, as Proto-Germanic did: /ˈhlɑi̯.βɑz/ is hlævas.
+- /hʷ/ → hv: /ˈhʷɑt/ is hvat. /xʷ/ → gv: /ˈse.xʷɑ.nɑ̃/ is segvana.
+- /kʷ/ → kv: /ˈkʷe.nɔː/ is kveno. /gʷ/ /ɣʷ/ → gv: /ˈsiŋ.gʷɑ.nɑ̃/ is singvana.
+- /w/ → v: /ˈwul.ɸɑz/ is vúlfas.
+- /j/ → j: /ˈhul.ti.jɑz/ is húltijas.
+- /r/ → r. Icelandic r is a trill.
+
+Geminates
+Icelandic says some doubled letters as other sounds. Double a letter only where Icelandic reads the double as a long consonant.
+- /m.m/ → mm. /s.s/ → ss. /r.r/ → rr. /d.d/ → dd. /g.g/ → gg.
+- /n.n/ → nn after a, e, i, and o. After ú, í, æ, á, and the other diphthong spellings, Icelandic reads nn as [tn], so write n: /ˈkun.nɑ.nɑ̃/ is kúnana.
+- /l.l/ → l, always. Icelandic reads ll as [tl]: /ˈɸul.lɑz/ is fúlas.
+- /p.p/ → p, /t.t/ → t, /k.k/ → k. Icelandic pp, tt, and kk are preaspirated.
+- /j.j/ → j. /w.w/ → v.
+
+Capitals and pauses
+- Write lowercase letters. Capitalize the first letter of each sentence, after a period, an exclamation mark, or a question mark, and at the start of the line.
+- Keep each comma, exclamation mark, question mark, and period of the IPA.
+
+Lost in the Icelandic reading
+- Vowel length and overlength. Icelandic lengthens every stressed vowel before one consonant and shortens it before two. namô and nama would sound alike.
+- Nasal vowels. dagą and daga would sound alike.
+- The difference between /e/, /eː/, and /ɛː/. All three are e.
+- The fricative at the start of a word: /ɣ/ comes out as the stop [k]. Icelandic g also becomes palatal [c] before e, i, í, and æ, so gevana starts like Icelandic geta.
+- /x/ between vowels comes out voiced [ɣ]: fagana.
+- The bilabial /ɸ/ comes out as [f], and as [v] between vowels.
+- [z], and the voicing of /b d g/.
+- /hʷ/ comes out as [kv] or [xv]. /iu̯/ comes out as [ju].
+- Gemination of l, of n after ú, and of p, t, k.
+- Icelandic changes a vowel before ng and nk: a, e, o become [au], [ei], [ou] there, so ganganą comes out with [au]. i and ú are not much changed.
+- Icelandic reads rl and rn as [rtl] and [rtn]: hurną gets a [t].

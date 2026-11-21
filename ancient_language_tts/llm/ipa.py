@@ -113,11 +113,11 @@ def to_ipa(text: str, source: str, *, tier: Tier = "high", **settings: Any) -> s
     transcription is dropped. One that still cannot score that line, or still
     cannot rewrite it, keeps the first line. One that still cannot score a
     standing line is left out of the mean. When `models` is set, that list is
-    the tier. Settings are the keyword arguments of `speak`.
+    the tier. Settings are the settings of `config`.
 
     A passage longer than `max_chars` is split on sentence boundaries, and
     each piece is transcribed on its own. The lines are joined in order.
-    `speak` respells each of those pieces before joining them.
+    `api.respell` respells each of those pieces before joining them.
     """
     with config.scope(**settings):
         parts = chunks.split(text)
@@ -381,7 +381,7 @@ def score_ipa(text: str, ipa: str, lang: str, model: str, **settings: Any) -> di
     """Score how well `ipa` renders `text` in `lang`.
 
     `model` is one OpenRouter id, and it is the only model asked. Settings
-    are the keyword arguments of `speak`. The dict has `reasoning` and
+    are the settings of `config`. The dict has `reasoning` and
     `score`. `score` runs from 0 to 1000.
     """
     cleaned_text = text.strip()

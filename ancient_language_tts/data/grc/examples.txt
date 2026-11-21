@@ -1,5 +1,71 @@
 φίλος → ˈpʰi.los
-ἄνθρωπος → ˈan.tʰrɔː.pos
-ζῷον → ˈzdɔː.on
-οὐρανός → uː.raˈnos
-ῥήτωρ → ˈr̥ɛː.tɔːr
+
+ἄνθρωπος → ˈan.tʰro.pos
+
+ζῷον → ˈzo.on
+
+οὐρανός → u.raˈnos
+
+ῥήτωρ → ˈre.tor
+
+θεός → tʰɛˈos
+
+παιδίον → pɛˈdi.on
+
+εἰρήνη → iˈre.ne
+
+οἶκος → ˈy.kos
+
+υἱός → hyˈos
+
+αὐτός → aɸˈtos
+
+εὐχαριστῶ → ɛɸ.kʰa.risˈto
+
+εὐαγγέλιον → ɛ.βaŋˈgɛ.li.on
+
+πνεῦμα → ˈpnɛβ.ma
+
+ἡμέρα → heˈmɛ.ra
+
+γῆ → ˈʝe
+
+γυνή → ʝyˈne
+
+ἀγάπη → aˈɣa.pe
+
+ἄγγελος → ˈaŋ.gɛ.los
+
+κόσμος → ˈkoz.mos
+
+θάλασσα → ˈtʰa.la.sa
+
+ἐκκλησία → ɛ.kleˈsi.a
+
+ψυχή → psyˈkʰe
+
+δόξα → ˈdok.sa
+
+ὕδωρ → ˈhy.dor
+
+πέμπω → ˈpɛm.po
+
+Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν, καὶ θεὸς ἦν ὁ λόγος. → ɛn arˈkʰe ˈen ho ˈlo.ɣos, kɛ ho ˈlo.ɣos ˈen pros ton tʰɛˈon, kɛ tʰɛˈos ˈen ho ˈlo.ɣos.
+
+οὗτος ἦν ἐν ἀρχῇ πρὸς τὸν θεόν. πάντα δι’ αὐτοῦ ἐγένετο, καὶ χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν ὃ γέγονεν. → ˈhu.tos ˈen ɛn arˈkʰe pros ton tʰɛˈon. ˈpan.ta di aɸˈtu ɛˈʝɛ.nɛ.to, kɛ kʰoˈris aɸˈtu ɛˈʝɛ.nɛ.to uˈdɛ ˈhɛn ˈho ˈʝɛ.ɣo.nɛn.
+
+ἐν αὐτῷ ζωὴ ἦν, καὶ ἡ ζωὴ ἦν τὸ φῶς τῶν ἀνθρώπων· καὶ τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει, καὶ ἡ σκοτία αὐτὸ οὐ κατέλαβεν. → ɛn aɸˈto zoˈe ˈen, kɛ he zoˈe ˈen to ˈpʰos ton anˈtʰro.pon. kɛ to ˈpʰos ɛn te skoˈti.a ˈpʰɛ.ni, kɛ he skoˈti.a aɸˈto u kaˈtɛ.la.βɛn.
+
+Ἀρχὴ τοῦ εὐαγγελίου Ἰησοῦ Χριστοῦ υἱοῦ θεοῦ. → arˈkʰe tu ɛ.βaŋ.gɛˈli.u i.eˈsu kʰrisˈtu hyˈu tʰɛˈu.
+
+Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς· ἁγιασθήτω τὸ ὄνομά σου· ἐλθέτω ἡ βασιλεία σου· γενηθήτω τὸ θέλημά σου, ὡς ἐν οὐρανῷ καὶ ἐπὶ γῆς· → ˈpa.tɛr heˈmon ho ɛn tys u.raˈnys. ha.ʝi.asˈtʰe.to to ˈo.no.ma su. ɛlˈtʰɛ.to he βa.siˈli.a su. ʝɛ.neˈtʰe.to to ˈtʰɛ.le.ma su, hos ɛn u.raˈno kɛ ɛˈpi ˈʝes.
+
+τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον· καὶ ἄφες ἡμῖν τὰ ὀφειλήματα ἡμῶν, ὡς καὶ ἡμεῖς ἀφήκαμεν τοῖς ὀφειλέταις ἡμῶν· → ton ˈar.ton heˈmon ton ɛ.piˈu.si.on ˈdos heˈmin ˈse.mɛ.ron. kɛ ˈa.pʰɛs heˈmin ta o.pʰiˈle.ma.ta heˈmon, hos kɛ heˈmis aˈpʰe.ka.mɛn tys o.pʰiˈlɛ.tɛs heˈmon.
+
+καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ. → kɛ me i.sɛˈnɛŋ.kes heˈmas is pi.razˈmon, aˈla ˈry.sɛ heˈmas aˈpo tu po.neˈru.
+
+Οὕτως γὰρ ἠγάπησεν ὁ θεὸς τὸν κόσμον, ὥστε τὸν υἱὸν τὸν μονογενῆ ἔδωκεν, ἵνα πᾶς ὁ πιστεύων εἰς αὐτὸν μὴ ἀπόληται ἀλλ’ ἔχῃ ζωὴν αἰώνιον. → ˈhu.tos ɣar eˈɣa.pe.sɛn ho tʰɛˈos ton ˈkoz.mon, ˈhos.tɛ ton hyˈon ton mo.no.ʝɛˈne ˈɛ.do.kɛn, ˈhi.na ˈpas ho pisˈtɛ.βon is aɸˈton me aˈpo.le.tɛ al ˈɛ.kʰe zoˈen ɛˈo.ni.on.
+
+Ἡ ἀγάπη μακροθυμεῖ, χρηστεύεται ἡ ἀγάπη, οὐ ζηλοῖ, ἡ ἀγάπη οὐ περπερεύεται, οὐ φυσιοῦται. → he aˈɣa.pe ma.kro.tʰyˈmi, kʰresˈtɛ.βɛ.tɛ he aˈɣa.pe, u zeˈly, he aˈɣa.pe u pɛr.pɛˈrɛ.βɛ.tɛ, u pʰy.siˈu.tɛ.
+
+ὑμεῖς δὲ τίνα με λέγετε εἶναι; → hyˈmis dɛ ˈti.na mɛ ˈlɛ.ʝɛ.tɛ ˈi.nɛ?

@@ -186,7 +186,7 @@ def respell(
     respelling is dropped. One that still cannot score that line, or still
     cannot rewrite it, keeps the first line. One that still cannot score a
     standing line is left out of the mean. When `models` is set, that list is
-    the tier. Settings are the keyword arguments of `speak`.
+    the tier. Settings are the settings of `config`.
     """
     with config.scope(**settings):
         return _ensemble(text, ipa, source, target, tier)
@@ -481,7 +481,7 @@ def score_respelling(
     """Score how well `respelling` renders `ipa` for `phonetics_lang`.
 
     `model` is one OpenRouter id, and it is the only model asked. Settings
-    are the keyword arguments of `speak`. The dict has `reasoning` and
+    are the settings of `config`. The dict has `reasoning` and
     `score`. `score` runs from 0 to 1000.
     """
     cleaned_text = text.strip()

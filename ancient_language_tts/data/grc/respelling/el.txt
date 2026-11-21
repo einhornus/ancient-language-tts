@@ -1,0 +1,52 @@
+The input looks like Greek, and a Modern Greek voice will read Greek letters with their modern values. Never copy the original spelling. The IPA already has the first-century values; spell those in the letters a Modern Greek reader says that way. φ θ χ are aspirated stops, so they are π τ κ, not φ θ χ. δ is a stop, so it is ντ, not δ. ει is [i], so it is ι. αι is [ɛ], so it is ε. οι and υ are [y], so they are ι. The rough breathing [h] is not written.
+
+Map each IPA symbol to the Modern Greek spelling. Write monotonic Greek: lowercase letters, one accent mark (the tonos) and the diaeresis, and final ς at the end of a word. Capitalize the first letter of each sentence.
+
+Stress
+- A word with ˈ takes a tonos on the vowel letter of the stressed syllable: /u.raˈnos/ is ουρανός, /ˈlo.ɣos/ is λόγος. A monosyllable with ˈ takes the tonos too, so the voice stresses it: /ˈen/ is έν, /ˈpʰos/ is πός.
+- A word with no ˈ takes no tonos: /ho/ is ο, /kɛ/ is κε, /su/ is σου.
+- On ου the tonos goes on υ: /aɸˈtu/ is αφτού.
+- A capital letter at the start of a sentence keeps its tonos in front: /ˈhu.tos/ at the start is Ούτος.
+
+Vowels
+- /a/ → α.
+- /ɛ/ /e/ → ε. Modern Greek has one e, so η and ε merge: /heˈmɛ.ra/ is εμέρα.
+- /i/ → ι: /iˈre.ne/ is ιρένε.
+- /y/ → ι. Modern Greek has no [y]. υ and οι are read [i] too, so write the plain ι: /ˈy.kos/ is ίκος, /hyˈos/ is ιός.
+- /o/ → ο. Never ω; it reads the same, and ο is the plain letter.
+- /u/ → ου: /u.raˈnos/ is ουρανός.
+- Two vowels in two syllables must not form a Modern Greek digraph. Write a diaeresis on the second when the pair would spell αι, ει, οι, or υι: /a.i/ is αϊ, /ɛ.i/ /ɛ.y/ /e.i/ are εϊ, /o.i/ /o.y/ are οϊ. When that second vowel is stressed, it takes both marks, ΐ: /e.saˈi.as/ is εσαΐας. Every other pair is written as it stands: /tʰɛˈos/ is τεός, /ˈzo.on/ is ζόον, /i.eˈsus/ is ιεσούς.
+
+Labial diphthongs
+- /aβ/ → αβ, /aɸ/ → αφ: /aɸˈtos/ is αφτός.
+- /ɛβ/ /eβ/ → εβ, /ɛɸ/ /eɸ/ → εφ: /ˈpnɛβ.ma/ is πνέβμα, /ɛɸ.kʰa.risˈto/ is εφκαριστό.
+- Write the consonant letter, not αυ or ευ. Modern Greek reads αυ and ευ the same way, but β and φ show the IPA exactly.
+
+Consonants
+- /p/ /pʰ/ → π. /t/ /tʰ/ → τ. /k/ /kʰ/ → κ. Modern Greek φ θ χ are fricatives; the aspirate is a stop, and π τ κ are the nearest stops: /ˈpʰi.los/ is πίλος, /tʰɛˈos/ is τεός, /ˈkʰa.ris/ is κάρις.
+- /d/ → ντ in every position. Modern Greek δ is [ð], and ντ is its only spelling of [d]: /ˈdok.sa/ is ντόξα, /ˈhy.dor/ is ίντορ, /dɛ/ is ντε.
+- /b/ → μπ. It occurs only after /m/, so /m.b/ is μπ: /lamˈba.no/ is λαμπάνο.
+- /β/ → β: /βa.siˈli.a/ is βασιλία.
+- /ɣ/ → γ: /ˈlo.ɣos/ is λόγος.
+- /ʝ/ → γ. It occurs only before /ɛ e i y/, and Modern Greek γ is [ʝ] before ε and ι: /ʝyˈne/ is γινέ, /ɛˈʝɛ.nɛ.to/ is εγένετο.
+- /ɸ/ → φ.
+- /ŋg/ → γγ: /ˈaŋ.gɛ.los/ is άγγελος. /ŋk/ and /ŋkʰ/ → γκ: /i.sɛˈnɛŋ.kes/ is ισενέγκες. /ŋks/ → γξ.
+- /s/ → σ, and ς at the end of a word. /z/ before a voiced consonant → σ, because Modern Greek voices σ there on its own: /ˈkoz.mos/ is κόσμος, /pi.razˈmon/ is πιρασμόν. Every other /z/ → ζ: /zoˈe/ is ζοέ.
+- /ks/ /k.s/ → ξ. /ps/ /p.s/ → ψ.
+- /m/ → μ. /n/ → ν. /l/ → λ. /r/ → ρ.
+- /h/ → nothing. Modern Greek has no [h]. χ would be [x] or [ç], much stronger than a breath: /ho/ is ο, /heˈmon/ is εμόν.
+- Never write a doubled consonant letter. The IPA has no geminates: /ˈtʰa.la.sa/ is τάλασα, /aˈla/ is αλά.
+
+Pauses
+- Keep each comma, exclamation mark, and period of the IPA.
+- A question mark is the Greek question mark ; : /ˈi.nɛ?/ is ίνε;
+
+Lost in the Modern Greek reading
+- Aspiration. /pʰ tʰ kʰ/ come out as plain [p t k].
+- /h/.
+- The rounded /y/. It comes out as [i], so οἶκος and εἰκός sound alike.
+- The difference between /e/ (η) and /ɛ/ (ε, αι).
+- Post-nasal voicing. Modern Greek reads μπ, ντ, and γκ as [mb], [nd], and [ŋg], and often as plain [b], [d], [g]: πέμπο comes out as [ˈpembo], πάντα as [ˈpanda]. A /d/ written ντ between vowels may get a short [n] before it: ίντορ.
+- γι before a vowel is one consonant [ʝ] in Modern Greek: /ˈha.ʝi.os/ written άγιος may lose its [i] syllable. An unstressed ι after a consonant before a vowel may glide, as /skoˈti.a/ does not but /ɛ.βaŋˈgɛ.li.on/ may.
+- κ and γ before ε and ι come out palatal, [c] and [ʝ]. For γ that is the intended value. For κ it is a Modern Greek allophone the IPA does not mark.
+- Modern Greek reads /β/ as the labiodental [v] and /ɸ/ as [f].

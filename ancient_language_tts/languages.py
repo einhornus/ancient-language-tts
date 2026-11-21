@@ -2,7 +2,7 @@
 
 Ancient languages are the ones this package transcribes. `lat` is Classical
 Latin and `lat-ecc` is Ecclesiastical Latin in the Italian school. `grc` is
-Classical Attic. Other stages of those languages are different phonologies
+Koine Greek of the first century AD. Other stages of those languages are different phonologies
 and are not folded into these codes. `eme` and `lat-ecc` are project codes:
 ISO 639 has no entry for either. The proto-language codes are the ones
 Wiktionary uses.
@@ -52,7 +52,7 @@ ANCIENT: tuple[AncientLanguage, ...] = (
         "Ecclesiastical Latin",
         "Italian school, Roman pronunciation",
     ),
-    AncientLanguage("grc", "Ancient Greek", "Classical Attic, 5th–4th century BC"),
+    AncientLanguage("grc", "Koine Greek", "Roman-era Koine, 1st century AD"),
     AncientLanguage("eme", "Early Modern English", "c. 1600 AD"),
     AncientLanguage("enm", "Middle English", "London, c. 1400 AD"),
     AncientLanguage("ang", "Old English", "Late West Saxon, c. 900 AD"),
@@ -80,6 +80,54 @@ MODERN: tuple[ModernLanguage, ...] = (
         "zcAOhNBS3c14rBihAFp1",
         "Giovanni",
     ),
+    # No premade ElevenLabs voice is Dutch. George is multilingual, and
+    # language_code "nl" selects Dutch letter-to-sound. Pin a Dutch voice
+    # from the voice library with ELEVENLABS_VOICE_ID for a native accent.
+    ModernLanguage(
+        "nl",
+        "Dutch",
+        "nl",
+        "JBFqnCBsd6RMkjVDRZzb",
+        "George",
+    ),
+    # No premade ElevenLabs voice is Icelandic either. language_code "is"
+    # selects Icelandic letter-to-sound on a model that supports it.
+    ModernLanguage(
+        "is",
+        "Icelandic",
+        "is",
+        "JBFqnCBsd6RMkjVDRZzb",
+        "George",
+    ),
+    # No premade ElevenLabs voice is Greek. language_code "el" selects
+    # Modern Greek letter-to-sound, which reads the Koine respelling.
+    ModernLanguage(
+        "el",
+        "Modern Greek",
+        "el",
+        "JBFqnCBsd6RMkjVDRZzb",
+        "George",
+    ),
+    # No premade ElevenLabs voice is Lithuanian. language_code "lt" selects
+    # Lithuanian letter-to-sound on a model that supports it; it reads the
+    # Proto-Indo-European respelling.
+    ModernLanguage(
+        "lt",
+        "Lithuanian",
+        "lt",
+        "JBFqnCBsd6RMkjVDRZzb",
+        "George",
+    ),
+    # No premade ElevenLabs voice is Ukrainian. language_code "uk" selects
+    # Ukrainian letter-to-sound on a model that supports it; it reads the
+    # Proto-Slavic respelling.
+    ModernLanguage(
+        "uk",
+        "Ukrainian",
+        "uk",
+        "JBFqnCBsd6RMkjVDRZzb",
+        "George",
+    ),
 )
 
 _ANCIENT_ALIASES = {
@@ -91,6 +139,10 @@ _ANCIENT_ALIASES = {
     "church-latin": "lat-ecc",
     "ancient-greek": "grc",
     "greek": "grc",
+    "koine": "grc",
+    "koine-greek": "grc",
+    "biblical-greek": "grc",
+    "new-testament-greek": "grc",
     "early-modern-english": "eme",
     "middle-english": "enm",
     "old-english": "ang",
@@ -101,11 +153,27 @@ _ANCIENT_ALIASES = {
     "proto-indo-european": "ine-pro",
     "pie": "ine-pro",
     "proto-slavic": "sla-pro",
+    "common-slavic": "sla-pro",
+    "psl": "sla-pro",
 }
 
 _MODERN_ALIASES = {
     "english": "en",
     "italian": "it",
+    "dutch": "nl",
+    "nederlands": "nl",
+    "icelandic": "is",
+    "islenska": "is",
+    "íslenska": "is",
+    "modern-greek": "el",
+    "ellinika": "el",
+    "ελληνικά": "el",
+    "lithuanian": "lt",
+    "lietuviu": "lt",
+    "lietuvių": "lt",
+    "ukrainian": "uk",
+    "ukrainska": "uk",
+    "українська": "uk",
 }
 
 _ANCIENT_BY_CODE = {item.code: item for item in ANCIENT}

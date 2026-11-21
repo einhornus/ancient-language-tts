@@ -7,8 +7,8 @@ import unittest
 from unittest import mock
 
 from ancient_language_tts import chunks, config
-from ancient_language_tts.ipa import to_ipa
-from ancient_language_tts.speak import speak
+from ancient_language_tts import api
+from ancient_language_tts.llm.ipa import to_ipa
 
 
 class SplitTests(unittest.TestCase):
@@ -76,7 +76,7 @@ class SplitTests(unittest.TestCase):
 
 
 class PipelineTests(unittest.TestCase):
-    def test_speak_runs_ipa_and_respelling_on_each_piece(self) -> None:
+    def test_llm_respell_runs_ipa_and_respelling_on_each_piece(self) -> None:
         text = "aa. bb. cc. dd."
 
         def fake_ipa(part: str, source: str, *, tier: str = "high", **settings: object) -> str:
@@ -95,17 +95,14 @@ class PipelineTests(unittest.TestCase):
             return part.upper()
 
         with (
-            mock.patch("ancient_language_tts.speak.ipa_step.to_ipa", side_effect=fake_ipa) as ipa,
-            mock.patch("ancient_language_tts.speak.respell_step.respell", side_effect=fake_respell) as spelling,
-            mock.patch("ancient_language_tts.speak.tts.synthesize", return_value=b"audio"),
+            mock.patch("ancient_language_tts.api.llm_steps.to_ipa", side_effect=fake_ipa) as ipa,
+            mock.patch("ancient_language_tts.api.llm_steps.respell", side_effect=fake_respell) as spelling,
         ):
-            speech = speak(text, source="lat", target="en", max_chars=10)
+            line = api.respell(text, "lat", "it", method="llm", max_chars=10)
 
         self.assertEqual([call.args[0] for call in ipa.call_args_list], ["aa. bb.", "cc. dd."])
         self.assertEqual([call.args[0] for call in spelling.call_args_list], ["aa. bb.", "cc. dd."])
-        self.assertEqual(speech.ipa, "/aa. bb./ /cc. dd./")
-        self.assertEqual(speech.respelling, "AA. BB. CC. DD.")
-        self.assertEqual(speech.audio, b"audio")
+        self.assertEqual(line, "AA. BB. CC. DD.")
 
     def test_to_ipa_joins_the_pieces(self) -> None:
         with mock.patch("ancient_language_tts.llm.ipa._ensemble", side_effect=lambda text, source, tier: text[::-1]):

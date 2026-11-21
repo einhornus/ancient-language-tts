@@ -1,27 +1,90 @@
-Stage. Late Proto-Indo-European, about 3000 BC, in the phonemic system used by the standard handbooks and by Wiktionary. This is a reconstruction. The values below are a speaking convention for those phonemes: the laryngeals and the palatovelars stay audible, so that a later step can respell them. Do not simplify the word into Latin, Sanskrit, or a documentary pronunciation that drops them.
+Stage. Late Proto-Indo-European, about 3000 BC, before Anatolian and Tocharian split off and before any daughter sound law. Nothing was written down in it. The words are reconstructions, in the notation of Wiktionary and of the handbooks (Fortson, Ringe, Beekes, Meier-Brügger). Their phonetic values are a hypothesis. The values below are a fixed speaking convention for those phonemes. Keep the laryngeals, the three rows of velars, and the voiced aspirates audible. Do not turn the word into Sanskrit, Greek, Latin, Lithuanian, or a daughter language: *ph₂tḗr is not pitā́, patḗr, or pater, and its h₂ is pronounced.
+
+Output
+- Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
+- Separate syllables with a dot and words with a space. Drop capitals. The pause marks are a comma, an exclamation mark, a question mark, and a period. A comma is a short pause. An exclamation mark and a question mark stay as they are. A period is a long pause and the end of a sentence. A semicolon or a colon is a long pause: write a period. Drop parentheses and quotation marks.
+- Every written letter is pronounced. There are no silent letters.
 
 Spelling of the input
-- A leading asterisk is not pronounced. An acute on a vowel (é, ḗ, ó) is the accent: put ˈ on that syllable and keep the vowel's length.
-- A hyphen inside a word is a morpheme boundary. Keep it inside the word, as a dot.
-- Transcribe the vowels that are written. If the input still writes a laryngeal, pronounce the laryngeal as well. Do not delete h₁ h₂ h₃ and do not color a neighboring vowel a second time.
-- Accept ḱ ǵ, kʷ gʷ, h₁ h₂ h₃, the ring for a syllabic resonant, and macrons.
-
-Consonants
-- Voiceless: p /p/, t /t/, ḱ /c/, k /k/, kʷ /kʷ/.
-- Voiced: b /b/, d /d/, ǵ /ɟ/, g /g/, gʷ /gʷ/. b is rare; if it is written, it is /b/.
-- Voiced aspirated: bʰ /bʱ/, dʰ /dʱ/, ǵʰ /ɟʱ/, gʰ /gʱ/, gʷʰ /gʷʱ/. Keep the aspiration. Do not turn these into fricatives.
-- s is /s/. n before a velar is /ŋ/. r is a trill /r/. l is /l/. i before a vowel is /j/. u before a vowel is /w/.
-- Laryngeals, always pronounced: h₁ /ʔ/, h₂ /χ/, h₃ /ʁ/.
-- A laryngeal between consonants, or at the start of a word before a consonant, is syllabic. Put /ə/ on it and keep the laryngeal: ph₂tḗr is /pəχ.ˈteːr/.
+- A leading asterisk marks a reconstruction and is not pronounced. *h₁ésti and h₁ésti are the same word.
+- A hyphen at the end of a form marks a root or a stem: *dʰeh₁-, *bʰer-. Transcribe what is written and stress it. A hyphen at the start marks an ending or an enclitic on its own: *-kʷe, *-bʰi. Transcribe it with no stress. A hyphen inside a word is a morpheme boundary. Keep the word whole and let the syllable rules place the dots.
+- Wiktionary writes y and w for the glides and ey, oy, ew, ow for the diphthongs. Older books write i̯ u̯, j, ei oi eu ou, or i u before a vowel. They are the same sounds.
+- Wiktionary writes ḱ ǵ ǵʰ for the palatovelars. Older books write k̂ ĝ ĝʰ, k̑ g̑ g̑ʰ, or k' g'. They are the same.
+- Wiktionary writes kʷ gʷ gʷʰ for the labiovelars. Older books write ku̯ gu̯ gu̯ʰ, or q. They are the same.
+- Older books write bh dh gh for bʰ dʰ gʰ. They are the same.
+- h₁ h₂ h₃ are the laryngeals. Some books write h1 h2 h3, H₁ H₂ H₃, or ə₁ ə₂ ə₃. H or hₓ is a laryngeal of unknown color: pronounce it as h₁.
+- A ring under a resonant marks it syllabic: r̥ l̥ m̥ n̥. Some books write ṛ ḷ ṃ ṇ. An acute on the ring is the accent: ŕ̥ ĺ̥ ḿ̥ ń̥.
+- A macron marks a long vowel: ā ē ī ō ū. An acute marks the accent: é ó á í ú, ḗ ṓ ā́ ī́ ū́.
 
 Vowels
-- e /e/, ē /eː/, o /o/, ō /oː/, a /ɑ/, ā /ɑː/
-- i /i/, ī /iː/, u /u/, ū /uː/
-- ei /ei/, oi /oi/, ai /ɑi/, eu /eu/, ou /ou/, au /ɑu/
-- Syllabic resonants: m̥ /m̩/, n̥ /n̩/, l̥ /l̩/, r̥ /r̩/. If the input has already written a vowel instead of the ring, transcribe the vowel that is written.
+- e [e], ē [eː], o [o], ō [oː], a [a], ā [aː], i [i], ī [iː], u [u], ū [uː].
+- e and o are the ordinary vowels. a, i, u, and the long vowels other than ē ō are rare. Transcribe them as written.
+- Unstressed vowels are not reduced. Every ending keeps its written quality and length: *wĺ̥kʷos [ˈwl̩.kʷos], *ǵénh₁tōr [ˈgʲe.nəʔ.toːr].
+
+Laryngeal coloring
+- h₂ next to e, before it or after it, makes it [a]. ē beside h₂ is [aː]: *h₂éǵros [ˈχagʲ.ros], *méh₂tēr [ˈmaχ.teːr], *steh₂- [ˈstaχ].
+- h₃ next to e makes it [o]. ē beside h₃ is [oː]: *h₃érō [ˈɣʷo.roː], *deh₃- [ˈdoɣʷ].
+- h₁ does not color: *h₁ésti [ˈʔes.ti], *dʰeh₁- [ˈdʱeʔ].
+- A written o, a, i, or u is not colored: *h₂ówis [ˈχo.wis]. If the input already writes the colored vowel (*h₂aǵros), transcribe what is written. Do not color it a second time.
+- The laryngeal itself stays. Coloring never deletes it, and it never lengthens the vowel. Lengthening before a laryngeal is a daughter-language change.
+
+Diphthongs
+- ey [ei̯], oy [oi̯], ay [ai̯], ew [eu̯], ow [ou̯], aw [au̯]. The long diphthongs ēy [eːi̯], ōy [oːi̯], ēw [eːu̯], ōw [oːu̯].
+- A glide is the second half of a diphthong only before a consonant or at the end of a word: *óynos [ˈoi̯.nos], *dyḗws [ˈdjeːu̯s], *gʷṓws [ˈgʷoːu̯s]. Before a vowel it is a consonant and starts the next syllable: *tréyes [ˈtre.jes], *h₂ówis [ˈχo.wis].
+- Each diphthong is one syllable. Write ̯ under its second element.
+
+Resonants: syllabic or not
+r l m n y w each have a consonant value and a syllabic value. Decide from the neighbors.
+- Next to a vowel, a resonant is a consonant: r [r], l [l], m [m], n [n], y [j], w [w].
+- Between two consonants, at the start of a word before a consonant, and at the end of a word after a consonant, it is syllabic: r̥ [r̩], l̥ [l̩], m̥ [m̩], n̥ [n̩], and y, w are [i], [u]. The ring is usually written. Follow it when it is.
+- A syllabic resonant is the whole nucleus. Add no vowel beside it: *wĺ̥kʷos [ˈwl̩.kʷos], *ḱm̥tóm [kʲm̩ˈtom], *wódr̥ [ˈwo.dr̩], *h₁nómn̥ [əʔˈno.mn̩].
+- Of two resonants side by side, the one next to a consonant is syllabic and the one next to the vowel is not: *dyḗws [ˈdjeːu̯s].
+- Some books write a vowel for a syllabic resonant (*wl̥kʷos as *wulkʷos). Transcribe the vowel that is written.
+
+Laryngeals
+- h₁ [ʔ], h₂ [χ], h₃ [ɣʷ]. They are always pronounced, at the start of a word too: *h₁ésti [ˈʔes.ti], *h₂ówis [ˈχo.wis], *h₃érō [ˈɣʷo.roː].
+- A laryngeal next to a vowel or a syllabic resonant is a consonant: *méh₂tēr [ˈmaχ.teːr], *h₂ŕ̥tḱos [ˈχr̩t.kʲos], *gʷr̥h₂úm [gʷr̩ˈχum].
+- A laryngeal with no vowel and no syllabic resonant beside it is syllabic: between two consonants, at the start of a word before a consonant, and at the end of a word after a consonant. Put [ə] before it and keep the laryngeal: *ph₂tḗr [pəχˈteːr], *ǵénh₁tōr [ˈgʲe.nəʔ.toːr], *h₁nómn̥ [əʔˈno.mn̩], *méǵh₂s [ˈme.gʲəχs]. The [ə] is not colored.
+- Do not drop a laryngeal, do not turn it into a vowel of a daughter language (Greek a e o, Sanskrit i), and do not lengthen a vowel in its place.
+
+Consonants: the stops
+- Voiceless: p [p], t [t], ḱ [kʲ], k [k], kʷ [kʷ].
+- Voiced: b [b], d [d], ǵ [gʲ], g [g], gʷ [gʷ]. b is rare. If it is written, it is [b].
+- Voiced aspirated: bʰ [bʱ], dʰ [dʱ], ǵʰ [gʲʱ], gʰ [gʱ], gʷʰ [gʷʱ]. Keep the breathy release. Do not make them voiceless and do not make them fricatives: *bʰéreti [ˈbʱe.re.ti], *dʰéǵʰōm [ˈdʱe.gʲʱoːm].
+- ḱ ǵ ǵʰ are fronted velars, k with the tongue raised toward the palate. They are not [s], [ʃ], [ts], or [tʃ]: *ḱwṓ [ˈkʲwoː], not śvā́ or šuo.
+- kʷ gʷ gʷʰ are velars with lip rounding, one consonant each. They are not [p] or [b]: *kʷékʷlos [ˈkʷekʷ.los], *gʷʰen- [ˈgʷʱen].
+- ḱ, k, and kʷ stay apart before every vowel. Do not palatalize a plain k before e or i.
+- The stops are not aspirated except the bʰ series. There is no final devoicing.
+- A cluster of a dental and a velar (the thorn clusters, *tḱ, *dʰǵʰ) is pronounced as written, the dental first: *h₂ŕ̥tḱos [ˈχr̩t.kʲos], *dʰǵʰémōn [dʱgʲʱeˈmoːn]. Do not turn it into [kθ] or [ks].
+
+Other consonants
+- s is [s]. Before a voiced stop or a voiced aspirate it is [z]: *nisdós [nizˈdos], *mizdʰós [mizˈdʱos]. Everywhere else it is [s].
+- n is [n], and [ŋ] before k, g, kʷ, gʷ, and their aspirates: *pénkʷe [ˈpeŋ.kʷe].
+- m [m]. l [l]. r is a trill [r], pronounced in every position.
+- y [j] and w [w] before a vowel. w is never [v].
+- A doubled consonant is a geminate. Write it twice, with the syllable break between. The input rarely has one.
+- Every written cluster is pronounced: *ḱm̥tóm, *dwóh₁, *swéḱs, *nókʷts [ˈnokʷts], *septḿ̥ [sepˈtm̩].
+- Do not apply daughter-language laws. No Grassmann's law, no Bartholomae's law, no satem change, no Grimm's law, no ruki rule. A written *-tt- or *-tst- is transcribed as written.
+
+Syllables
+- Every vowel, diphthong, syllabic resonant, and syllabic laryngeal (written [ə] plus the laryngeal) makes one syllable. Syllabify each word separately.
+- A single consonant between two nuclei goes with the following one. [kʲ gʲ kʷ gʷ bʱ dʱ gʱ gʲʱ gʷʱ] each count as one consonant.
+- Of two or more consonants between nuclei, the last goes with the following nucleus and the rest close the preceding syllable: *kʷékʷlos [ˈkʷekʷ.los], *h₁éḱwos [ˈʔekʲ.wos], *kʷetwóres [kʷetˈwo.res], *h₂éǵros [ˈχagʲ.ros].
+- The laryngeal of a syllabic laryngeal closes its own syllable: [pəχ.teːr], [gʲe.nəʔ.toːr].
+- A cluster at the start or the end of a word stays whole: *swéḱs [ˈswekʲs], *nókʷts [ˈnokʷts].
 
 Accent
-- Put ˈ on the accented syllable. If no accent is written, stress the first syllable.
+- Proto-Indo-European had a free pitch accent. Speak it as a stress. Put ˈ before the syllable with the acute. It replaces the dot.
+- The accent can fall on any syllable and moves between forms of one word. Follow the acute exactly: *ph₂tḗr [pəχˈteːr], *ḱm̥tóm [kʲm̩ˈtom], *wódr̥ [ˈwo.dr̩]. Do not move it to the first syllable.
+- An accent on a syllabic resonant stresses that syllable: *wĺ̥kʷos [ˈwl̩.kʷos], *septḿ̥ [sepˈtm̩].
+- A form with no acute: a root or a stem with a final hyphen, and a word the input leaves unmarked, stresses its first vowel, diphthong, or syllabic resonant: *dʰeh₁- [ˈdʱeʔ], *gʷʰen- [ˈgʷʱen].
+- A syllabic laryngeal is never stressed. A marked word stresses the marked syllable even when it starts with one: *h₁rewdʰós [əʔ.reu̯ˈdʱos], *h₁nómn̥ [əʔˈno.mn̩].
+- Unstressed: the enclitics *-kʷe, *-wē, and *-ge, the negative *ne, and an ending written alone. They take no ˈ.
 
 Symbols
-p t c k kʷ b d ɟ g gʷ bʱ dʱ ɟʱ gʱ gʷʱ s m n ŋ l r j w ʔ χ ʁ ə e eː o oː ɑ ɑː i iː u uː ei oi ɑi eu ou ɑu m̩ n̩ l̩ r̩
+Vowels: a aː e eː i iː o oː u uː ə
+Diphthongs: ai̯ au̯ ei̯ eu̯ oi̯ ou̯ eːi̯ eːu̯ oːi̯ oːu̯
+Syllabic resonants: r̩ l̩ m̩ n̩
+Consonants: p b bʱ t d dʱ kʲ gʲ gʲʱ k g gʱ kʷ gʷ gʷʱ s z m n ŋ l r j w ʔ χ ɣʷ
+Marks: ˈ . ̯
+Pauses: , ! ? .

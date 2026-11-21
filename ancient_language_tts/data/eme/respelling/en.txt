@@ -1,19 +1,29 @@
-The original spelling looks like modern English. Never emit it. The IPA already has the 1600 values; spell those, not today's reading of the same word.
+The original spelling looks like modern English. Never emit it. The IPA already has the 1600 values; spell those, not today's reading of the same word. meat is meyt, not meet. love and good both have uh. /əɪ/ and /əʊ/ are eye and ow. r is always written.
+
+Map each IPA symbol to the English spelling. Write each word as one string of lowercase letters, capitalized only at the start of a sentence. Stress is not marked: drop ˈ and the syllable dots, and join the syllables of a word.
 
 Vowels
-- /iː/ → ee
-- /eː/ → ey
+- /iː/ → ee: /ˈmiːt/ is meet.
+- /eː/ → ey: /ˈmeːt/ is meyt, /ˈdeː/ is dey, /ˈneː.təɹ/ is neytuhr.
 - /ɛ/ → eh
-- /ɪ/ → ih
-- /ə/ → uh
-- /a/ → ah
-- /ɔ/ /ɔː/ → aw
-- /oː/ → oh
+- /ɪ/ → ih, also at the end of a word: /ˈlʊv.lɪ/ is luhvlih.
+- /a/ → ae, the vowel of cat: /ˈman/ is maen, /ˈʍat/ is hwaet. Before /ɹ/ in the same syllable, ah: /ˈaɹt/ is ahrt, /ˈdaɹ.lɪn/ is dahrlihn. ae before r would be read as the vowel of air.
+- /ɔ/ → aw: /ˈnɔt/ is nawt, /ˈsɔft/ is sawft.
+- /ɔː/ → aw: /ˈwɔːk/ is wawk.
+- /oː/ → oh: /ˈknoː/ is knoh.
 - /uː/ → oo
-- /ʊ/ → uh
-- /əɪ/ → eye, the whole nucleus. /təɪm/ is teyem, one syllable.
-- /əʊ/ → ow, the whole nucleus. /həʊs/ is hows, one syllable.
-- /ɔɪ/ → oy, the whole nucleus. /tʃɔɪs/ is choys, one syllable.
+- /ʊ/ → uh: /ˈlʊv/ is luhv, /ˈblʊd/ is bluhd.
+- /ə/ → uh: /ˈsʊ.məɹ/ is suhmuhr. A final /əl/ or /ən/ is uhl or uhn: /ˈnoː.bəl/ is nohbuhl.
+- /əɪ/ → eye, the whole nucleus. /ˈknəɪt/ is kneyet, one syllable. /ˈdʒəɪn/ is jeyen.
+- /əʊ/ → ow, the whole nucleus. /ˈhəʊ/ is how. /ˈəʊɹ/ is owr, one syllable.
+- /ɔɪ/ → oy, the whole nucleus. /ˈbɔɪ/ is boy.
+- /ɪu/ → ew, the whole nucleus. /ˈdɪu/ is dew. /ˈdʒɪu.ljɛt/ is jewlyeht.
+
+Vowels before r
+- /əɹ/ → uhr: /ˈbəɹd/ is buhrd.
+- /iːɹ/ → eer. /eːɹ/ → eyr: /kəmˈpeːɹ/ is kuhmpeyr. /aɹ/ → ahr.
+- /ɔːɹ/ → awr: /ˈhɔːɹs/ is hawrs. /oːɹ/ → ohr: /ˈhoːɹs/ is hohrs. Keep these two apart.
+- /uːɹ/ → oor. /ɪuɹ/ → ewr.
 
 Consonants
 - /p b t d k g f v s z m n l w h/ → the same letters
@@ -23,8 +33,9 @@ Consonants
 - /ʒ/ → zh
 - /tʃ/ → ch
 - /dʒ/ → j
-- /ŋ/ → ng
-- /g/ after /ŋ/ in the next syllable stays g. /ŋ/ and /g/ in the same syllable are ng, once, not ngg.
-- /ɹ/ → r, including after a vowel. Do not drop it.
-- /ʍ/ → hw
+- /ŋ/ → ng: /ˈsɪŋ/ is sing. /ŋ/ then /g/ in the next syllable → ngg: /ˈfɪŋ.gəɹ/ is fingguhr.
+- /ɹ/ → r, including after a vowel and at the end of a word. Do not drop it.
+- /ʍ/ → hw: /ˈʍat/ is hwaet.
+- /sj/ /tj/ /zj/ → sy, ty, zy: /ˈkwɛs.tjən/ is kwehstyuhn. Never sh or zh.
 - /kn/ at the start of a word stays k then n. Do not drop the k. /gn/ and /wr/ likewise keep both consonants.
+- /kw/ → kw.

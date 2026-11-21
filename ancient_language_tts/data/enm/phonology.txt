@@ -1,30 +1,90 @@
-Stage. London Middle English of about 1400, the language of Chaucer. The Great Vowel Shift has not happened. time has /iː/, not the modern diphthong. hous has /uː/, not the modern diphthong. Do not apply modern English values to a spelling that looks familiar.
+Stage. London Middle English of about 1400, the language of Chaucer and the Ellesmere manuscript. The Great Vowel Shift has not happened: tyme has [iː], hous has [uː], name has [aː], mone has [oː]. Every written consonant is still pronounced. The spelling often looks like modern English. Do not apply modern English values to it, and do not return a modern dictionary pronunciation.
+
+Output
+- Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries, except the elision of final -e described below.
+- Separate syllables with a dot and words with a space. Drop capitals. The pause marks are a comma, an exclamation mark, a question mark, and a period. A comma is a short pause. An exclamation mark and a question mark stay as they are. A period is a long pause and the end of a sentence. A semicolon or a colon is a long pause: write a period. Drop parentheses and quotation marks.
+- A line break in verse is a space, unless the text puts a pause mark there.
+
+Spelling of the input
+- y and i are the same vowel letter: nyght, tyme, wyf. y at the start of a word or a syllable, before a vowel, is the consonant [j]: yong, yeer, ye "you" [ˈjeː], yow. ye "eye" is the vowel [ˈiː.ə], and so is its plural yen [ˈiː.ən]. The past-participle prefix y- or i- is the vowel [ɪ]: yronne [ɪˈrʊn.nə], ycleped.
+- u and v are the same letter. Between vowels, and before a vowel at the start of a word, it is the consonant [v]: loue = love, euery = every, vertu. Elsewhere it is a vowel: vp = up, vs = us.
+- o is written for [ʊ] next to m, n, u, v, w: sone "son" [ˈsʊ.nə], sonne [ˈsʊn.nə], come [ˈkʊ.mə], love [ˈlʊ.və], monk, yong, tonge, wonder. Where the modern word has the vowel of cup from this source, use [ʊ].
+- ȝ (yogh) is [j] at the start of a word (ȝe) and [ç] or [x] before t or at the end of a word, like gh.
+- þ is th. ð is th.
+- j is [dʒ]: joye, Jankyn.
+- k is [k]. c is [s] before e, i, y and [k] elsewhere: certeyn, cité, cours, clene. ck is [k].
+- g is [dʒ] before e, i, y in French loans: gentil, corage, age, sergeant. In native words it is [g] before every vowel: gest "guest", gyve, begynne, togidre.
+- qu is [kw]. x is [k.s] between vowels and [ks] elsewhere.
+- French gn inside or at the end of a word is [n], and the vowel before it is long: signe [ˈsiː.nə], digne, benigne [bɛˈniː.nə].
+- A doubled vowel letter (aa, ee, oo) is one long vowel.
+
+Long and short vowels
+- A vowel written double is long.
+- A single a, e, or o in an open syllable of a native or early French word, before a single consonant and another vowel, is long: name [ˈnaː.mə], make, tale, mete "meat" [ˈmɛː.tə], hope [ˈhɔː.pə], open [ˈɔː.pən].
+- A single vowel before a doubled consonant or before two consonants is short: hadde [ˈhad.də], sonne, croppes, kepte [ˈkɛp.tə], dette.
+- Exception. i, y, and ou are long before ld, nd, and mb: child [ˈtʃiːld], fynde [ˈfiːn.də], clymbe, founde [ˈfuːn.də]. o is long [ɔː] before ld: olde [ˈɔːl.də], holde, colde.
+- A vowel before gh is short, and it stays short: nyght [ˈnɪçt], knyght, droghte [ˈdrʊxt]. After a diphthong the diphthong stays: taughte [ˈtaux.tə], thought [ˈθɔuxt].
+- i and y are long [iː] in a stressed open syllable (tyme, ryde) and in a word whose modern form has [aɪ] (lyf, wyf, myn, I). Elsewhere they are short [ɪ]: with [wɪθ], his, swich, Aprille, Cristes [ˈkrɪs.təs].
 
 Vowels
-- Short a /a/, e /ɛ/, i /ɪ/, o /ɔ/, u /ʊ/.
-- Long ā /aː/, the vowel of name and made. It is not /eɪ/.
-- Open long ē /ɛː/, the vowel that later became modern /iː/ in meat, sea, east. Close long ē /eː/, the vowel of meet, see, need. Keep them distinct. Where the spelling does not show which one a word has, use the etymological value if you know it; otherwise use /eː/.
-- Long ī /iː/, the vowel of tyme, ryde, nyght. It is not /aɪ/.
-- Open long ō /ɔː/. Close long ō /oː/, the vowel of mone and good. It is not yet /uː/.
-- Long ū /uː/, the vowel of hous, out, and cow. It is not /aʊ/.
-- ai, ay, ei, ey are /ai/. au, aw are /au/.
-- ou, ow for the hous set is /uː/. ou, ow for the know set is /ɔu/.
-- ew is /iu/. eu is /ɛu/. oi, oy are /ɔi/.
-- Unstressed final -e is /ə/ when it is etymological or when the line is verse and the meter wants it. Before a following vowel, drop it. A purely scribal -e is silent. When the two cannot be told apart, pronounce /ə/.
+- Short a [a], e [ɛ], i and y [ɪ], o [ɔ], u [ʊ]. The o of the cup words above is [ʊ].
+- Long a [aː]: name, cas, fader. It is not [eɪ].
+- Long e has two values. Close [eː] is the vowel of modern meet, see, sweet, green, deep, be, he, me: sweete [ˈsweː.tə], grene, slepen [ˈsleː.pən]. Open [ɛː] is the vowel of modern meat, sea, heath, breath, clean, speak, great, break, eek: heeth [ˈhɛːθ], breeth [ˈbrɛːθ], eek [ˈɛːk], clene [ˈklɛː.nə]. The spelling does not tell them apart. Use the modern reflex: a modern ee or ie, or the vowel of field, is [eː]. A modern ea, or a modern short e from a long vowel (breath, dead, deaf), is [ɛː]. When you cannot tell, use [eː].
+- Long i and y [iː]: tyme, ryde, wyf. It is not [aɪ].
+- Long o has two values. Close [oː] is the vowel of modern food, good, root, moon, foot, book, do, to: roote [ˈroː.tə], soote [ˈsoː.tə], goode, mone, sooth. Open [ɔː] is the vowel of modern boat, stone, home, holy, go, so, both, and of every o that came from Old English ā: hooly [ˈhɔː.lɪ], hoom, goon [ˈgɔːn], stoon, so, open. Use the modern reflex: a modern [uː] or [ʊ] is [oː], a modern [oʊ] is [ɔː]. When you cannot tell, use [oː]. It is not yet [uː].
+- ou and ow in words whose modern vowel is [aʊ], and in French loans with ou, are long [uː]: hous [ˈhuːs], shoures [ˈʃuː.rəs], flour [ˈfluːr], licour [lɪˈkuːr], cours, foweles [ˈfuː.ləs], now [ˈnuː], how. It is not [aʊ].
+- Unstressed final y and ie are [ɪ]: every [ˈɛv.rɪ], hooly, Caunterbury, sely.
+
+Diphthongs
+- ai, ay, ei, ey are [ai]: day [ˈdai], wey, veyne [ˈvai.nə], seyde, certeyn [sɛrˈtain], verray [ˈvɛr.rai].
+- au and aw are [au]: cause, lawe, straunge [ˈstraun.dʒə], taughte. The a before n plus a consonant in French loans is often written au and is [au].
+- ou and ow in words whose modern vowel is [oʊ] or [ɔː] are [ɔu]: knowe [ˈknɔu.ə], growe, soule, thought [ˈθɔuxt], broughte, nought. This includes every ough and ought whose modern word has the vowel of law or of go.
+- ew and eu are [iu] in words from Old English ēow and īw and in new, trewe, knew, hewe "hue": newe [ˈniu.ə], trewe. They are [ɛu] in fewe, lewed, shewe, beautee: fewe [ˈfɛu.ə]. When you cannot tell, use [iu].
+- French u, and French ew and eu, are [iu]: vertu [vɛrˈtiu], nature [naˈtiu.rə], vertuous, mesure. Do not use the front rounded [y].
+- oi and oy are [ɔi]: joye [ˈdʒɔi.ə], coy, point.
+- Each diphthong is one syllable.
+
+Unstressed vowels and endings
+- Unstressed e is [ə]. The endings -es, -ed, -en, -eth, and -er are syllables with [ə]: shoures [ˈʃuː.rəs], perced [ˈpɛr.səd], bathed [ˈbaː.ðəd], maken [ˈmaː.kən], priketh [ˈprɪ.kəθ], fader [ˈfaː.dər].
+- Final -e is [ə], its own syllable: name [ˈnaː.mə], roote, soote, Aprille [aˈprɪl.lə], knowe [ˈknɔu.ə]. It is pronounced at a pause and at the end of a verse line.
+- Before a word that begins with a vowel, drop the final -e: droghte of [ˈdrʊxt ɔf], veyne in [ˈvain ɪn]. Drop it also before an h that is silent and before the weak words he, his, him, hir, hem, hath, hadde, how, here: thanne he [ˈðan ˈheː].
+- The -e of the, he, me, she, we, be, ye, thee is not this -e. It is the stressed vowel of the word: [ðə] for the, [ˈheː] for he.
+- In verse, an unstressed e between two consonants, next to another unstressed syllable, is often silent: every [ˈɛv.rɪ], evere [ˈɛv.rə], foweles [ˈfuː.ləs], palmeres [ˈpal.mərs], sovereyn. Drop it where the line of ten or eleven syllables needs it. Outside verse, keep it except in every and evere.
+- Pronounce every other vowel. Do not elide anything the rules above do not drop.
 
 Consonants
-- Every written consonant is pronounced. kn is /kn/, gn at the start of a word is /gn/, wr is /wr/.
-- gh and h after a vowel are /ç/ after a front vowel and /x/ after a back vowel. They are not silent.
-- wh is /ʍ/. th, þ, and ð are /θ/ at the start or end of a word and next to a voiceless consonant, and /ð/ between voiced sounds.
-- sh is /ʃ/. ch is /tʃ/. j, dg, and gg are /dʒ/.
-- r is a tap /r/ wherever it is written. l is /l/, including in folk, walk, and palm.
-- ng is /ŋ/ plus /g/. A doubled consonant is a geminate.
-- f and v are the sounds that are written. s is /s/, and /z/ between vowels when the modern word voices it.
+- Every written consonant is pronounced. kn is [kn]: knyght [ˈknɪçt], knowe. gn at the start of a word is [gn]: gnawe. wr is [wr]: write. l is [l] in folk, half, walke, palmer, shulde, wolde, colde. b is [b] after m: lamb, clymbe.
+- gh is [ç] after a front vowel or a diphthong that ends in i: nyght [ˈnɪçt], knyght, myght, heigh [ˈhaiç]. It is [x] after a back vowel or a diphthong that ends in u: droghte [ˈdrʊxt], thought [ˈθɔuxt], taughte [ˈtaux.tə], lough. It is never silent and never [f].
+- h is [h] at the start of a native word: hous, hath, hooly, him. It is silent in French loans: honour [ɔˈnuːr], hour, honeste, hoost "host" [ˈɔːst], habit, humble [ˈʊm.blə], heritage.
+- wh is [ʍ]: whan [ʍan], which [ˈʍɪtʃ], what.
+- th is [ð] at the start of the, that, this, thise, thou, thee, thy, thyn, they, thanne, ther, though, thus, and their forms. It is [ð] between vowels or voiced sounds inside a word: bathed [ˈbaː.ðəd], other, fethere, brother. Elsewhere it is [θ]: thought, thing, with [wɪθ], breeth, heeth, hath, priketh.
+- s is [s]. It is [z] between vowels when the modern word has [z]: chese "choose", rose, wise, resoun [rɛˈzuːn], and in the plural houses [ˈhuː.zəs]. The ending -es is [əs], and s at the end of a word is [s]: is [ˈɪs], his [hɪs], was.
+- f and v are what is written: lyf [ˈliːf], lyves [ˈliː.vəs], halve [ˈhal.və].
+- sh, sch, and ssh are [ʃ]: shoures, schal, fresshe [ˈfrɛ.ʃə]. ch is [tʃ]: chirche [ˈtʃɪr.tʃə], swich [ˈswɪtʃ], March [ˈmartʃ]. j, dg, and g before e, i, y in a French loan are [dʒ]. gg is [dʒ] where the modern word has [dʒ]: brigge [ˈbrɪd.dʒə], egge "edge", segge "say"; elsewhere it is [g.g].
+- ng is [ŋ] plus [g] in every position: yonge [ˈjʊŋ.gə], thing [ˈθɪŋg], longen [ˈlɔŋ.gən], kyng. nk is [ŋk]: thanke. n before c, k, g, or qu is [ŋ].
+- r is a trill [r] wherever it is written, before a consonant and at the end of a word too: March [ˈmartʃ], flour [ˈfluːr].
+- A doubled consonant is a geminate. Write the consonant twice with the syllable boundary between: sonne [ˈsʊn.nə], Aprille [aˈprɪl.lə], croppes [ˈkrɔp.pəs], hadde, lette [ˈlɛt.tə]. ck, sh, and ssh are not geminates: fresshe [ˈfrɛ.ʃə].
+- p t k b d g f v θ ð s z ʃ m n l have their ordinary values. There is no aspiration and no dark l to mark.
+
+Syllables
+- Every vowel or diphthong makes one syllable. Syllabify each word separately.
+- A single consonant between vowels goes with the following vowel. [tʃ], [dʒ], [ʃ], [θ], [ð], [ç], [x], and [kw] each count as one consonant.
+- Of two or more consonants, the last goes with the following vowel and the rest close the preceding syllable: perced [ˈpɛr.səd], holt and [ˈhɔlt and], kepte [ˈkɛp.tə].
+- A stop or f plus l or r stays together and begins the next syllable: tendre [ˈtɛn.drə], engendred [ɛnˈdʒɛn.drəd], Aprille [aˈprɪl.lə] after its geminate. Any other pair is split: every [ˈɛv.rɪ], palmer [ˈpal.mər].
+- [ç] or [x] plus t is a coda: nyght [ˈnɪçt], taughte [ˈtaux.tə].
+- A prefix boundary overrides these rules: y-ronne [ɪˈrʊn.nə], bi-gynne.
 
 Stress
-- A native word stresses the first syllable.
-- A French loan often stresses a later syllable, as in Chaucer. Use that stress.
-- Put ˈ before the stressed syllable.
+- A monosyllable takes ˈ unless it is an article, a preposition, a conjunction, or a possessive: the, a, an, of, to, in, on, at, by, with, for, fro, and, or, but, that, as, if, whan, his, hir, my, thy, oure, youre. that is unstressed also as a relative pronoun.
+- A native word stresses the first syllable of its root. The prefixes y-, i-, a-, be-, bi-, for-, to-, and with- are unstressed: yronne [ɪˈrʊn.nə], bigynne, forsake, agoon.
+- A French or Latin loan stresses its last full syllable, the last syllable whose vowel is not [ə]: vertu [vɛrˈtiu], licour [lɪˈkuːr], honour [ɔˈnuːr], nature [naˈtiu.rə], corage [kʊˈraː.dʒə], melodye [mɛ.lɔˈdiː.ə], Aprille [aˈprɪl.lə], pilgrimages [pɪl.grɪˈmaː.dʒəs].
+- In verse Chaucer often moves the stress of a French loan to its first syllable. The line is iambic: ten syllables, or eleven with a final -e, alternating unstressed and stressed. When the input is verse and the line needs it, stress the first syllable: verray [ˈvɛr.rai], parfit [ˈpar.fɪt], gentil [ˈdʒɛn.tɪl], tendre [ˈtɛn.drə], servyse. Outside verse, use the last full syllable.
+- A Latin or Greek name keeps its Latin stress: Zephirus [ˈzɛ.fɪ.rʊs].
+- Put ˈ before the stressed syllable. It replaces the dot.
 
 Symbols
-a aː ɛ ɛː eː ɪ iː ɔ ɔː oː ʊ uː ə ai au ɔu iu ɛu ɔi p b t d k g f v θ ð s z ʃ tʃ dʒ x ç m n ŋ l r j w ʍ h
+Vowels: a aː ɛ ɛː eː ɪ iː ɔ ɔː oː ʊ uː ə
+Diphthongs: ai au ɔu iu ɛu ɔi
+Consonants: p b t d k g f v θ ð s z ʃ tʃ dʒ ç x h m n ŋ l r j w ʍ
+Marks: ˈ .
+Pauses: , ! ? .

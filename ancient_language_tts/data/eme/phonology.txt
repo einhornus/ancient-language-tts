@@ -1,28 +1,91 @@
-Stage. Educated southern English of about 1600, the Original Pronunciation used for Shakespeare. The spelling looks like today's English. The values below replace today's values wherever they differ. Do not return a modern dictionary pronunciation.
+Stage. Educated London English of about 1600, the Original Pronunciation used for Shakespeare. The Great Vowel Shift has run most of its course, but not all of it: meat is not yet meet, face is a pure long vowel, price and mouth begin with a central vowel, love and good share one vowel, and r is pronounced after every vowel. The spelling looks like today's English. The values below replace today's values wherever they differ. Do not return a modern dictionary pronunciation.
+
+Output
+- Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
+- Separate syllables with a dot and words with a space. Drop capitals. The pause marks are a comma, an exclamation mark, a question mark, and a period. A comma is a short pause. An exclamation mark and a question mark stay as they are. A period is a long pause and the end of a sentence. A semicolon or a colon is a long pause: write a period. Drop parentheses, dashes, and quotation marks.
+- A line break in verse is a space, unless the text puts a pause mark there.
+
+Spelling of the input
+- The input may be in original spelling or modernized. Read both the same way: u and v, i and j, and a final -e are spelling, not sound. vnto is unto, iust is just, doe is do, beene is been.
+- An apostrophe marks a lost syllable, and the syllable is not pronounced: lov'd [ˈlʊvd], heav'n [ˈhɛvn] is one syllable, o'er [ˈoːɹ], e'en [ˈiːn], 'tis [ˈtɪz], th' [ð].
+- A grave or acute accent on -èd or -éd marks a syllable: belovèd [bɪˈlʊ.vɪd], cursèd [ˈkəɹ.sɪd].
+- y at the end of a word is a vowel. y at the start of a word before a vowel is [j]: yet, yonder, you.
 
 Vowels, by the lexical set the word belongs to
-- KIT /ɪ/, DRESS /ɛ/, TRAP /a/, LOT /ɔ/, CLOTH /ɔ/, BATH /a/. There is no trap–bath split.
-- STRUT /ʊ/ and FOOT /ʊ/. They have not split. cut, put, and blood all have /ʊ/.
-- FLEECE /iː/. The MEAT set (meat, sea, speak, beat), words with Middle English open ē, is /eː/, distinct from FLEECE. If you cannot tell the two sets apart, use /iː/.
-- FACE /eː/, PALM /a/, THOUGHT /ɔː/, GOAT /oː/, GOOSE /uː/.
-- PRICE /əɪ/, CHOICE /ɔɪ/, MOUTH /əʊ/.
-- NEAR /iː/ plus /ɹ/, SQUARE /eː/ plus /ɹ/, START /a/ plus /ɹ/, NORTH and FORCE /ɔː/ plus /ɹ/, CURE /uː/ plus /ɹ/.
-- NURSE and lettER are /ə/ plus /ɹ/. happY is /ɪ/. commA is /ə/. A syllabic -ed or -es is /ɪ/.
+- KIT [ɪ]: sit, wind, his, busy.
+- DRESS [ɛ]: bed, head, dead, breath, any. Words with modern ea and a short vowel are DRESS.
+- TRAP [a]: man, cat, hand, shall. BATH is TRAP: path, last, after, dance [ˈdans]. There is no trap–bath split.
+- a after w or wh is still TRAP. The rounding of was, what, want, wash, and swan has not happened: what [ˈʍat], was [ˈwaz], want [ˈwant].
+- LOT [ɔ]: not, hot, God. CLOTH is LOT, short: soft [ˈsɔft], cross, off, often, lost.
+- STRUT and FOOT are one vowel [ʊ]. They have not split: love [ˈlʊv], cut, sun, come, blood [ˈblʊd], good, foot, put, book. Words with oo and a modern short vowel are [ʊ].
+- FLEECE [iː]: see, be, me, he, she, we, thee, meet, green, piece, field. These are the words with modern ee or ie, and the pronouns.
+- The MEAT set [eː]: meat, sea, speak, east, reason, please, lease, beast, dream, peace. These are the words with modern ea and a long vowel, and their families. They have the vowel of FACE, not of FLEECE. great, break, and steak are in this set too. When you cannot tell whether a word with modern [iː] belongs to FLEECE or to MEAT, use [iː].
+- FACE [eː]: name, made, face, nation, and day, way, say, pay, rain, vein, they. The ai, ay, ei, ey words have merged with name.
+- PALM [a]: father, palm [ˈpam], calm, alms. It is TRAP, with no l.
+- THOUGHT [ɔː]: all, law, walk [ˈwɔːk], talk, caught, daughter, saw, cause.
+- GOAT [oː]: go, so, home, stone, noble, know, grow, soul, own, window [ˈwɪn.doː], though. The o words and the ow words have merged.
+- GOOSE [uː]: food, moon, do, too, who, prove, move, lose, soon, through.
+- The due set [ɪu]: due [ˈdɪu], new, few, dew, tune, duke, music, Jupiter, Juliet, true, rude. Words with modern [juː] or [uː] after a consonant from French u, ew, eu, or ue have [ɪu].
+- PRICE [əɪ]: time, I, my, eye, night, fire, wise, kind, wind in rhyme with kind.
+- MOUTH [əʊ]: now, how, out, house, our, hour, thou, sound.
+- CHOICE has two values. oi in join, point, boil, poison, voice, and noise is [əɪ], the vowel of PRICE: join [ˈdʒəɪn]. oy in boy, joy, toy, coy, and employ is [ɔɪ].
+- happY, the final y or ie of a word, is [ɪ]: lovely [ˈlʊv.lɪ], merry, city. In rhyme with a PRICE word, as in Sonnet rhymes on die, eye, or I, it is [əɪ]: memory [ˈmɛ.mə.rəɪ] rhyming with die.
+- commA and every reduced unstressed vowel are [ə].
+
+Vowels before r
+- NURSE is [əɹ] whatever the spelling: bird [ˈbəɹd], word, heard, her, work, turn, earth, first.
+- lettER is [əɹ]: winter [ˈwɪn.təɹ], father, honour, nature.
+- NEAR [iːɹ]: here, dear, ear, fear.
+- SQUARE [eːɹ]: care, there, where, compare, fair, bear, wear.
+- START [aɹ]: art, far, heart, hard, park, darling.
+- NORTH [ɔːɹ]: horse [ˈhɔːɹs], short, lord, for, or, born, York.
+- FORCE [oːɹ], distinct from NORTH: hoarse [ˈhoːɹs], more, door, four, sworn, floor, glory.
+- CURE [uːɹ]: poor, moor, sure. With the due set, [ɪuɹ]: cure, pure.
+- The ending -ture is [təɹ]: nature [ˈneː.təɹ], creature, venture. -sure is [zəɹ] or [səɹ]: pleasure [ˈplɛ.zəɹ], measure.
+
+Unstressed syllables and endings
+- An unstressed short vowel is [ə]: about, compare [kəmˈpeːɹ], discontent, temperate [ˈtɛm.pə.rət].
+- The prefixes be-, de-, re-, e-, and pre- are [ɪ]: beloved, delight, return [rɪˈtəɹn].
+- -ing is [ɪn] when unstressed: darling [ˈdaɹ.lɪn], loving, morning.
+- -ed is pronounced as a syllable [ɪd] after t and d, and where an accent or the meter shows it. Elsewhere it is [d] or [t], as in modern English: loved [ˈlʊvd], walked [ˈwɔːkt].
+- -es and -est are [ɪz] and [ɪst] where they are syllables: horses [ˈhɔːɹ.sɪz], lovest.
+- -tion and -sion are two syllables, [sɪ.ən] and [zɪ.ən] after a vowel, [sɪ.ən] after a consonant: nation [ˈneː.sɪ.ən], occasion [ɔˈkeː.zɪ.ən]. In verse, where the meter counts one syllable, they are [sjən], [tjən], or [zjən]: question [ˈkwɛs.tjən] at the end of a line of eleven syllables. They are never [ʃən] or [ʒən].
+- In verse, an unstressed i or e before another vowel glides to [j] when the meter needs one syllable fewer: glorious [ˈgloː.rjəs], Juliet [ˈdʒɪu.ljɛt], marriage. Otherwise it is a syllable [ɪ]: glorious in prose is [ˈgloː.rɪ.əs].
+- In verse, heaven, even, ever, spirit, and power are often one syllable: [ˈhɛvn], [ˈiːn], [ˈeːɹ], [ˈspɪɹt], [ˈpəʊɹ]. Use one syllable when the meter needs it, two otherwise.
+- the is [ðə]. a is [ə]. an is [ən]. to is [tə] before a consonant and [tʊ] before a vowel. All other words keep their full vowel.
 
 Consonants
-- r is /ɹ/ in every position where it is written, including before a consonant and at the end of a word.
-- kn is /kn/. gn at the start of a word is /gn/. wr is /wr/.
-- wh is /ʍ/, distinct from w /w/.
-- ng is /ŋ/ plus /g/. The g is pronounced, including in singer.
-- h is /h/, except in hour, honest, heir, and honor, where it is silent.
-- gh is silent, except where the modern word has /f/ (laugh, enough, cough), and there it is /f/.
-- -tion is /sɪ.ən/. -sion is /zɪ.ən/ after a vowel and /sɪ.ən/ after a consonant. It is not /ʃən/.
-- th is /θ/ at the start of a content word and at the end of a word, and /ð/ between vowels and at the start of this, that, the, them, then, there, these, those, thou, thee, thy.
-- Other consonants have their modern English values: p b t d k g f v s z ʃ ʒ tʃ dʒ m n l j.
+- r is [ɹ] in every position where it is written, before a consonant and at the end of a word too: art [ˈaɹt], winter [ˈwɪn.təɹ].
+- kn is [kn]: knight [ˈknəɪt], know. gn at the start of a word is [gn]: gnaw. wr is [wr]: write, wrong.
+- wh is [ʍ], distinct from w [w]: what [ˈʍat], which, where, why. who, whom, whose, and whole are [h].
+- gh is silent: night [ˈnəɪt], light, thought [ˈθɔːt], daughter, though. Where the modern word has [f] it is [f]: laugh [ˈlaf], enough, rough, cough, tough.
+- h is [h], except in French loans that had no h in speech yet: hour [ˈəʊɹ], honest, honour, heir, herb, humble, humour, host, hospital.
+- l is silent in walk, talk, chalk, folk, yolk, half, calf, calm, palm, balm, alms, salmon, and in could, would, should. It is [l] everywhere else.
+- ng is [ŋ] at the end of a word and before a suffix: sing [ˈsɪŋ], singer [ˈsɪŋ.əɹ]. Inside a simple word before a vowel it is [ŋg]: finger [ˈfɪŋ.gəɹ], longer, stronger, anger, English.
+- th is [ð] at the start of the, this, that, these, those, then, than, there, they, them, their, thee, thou, thy, thine, though, thus, and between vowels inside a word: father, other. Elsewhere it is [θ]: think, thought, breath, earth, with [ˈwɪθ], hath [ˈhaθ], doth, saith.
+- s is [z] where the modern word has [z]: is [ˈɪz], his, was, as, reason. The endings -s and -es after a voiced sound are [z]: buds [ˈbʊdz], summer's.
+- si, ti, ci, and ssi before an unstressed vowel follow the -tion rule: a syllable [sɪ], [zɪ], [tɪ] in prose, and [sj], [zj], [tj] where the meter needs one syllable fewer: passion [ˈpa.sɪ.ən] or [ˈpa.sjən], gracious [ˈgreː.sɪ.əs]. sure and sugar have [ʃ].
+- A doubled consonant letter is one consonant. There are no geminates.
+- p b t d k g f v θ ð s z ʃ ʒ tʃ dʒ m n l j w h have their modern English values. t between vowels is [t], never a tap.
+
+Syllables
+- Every vowel or diphthong makes one syllable. Syllabify each word separately.
+- A single consonant between vowels goes with the following vowel. [tʃ], [dʒ], [ʃ], [ʒ], [θ], and [ð] each count as one consonant.
+- Of two or more consonants, the last goes with the following vowel and the rest close the preceding syllable: winter [ˈwɪn.təɹ], darling [ˈdaɹ.lɪn].
+- A stop or f plus l or r stays together and begins the next syllable: temperate [ˈtɛm.pə.rət], England [ˈɪŋ.glənd].
+- A final -le, -el, -on, or -en after a consonant is a syllable with [ə]: noble [ˈnoː.bəl], reason [ˈreː.zən].
+- A prefix boundary overrides these rules: dis.content, un.to.
 
 Stress
-- Use the stress of about 1600 where you know it. Where you do not, use the modern lexical stress.
-- Put ˈ before the stressed syllable.
+- A monosyllable takes ˈ unless it is an article, a preposition, a conjunction, a possessive, a personal pronoun, or an auxiliary before another verb: the, a, an, of, to, in, on, at, by, with, for, from, through, and, or, but, nor, that, if, as, my, thy, his, her, our, your, their, I, thou, thee, he, she, it, we, you, me, him, us, them, shall, will, do, did, doth, have, hath, can, may, must. That same verb takes ˈ when it is the main verb: is [ˈɪz], art [ˈaɹt], hath all [ˈhaθ ˈɔːl].
+- A word of more than one syllable takes the modern lexical stress, unless it is one of the words below.
+- Shakespeare's stress differs from today's in these words, and the verse confirms it: aspect [aˈspɛkt], revenue [rɪˈvɛ.nɪu], persever [pəɹˈsɛ.vəɹ], obdurate [ɔbˈdɪu.rət], canonized [kaˈnɔ.nəɪzd], advertised [adˈvəɹ.təɪzd], commendable [ˈkɔ.mən.də.bəl], complete [ˈkɔm.pliːt] before a stressed noun, extreme [ˈɛk.striːm] before a stressed noun, triumphing [trəɪˈʊm.fɪn], sepulchre [sɪˈpʊl.kəɹ], contrary [kənˈtreː.rɪ], record as a verb or noun [rɪˈkɔːɹd], exile [ɛkˈsəɪl], envy as a verb [ɛnˈvəɪ].
+- In verse the line is iambic: ten syllables, or eleven with an unstressed ending. Where you are not sure of a stress or a syllable count, choose the reading that keeps the line regular.
+- Put ˈ before the stressed syllable. It replaces the dot.
 
 Symbols
-iː eː ɛ ɪ ə a ɔ ɔː oː uː ʊ əɪ əʊ ɔɪ p b t d k g f v θ ð s z ʃ ʒ tʃ dʒ m n ŋ l ɹ j w ʍ h
+Vowels: iː eː ɛ ɪ ə a ɔ ɔː oː uː ʊ
+Diphthongs: əɪ əʊ ɔɪ ɪu
+Consonants: p b t d k g f v θ ð s z ʃ ʒ tʃ dʒ m n ŋ l ɹ j w ʍ h
+Marks: ˈ .
+Pauses: , ! ? .

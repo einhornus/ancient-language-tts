@@ -1,50 +1,50 @@
 """Text-to-speech for ancient languages, through a modern voice.
 
 Bring your own keys: OpenRouter for the LLM calls, ElevenLabs for the speech.
+The pipeline is four functions, each usable on its own:
 
-    import ancient_language_tts
+    import ancient_language_tts as alt
 
-    speech = ancient_language_tts.speak(
-        "Arma virumque canō",
-        source="lat",
-        target="en",
-        output="out/lat.mp3",
-        openrouter_api_key="sk-or-...",
-        elevenlabs_api_key="...",
-    )
+    ipa = alt.to_ipa("Arma virumque canō", "lat", method="llm", tier="low")
+    line = alt.respell_ipa(ipa, "lat", "it", method="llm")
+    line = alt.respell("Arma virumque canō", "lat", "it", method="rules")
+    audio = alt.speak(line, "it", output="out/lat.mp3")
+
+`method` is "llm" (the same text → IPA → respelling pipeline for every
+language) or "rules" (the deterministic engine in `rule_based`).
 """
 
-from . import rule_based
+from . import llm, rule_based
+from .api import METHODS, Method, respell, respell_ipa, speak, to_ipa
 from .chunks import MAX_CHARS, split
 from .config import TIER_MODELS, Settings, Tier
 from .errors import TTSError
-from .ipa import improve_ipa, score_ipa, to_ipa
 from .languages import ancient_languages, modern_languages
-from .respelling import improve_respelling, respell, score_respelling
+from .llm import improve_ipa, improve_respelling, score_ipa, score_respelling
 from .rules import targets
-from .speak import Speech, speak
-from .tts import synthesize
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
     "MAX_CHARS",
-    "Speech",
+    "METHODS",
+    "Method",
     "Settings",
-    "TTSError",
     "TIER_MODELS",
+    "TTSError",
     "Tier",
     "ancient_languages",
     "improve_ipa",
     "improve_respelling",
+    "llm",
     "modern_languages",
     "respell",
+    "respell_ipa",
     "rule_based",
     "score_ipa",
     "score_respelling",
     "speak",
     "split",
-    "synthesize",
     "targets",
     "to_ipa",
 ]

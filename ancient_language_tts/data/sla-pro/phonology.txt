@@ -1,27 +1,72 @@
-Stage. Early Common Slavic, about 500 AD, in the conventional Proto-Slavic notation (ě, ь, ъ, ę, ǫ, y, c, č, š, ž). The first palatalization and iotation are already written into the spelling. The jers are still pronounced, including at the end of a word. *v is still /w/. *g is still a stop. Do not read this as Old Church Slavonic recitation with later values, and do not apply the second or third palatalization yourself.
+Stage. Early Common Slavic, about 500–600 AD, the speech of the Slavs at the start of their expansion, before any written Slavic language. Nothing was written down in it. The words are reconstructions, in the notation of Wiktionary and of the handbooks (Derksen, Shevelov, Holzer, Kapović). Their phonetic values are a hypothesis. The values below are a fixed speaking convention for those phonemes. At this date the jers are still full short vowels in every position, including at the end of a word. The liquid diphthongs (*gordъ, *golva, *bergъ, *melko) have not yet been metathesized. v is still the glide [w]. g is a stop. The nasal vowels are still nasal. Do not turn the word into Old Church Slavonic, Russian, Ukrainian, Polish, or another daughter language: *gȏrdъ is not grad, gorod, horod, or gród, and its ъ is pronounced.
+
+Output
+- Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
+- Separate syllables with a dot and words with a space. Drop capitals. The pause marks are a comma, an exclamation mark, a question mark, and a period. A comma is a short pause. An exclamation mark and a question mark stay as they are. A period is a long pause and the end of a sentence. A semicolon or a colon is a long pause: write a period. Drop parentheses and quotation marks.
+- Every written letter is pronounced. There are no silent letters. A jer is a letter and is a vowel.
 
 Spelling of the input
-- A leading asterisk is not pronounced. A hyphen inside a word is a morpheme boundary: keep it inside the word, as a dot.
-- Transcribe the letters that are there. If the input still has k or g before a front vowel, leave the stop.
-- ľ ń ŕ, and the clusters lj nj rj, are /lʲ nʲ rʲ/.
+- A leading asterisk marks a reconstruction and is not pronounced. *gȏrdъ and gȏrdъ are the same word.
+- A hyphen at the end of a form marks a root or a stem. A hyphen at the start marks an ending or a suffix on its own. Transcribe what is written. A hyphen inside a word is a morpheme boundary. Keep the word whole and let the syllable rules place the dots.
+- Wiktionary writes ľ ň ř ť ď ś for the palatal consonants. Older books write lj nj rj tj dj, ĺ ń ŕ, l' n' r' t' d', or ć đ for ť ď. They are the same sounds.
+- Wiktionary writes x. Older books write ch or h. It is the same sound.
+- Wiktionary writes dz and dž. Older books write ʒ, ǯ, or ʒ́. They are the same.
+- Wiktionary writes the syllabic liquids as a jer plus the liquid: ьr ъr ьl ъl (*vьlkъ, *sъmьrtь). Some books write r̥ l̥, ṛ ḷ, or r̥̄ l̥̄ with no jer (*vl̥kъ, *sr̥dьce). Both are treated below.
+- Some books write ĭ ŭ, or ǐ ǔ, for ь ъ. They are the same sounds.
+- Some books write ē for ě, ī ū ā for i u a, and ę̄ ǭ for ę ǫ. The macron adds nothing: those vowels are long anyway.
+- The letters i, y, u, ě, a, ę, ǫ are always vowels. j is always the glide.
+- Transcribe the consonants that are written. The first palatalization (*k g x > č ž š), the second and third palatalizations (*k g x > c dz s), and the effects of iotation are already in the spelling of the input. If the input still writes k, g, or x before a front vowel, keep the velar. Do not palatalize anything that is not written palatal.
 
 Vowels
-- i /i/, y /ɨ/, e /e/, ě /æ/, a /ɑ/, o /o/, u /u/
-- ь, the front jer, is /ɪ/. ъ, the back jer, is /ʊ/. Both are pronounced in every position at this date, including word-finally. Do not drop a weak jer.
-- ę is /ẽ/. ǫ is /õ/. If the source writes eN or oN for those nasals, use the same nasal vowels.
-- There are no diphthongs. A vowel followed by j is that vowel plus /j/.
-- A liquid written with a ring, or standing as the syllable peak between consonants, is /r̩/ or /l̩/. A form that writes a jer next to the liquid pronounces the jer.
+Early Common Slavic had a quantity contrast that its letters already show. i y u ě a ę ǫ are long. e o ь ъ are short. The accent marks below do not change length.
+- i [iː], y [ɨː], u [uː].
+- ě [æː], an open front vowel, never [ie], [i], or [ja].
+- a [ɑː], a long back open vowel, never short.
+- e [e], o [o], short mid vowels. They are not reduced when unstressed.
+- ь [ɪ], the front jer, short and lax. ъ [ʊ], the back jer, short and lax.
+- ę [ẽː], ǫ [õː]. These are nasal vowels, one segment each. Add no [n] or [m] after them. Never [ja], [jɑ], [u], or [ɔn].
+- Unstressed vowels keep their full quality and length.
+
+Jers
+- Every jer is pronounced, strong or weak, in every position: *dь̑nь [ˈdɪ.nɪ], *pь̏sъ [ˈpɪ.sʊ], *otь̀cь [oˈtɪ.tsɪ], *sъ̏lnьce [ˈsʊl.nɪ.tse].
+- Do not drop a final jer, do not drop a jer in a weak syllable (Havlík's law is later), and do not change a jer into e, o, i, or y.
+- A jer after j or a palatal consonant is still [ɪ] or [ʊ] as written.
+
+Diphthongs and glides
+- There are no diphthongs in vowel letters. A vowel before j is that vowel plus [j]: *krãjь [ˈkrɑː.jɪ], *mojà [moˈjɑː].
+- Liquid diphthongs. e or o followed by r or l, and then a consonant, is a vowel and the liquid in one syllable. The liquid closes the syllable: *gȏrdъ [ˈgor.dʊ], *golvà [golˈwɑː], *bȇrgъ [ˈber.gʊ]. Do not move the vowel after the liquid, and do not add a vowel on either side.
+- A jer before r or l plus a consonant is the same: the jer and the liquid make one syllable: *vь̑lkъ [ˈwɪl.kʊ], *sъmь̀rtь [sʊˈmɪr.tɪ].
+- A liquid written with a ring, or standing as the only syllable peak between consonants, is syllabic [r̩] [l̩]: *vl̥kъ [ˈwl̩.kʊ], *sr̥dьce [ˈsr̩.dɪ.tse]. Add no vowel beside it.
 
 Consonants
-- p b t d k g are /p b t d k g/. g is a stop /g/.
-- s z are /s z/. x is /x/. š is /ʃ/. ž is /ʒ/. č is /tʃ/. c is /ts/.
-- j is /j/. l is /l/. r is a trill /r/. m is /m/. n is /n/. v is /w/.
-- Palatal lj nj rj are /lʲ nʲ rʲ/.
+- p b t d k g are [p b t d k g]. They are unaspirated. Voiced stops stay voiced at the end of a word. g is a stop [g], never [ɣ], [h], or [ɦ].
+- s [s], z [z], x [x]. š [ʃ], ž [ʒ], č [tʃ], c [ts], dz [dz], dž [dʒ]. č ž š are soft in quality, but write them as above.
+- m [m], n [n]. n before k g x is [ŋ].
+- l [l], r a trill [r]. Both are pronounced in every position.
+- j [j].
+- v [w], a bilabial glide, before a vowel, before a consonant, and after one: *vodà [woˈdɑː], *svę̑tъ [ˈswẽː.tʊ], *zvězdà [zwæːˈzdɑː]. Never [v].
+- ľ [lʲ], ň [nʲ], ř [rʲ], ť [tʲ], ď [dʲ], ś [sʲ]. Each is one palatalized consonant: *kòňь [ˈko.nʲɪ], *nȍťь [ˈno.tʲɪ], *mèďa [ˈme.dʲɑː]. Do not split it into a consonant plus [j], and do not turn ť ď into [tʃ dʒ], [ʃt ʒd], or [ts dz].
+- A labial plus ľ (pľ bľ mľ vľ) is the labial and [lʲ]: *zemľà [zeˈmlʲɑː].
+- No assimilation of voice across a morpheme boundary beyond what is written. Every written cluster is pronounced: *dъ̏ždžь [ˈdʊ.ʒdʒɪ], *xlě̑bъ [ˈxlæː.bʊ].
 
-Stress
-- Stress is free. If the input marks it, with an acute or with ˈ, use that syllable.
-- If nothing is marked, stress the first syllable.
-- Put ˈ before the stressed syllable.
+Syllables
+- Every vowel, jer, nasal vowel, and syllabic liquid makes one syllable. Syllabify each word separately.
+- Early Common Slavic syllables are open. A consonant or a cluster between two nuclei goes with the following nucleus: *mě̀sto [ˈmæː.sto], *sestrà [seˈstrɑː], *kȍstь [ˈko.stɪ], *ògnь [ˈo.gnɪ], *zvězdà [zwæːˈzdɑː].
+- Two exceptions close the syllable. r or l after a vowel or a jer and before a consonant belongs to the preceding syllable (the liquid diphthongs above). j before a consonant or at the end of a word belongs to the preceding syllable.
+- A palatal consonant [lʲ nʲ rʲ tʲ dʲ sʲ] and an affricate [ts dz tʃ dʒ] each count as one consonant.
+
+Accent
+Proto-Slavic had a free, mobile pitch accent with rising and falling tones. Speak it as a stress. Put ˈ before the stressed syllable. It replaces the dot. Do not transcribe the tone.
+- Wiktionary marks the accented syllable with one of these on its vowel, jer, or nasal vowel: ȁ ȅ ȉ ȍ ȕ (double grave, short falling), ȃ ȇ ȋ ȏ ȗ (inverted breve, long falling), à è ì ò ù ỳ ě̀ (grave, acute or short rising), ã ẽ ĩ õ ũ ỹ ě̃ (tilde, neoacute). On a nasal vowel the mark stands above the hook: ę̑ ǫ̑ ę̀ ǫ̀ ę̃ ǫ̃. On a jer it is a combining mark: ь̑ ь̀ ь̃ ъ̏ ъ̀. The handbooks also use the acute ´ and the double acute ˝ for the accented syllable. Any of these marks the stressed syllable.
+- õ with a tilde is o with the neoacute, a short oral o. It is not the nasal ǫ: *võľa [ˈwo.lʲɑː]. ẽ is e with the neoacute, not ę.
+- A mark on a jer stresses the jer: *otь̀cь [oˈtɪ.tsɪ], *dь̑nь [ˈdɪ.nɪ]. A mark on r or l after a jer stresses that syllable: *vьĺkъ is [ˈwɪl.kʊ].
+- A form with no mark stresses its first syllable: *vьsь [ˈwɪ.sɪ], *dzělo [ˈdzæː.lo].
+- Exactly one ˈ in each stressed word. A macron is not an accent.
+- Unstressed: the prepositions and prefixes written as separate words (vъ, sъ, kъ, na, za, po, do, otъ, u, iz, bez), the conjunctions i, a, ni, the negative ne, the particles že, li, bo, and the enclitic pronouns mi, ti, si, sę, jь. They take no ˈ unless the input marks them.
 
 Symbols
-i ɨ ɪ e æ ɑ o u ʊ ẽ õ r̩ l̩ p b t d k g s z x ʃ ʒ tʃ ts j l r m n w lʲ nʲ rʲ
+Vowels: iː ɨː uː æː ɑː e o ɪ ʊ ẽː õː
+Syllabic liquids: r̩ l̩
+Consonants: p b t d k g s z x ʃ ʒ tʃ ts dz dʒ m n ŋ l r j w lʲ nʲ rʲ tʲ dʲ sʲ
+Marks: ˈ . ː
+Pauses: , ! ? .

@@ -1,33 +1,68 @@
-Stage. Classical Attic of the 5th and 4th centuries BC. φ θ χ are aspirated stops. ζ is /zd/. This is not Modern Greek and not Koine.
+Stage. Koine Greek of the first century AD: the common Greek of the Roman East, the language of the New Testament, Josephus, Plutarch, and the papyrus letters of that time. This is the educated popular pronunciation of about AD 50, after the vowel mergers of the Hellenistic period and before the Byzantine changes. It is not Classical Attic: vowel length is gone, ει is [i], αι is [ɛ], οι is [y], and the accent is a stress. It is not Modern Greek either: υ and οι are still the rounded [y], η is still a separate [e], φ θ χ are still aspirated stops, δ is still a stop, and the rough breathing is still [h]. Do not use the Erasmian school pronunciation and do not use the Modern Greek one.
+
+Sources for this convention: the popular Koine chart of 2nd century BC to 3rd century AD and the papyrus letter of AD 100 in the Wikipedia article Koine Greek phonology; Horrocks, Greek: A History of the Language and its Speakers (2010); Allen, Vox Graeca (1987); Gignac, A Grammar of the Greek Papyri of the Roman and Byzantine Periods (1976); Buth's reconstruction of first-century Koine. Where they disagree on a date, this file takes the middle: the vowel mergers and the fricative β and γ are in, the fricative φ θ χ and δ and the loss of h are not yet.
+
+Output
+- Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
+- Separate syllables with a dot and words with a space. Drop capitals. The pause marks are a comma, an exclamation mark, a question mark, and a period. A comma is a short pause. An exclamation mark and a question mark stay as they are. A period is a long pause and the end of a sentence. The Greek question mark ; is a question mark: write ?. The raised dot · (ano teleia), a semicolon, or a colon is a long pause: write a period. Drop quotation marks and brackets.
+- Never write a length mark. Koine has no long vowels.
 
 Spelling of the input
-- The input may be polytonic Greek, monotonic Greek, or a Latin transliteration. In transliteration, ph th ch are /pʰ tʰ kʰ/, y is /y/, ē is η, ō is ω, and a rough breathing may be written h.
-- A rough breathing is /h/ at the start of that vowel or diphthong. A smooth breathing adds nothing.
-- An iota subscript is silent. Transcribe the long vowel only.
-- ῥ is /r̥/. ρρ is a geminate /r.r/.
-
-Consonants
-- π τ κ are /p t k/. φ θ χ are /pʰ tʰ kʰ/, not /f θ x/.
-- β δ γ are /b d g/. γ before κ, γ, χ, or ξ is /ŋ/.
-- σ and ς are /s/, and /z/ before a voiced stop. ζ is /zd/, one cluster, not /z/ and not /dz/.
-- ξ is /k/ plus /s/. ψ is /p/ plus /s/.
-- μ ν are /m n/. ν before a velar is /ŋ/. λ is /l/. ρ is a trill /r/.
-- ϝ, if it is written, is /w/.
+- The input may be polytonic Greek, monotonic Greek, or a Latin transliteration. In transliteration, ph th ch are φ θ χ, y is υ, ē is η, ō is ω, and a rough breathing may be written h.
+- A rough breathing is [h] at the start of that vowel or diphthong: ὁ [ho], ἡμέρα [heˈmɛ.ra], υἱός [hyˈos], οὗτος [ˈhu.tos]. A smooth breathing adds nothing. ῥ at the start of a word is a plain [r], with no [h].
+- An iota subscript or adscript is silent: ᾳ is α [a], ῃ is η [e], ῳ is ω [o]. ἀρχῇ [arˈkʰe], αὐτῷ [aɸˈto].
+- A diaeresis (ϊ, ϋ) splits the two vowels into two syllables: Ἠσαΐας [e.saˈi.as], πραΰς [praˈys].
+- An apostrophe marks an elided vowel. Write the elided word as its own word without that vowel: δι’ αὐτοῦ [di aɸˈtu], ἀλλ’ ἔχῃ [al ˈɛ.kʰe], κατ’ ἐμέ [kat ɛˈmɛ]. A φ, θ, χ written at the elision (ἀφ’ ὑμῶν, καθ’ ἡμέραν) is the aspirate [pʰ tʰ kʰ]. Do not add elisions that are not written.
+- A movable ν (ἐστίν, ἔδωκεν) is pronounced when it is written.
+- Hebrew and other foreign names follow the same letter values: Ἀβραάμ [a.βraˈam], Δαυίδ [daˈβid], Ἰσραήλ [is.raˈel], Καῖσαρ [ˈkɛ.sar].
 
 Vowels
-- α /a/, ᾱ /aː/
-- ε /e/, η /ɛː/
-- ι /i/, ῑ /iː/
-- ο /o/, ω /ɔː/
-- υ /y/, ῡ /yː/
-- ει is /eː/. ου is /uː/. Both are single long vowels in this stage, whether the diphthong is called genuine or spurious.
-- αι /ai/, αυ /au/, ευ /eu/, οι /oi/, υι /yi/
+- α and ᾳ are [a].
+- ε and αι are the same open mid vowel [ɛ]: ἔργον [ˈɛr.ɣon], καί [kɛ], παιδίον [pɛˈdi.on], φαίνει [ˈpʰɛ.ni].
+- η and ῃ are a close mid [e], still kept apart from ε: ἡμέρα [heˈmɛ.ra], ζωή [zoˈe], γῆ [ˈʝe]. It has not yet merged with ι.
+- ι and ει are [i]: εἰρήνη [iˈre.ne], πιστεύει [pisˈtɛ.βi], εἶναι [ˈi.nɛ]. ει before a vowel is [i] too: βασιλεία [βa.siˈli.a].
+- ο, ω, and ῳ are the same mid vowel [o]: λόγος [ˈlo.ɣos], ὥρα [ˈho.ra], ἀνθρώπων [anˈtʰro.pon].
+- ου is [u]: οὐρανός [u.raˈnos], τοῦ [tu].
+- υ, οι, and υι are the rounded front vowel [y]: ὕδωρ [ˈhy.dor], οἶκος [ˈy.kos], τοῖς [tys], υἱός [hyˈos]. υι before a vowel is [y] and that vowel is a new syllable: υἱοῦ [hyˈu]. Do not unround it to [i]. That merger is Byzantine.
+- αυ, ευ, and ηυ end in a labial fricative, not in [u]. Before a vowel or a voiced consonant (β γ δ ζ λ μ ν ρ) they are [aβ], [ɛβ], [eβ]: εὐαγγέλιον [ɛ.βaŋˈgɛ.li.on], πνεῦμα [ˈpnɛβ.ma], πιστεύων [pisˈtɛ.βon], Δαυίδ [daˈβid]. Before a voiceless consonant (π τ κ φ θ χ σ ξ ψ) and at the end of a word they are [aɸ], [ɛɸ], [eɸ]: αὐτός [aɸˈtos], εὐχαριστῶ [ɛɸ.kʰa.risˈto], εὐθέως [ɛɸ.tʰɛˈos].
+- Two vowel letters that are not one of the digraphs above are two syllables: θεός [tʰɛˈos], Ἰησοῦς [i.eˈsus], ζῷον [ˈzo.on], ἐπιούσιον [ɛ.piˈu.si.on].
+- Vowel length is not pronounced. A circumflex, a long α, ι, or υ, an η, and an ω are all the same length as their short partners. Learned Atticizing speech still kept length in this century; do not follow it.
 
-Accent
-- The accent is a pitch. For this transcription, put ˈ on the syllable that carries the acute, the circumflex, or a grave. A grave is an acute that was lowered in front of another word; the syllable is still the accented one.
-- A circumflex vowel is long.
+Consonants
+- π τ κ are plain voiceless stops [p t k]. They stay voiceless after a nasal: πέμπω [ˈpɛm.po], πάντα [ˈpan.ta].
+- φ θ χ are aspirated stops [pʰ tʰ kʰ], not the fricatives [f θ x]: φῶς [ˈpʰos], θεός [tʰɛˈos], χάρις [ˈkʰa.ris]. Fricative φ is only beginning in this century; do not write it.
+- β is the bilabial fricative [β]: βασιλεία [βa.siˈli.a], ἔλαβεν [ˈɛ.la.βɛn]. After μ it is the stop [b]: λαμβάνω [lamˈba.no].
+- δ is the stop [d] in every position: δόξα [ˈdok.sa], ὕδωρ [ˈhy.dor]. It is not yet [ð].
+- γ is the velar fricative [ɣ] before a back vowel ([a o u]), before a consonant, and at the end of a syllable: λόγος [ˈlo.ɣos], γάρ [ɣar], ἀγάπη [aˈɣa.pe], πρᾶγμα [ˈpraɣ.ma], ἔργον [ˈɛr.ɣon].
+- γ before a front vowel ([ɛ e i y], so before ε αι η ι ει υ οι) is the palatal fricative [ʝ]: γῆ [ˈʝe], γυνή [ʝyˈne], ἐγένετο [ɛˈʝɛ.nɛ.to], ἅγιος [ˈha.ʝi.os].
+- γ before γ, κ, χ, or ξ is the nasal [ŋ]. γγ is [ŋg], γκ is [ŋk], γχ is [ŋkʰ], γξ is [ŋks]: ἄγγελος [ˈaŋ.gɛ.los], εἰσενέγκῃς [i.sɛˈnɛŋ.kes].
+- ζ is [z]: ζωή [zoˈe], ζῷον [ˈzo.on]. It is no longer [zd].
+- σ and ς are [s]. Before a voiced consonant (β γ δ μ ν λ ρ) σ is [z]: κόσμος [ˈkoz.mos], πειρασμόν [pi.razˈmon].
+- ξ is [k] plus [s]. ψ is [p] plus [s]: ψυχή [psyˈkʰe], δόξα [ˈdok.sa].
+- μ λ are [m l]. ρ is a trill [r] in every position.
+- ν is [n]. Inside a word ν before π β φ ψ μ is [m] and ν before κ γ χ ξ is [ŋ], whether or not the spelling assimilates it: ἐνκαλέω [ɛŋ.kaˈlɛ.o].
+- A doubled consonant is one short consonant. Geminates were simplified in common speech: θάλασσα [ˈtʰa.la.sa], ἐκκλησία [ɛ.kleˈsi.a], ἄλλος [ˈa.los], ἀλλά [aˈla].
+- ϝ does not occur. j and w do not occur: an ι or υ next to a vowel is a vowel, except the υ of αυ, ευ, ηυ above.
+
+Syllables
+- Every vowel or diphthong makes one syllable. Syllabify each word separately.
+- A single consonant between vowels goes with the following vowel. [pʰ], [tʰ], [kʰ] each count as one consonant. The [β] of αυ, ευ, ηυ before a vowel is such a consonant: εὐαγγέλιον [ɛ.βaŋˈgɛ.li.on].
+- Of two or more consonants, the last goes with the following vowel and the rest close the preceding syllable: ἔργον [ˈɛr.ɣon], ὥστε [ˈhos.tɛ], τέκνον [ˈtɛk.non], δόξα [ˈdok.sa].
+- A stop plus λ or ρ stays together and begins the next syllable: ἄνθρωπος [ˈan.tʰro.pos], μακροθυμεῖ [ma.kro.tʰyˈmi], ἔμπροσθεν [ˈɛm.pros.tʰɛn], ἐκκλησία [ɛ.kleˈsi.a].
+- A cluster at the start of a word stays together: πνεῦμα [ˈpnɛβ.ma], ψυχή [psyˈkʰe], Χριστός [kʰrisˈtos].
+- A prefix boundary overrides these rules: ἐκ-λέγομαι [ɛkˈlɛ.ɣo.mɛ], ἐκ-ρέω [ɛkˈrɛ.o].
+
+Stress
+- The accent of this century is a stress on the syllable that carries the written acute, circumflex, or grave. The pitch accent of Attic is gone in common speech. A grave is an acute lowered before another word; the syllable is still the stressed one.
+- Put ˈ before the stressed syllable. It replaces the dot.
+- Every word of two or more syllables with a written accent takes ˈ on that syllable: ἀλλά [aˈla], ἀπό [aˈpo], οὐδέ [uˈdɛ].
+- A monosyllable takes ˈ unless it is unstressed. Unstressed monosyllables: every form of the article (ὁ ἡ τό τοῦ τῆς τῷ τῇ τόν τήν τά τῶν τοῖς ταῖς οἱ αἱ τούς τάς), the prepositions (ἐν εἰς ἐκ ἐξ πρός σύν), the conjunctions and particles (καί δέ γάρ τε μέν οὖν ἄν εἰ ὡς), the negatives (οὐ οὐκ οὐχ μή), the enclitic pronouns (μου σου μοι σοι με σε), and an elided word. Other monosyllables are stressed: ἦν [ˈen], φῶς [ˈpʰos], γῆ [ˈʝe], πᾶς [ˈpas], δός [ˈdos], ἕν [ˈhɛn], the relative pronoun ὅ [ˈho].
+- An enclitic written without an accent (ἐστιν, εἰμι, τις, ποτε) takes no ˈ. One written with an accent of its own takes ˈ there: ἔστιν [ˈɛs.tin].
+- A word that gains a second accent from an enclitic (ὄνομά σου, ἄνθρωπός τις) keeps ˈ on its own accent only: ὄνομά σου [ˈo.no.ma su].
 - If the input writes no accent, use the dictionary accent.
-- Honor an elision the input marks with an apostrophe. Do not add elisions that are not written.
 
 Symbols
-a aː e ɛː i iː o ɔː y yː eː uː ai au eu oi yi p t k b d g pʰ tʰ kʰ s z m n ŋ l r r̥ h j w
+Vowels: a ɛ e i o u y
+Consonants: p t k pʰ tʰ kʰ b d g β ɣ ʝ ɸ s z m n ŋ l r h
+Marks: ˈ .
+Pauses: , ! ? .
