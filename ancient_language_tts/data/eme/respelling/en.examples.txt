@@ -6,7 +6,7 @@ not → ˈnɔt → not
 
 day → ˈdɛː → deh
 
-know → ˈknoː → cnaw
+know → ˈknoː → cnoe
 
 knight → ˈknəɪt → cnight
 
@@ -72,21 +72,21 @@ due → ˈdɪu → due
 
 true → ˈtrɪu → treeoo
 
-go → ˈgoː → gaw
+go → ˈgoː → go
 
-home → ˈhoːm → hawm
+home → ˈhoːm → home
 
-stone → ˈstoːn → stawn
+stone → ˈstoːn → stone
 
-window → ˈwɪn.doː → windaw
+window → ˈwɪn.doː → window
 
 more → ˈmoːr → more
 
 bird → ˈbɪrd → bihrd
 
-heard → ˈhɛrd → hehrd
+heard → ˈhɛrd → haird
 
-her → ˈhɛr → hehr
+her → ˈhɛr → hair
 
 turn → ˈtʊrn → tuhrn
 
@@ -116,7 +116,7 @@ cursèd → ˈkʊr.sɪd → cuhrsid
 
 humble → ˈʊm.bəl → oomble
 
-shone → ˈʃoːn → shawn
+shone → ˈʃoːn → shown
 
 laugh → ˈlaf → laugh
 
@@ -152,20 +152,20 @@ of → ɔv → ov
 
 To be, or not to be, that is the question: → tə ˈbiː, ɔr ˈnɔt tə ˈbiː, ðat ˈɪz ðə ˈkwɛs.tjən. → Ta be, or not ta be, that is the questeeun.
 
-Now is the winter of our discontent Made glorious summer by this sun of York; → ˈnəʊ ˈɪz ðə ˈwɪn.tər ɔv əʊr dɪs.kənˈtɛnt ˈmɛːd ˈgloː.rjəs ˈsʊ.mər bəɪ ˈðɪs ˈsʊn ɔv ˈjɔrk. → Now is the winter ov our discontent Med glawryus soomer by this soon ov York.
+Now is the winter of our discontent Made glorious summer by this sun of York; → ˈnəʊ ˈɪz ðə ˈwɪn.tər ɔv əʊr dɪs.kənˈtɛnt ˈmɛːd ˈgloː.rjəs ˈsʊ.mər bəɪ ˈðɪs ˈsʊn ɔv ˈjɔrk. → Now is the winter ov our discontent Med gloryus soomer by this soon ov York.
 
 Shall I compare thee to a summer's day? Thou art more lovely and more temperate: → ʃal əɪ kəmˈpɛːr ðiː tə ə ˈsʊ.mərz ˈdɛː? ðəʊ ˈart ˈmoːr ˈlʊv.lɪ and ˈmoːr ˈtɛm.pə.rət. → Shall I compare thee ta a soomers deh? Thou art more loovly and more temperate.
 
 Rough winds do shake the darling buds of May, And summer's lease hath all too short a date; → ˈrʊf ˈwɪndz duː ˈʃɛːk ðə ˈdar.lɪn ˈbʊdz ɔv ˈmɛː, and ˈsʊ.mərz ˈleːs ˈhaθ ˈɔːl ˈtuː ˈʃɔrt ə ˈdɛːt. → Roof winds do shek the darlin boods ov Meh, And soomers less hath all too short a det.
 
-What a piece of work is a man! How noble in reason, how infinite in faculty! → ˈʍat ə ˈpiːs ɔv ˈwʊrk ˈɪz ə ˈman! ˈhəʊ ˈnoː.bəl ɪn ˈreː.zən, ˈhəʊ ˈɪn.fɪ.nɪt ɪn ˈfa.kəl.tɪ! → Whaht a piece ov wuhrk is a man! How nawble in rezzen, how infinite in faculty!
+What a piece of work is a man! How noble in reason, how infinite in faculty! → ˈʍat ə ˈpiːs ɔv ˈwʊrk ˈɪz ə ˈman! ˈhəʊ ˈnoː.bəl ɪn ˈreː.zən, ˈhəʊ ˈɪn.fɪ.nɪt ɪn ˈfa.kəl.tɪ! → Whaht a piece ov wuhrk is a man! How noble in rezzen, how infinite in faculty!
 
-But, soft! what light through yonder window breaks? It is the east, and Juliet is the sun. → bʊt, ˈsɔft! ˈʍat ˈləɪt θruː ˈjɔn.dər ˈwɪn.doː ˈbreːks? ɪt ˈɪz ðə ˈeːst, and ˈdʒɪu.ljɛt ˈɪz ðə ˈsʊn. → Boot, soft! whaht light through yonder windaw breks? It is the est, and Jeeoolyet is the soon.
+But, soft! what light through yonder window breaks? It is the east, and Juliet is the sun. → bʊt, ˈsɔft! ˈʍat ˈləɪt θruː ˈjɔn.dər ˈwɪn.doː ˈbreːks? ɪt ˈɪz ðə ˈeːst, and ˈdʒɪu.ljɛt ˈɪz ðə ˈsʊn. → Boot, soft! whaht light through yonder window breks? It is the est, and Jeeoolyet is the soon.
 
 Speak the speech, I pray you, as I pronounced it to you, trippingly on the tongue. → ˈspeːk ðə ˈspiːtʃ, əɪ ˈprɛː jʊ, az əɪ prəˈnəʊnst ɪt tə jʊ, ˈtrɪ.pɪn.lɪ ɔn ðə ˈtʊŋ. → Spek the speech, I preh you, as I pronounced it ta you, trippinly on the toong.
 
-The quality of mercy is not strained, It droppeth as the gentle rain from heaven → ðə ˈkwa.lɪ.tɪ ɔv ˈmɛr.sɪ ˈɪz ˈnɔt ˈstrɛːnd, ɪt ˈdrɔ.pɪθ az ðə ˈdʒɛn.təl ˈrɛːn frɔm ˈhɛ.vən. → The quahlity ov mehrcy is not strend, It droppeth as the gentle ren from heaven.
+The quality of mercy is not strained, It droppeth as the gentle rain from heaven → ðə ˈkwa.lɪ.tɪ ɔv ˈmɛr.sɪ ˈɪz ˈnɔt ˈstrɛːnd, ɪt ˈdrɔ.pɪθ az ðə ˈdʒɛn.təl ˈrɛːn frɔm ˈhɛ.vən. → The quahlity ov mairsy is not strend, It droppeth as the gentle ren from heaven.
 
-The man, being yet more pinched with the cold, put on another garment besides. → ðə ˈman, ˈbiː.ɪn ˈjɛt ˈmoːr ˈpɪntʃt wɪθ ðə ˈkoːld, ˈpʊt ɔn əˈnʊ.ðər ˈgar.mənt bɪˈsəɪdz. → The man, bein yet more pinched with the cawld, put on anoother garment besides.
+The man, being yet more pinched with the cold, put on another garment besides. → ðə ˈman, ˈbiː.ɪn ˈjɛt ˈmoːr ˈpɪntʃt wɪθ ðə ˈkoːld, ˈpʊt ɔn əˈnʊ.ðər ˈgar.mənt bɪˈsəɪdz. → The man, bein yet more pinched with the cold, put on anoother garment besides.
 
 And the man, not able to abide the heat, went to wash himself in a river that ran hard by. → and ðə ˈman, ˈnɔt ˈɛː.bəl tə əˈbəɪd ðə ˈheːt, ˈwɛnt tə ˈwaʃ hɪmˈsɛlf ɪn ə ˈrɪ.vər ðat ˈran ˈhard ˈbəɪ. → And the man, not ebble ta abide the het, went ta wahsh himself in a river that ran hard by.

@@ -1,13 +1,16 @@
-Do not apply the Great Vowel Shift. /iː/ is ie, so a Middle English tyme is tieme, not tijme. /uː/ is oe, so hous is hoes, not huis. /aː/ is the long a of naam. /x/ and /ç/ are ch, never silent.
+Do not apply the Great Vowel Shift. /iː/ is ie, so a Middle English tyme is tieme, not tijme. /uː/ is oe, so hous is hoes, not huis. /aː/ is the long a of naam, always written aa. /x/ and /ç/ are ch, never silent.
 
-Map each IPA symbol to the Dutch spelling. A word whose ˈ is on its first syllable, and a word with no ˈ, takes no accent. A word whose ˈ is on a later syllable takes an acute accent on the stressed vowel: /vɛrˈtiu/ is vertíéuw, /lɪˈkuːr/ is likóér, /aˈprɪl.lə/ is aprílle.
+Map each IPA symbol to the Dutch spelling. A word whose ˈ is on its first syllable, and a word with no ˈ, takes no accent. A word whose ˈ is on a later syllable takes an acute accent on the stressed vowel: /vɛrˈtiu/ is vèrtíéuw, /lɪˈkuːr/ is likóér, /aˈprɪl.lə/ is aprílle. A stressed /ɛ/ takes a grave accent instead, è, because Dutch reads é as a long [eː]: /ɛnˈdʒɛn.drəd/ is endzjèndred.
+
+Many voices read a word that looks English as English. Prefer the spelling that cannot be an English word: aa for /aː/, è for /ɛ/ before r, kw and never qu.
 
 Long vowels
-- /aː/ → a when its IPA syllable ends in the vowel and another syllable follows: /ˈnaː.mə/ is name. Elsewhere aa: /ˈkaːs/ is kaas.
+- /aː/ → aa in every position, also in an open syllable, so the word cannot be read as English: /ˈnaː.mə/ is naame, /ˈtaː.blə/ is taable, /ˈkaːs/ is kaas.
 - /eː/ → e when its IPA syllable ends in the vowel and another syllable follows: /ˈsweː.tə/ is swete. Elsewhere ee, also at the end of a word: /ˈheː/ is hee.
 - /oː/ → o when its IPA syllable ends in the vowel, and at the end of a word: /ˈroː.tə/ is rote, /toː/ is to. Elsewhere oo: /ˈsoːθ/ is sooth.
 - /ɛː/ → ê in every position: /ˈhɛːθ/ is hêth.
 - /ɔː/ → ô in every position: /ˈɔː.pən/ is ôpen.
+- A stressed /aː/ on a later syllable is áá: /sɛr.viːˈsaː.blə/ is sèrviesááble.
 - /iː/ → ie: /ˈtiː.mə/ is tieme.
 - /uː/ → oe: /ˈhuːs/ is hoes.
 
@@ -17,17 +20,21 @@ Short vowels
 - An unstressed /ɛ/ in an open syllable doubles the next consonant too, or Dutch reads it as a schwa: /mɛ.lɔˈdiː.ə/ is mellodíéë.
 - Any other unstressed short vowel in an open syllable is the plain letter: /lɪˈkuːr/ is likóér. Dutch shortens unstressed vowels on its own.
 - An unstressed /ɪ/ at the end of a word is i: /ˈhɔː.lɪ/ is hôli.
-- Never double a consonant after oe, ie, ê, ô, or a diphthong, except for a geminate.
+- Never double a consonant after oe, ie, ê, ô, aa, or a diphthong, except for a geminate.
+- /ɛ/ before /r/ in the same syllable is è, stressed or not, in every word, because Dutch reduces an unstressed er to a schwa and an English reader says er as in her: /ˈhɛr.tə/ is hèrte, /vɛrˈtiu/ is vèrtíéuw, /ˈðɛr/ is dhèr, /ˈlʊv.jɛr/ is loevjèr.
+
+Hiatus
+- /i/ or /iː/ before a full vowel (not /ə/) is ie followed by j, so Dutch hears two syllables: /liˈuːn/ is liejóén, /skwiˈɛr/ is skwiejèr. Before /ə/ use the diaeresis as below.
 
 Schwa
 - /ə/ → e. A final /ə/ is its own syllable, and Dutch reads a final e that way: /ˈsoː.tə/ is sote.
 - /ə/ right after a vowel letter takes a diaeresis: /ˈiː.ə/ is ieë, /mɛ.lɔˈdiː.ə/ is mellodíéë. After w, j, or the diphthong ei it takes none, as in Dutch eieren: /ˈniu.ə/ is nieuwe, /ˈknɔu.ə/ is knouwe.
 
 Diphthongs
-- /æi/ → ei: /ˈdæi/ is dei, /ˈvæin/ is vein, /ˈvæi.nə/ is veine, /ˈvɛr.ræi/ is verrei. Dutch ei, said [ɛi] or [ɑi], is the nearest Dutch sound. Write ei, never ij, which Dutch says the same but which looks like the y of the source spelling, and never aai, which is too open and too long. Stressed on a later syllable it takes the accent on both letters: /sɛrˈtæin/ is sertéín.
+- /æi/ → ei: /ˈdæi/ is dei, /ˈvæin/ is vein, /ˈvæi.nə/ is veine, /ˈvɛr.ræi/ is vèrrei. Dutch ei, said [ɛi] or [ɑi], is the nearest Dutch sound. Write ei, never ij, which Dutch says the same but which looks like the y of the source spelling, and never aai, which is too open and too long. Stressed on a later syllable it takes the accent on both letters: /sɛrˈtæin/ is sèrtéín.
 - /au/ → au, and auw when a vowel follows directly: /ˈkau.zə/ is kauze, /ˈtaux.tə/ is tauchte.
 - /ɔu/ → ou, and ouw when a vowel follows directly: /ˈθɔuxt/ is thoucht, /ˈknɔu.ə/ is knouwe. Dutch reads au and ou alike, so /au/ and /ɔu/ merge.
-- /iu/ → ieuw: /vɛrˈtiu/ is vertíéuw, /ˈniu.ə/ is nieuwe.
+- /iu/ → ieuw: /vɛrˈtiu/ is vèrtíéuw, /ˈniu.ə/ is nieuwe.
 - /ɛu/ → eeuw: /ˈfɛu.ə/ is feeuwe.
 - /ɔi/ → oi, and oj when a vowel follows directly: /ˈdʒɔi.ə/ is dzjoje.
 
@@ -41,7 +48,7 @@ Consonants
 - /ʃ/ → sj: /ˈʃuː.rəs/ is sjoeres.
 - /tʃ/ → tsj: /ˈmartʃ/ is martsj.
 - /dʒ/ → dzj: /ˈdʒɛn.tɪl/ is dzjentil. /d.dʒ/ is ddzj.
-- /kw/ → kw. /ks/ and /k.s/ → ks.
+- /kw/ → kw, never qu, also where the source spelling has qu. /ks/ and /k.s/ → ks.
 - /ŋ/ before /k/ → n: /ˈθaŋ.kə/ is thanke.
 - /ŋ/ plus /g/ at the end of a word → ng: /ˈθɪŋg/ is thing. Between vowels → ngg, so the g is heard: /ˈjʊŋ.gə/ is joengge.
 - /kn/, /gn/, and /wr/ keep both consonants: kn, gn, wr.

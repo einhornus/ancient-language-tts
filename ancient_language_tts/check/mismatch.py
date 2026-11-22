@@ -70,7 +70,7 @@ DISTANCES_FILE = _DATA / "phoneme_distances.json"
 
 UNMATCHED = 3.0           # alignment cost of a phoneme or frame left unmatched
 MISSING_PENALTY = 3.0     # times the weight of an expected phoneme left unmatched
-EXTRA_PENALTY = 0.5       # times sqrt(confidence) of a frame left unmatched
+EXTRA_PENALTY = 1.5       # times sqrt(confidence) of a frame left unmatched
 UNKNOWN_DISTANCE = 1.0    # a pair the table lacks
 REPEAT_GAP_MS = 60        # collapse_frames bridges a gap of dropped frames up to this long
 REPEAT_CONFIDENCE = 0.5   # ... unless both sides are this sure (a real repeat)
