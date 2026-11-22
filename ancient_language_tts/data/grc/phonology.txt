@@ -1,6 +1,6 @@
 Stage. Koine Greek of the first century AD: the common Greek of the Roman East, the language of the New Testament, Josephus, Plutarch, and the papyrus letters of that time. This is the educated popular pronunciation of about AD 50, after the vowel mergers of the Hellenistic period and before the Byzantine changes. It is not Classical Attic: vowel length is gone, ει is [i], αι is [ɛ], οι is [y], and the accent is a stress. It is not Modern Greek either: υ and οι are still the rounded [y], η is still a separate [e], φ θ χ are still aspirated stops, δ is still a stop, and the rough breathing is still [h]. Do not use the Erasmian school pronunciation and do not use the Modern Greek one.
 
-Sources for this convention: the popular Koine chart of 2nd century BC to 3rd century AD and the papyrus letter of AD 100 in the Wikipedia article Koine Greek phonology; Horrocks, Greek: A History of the Language and its Speakers (2010); Allen, Vox Graeca (1987); Gignac, A Grammar of the Greek Papyri of the Roman and Byzantine Periods (1976); Buth's reconstruction of first-century Koine. Where they disagree on a date, this file takes the middle: the vowel mergers and the fricative β and γ are in, the fricative φ θ χ and δ and the loss of h are not yet.
+Sources for this convention: the popular Koine chart of 2nd century BC to 3rd century AD and the papyrus letter of AD 100 in the Wikipedia article Koine Greek phonology; Horrocks, Greek: A History of the Language and its Speakers (2010); Allen, Vox Graeca (1987); Gignac, A Grammar of the Greek Papyri of the Roman and Byzantine Periods (1976); Buth's reconstruction of first-century Koine. Where they disagree on a date, this file takes the middle: the vowel mergers and the fricative β and γ are in, the fricative φ θ χ and δ and the loss of h are not yet. The AD 100 letter (in Horrocks's transcription) has the same values: [y] for υ and οι, a separate η, fricative αυ ευ and β, aspirated stops still stops, and [h] still written. It is an Egyptian letter, though, and this file leaves out three things in it. It does not voice stops after a nasal (πέμπω [ˈpɛm.po], not [ˈpɛm.bo]). That voicing is strongest in Egypt, from Coptic influence, and was not yet general. It does not mark the palatal [c cʰ] of κ χ before a front vowel; only γ, a fricative, is written palatal [ʝ] there. And it writes η [e] and ε αι [ɛ] for the article's close-mid [e̝] and lowered-mid [e̞]: the same contrast in broad symbols. Geminates are simplified (Gignac and Horrocks find this from the 3rd century BC, though some regions kept them).
 
 Output
 - Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
@@ -13,6 +13,8 @@ Spelling of the input
 - An iota subscript or adscript is silent: ᾳ is α [a], ῃ is η [e], ῳ is ω [o]. ἀρχῇ [arˈkʰe], αὐτῷ [aɸˈto].
 - A diaeresis (ϊ, ϋ) splits the two vowels into two syllables: Ἠσαΐας [e.saˈi.as], πραΰς [praˈys].
 - An apostrophe marks an elided vowel. Write the elided word as its own word without that vowel: δι’ αὐτοῦ [di aɸˈtu], ἀλλ’ ἔχῃ [al ˈɛ.kʰe], κατ’ ἐμέ [kat ɛˈmɛ]. A φ, θ, χ written at the elision (ἀφ’ ὑμῶν, καθ’ ἡμέραν) is the aspirate [pʰ tʰ kʰ]. Do not add elisions that are not written.
+- That aspirate is the rough breathing of the next word, moved onto the stop. Do not write the [h] a second time: καθ’ ἡμέραν [katʰ eˈmɛ.ran], ἐφ’ ἡμῖν [ɛpʰ eˈmin], ἀφ’ ὑμῶν [apʰ yˈmon]. The same holds for οὐχ: οὐχ ὁ [ukʰ o]. Before a smooth breathing nothing changes: οὐκ ἔστιν [uk ˈɛs.tin], ἀπ’ αὐτοῦ [ap aɸˈtu].
+- A coronis marks crasis, two words written as one. Read the written letters as one word: κἀγώ [kaˈɣo], κἀκεῖ [kaˈki], τοὔνομα [ˈtu.no.ma].
 - A movable ν (ἐστίν, ἔδωκεν) is pronounced when it is written.
 - Hebrew and other foreign names follow the same letter values: Ἀβραάμ [a.βraˈam], Δαυίδ [daˈβid], Ἰσραήλ [is.raˈel], Καῖσαρ [ˈkɛ.sar].
 
@@ -41,7 +43,7 @@ Consonants
 - ξ is [k] plus [s]. ψ is [p] plus [s]: ψυχή [psyˈkʰe], δόξα [ˈdok.sa].
 - μ λ are [m l]. ρ is a trill [r] in every position.
 - ν is [n]. Inside a word ν before π β φ ψ μ is [m] and ν before κ γ χ ξ is [ŋ], whether or not the spelling assimilates it: ἐνκαλέω [ɛŋ.kaˈlɛ.o].
-- A doubled consonant is one short consonant. Geminates were simplified in common speech: θάλασσα [ˈtʰa.la.sa], ἐκκλησία [ɛ.kleˈsi.a], ἄλλος [ˈa.los], ἀλλά [aˈla].
+- A doubled consonant is one short consonant. Geminates were simplified in common speech: θάλασσα [ˈtʰa.la.sa], ἐκκλησία [ɛ.kleˈsi.a], ἄλλος [ˈa.los], ἀλλά [aˈla]. The spellings πφ, τθ, κχ are a doubled aspirate and are one [pʰ], [tʰ], [kʰ] too: Σαπφώ [saˈpʰo], Ματθαῖος [maˈtʰɛ.os], Βάκχος [ˈβa.kʰos]. A double ρρ is one [r]: ἄρρητος [ˈa.re.tos].
 - ϝ does not occur. j and w do not occur: an ι or υ next to a vowel is a vowel, except the υ of αυ, ευ, ηυ above.
 
 Syllables
@@ -56,9 +58,10 @@ Stress
 - The accent of this century is a stress on the syllable that carries the written acute, circumflex, or grave. The pitch accent of Attic is gone in common speech. A grave is an acute lowered before another word; the syllable is still the stressed one.
 - Put ˈ before the stressed syllable. It replaces the dot.
 - Every word of two or more syllables with a written accent takes ˈ on that syllable: ἀλλά [aˈla], ἀπό [aˈpo], οὐδέ [uˈdɛ].
-- A monosyllable takes ˈ unless it is unstressed. Unstressed monosyllables: every form of the article (ὁ ἡ τό τοῦ τῆς τῷ τῇ τόν τήν τά τῶν τοῖς ταῖς οἱ αἱ τούς τάς), the prepositions (ἐν εἰς ἐκ ἐξ πρός σύν), the conjunctions and particles (καί δέ γάρ τε μέν οὖν ἄν εἰ ὡς), the negatives (οὐ οὐκ οὐχ μή), the enclitic pronouns (μου σου μοι σοι με σε), and an elided word. Other monosyllables are stressed: ἦν [ˈen], φῶς [ˈpʰos], γῆ [ˈʝe], πᾶς [ˈpas], δός [ˈdos], ἕν [ˈhɛn], the relative pronoun ὅ [ˈho].
+- A monosyllable takes ˈ unless it is unstressed. Unstressed monosyllables: every form of the article (ὁ ἡ τό τοῦ τῆς τῷ τῇ τόν τήν τά τῶν τοῖς ταῖς οἱ αἱ τούς τάς), the prepositions (ἐν εἰς ἐκ ἐξ πρός σύν), the conjunctions and particles (καί δέ γάρ τε μέν οὖν ἄν εἰ ὡς), the negatives (οὐ οὐκ οὐχ μή), the enclitic pronouns (μου σου μοι σοι με σε), and an elided word with no written accent (δι’ κατ’ μετ’ ἀλλ’ ἐπ’ ἀφ’). Other monosyllables are stressed: ἦν [ˈen], φῶς [ˈpʰos], γῆ [ˈʝe], πᾶς [ˈpas], δός [ˈdos], ἕν [ˈhɛn], the relative pronoun ὅ [ˈho].
 - An enclitic written without an accent (ἐστιν, εἰμι, τις, ποτε) takes no ˈ. One written with an accent of its own takes ˈ there: ἔστιν [ˈɛs.tin].
 - A word that gains a second accent from an enclitic (ὄνομά σου, ἄνθρωπός τις) keeps ˈ on its own accent only: ὄνομά σου [ˈo.no.ma su].
+- An unstressed monosyllable that takes an accent from a following enclitic is stressed, because that accent is the stress of the pair: εἴ τις [ˈi tis], οὔ τις [ˈu tis]. A word of two or more syllables that is elided keeps the accent written on it: ἔπειτ’ ἐγένετο [ˈɛ.pit ɛˈʝɛ.nɛ.to].
 - If the input writes no accent, use the dictionary accent.
 
 Symbols

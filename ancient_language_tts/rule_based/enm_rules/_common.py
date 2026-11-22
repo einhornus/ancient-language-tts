@@ -14,7 +14,7 @@ from typing import Union
 
 VOWELS = frozenset({
     "a", "aː", "ɛ", "ɛː", "eː", "ɪ", "iː", "ɔ", "ɔː", "oː", "ʊ", "uː", "ə",
-    "ai", "au", "ɔu", "iu", "ɛu", "ɔi",
+    "æi", "au", "ɔu", "iu", "ɛu", "ɔi",
 })
 
 _PHONES = tuple(VOWELS) + (

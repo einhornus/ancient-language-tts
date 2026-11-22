@@ -1,70 +1,68 @@
-Ukrainian is a living descendant of Proto-Slavic, and its alphabet has letters for most of the Early Common Slavic system: hard consonants before е, a separate ґ for the stop [g], в that is the glide [w] before a consonant and at the end of a word, the vowel и [ɪ], the soft-vowel letters я є ю ї, the soft sign ь, the affricates дз and дж, and no devoicing of voiced consonants at the end of a word. Ukrainian vowels are not reduced when unstressed, as Russian vowels are. Use these. Do not write the Ukrainian descendant of the word: *gȏrdъ is not город, *mě̀sto is not місто, *rǫkà is not рука, *mę̑so is not м'ясо, *dь̑nь is not день, and *sъ̏lnьce is not сонце. ě is never і, ǫ is never у, ę is never я, a jer is never dropped and never becomes е or о, and g is never г.
+Ukrainian is a living descendant of Proto-Slavic, and its alphabet has letters for most of the Middle Common Slavic system: hard consonants before е, a separate ґ for the stop [g], в that is the approximant [ʋ] before a vowel, as Common Slavic v was, the vowels и [ɪ] and і [i], the soft-vowel letters я є ю ї, the soft sign ь, the affricates дз and дж, and no devoicing of voiced consonants at the end of a word. Ukrainian vowels are not reduced when unstressed, as Russian vowels are. Use these. Do not write the Ukrainian descendant of the word: *gȏrdъ is not город, *mě̀sto is not місто, *rǫkà is not рука, *mę̑so is not м'ясо, *dь̑nь is not день, and *sъ̑lnьce is not сонце. ě is never і or я, ǫ is never у, ę is never я, a jer is never dropped and never becomes е or о, and g is never г.
 
 Map each IPA symbol to the Ukrainian spelling. Write Cyrillic letters and the stress mark below. Never write the IPA symbols, the asterisk, Latin letters, ъ, ы, ё, or э.
 
 Stress
 Ukrainian has a free stress like Proto-Slavic, and ordinary spelling does not show it. Mark it the way Ukrainian dictionaries and schoolbooks do, so the voice stresses the right syllable.
-- Every word with ˈ takes exactly one stress mark: a combining acute (U+0301) right after the vowel letter of the stressed syllable: а́ е́ и́ і́ о́ у́ я́ є́ ю́ ї́. Monosyllables take it too: /ˈdo.mʊ/ is до́му, /ˈgor.dʊ/ is ґо́рду, /duːˈʃɑː/ is душа́.
-- A stressed syllabic liquid is written with и, below, and the mark goes on that и: /ˈsr̩.dɪ.tse/ is си́рдице.
-- A word with no ˈ takes no mark: /iː/ is і, /wʊ/ is ву.
+- Every word with ˈ takes exactly one stress mark: a combining acute (U+0301) right after the vowel letter of the stressed syllable: а́ е́ и́ і́ о́ у́ я́ є́ ю́ ї́. Monosyllables take it too: /ˈdɔ.mʊ/ is до́му, /ˈgɔr.dʊ/ is ґо́рду, /duːˈʃɑː/ is душа́.
+- A stressed syllabic liquid is written with и, below, and the mark goes on that и: /ˈsr̩.dɪ.tsɛ/ is си́рдіце.
+- A word with no ˈ takes no mark: /iː/ is і, /ʋʊ/ is ву.
 - Only the stressed syllable takes a mark. Every other vowel is written plain.
 
 Vowels
 Ukrainian has no vowel length. Write the quality and drop ː.
-- /i/ /iː/ → і: /ˈmɑː.tiː/ is ма́ті, /jeˈdiː.nʊ/ is єді́ну.
+- /i/ /iː/ → і: /ˈmɑː.tiː/ is ма́ті, /jɛˈdiː.nʊ/ is єді́ну.
 - /ɨ/ /ɨː/ → и. Ukrainian и is the central [ɪ], the nearest to [ɨ]: /ˈsɨː.nʊ/ is си́ну, /ˈrɨː.bɑː/ is ри́ба.
-- /ɪ/ → и. Ukrainian и is a short lax [ɪ], the same quality as the front jer: /ˈdɪ.nɪ/ is ди́ни, /oˈtɪ.tsɪ/ is оти́ци. Never е or і for a jer.
-- /e/ → е. Ukrainian е is [ɛ], and the consonant before it stays hard: /ʒeˈnɑː/ is жена́, /ˈne.bo/ is не́бо.
-- /æ/ /æː/ → я after a consonant. Ukrainian я after a consonant is the consonant softened plus [a], which fronts the vowel toward [æ]: /ˈmæː.sto/ is мя́сто, /tsæːˈnɑː/ is цяна́, /ˈxlæː.bʊ/ is хля́бу. Write no apostrophe, even after a labial. At the start of a word or after a vowel, /æ/ → е. Never і.
-- /ɑ/ /ɑː/ → а: /seˈstrɑː/ is сестра́.
-- /o/ → о. Ukrainian о is [ɔ] and is not reduced when unstressed: /ˈslo.wo/ is сло́во, /golˈwɑː/ is ґолва́.
+- /ɪ/ → і. The front jer is a short front [ɪ]. Ukrainian и is heard as a central [ɨ] and, unstressed, drifts to [e]; і keeps the jer front and high, the nearest a Ukrainian voice says: /ˈdɪ.nɪ/ is ді́ні, /ɔˈtɪ.tsɪ/ is оті́ці, /nɛˈsɛ.tɪ/ is несе́ті. Never е or и for a jer.
+- /ɛ/ → е. Ukrainian е is [ɛ], the same open-mid vowel, and the consonant before it stays hard: /ʒɛˈnɑː/ is жена́, /ˈnɛ.bɔ/ is не́бо.
+- /æ/ /æː/ → е after a consonant. Ukrainian е is the open [ɛ], the nearest Ukrainian vowel to [æ]; я would be heard as [ja] or a back [a], which is farther: /ˈmæː.stɔ/ is ме́сто, /tsæːˈnɑː/ is цена́, /ˈxlæː.bʊ/ is хле́бу, /ˈlæː.sʊ/ is ле́су. At the start of a word or after a vowel, /æ/ → е too. Never я or і.
+- /ɑ/ /ɑː/ → а: /sɛˈstrɑː/ is сестра́.
+- /ɔ/ → о. Ukrainian о is [ɔ], the same low back rounded vowel, and is not reduced when unstressed: /ˈslɔ.ʋɔ/ is сло́во, /gɔlˈʋɑː/ is ґолва́.
 - /u/ /uː/ → у.
-- /ʊ/ → у. Ukrainian у is the nearest rounded back vowel to the back jer: /ˈgor.dʊ/ is ґо́рду, /ˈkʊ.to/ is ку́то. Never о for a jer.
+- /ʊ/ → у. Ukrainian у is the nearest rounded back vowel to the back jer: /ˈgɔr.dʊ/ is ґо́рду, /ˈkʊ.tɔ/ is ку́то. Never о for a jer.
 
 Nasal vowels
-Ukrainian has no nasal vowels. Write the oral vowel and a nasal consonant after it, in the same syllable, so the voice keeps the nasality.
-- /ẽː/ → ен. /õː/ → он: /ˈmẽː.so/ is ме́нсо, /rõːˈkɑː/ is ронка́, /ˈwo.dõː/ is во́дон.
-- Before /p b m/ write м instead of н: /ˈzõː.bʊ/ is зо́мбу.
-- After j or a palatal consonant, /ẽː/ → єн and /õː/ → ьон, and the stress mark goes on є or о.
+Ukrainian has no nasal vowels. Write the oral vowel alone. Do not add н or м after it: a Ukrainian voice says that as a full consonant of its own, which the nasal vowel does not have.
+- /ɛ̃ː/ → е. /ɔ̃ː/ → о: /ˈmɛ̃ː.sɔ/ is ме́со, /rɔ̃ːˈkɑː/ is рока́, /ˈʋɔ.dɔ̃ː/ is во́до, /ˈzɔ̃ː.bʊ/ is зо́бу, /nɛˈsɔ̃ː.tɪ/ is несо́ті.
+- After j or a palatal consonant, /ɛ̃ː/ → є and /ɔ̃ː/ → ьо, and the stress mark goes on є or о: /zɛˈmlʲɔ̃ː/ is земльо́.
 - Never я or у for a nasal vowel. Those are the Ukrainian descendants.
 
 Syllabic liquids
-- /r̩/ → ир. /l̩/ → ил. Ukrainian cannot make r or l a syllable, and a short [ɪ] before the liquid is the closest a Ukrainian voice will say: /ˈwl̩.kʊ/ is ви́лку, /ˈsr̩.dɪ.tse/ is си́рдице.
-- A jer plus a liquid is written as the jer plus the liquid: /ˈwɪl.kʊ/ is ви́лку, /sʊˈmɪr.tɪ/ is суми́рти. Do not add a vowel after the liquid.
-- Liquid diphthongs are written in the IPA order, the vowel before the liquid: /ˈgor.dʊ/ is ґо́рду, /ˈber.gʊ/ is бе́рґу. Never the Ukrainian full vowel forms оро, оло, ере.
+- /r̩/ → ир. /l̩/ → ил. Ukrainian cannot make r or l a syllable, and a short [ɪ] before the liquid is the closest a Ukrainian voice will say: /ˈʋl̩.kʊ/ is ви́лку, /ˈsr̩.dɪ.tsɛ/ is си́рдіце.
+- A jer plus a liquid is written as the jer plus the liquid: /ˈʋɪl.kʊ/ is ві́лку, /sʊˈmɪr.tɪ/ is сумі́рті. Do not add a vowel after the liquid.
+- Liquid diphthongs are written in the IPA order, the vowel before the liquid: /ˈgɔr.dʊ/ is ґо́рду, /ˈbɛr.gʊ/ is бе́рґу. Never the Ukrainian full vowel forms оро, оло, ере.
 
 Consonants
 - /p b t d k s z m n l r/ → п б т д к с з м н л р. Ukrainian keeps voiced consonants voiced at the end of a word and before a voiceless one, as Proto-Slavic did, and р is a trill.
-- /g/ → ґ, always. Ukrainian г is the fricative [ɦ]: /ˈbo.gʊ/ is бо́ґу, /ˈo.gnɪ/ is о́ґни.
+- /g/ → ґ, always. Ukrainian г is the fricative [ɦ]: /ˈbɔ.gʊ/ is бо́ґу, /ˈɔ.gnɪ/ is о́ґні.
 - /ŋ/ → н.
 - /x/ → х: /ˈduː.xʊ/ is ду́ху.
-- /w/ → в. Ukrainian в is [w] before a consonant and at the end of a word, and [ʋ] before a vowel: /woˈdɑː/ is вода́, /zwæːˈzdɑː/ is звязда́. Never у or ў.
-- /ʃ/ → ш. /ʒ/ → ж. /tʃ/ → ч. /ts/ → ц. /dz/ → дз. /dʒ/ → дж. Ukrainian дз and дж are single affricates: /ˈdzæː.lo/ is дзя́ло, /ˈdʊ.ʒdʒɪ/ is ду́жджи.
-- After ш ж ч ц дз дж write the vowel letters а е и і о у, except /æ/, which is я: /tʃe.loˈwæː.kʊ/ is человя́ку.
+- /ʋ/ → в. Ukrainian в before a vowel is the approximant [ʋ], the Common Slavic sound, and every Common Slavic v stands before a vowel or a jer: /ʋɔˈdɑː/ is вода́, /zʋæːˈzdɑː/ is звезда́. Never у or ў.
+- /ʃ/ → ш. /ʒ/ → ж. /tʃ/ → ч. /ts/ → ц. /dz/ → дз. /dʒ/ → дж. Ukrainian дз and дж are single affricates: /ˈdzæː.lɔ/ is дзе́ло, /ˈdʊ.ʒdʒɪ/ is ду́жджі.
+- After ш ж ч ц дз дж write the vowel letters а е и і о у: /tʃɛ.lɔˈʋæː.kʊ/ is челове́ку, /ˈmɔ̃ː.ʒɪ/ is мо́жі.
 
 The glide /j/
-- /j/ before a vowel combines with it into one letter: /jɑ/ → я, /jæ/ → я, /je/ → є, /ji/ → ї, /ju/ → ю, /jʊ/ → ю, /jẽ/ → єн. /jo/ → йо. /jɪ/ and /jɨ/ → йи: /moˈjɑː/ is моя́, /jeˈdiː.nʊ/ is єді́ну, /ˈtrɪ.je/ is три́є, /ˈjɪ.mẽː/ is йи́мен, /jɪˈdõː.tɪ/ is йидо́нти.
-- /j/ before a consonant or at the end of a word → й: /ˈkrɑː.jɪ/ is кра́йи.
-- A consonant plus /j/ plus a vowel is written with the Ukrainian apostrophe (') between them: /bjɑ/ is б'я, /tje/ is т'є.
+- /j/ before a vowel combines with it into one letter: /jɑ/ → я, /jæ/ → я, /jɛ/ → є, /ji/ → ї, /jɪ/ → ї, /ju/ → ю, /jʊ/ → ю, /jɛ̃/ → є. /jɔ/ → йо. /jɨ/ → йи: /mɔˈjɑː/ is моя́, /jɛˈdiː.nʊ/ is єді́ну, /ˈtrɪ.jɛ/ is трі́є, /ˈjɪ.mɛ̃ː/ is ї́ме, /jɪˈdɔ̃ː.tɪ/ is їдо́ті, /ˈkrɑː.jɪ/ is кра́ї.
+- /j/ before a consonant or at the end of a word → й.
+- A consonant plus /j/ plus a vowel is written with the Ukrainian apostrophe (') between them: /bjɑ/ is б'я, /tjɛ/ is т'є.
 
 Palatal consonants
 /lʲ nʲ rʲ tʲ dʲ sʲ/ are written л н р т д с, and the letter after them marks the softness, the way Ukrainian does.
-- Before /ɑ æ/ → я, before /e/ → є, before /u ʊ/ → ю, before /o/ → ьо, before /i ɪ ɨ/ → і: /ˈwo.lʲɑː/ is во́ля, /zeˈmlʲɑː/ is земля́, /ˈme.dʲɑː/ is ме́дя, /ˈko.nʲɪ/ is ко́ні, /ˈno.tʲɪ/ is но́ті, /ˈpẽː.tʲɪ/ is пе́нті. Ukrainian и cannot follow a soft consonant, so a jer after one is і.
+- Before /ɑ æ/ → я, before /ɛ/ → є, before /u ʊ/ → ю, before /ɔ/ → ьо, before /i ɪ ɨ/ → і: /ˈʋɔ.lʲɑː/ is во́ля, /zɛˈmlʲɑː/ is земля́, /ˈmɛ.dʲɑː/ is ме́дя, /ˈkɔ.nʲɪ/ is ко́ні, /ˈnɔ.tʲɪ/ is но́ті, /ˈpɛ̃ː.tʲɪ/ is пе́ті.
 - Before a consonant or at the end of a word → ь after the letter: /nʲ/ at the end is нь.
 - Never ч or дж for /tʲ dʲ/. They are the East Slavic descendants.
 
 Capitals and pauses
-- Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here, and every other word is lowercase. A capital keeps its stress mark: /oˈtɪ.tsɪ/ at the start is Оти́ци, /ˈmɑː.tiː/ is Ма́ті.
+- Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here, and every other word is lowercase. A capital keeps its stress mark: /ɔˈtɪ.tsɪ/ at the start is Оті́ці, /ˈmɑː.tiː/ is Ма́ті.
 - Keep each comma, exclamation mark, question mark, and period of the IPA.
 
 Lost in the Ukrainian reading
-- Vowel length. Ukrainian has none, so /æː ɑː iː uː ɨː/ come out as short as /e o ɪ ʊ/.
+- Vowel length. Ukrainian has none, so /æː ɑː iː uː ɨː/ come out as short as /ɛ ɔ ɪ ʊ/.
 - The pitch accent. The stress mark places the stress only.
-- /ɨ/ and the front jer /ɪ/ both come out as Ukrainian и. *sy̑nъ and a word with ь in its place sound alike.
+- The front jer /ɪ/ comes out as a full [i], the same as /i/.
 - The back jer /ʊ/ comes out as a full [u], the same as /u/.
-- /æ/ comes out as a softened consonant plus [a]. After a labial the voice may say [mja] instead.
-- The nasal vowels come out as an oral vowel plus [n] or [m].
-- Ukrainian softens a consonant before і, so the т of ма́ті and the б of би́ті are slightly palatalized.
-- Unstressed е and и lean toward each other in Ukrainian ([eɪ]), so unstressed /e/ and /ɪ/ may sound alike.
+- /æ/ comes out as [ɛ], the same as /ɛ/.
+- The nasal vowels come out as plain oral vowels, the same as /ɛ/ and /ɔ/.
+- Ukrainian softens a consonant before і, so the т of ма́ті and of несе́ті is slightly palatalized.
+- Unstressed е and и lean toward each other in Ukrainian ([eɪ]).
 - Ukrainian л before а о у is velarized [ɫ].
-- /w/ before a vowel comes out as the labiodental [ʋ].

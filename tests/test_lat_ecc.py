@@ -10,8 +10,8 @@ from harness import run
 SOURCE = "lat-ecc"
 TARGET = "it"
 
-SENTENCES = 3          # the first N sentences of data/lat-ecc/texts.json
-VOICES_PER_GENDER = 15    # the first M males + the first M females of voices/it.json
+SENTENCES = 10          # the first N sentences of data/ang/texts.json
+VOICES_PER_GENDER = 15    # the first M males + the first M females of voices/nl.json
 TIER = "high"             # LLM tier: "high", "medium", "low"
 EFFORT = "low"           # LLM effort: "ultra", "high", "medium", "low", "basic"
 MAX_MISMATCH = None      # fail when the pooled mismatch is above this; None never fails

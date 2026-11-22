@@ -5,12 +5,12 @@ The pipeline is four functions, each usable on its own:
 
     import ancient_language_tts as alt
 
-    pieces = alt.to_ipa("Arma virumque canō", "lat", method="llm", tier="low")
-    # [{"text": "Arma virumque canō", "ipa": ["ˈ", "a", "r", ...]}]
+    pieces = alt.to_ipa("Arma virumque cano", "lat-ecc", method="llm", tier="low")
+    # [{"text": "Arma virumque cano", "ipa": ["ˈ", "a", "r", ...]}]
     print(alt.ipa_tokens.render(alt.chunks.join_ipa(pieces)))
-    line = alt.respell_ipa(pieces, "lat", "it", method="llm")
-    line = alt.respell("Arma virumque canō", "lat", "it", method="rules")
-    audio = alt.speak(line, "it", output="out/lat.mp3")
+    line = alt.respell_ipa(pieces, "lat-ecc", "it", method="llm")
+    line = alt.respell("Arma virumque cano", "lat-ecc", "it", method="rules")
+    audio = alt.speak(line, "it", output="out/lat-ecc.mp3")
 
 `method` is "llm" (the same text → IPA → respelling pipeline for every
 language) or "rules" (the deterministic engine in `rule_based`).

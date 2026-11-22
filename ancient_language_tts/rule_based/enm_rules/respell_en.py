@@ -10,7 +10,7 @@ from ._common import Item, Word, flat, parse_ipa, render
 _VOWEL = {
     "a": "ah", "aː": "ah", "ɛ": "eh", "ɛː": "eh", "eː": "ey", "ɪ": "ih", "iː": "ee",
     "ɔ": "aw", "ɔː": "aw", "oː": "oh", "ʊ": "uh", "uː": "oo", "ə": "uh",
-    "ai": "eye", "au": "ow", "ɔu": "oh", "iu": "yoo", "ɛu": "ew", "ɔi": "oy",
+    "æi": "eye", "au": "ow", "ɔu": "oh", "iu": "yoo", "ɛu": "ew", "ɔi": "oy",
 }
 _CONS = {
     "j": "y", "θ": "th", "ð": "th", "ʃ": "sh", "tʃ": "ch", "dʒ": "j",

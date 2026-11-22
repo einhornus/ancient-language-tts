@@ -17,6 +17,9 @@ dependencies = [
     "pydantic-ai-slim[openrouter]>=1.0",
     "httpx>=0.27",
     "python-dotenv>=1.0",
+    # Volume normalization of the generated audio (tts.normalize_volume).
+    "numpy>=1.24",
+    "soundfile>=0.12",
 ]
 
 [project.optional-dependencies]

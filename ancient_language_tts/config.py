@@ -18,6 +18,8 @@ the built-in default:
                                 holds the reading to one baseline
     ANCIENT_TTS_SIMILARITY      similarity boost, 0 to 1 (default 0.75).
                                 Higher is clearer; very high values distort
+    ANCIENT_TTS_SPEED           speaking rate, 0.7 to 1.2 (default 0.7).
+                                Only models before v3 accept it
     ANCIENT_TTS_LLM_MODELS      comma-separated OpenRouter ids, tried in
                                 order, instead of the tier lists
     ANCIENT_TTS_MODELS_HIGH     comma-separated OpenRouter ids replacing one
@@ -97,6 +99,10 @@ DEFAULT_OUTPUT_FORMAT = "mp3_44100_128"
 # consonants, so this stays at their clarity default rather than at 1.
 DEFAULT_STABILITY = 1.0
 DEFAULT_SIMILARITY = 0.75
+# Speaking rate, from ElevenLabs' range of 0.7 to 1.2 (1 is the voice's
+# own pace). The slowest end gives every sound of a respelling its time.
+DEFAULT_SPEED = 0.7
+SPEED_RANGE = (0.7, 1.2)
 
 APP_TITLE = "Ancient Language TTS"
 APP_URL = "https://github.com/einhornus/ancient-language-tts"
@@ -115,6 +121,7 @@ _SETTING_KEYS = frozenset({
     "output_format",
     "stability",
     "similarity_boost",
+    "speed",
 })
 
 
@@ -132,6 +139,7 @@ class Settings:
     output_format: str = DEFAULT_OUTPUT_FORMAT
     stability: float = DEFAULT_STABILITY
     similarity_boost: float = DEFAULT_SIMILARITY
+    speed: float = DEFAULT_SPEED
     tiers: Mapping[Tier, tuple[str, ...]] = field(default_factory=lambda: dict(TIER_MODELS))
 
     @property
@@ -171,6 +179,7 @@ def resolve(
     output_format: str | None = None,
     stability: float | None = None,
     similarity_boost: float | None = None,
+    speed: float | None = None,
 ) -> Settings:
     """Settings from the arguments, then the environment and `.env`, then the defaults.
 
@@ -222,6 +231,7 @@ def resolve(
         similarity_boost if similarity_boost is not None else os.getenv("ANCIENT_TTS_SIMILARITY", ""),
         DEFAULT_SIMILARITY,
     )
+    speed = _speed(speed if speed is not None else os.getenv("ANCIENT_TTS_SPEED", ""))
     return Settings(
         openrouter_api_key=openrouter,
         elevenlabs_api_key=elevenlabs,
@@ -235,6 +245,7 @@ def resolve(
         output_format=output_format.strip(),
         stability=stability,
         similarity_boost=similarity_boost,
+        speed=speed,
         tiers=tiers,
     )
 
@@ -264,6 +275,21 @@ def _unit(name: str, raw: float | str, default: float) -> float:
         raise ValueError(f"{name} must be a number between 0 and 1") from None
     if not 0.0 <= value <= 1.0:
         raise ValueError(f"{name} must be between 0 and 1")
+    return value
+
+
+def _speed(raw: float | str) -> float:
+    low, high = SPEED_RANGE
+    if isinstance(raw, str):
+        raw = raw.strip()
+        if not raw:
+            return DEFAULT_SPEED
+    try:
+        value = float(raw)
+    except (TypeError, ValueError):
+        raise ValueError(f"speed must be a number between {low} and {high}") from None
+    if not low <= value <= high:
+        raise ValueError(f"speed must be between {low} and {high}")
     return value
 
 

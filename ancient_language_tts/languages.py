@@ -1,7 +1,7 @@
 """Language codes.
 
-Ancient languages are the ones this package transcribes. `lat` is Classical
-Latin and `lat-ecc` is Ecclesiastical Latin in the Italian school. `grc` is
+Ancient languages are the ones this package transcribes. `lat-ecc` is
+Ecclesiastical Latin in the Italian school. `grc` is
 Koine Greek of the first century AD. Other stages of those languages are different phonologies
 and are not folded into these codes. `eme` and `lat-ecc` are project codes:
 ISO 639 has no entry for either. The proto-language codes are the ones
@@ -46,7 +46,6 @@ class ModernLanguage:
 
 
 ANCIENT: tuple[AncientLanguage, ...] = (
-    AncientLanguage("lat", "Classical Latin", "c. 100 BC–AD 100"),
     AncientLanguage(
         "lat-ecc",
         "Ecclesiastical Latin",
@@ -58,7 +57,7 @@ ANCIENT: tuple[AncientLanguage, ...] = (
     AncientLanguage("ang", "Old English", "Late West Saxon, c. 900 AD"),
     AncientLanguage("gem-pro", "Proto-Germanic", "c. 200 AD"),
     AncientLanguage("ine-pro", "Proto-Indo-European", "c. 3000 BC"),
-    AncientLanguage("sla-pro", "Proto-Slavic", "Early Common Slavic, c. 500 AD"),
+    AncientLanguage("sla-pro", "Proto-Slavic", "Middle Common Slavic, c. 750–800 AD"),
 )
 
 # George is the premade voice ElevenLabs documents as the safe default.
@@ -131,9 +130,6 @@ MODERN: tuple[ModernLanguage, ...] = (
 )
 
 _ANCIENT_ALIASES = {
-    "la": "lat",
-    "latin": "lat",
-    "classical-latin": "lat",
     "ecclesiastical-latin": "lat-ecc",
     "ecclesiastical": "lat-ecc",
     "church-latin": "lat-ecc",

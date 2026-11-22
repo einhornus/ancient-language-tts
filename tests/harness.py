@@ -13,10 +13,11 @@ Each test names an (ancient, modern) pair and its constants, then calls
 4. scores each take against the expected IPA and reports the metrics:
    overall, by voice, every take ranked, and the mistakes behind them.
 
-The metric is the mismatch of check.mismatch: the weighted phoneme edit
-distance between the expected and the heard IPA, divided by the number of
-expected phonemes. 0 is a perfect match. `pooled` divides the summed
-distance by the summed expected phonemes (long sentences weigh more);
+The metric is the mismatch of check.compare: the recognizer's frames are
+aligned to the expected phonemes, and the penalty of the mistakes is divided
+by the summed weight of the expected phonemes (1 a consonant, 2 a vowel,
+4 a stressed vowel; see check/mismatch.py). 0 is a perfect match. `pooled`
+divides the summed penalty by the summed weight (long sentences weigh more);
 `mean`, `median` and `stdev` are over takes; for one voice that is one
 take per sentence, so its `stdev` is the spread of its score between
 sentences. A mistake's `contribution` is its share
@@ -230,18 +231,18 @@ def _speak(row: dict, voice: dict, target: str) -> bytes | str:
 def _hear(audio: bytes, source: str, expected: list[str]) -> dict:
     from ancient_language_tts import check
 
-    phonemes = check.recognize_phonemes(audio, source=source)
-    tokens = check.tokens_from_phonemes(phonemes, pause_ms=PAUSE_MS)
-    comparison = check.compare(expected, tokens)
+    frames = check.recognize_phonemes(audio, source=source)
+    comparison = check.compare(expected, frames)
+    heard = comparison.frames  # collapsed, modifiers attached: what was aligned
     return {
-        "heard": alt.ipa_tokens.render(tokens),
+        "heard": alt.ipa_tokens.render(comparison.heard_tokens(PAUSE_MS)),
         "mismatch": comparison.mismatch,
-        "distance": comparison.distance,
+        "distance": comparison.penalty,
         "expected_phonemes": len(comparison.expected),
-        "heard_phonemes": len(comparison.heard),
-        "confidence": (
-            sum(p["confidence"] for p in phonemes) / len(phonemes) if phonemes else None
-        ),
+        "expected_weight": comparison.weight,
+        "heard_phonemes": len(heard),
+        "frames": len(frames),
+        "confidence": sum(f["confidence"] for f in heard) / len(heard) if heard else None,
         "mistakes": [m.to_dict() for m in comparison.breakdown()],
     }
 
@@ -288,9 +289,10 @@ def _metrics(rows: list[dict], voice: str | None) -> dict:
 
     scores = [t["mismatch"] for t in takes]
     expected = sum(t["expected_phonemes"] for t in takes)
+    weight = sum(t["expected_weight"] for t in takes)
     confidences = [t["confidence"] for t in takes if t["confidence"] is not None]
     metrics.update({
-        "mismatch_pooled": sum(t["distance"] for t in takes) / expected if expected else 0.0,
+        "mismatch_pooled": sum(t["distance"] for t in takes) / weight if weight else 0.0,
         "mismatch_mean": statistics.fmean(scores),
         "mismatch_median": statistics.median(scores),
         "mismatch_stdev": statistics.pstdev(scores),
@@ -298,27 +300,29 @@ def _metrics(rows: list[dict], voice: str | None) -> dict:
         "perfect_takes": sum(1 for s in scores if s == 0),
         "length_ratio": sum(t["heard_phonemes"] for t in takes) / expected if expected else None,
         "confidence": statistics.fmean(confidences) if confidences else None,
-        "mistakes": _pool_mistakes(takes, expected),
+        "mistakes": _pool_mistakes(takes, weight),
     })
     return metrics
 
 
-def _pool_mistakes(takes: list[dict], expected: int) -> list[dict]:
+def _pool_mistakes(takes: list[dict], weight: float) -> list[dict]:
     """The mistakes of all `takes` together; contributions sum to the pooled mismatch."""
     pooled: dict[tuple, dict] = {}
     for take in takes:
         for m in take["mistakes"]:
             entry = pooled.setdefault(
                 (m["expected"], m["heard"]),
-                {"expected": m["expected"], "heard": m["heard"], "penalty": m["penalty"],
+                {"expected": m["expected"], "heard": m["heard"], "total": 0.0,
                  "times": 0, "words": {}},
             )
             entry["times"] += m["times"]
+            entry["total"] += m["total"]
             for word, times in m["words"]:
                 entry["words"][word] = entry["words"].get(word, 0) + times
     mistakes = []
     for entry in pooled.values():
-        entry["contribution"] = entry["penalty"] * entry["times"] / expected if expected else 0.0
+        entry["penalty"] = entry["total"] / entry["times"]
+        entry["contribution"] = entry["total"] / weight if weight else 0.0
         entry["words"] = sorted(entry["words"].items(), key=lambda item: (-item[1], item[0]))
         mistakes.append(entry)
     return sorted(mistakes, key=lambda m: (-m["contribution"], -m["times"]))
@@ -486,6 +490,7 @@ def _settings(source: str, target: str, count: int, voices: list[dict], tier: st
             "output_format": settings.output_format,
             "stability": settings.stability,
             "similarity_boost": settings.similarity_boost,
+            "speed": settings.speed,
             "seed": SEED,
         },
         "check": {"pause_ms": PAUSE_MS},

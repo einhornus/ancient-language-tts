@@ -1,4 +1,4 @@
-Stage. Late West Saxon Old English of about 1000 AD, the language of Ælfric and of the Beowulf manuscript, in the reconstructed pronunciation that the handbooks teach. Old English is not modern English and not Middle English. Spellings like cyning, scip, niht, and hwæt look familiar. Do not give them modern English values, and do not return a modern dictionary pronunciation. Every written letter is pronounced. There are no silent letters and no silent final -e.
+Stage. Late West Saxon Old English of about 1000 AD, the language of Ælfric and of the Beowulf manuscript, in the reconstructed pronunciation that the handbooks teach. Old English is not modern English and not Middle English. Spellings like cyning, scip, niht, and hwæt look familiar. Do not give them modern English values, and do not return a modern dictionary pronunciation. Every written letter is pronounced. There are no silent letters and no silent final -e. The one exception is an e written after ċ, ġ, or sċ only to show that the consonant is palatal (see Diphthongs).
 
 Output
 - Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
@@ -28,7 +28,9 @@ Diphthongs
 - ea [æɑ̯], ēa [æːɑ̯]: eald [ˈæɑ̯ld], ēage [ˈæːɑ̯.ɣe], ēast [ˈæːɑ̯st].
 - eo [eo̯], ēo [eːo̯]: eorðe [ˈeo̯r.ðe], heofon [ˈheo̯.von], dēop [ˈdeːo̯p], þēod [ˈθeːo̯d].
 - Each diphthong is one syllable. The second element is non-syllabic: write ̯ under it. The short and the long diphthong differ only in the length of the first element.
-- In sceo- and ġeo- the e is a spelling that marks the consonant as palatal, and only o follows: sceolde [ˈʃol.de], ġeong [ˈjoŋg], ġeoc [ˈjok]. After every other consonant, and in sċea- and ġea-, ea and eo are real diphthongs: sceal [ˈʃæɑ̯l], ġēar [ˈjæːɑ̯r].
+- After ċ, ġ, or sċ, an e before a back vowel is sometimes only a spelling that marks the consonant as palatal. Then only the back vowel is pronounced. This is so where the vowel was back from the start, and dictionaries also print a spelling without the e: sċeolde, sċolde [ˈʃol.de], sċeort, sċort [ˈʃort], ġesċeōp "created" [jeˈʃoːp], ġeoc [ˈjok]. In ġeong "young" and ġeoguþ "youth" the vowel is [u]. They are also written ġung and ġuguþ: ġeong [ˈjuŋg], ġeoguþ [ˈju.ɣuθ].
+- Inside a word the e between ċ, ġ, sċ, or ċġ and a back vowel of an ending is always only a spelling: sēċean [ˈseː.tʃɑn], sēċeaþ [ˈseː.tʃɑθ], ġewyrċean [jeˈwyr.tʃɑn], seċġean [ˈsed.dʒɑn].
+- Everywhere else ea and eo after ċ, ġ, and sċ are real diphthongs. This includes the diphthongs from older æ, ǣ, e, and eu: sċeal [ˈʃæɑ̯l], sċeaþa [ˈʃæɑ̯.ðɑ], ġeaf [ˈjæɑ̯f], ġēar [ˈjæːɑ̯r], ċeald [ˈtʃæɑ̯ld], ċeorl [ˈtʃeo̯rl], ġeolu [ˈjeo̯.lu], ġeorn [ˈjeo̯rn], sċēotan [ˈʃeːo̯.tɑn], ċēosan [ˈtʃeːo̯.zɑn].
 
 Unstressed syllables
 - Unstressed vowels are short and keep the quality written. There is no schwa. The endings -e, -a, -u, -o, -an, -en, -on, -um, -as, -es, -ena, -ode, -ung, and -iġ are what they spell: nama [ˈnɑ.mɑ], heofonum [ˈheo̯.vo.num], ġefrūnon [jeˈfruː.non], fæder [ˈfæ.der], dagung [ˈdɑ.ɣuŋg].
@@ -42,17 +44,17 @@ Consonants: c
 - Use the modern reflex when the dictionary is not to hand. A modern word with ch or tch has [tʃ] (child, cheese, church, choose, chin, rich, each, ditch, bench, teach, stretch). A modern word with k or c has [k] (king, kin, keen, kemb, key, kith, come, cold), except where modern English changed the consonant by analogy: sēċan "seek", þenċan "think", and wyrċan "work" have [tʃ], and so does the word ēċe "eternal".
 - After i or ī at the end of a word, c is [tʃ]: ic [ˈitʃ], dīċ [ˈdiːtʃ], -liċ [litʃ], ġelīċ [jeˈliːtʃ]. Inside a word ċ stands before a lost j or i: sēċan [ˈseː.tʃɑn], tǣċan, rīċe, ēċe [ˈeː.tʃe], þenċan [ˈθen.tʃɑn], benċ. Before a back vowel of an ending, c is [k]: dīcas [ˈdiː.kɑs].
 - ċċ is [t.tʃ]: reċċan [ˈret.tʃɑn], streċċan. cc elsewhere is [k.k]: liccian [ˈlik.ki.ɑn].
-- ċġ, often printed cg, is [dʒ], and between vowels it is the geminate [d.dʒ]: seċġan [ˈsed.dʒɑn], brycg [ˈbrydʒ], ecg [ˈedʒ], hrycg [ˈr̥ydʒ].
+- ċġ, often printed cg, is [dʒ] (except in the few velar words listed under g: docga, frocga), and between vowels it is the geminate [d.dʒ]: seċġan [ˈsed.dʒɑn], brycg [ˈbrydʒ], ecg [ˈedʒ], hrycg [ˈr̥ydʒ].
 
 Consonants: g
-- ġ is [j]. A modern edition dots g in the same front contexts as c: ġiefan [ˈjy.vɑn], ġēar [ˈjæːɑ̯r], ġeard, ġeolu, ġē "ye", ġif, ġeong, onġinnan [onˈjin.nɑn]. Modern give, get, gift, and begin have g from Norse. Their Old English words had [j].
+- ġ is [j]. A modern edition dots g in the same front contexts as c: ġiefan [ˈjy.vɑn], ġēar [ˈjæːɑ̯r], ġeard, ġeolu, ġeorn, ġē "ye", ġif, ġeong, onġinnan [onˈjin.nɑn]. Modern give, get, gift, and begin have g from Norse. Their Old English words had [j].
 - g stays [g] before e, ē, y, ȳ when that vowel is the i-mutation of a back vowel: gēs "geese" [ˈgeːs], gylden [ˈgyl.den], gyrdel.
 - After a front vowel, g at the end of a word or before a consonant is [j]: dæġ [ˈdæj], weġ [ˈwej], mæġden [ˈmæj.den], hāliġ [ˈhɑː.lij], mæniġ [ˈmæ.nij]. Between front vowels it is [j]: dæġes [ˈdæ.jes].
 - At the start of a word before a back vowel or a consonant, g is the stop [g]: gōd [ˈgoːd], gold, grēne, glæd, Gār-Dena [ˈgɑːr.de.nɑ]. The same holds at the start of a compound element.
-- Inside a word after a back vowel, a back diphthong, l, or r, g is the fricative [ɣ]: dagas [ˈdɑ.ɣɑs], fugol [ˈfu.ɣol], āgan, ēage [ˈæːɑ̯.ɣe], burgum [ˈbur.ɣum], ġehālgod [jeˈhɑːl.ɣod].
-- At the end of a word after a back vowel, l, or r, it is voiceless [x], the same sound as h there. Late West Saxon writes either letter: burg and burh are both [ˈburx], bēag [ˈbæːɑ̯x], ġenōg and ġenōh [jeˈnoːx].
-- gg is [g.g]: frogga [ˈfrog.gɑ], docga.
-- ng is [ŋ] plus the stop [g], in every position: cyning [ˈky.niŋg], singan [ˈsiŋ.gɑn], lang [ˈlɑŋg], æþelingas [ˈæ.ðe.liŋ.gɑs]. nc is [ŋk]: þanc [ˈθɑŋk], drincan. Before ċ or ġ, n is [n]: þenċan [ˈθen.tʃɑn], senġan [ˈsen.dʒɑn].
+- Inside a word after a back vowel, a back diphthong, l, or r, g is the fricative [ɣ]: dagas [ˈdɑ.ɣɑs], fugol [ˈfu.ɣol], āgan, ēage [ˈæːɑ̯.ɣe], burgum [ˈbur.ɣum], ġehālgod [jeˈhɑːl.ɣod]. After a front vowel and before a back vowel, undotted g is [ɣ] too: wegas [ˈwe.ɣɑs], plegode [ˈple.ɣo.de], plegodon [ˈple.ɣo.don].
+- At the end of a word after a back vowel, a back diphthong, l, or r, it is voiceless [x], the same sound as h there. Late West Saxon writes either letter: burg and burh are both [ˈburx], bēag [ˈbæːɑ̯x], ġenōg and ġenōh [jeˈnoːx].
+- gg is [g.g]: frogga [ˈfrog.gɑ]. A few words with this velar geminate are also spelled cg: docga [ˈdog.gɑ], frocga, sucga, wicga [ˈwig.gɑ]. Modern English has g in them (dog, frog, earwig).
+- ng is [ŋ] plus the stop [g], in every position: cyning [ˈky.niŋg], singan [ˈsiŋ.gɑn], lang [ˈlɑŋg], æþelingas [ˈæ.ðe.liŋ.gɑs]. nc is [ŋk]: þanc [ˈθɑŋk], drincan. Before ċ or ġ, n is [n], and nġ is [ndʒ], not [nj]: þenċan [ˈθen.tʃɑn], senġan [ˈsen.dʒɑn], lenġu [ˈlen.dʒu]. A dotted ġ after n is always [dʒ]. An undotted g after n is [ŋg] even before a front vowel: engel "angel" [ˈeŋ.gel], Engle [ˈeŋ.gle].
 
 Consonants: sc
 - sċ is [ʃ]. A modern edition dots it at the start of a word before every vowel and consonant (sċip [ˈʃip], sċēap, sċeal, sċort, sċulon [ˈʃu.lon]) and at the end of a word or before a front vowel after a front vowel (fisċ [ˈfiʃ], Englisċ [ˈeŋ.gliʃ], fisċere).
@@ -67,14 +69,15 @@ Consonants: h
 - hw is [ʍ]: hwæt [ˈʍæt], hwā, hwīl. hl is [l̥], hr is [r̥], hn is [n̥]: hlāf [ˈl̥ɑːf], hrīm [ˈr̥iːm], hnutu [ˈn̥u.tu]. Each one is a single onset consonant.
 
 Consonants: f, s, þ
-- f, s, and þ are voiced [v], [z], [ð] between two voiced sounds (vowels, or a vowel and a voiced consonant) when the syllable before them is stressed: heofon [ˈheo̯.von], ofer [ˈo.ver], hūsian [ˈhuː.zi.ɑn], rīsan [ˈriː.zɑn], eorðe [ˈeo̯r.ðe], smiþas [ˈsmi.ðɑs], æþeling [ˈæ.ðe.liŋg], ġewurþe [jeˈwur.ðe].
-- They are voiceless [f], [s], [θ] at the start of a word, at the end of a word, next to a voiceless consonant, after an unstressed syllable, and at the start of a compound element or a root after a prefix: fæder [ˈfæ.der], wulf [ˈwulf], hūs [ˈhuːs], smiþ [ˈsmiθ], ġefrūnon [jeˈfruː.non], Wuldorfæder [ˈwul.dor.fæ.der], mōdġeþanc [ˈmoːd.je.θɑŋk].
+- f, s, and þ are voiced [v], [z], [ð] inside a word between two voiced sounds (vowels, or a vowel and a voiced consonant), in a stressed or an unstressed syllable alike: heofon [ˈheo̯.von], ofer [ˈo.ver], frēosan [ˈfreːo̯.zɑn], rīsan [ˈriː.zɑn], eorðe [ˈeo̯r.ðe], smiþas [ˈsmi.ðɑs], æþeling [ˈæ.ðe.liŋg], ġewurþe [jeˈwur.ðe], wulfas [ˈwul.vɑs], mōnaþas [ˈmoː.nɑ.ðɑs].
+- They are voiceless [f], [s], [θ] at the start of a word, at the end of a word, next to a voiceless consonant, and at the start or the end of a compound element or of a root after a prefix: fæder [ˈfæ.der], wulf [ˈwulf], hūs [ˈhuːs], smiþ [ˈsmiθ], ġefrūnon [jeˈfruː.non], Wuldorfæder [ˈwul.dor.fæ.der], mōdġeþanc [ˈmoːd.je.θɑŋk], Ælfrǣd [ˈælf.ræːd], wīfmann [ˈwiːf.mɑn].
 - ff, ss, þþ, and ðð are voiceless geminates: [f.f], [s.s], [θ.θ]: cyssan [ˈkys.sɑn], oþþe [ˈoθ.θe].
 - þ and ð are [θ] at the start of every word, the article and the pronouns included: þæt [θæt], þū [ˈθuː], ðā [θɑː]. There is no [ð] at the start of a word.
 - x is [ks]: weaxan [ˈwæɑ̯k.sɑn], siex, six [ˈsiks].
 
 Other consonants
 - p t b d m n w have their ordinary values. There is no aspiration to mark. w is [w], never [v].
+- In a weak verb of the first class with a short front vowel before r (herian, nerian, werian, ferian, swerian, styrian), the i of -ian, -iaþ, -iende is the consonant [j], also written ġ, iġ, or g (herġan, heriġan): herian [ˈher.jɑn], nerian [ˈner.jɑn], heriaþ [ˈher.jɑθ]. The noun here "army" has [j] the same way in heriġes, herġes [ˈher.jes]. In every other -ian verb the i is a vowel and its own syllable: lufian [ˈlu.vi.ɑn], andswarian [ˈɑnd.swɑ.ri.ɑn], āscian [ˈɑːs.ki.ɑn].
 - r is a trill [r], pronounced in every position: before a consonant and at the end of a word too: eart [ˈæɑ̯rt], weard [ˈwæɑ̯rd], fæder [ˈfæ.der].
 - l is [l] in every position. Do not mark dark l.
 - Every written consonant cluster is pronounced: cn [kn] cnāwan, gn [gn] gnæt, wr [wr] wrītan, wl [wl] wlite, hl hr hn hw as above, sw, tw, dw.
@@ -92,8 +95,9 @@ Stress
 - A compound stresses its first element only: Gār-Dena [ˈgɑːr.de.nɑ], þēodcyning [ˈθeːo̯d.ky.niŋg], Wuldorfæder.
 - ġe- and be- are never stressed: ġefaran [jeˈfɑ.rɑn], ġehwæs [jeˈʍæs], bebēodan [beˈbeːo̯.dɑn]. for- is unstressed too: forġiefan [forˈjy.vɑn], forwyrd [forˈwyrd].
 - and-, ond-, un-, and ed- are always stressed: andswaru [ˈɑnd.swɑ.ru], andswarian [ˈɑnd.swɑ.ri.ɑn], unriht [ˈun.riçt].
-- Every other prefix (ā-, æt-, of-, on-, ofer-, tō-, ūt-, under-, wiþ-, ymb-) is stressed in a noun or an adjective and unstressed in a verb or an adverb: ofermōd [ˈo.ver.moːd], tōcyme [ˈtoː.ky.me], but onġinnan [onˈjin.nɑn], onstealde [onˈstæɑ̯l.de], tōbecume [toː.beˈku.me], ārīsan [ɑːˈriː.zɑn].
-- A monosyllable takes ˈ unless it is an article or a demonstrative used as one (se, sēo, þæt, þā, þone, þǣre), a preposition (on, in, tō, of, mid, æt, be, for, fram, wiþ, ymb, ofer, under), a conjunction (and, ond, ac, oþþe, gif, þæt, swā "as"), the particle þe, the negative ne, or a possessive before its noun (mīn, þīn, his, hire, ūre, ēower, hiera). A possessive after its noun is stressed: Fæder ūre [ˈfæ.der ˈuː.re]. Pronouns, verbs, and adverbs are stressed: ic [ˈitʃ], hē, wē, is, nū, hū, þā "then".
+- ġeond-, mis-, and wiþ- before a verb are unstressed: ġeondsēon [jeo̯ndˈseːo̯n], misdōn [misˈdoːn].
+- Every other prefix (ā-, æfter-, æt-, fore-, fram-, in-, of-, on-, ofer-, tō-, þurh-, under-, up-, ūt-, wiþer-, ymb-) is stressed in a noun or an adjective and unstressed in a verb or an adverb: ofermōd [ˈo.ver.moːd], tōcyme [ˈtoː.ky.me], but onġinnan [onˈjin.nɑn], onstealde [onˈstæɑ̯l.de], tōbecume [toː.beˈku.me], ārīsan [ɑːˈriː.zɑn].
+- A word takes ˈ unless it is an article or a demonstrative used as one (se, sēo, þæt, þā, þone, þǣre), a preposition (on, in, tō, of, mid, æt, be, for, fram, wiþ, ymb, ofer, under), a conjunction (and, ond, ac, oþþe, ġif, þæt, swā "as"), the particle þe, the negative ne, or a possessive before its noun (mīn, þīn, his, hire, ūre, ēower, hiera). A possessive after its noun is stressed: Fæder ūre [ˈfæ.der ˈuː.re]. Pronouns, verbs, and adverbs are stressed: ic [ˈitʃ], hē, wē, is, nū, hū, þā "then".
 - A Latin or Greek name or loan keeps the stress of Old English, on its first syllable, unless it is still a foreign word in the text: Crīst [ˈkriːst], Adam [ˈɑ.dɑm].
 - Put ˈ before the stressed syllable. It replaces the dot.
 

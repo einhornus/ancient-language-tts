@@ -19,6 +19,7 @@ _DOUBLE_OK = frozenset("bdfgklmnprstvz") | {"sj"}
 _ONSET_FIRST = frozenset("pbtdkgfv")
 _ACUTE = {"a": "á", "e": "é", "i": "í", "o": "ó", "u": "ú"}
 _VOWEL_LETTERS = frozenset("aeiouáéíóúêôë")
+_EI = ("ei", "éí")
 
 
 def respell(ipa: str) -> str:
@@ -78,9 +79,12 @@ def _vowel(ph: str, open_: bool, more: bool, vowel_next: bool, out: list[str]) -
     if ph in _SHORT:
         return _SHORT[ph]
     if ph == "ə":
-        return "ë" if out and out[-1] and out[-1][-1] in _VOWEL_LETTERS else "e"
-    if ph == "ai":
-        return "aai"
+        # ei ends in a glide, as in Dutch eieren: no diaeresis after it.
+        if out and out[-1] and out[-1][-1] in _VOWEL_LETTERS and not out[-1].endswith(_EI):
+            return "ë"
+        return "e"
+    if ph == "æi":
+        return "ei"
     if ph == "au":
         return "auw" if vowel_next else "au"
     if ph == "ɔu":

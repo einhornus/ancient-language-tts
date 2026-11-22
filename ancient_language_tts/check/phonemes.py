@@ -1,4 +1,4 @@
-"""Turn CTC logits into a list of recognized phonemes.
+"""Turn CTC logits into per-frame phoneme distributions, and those into phonemes.
 
 Each 20 ms frame of the model output is a distribution over ZIPA's
 vocabulary (`data/zipa_tokens.json`): single IPA characters plus a blank
@@ -10,10 +10,13 @@ vocabulary (`data/zipa_tokens.json`): single IPA characters plus a blank
   emitted here,
 * the remaining mass, renormalized, ranks which character it is.
 
-Frames with confidence above the threshold are kept, and runs of
-*consecutive* kept frames with the same top character merge into one run.
-A dropped frame (silence or CTC blank) always ends a run, so a genuinely
-repeated sound ("ll") stays two phonemes.
+`recognize_phonemes` returns the frames whose confidence is above the
+threshold, each with its own distribution (`Frame`). Nothing is merged.
+
+`phonemes_from_frames` turns those frames into phonemes (`Phoneme`): runs
+of *consecutive* kept frames with the same top character merge into one
+run. A dropped frame (silence or CTC blank) always ends a run, so a
+genuinely repeated sound ("ll") stays two phonemes.
 
 ZIPA spells a phone as a base letter followed by modifier characters
 (`pʰ` is `p` + `ʰ`, `aː` is `a` + `ː`, `t̪` is `t` + combining bridge). A run
@@ -23,8 +26,9 @@ phonemes (`t` `ʃ`, `a` `u`), as in the project's `phonemes.json` files.
 
 Pass `source` (an ancient language code) to condition all of this on that
 language (see `conditioning.py`): the model's tokens are mapped by
-`data/<code>/zipa.json`, sounds the language lacks are never chosen, and
-each `phoneme` is one token of `data/<code>/phonemes.json`.
+`data/<code>/zipa.json` and sounds the language lacks are never chosen. A
+frame's distribution is over those mapped characters, and each merged
+`phoneme` is one token of `data/<code>/phonemes.json`.
 """
 
 from __future__ import annotations
@@ -40,7 +44,7 @@ from .model import TICK_MS, get_phoneme_model
 
 BLANK = lang.BLANK
 DROP = lang.DROP
-DEFAULT_THRESHOLD = 0.5
+DEFAULT_THRESHOLD = 0.2
 PAUSE_MS = 300  # `hear` writes a silence at least this long as a space
 
 # ZIPA's tokens.txt (ipa_simplified), id = position. Used when no table is given.
@@ -51,6 +55,13 @@ SPECIAL_TOKENS = {
 
 # Characters that modify the phone before them rather than being one.
 MODIFIERS = frozenset(row["token"] for row in lang.model_tokens() if row["type"] == "modifier")
+
+
+class Frame(TypedDict):
+    start_ms: int
+    end_ms: int
+    confidence: float                # 1 - P(blank) of this frame
+    probas: list[tuple[str, float]]  # character distribution, blank excluded, sums to ~1
 
 
 class Phoneme(TypedDict):
@@ -70,27 +81,31 @@ def recognize_phonemes(
     top_k: int = 10,
     model_id: str | None = None,
     model_file: str | None = None,
-) -> list[Phoneme]:
-    """Recognize the phonemes in `audio` with the local ZIPA CTC model.
+) -> list[Frame]:
+    """The phoneme distribution of every confident frame of `audio`.
 
-    `audio` is a file path, encoded file bytes (e.g. what `speak` returns) or
-    a numpy waveform (pass `sample_rate` if it is not 16 kHz). With `source`
-    the recognition is conditioned on that ancient language and every
-    `phoneme` is one of its tokens; without it the model's own IPA comes
-    back. Returns the phonemes in time order; see the module docstring for
-    how frames are kept and merged. `top_k` caps each phoneme's `probas`.
+    Runs the local ZIPA CTC model. `audio` is a file path, encoded file
+    bytes (e.g. what `speak` returns) or a numpy waveform (pass
+    `sample_rate` if it is not 16 kHz). Returns, in time order, one `Frame`
+    per 20 ms frame whose confidence is above `threshold`. Frames at or
+    below it are left out, so a gap in the times is silence or blank. With
+    `source` the distributions are conditioned on that ancient language;
+    without it they are over the model's own IPA characters. `top_k` caps
+    each frame's `probas`. `phonemes_from_frames` merges the frames into
+    phonemes.
     """
     waveform = load_audio(audio, sample_rate)
     model = get_phoneme_model(model_id, model_file)
     logits = model.get_logits(waveform)
-    return phonemes_from_logits(
+    return frames_from_logits(
         logits, glyph_table(model.tokens, source), source=source, threshold=threshold, top_k=top_k
     )
 
 
 def recognize(audio: AudioInput, sample_rate: int | None = None, **kwargs) -> list[str]:
-    """Just the phones of `recognize_phonemes`, e.g. ``["a", "r", "m", "aː"]``."""
-    return [p["phoneme"] for p in recognize_phonemes(audio, sample_rate, **kwargs)]
+    """The phones heard in `audio`, e.g. ``["a", "r", "m", "aː"]``."""
+    frames = recognize_phonemes(audio, sample_rate, **kwargs)
+    return [p["phoneme"] for p in phonemes_from_frames(frames, source=kwargs.get("source"))]
 
 
 def hear(
@@ -107,9 +122,20 @@ def hear(
     `data/<source>/phonemes.json`, with a space token wherever the audio
     pauses for `pause_ms` or longer. The recognizer gives no stress,
     syllable dots or punctuation.
+
+    Built from the frames the way `check.compare` sees them
+    (`mismatch.prepare_frames`): repeated frames of one sound collapsed,
+    modifier frames attached, then each frame's top glyph, cut into the
+    language's tokens.
     """
-    phonemes = recognize_phonemes(audio, sample_rate, source=source, **kwargs)
-    return tokens_from_phonemes(phonemes, pause_ms=pause_ms)
+    from .mismatch import heard_tokens, prepare_frames
+
+    frames = recognize_phonemes(audio, sample_rate, source=source, **kwargs)
+    conditioning = lang.language(source)
+    tokens: list[str] = []
+    for glyph in heard_tokens(prepare_frames(frames), pause_ms=pause_ms):
+        tokens.extend([glyph] if glyph == ipa_tokens.SPACE else conditioning.tokenize(glyph))
+    return tokens
 
 
 def tokens_from_phonemes(phonemes: list[Phoneme], *, pause_ms: int = PAUSE_MS) -> list[str]:
@@ -143,16 +169,16 @@ def glyph_table(tokens: dict[int, str] | list[str], source: str | None = None) -
     return table
 
 
-def phonemes_from_logits(
+def frames_from_logits(
     logits: np.ndarray,
     glyphs: dict[int, str] | None = None,
     *,
     source: str | None = None,
     threshold: float = DEFAULT_THRESHOLD,
-    top_k: int = 5,
+    top_k: int = 10,
     frame_ms: int = TICK_MS,
-) -> list[Phoneme]:
-    """The model-free half of `recognize_phonemes`: (time, vocab) logits -> phonemes."""
+) -> list[Frame]:
+    """The model-free half of `recognize_phonemes`: (time, vocab) logits -> frames."""
     logits = np.asarray(logits, dtype=np.float64)
     if logits.ndim == 3:
         logits = logits[0]
@@ -165,29 +191,55 @@ def phonemes_from_logits(
     probs[:, blank] = 0.0
     if DROP in names:
         probs[:, names.index(DROP)] = 0.0  # still "a sound", but never the one chosen
-    top = probs.argmax(axis=1)
-    audible = probs.max(axis=1) > 0  # False when only dropped glyphs had mass
+    mass = probs.sum(axis=1)  # 0 when only dropped glyphs had mass
 
-    runs: list[tuple[int, int]] = []
-    run_start = None
-    for i in range(len(probs) + 1):
-        kept = i < len(probs) and confidence[i] > threshold and audible[i]
-        if run_start is not None and (not kept or top[i] != top[run_start]):
-            runs.append((run_start, i))
-            run_start = None
-        if kept and run_start is None:
-            run_start = i
+    frames: list[Frame] = []
+    for i in np.flatnonzero((confidence > threshold) & (mass > 0)):
+        dist = probs[i] / mass[i]
+        order = np.argsort(-dist, kind="stable")[:top_k]
+        frames.append({
+            "start_ms": int(i) * frame_ms,
+            "end_ms": (int(i) + 1) * frame_ms,
+            "confidence": round(float(confidence[i]), 3),
+            "probas": [(names[j], round(float(dist[j]), 3)) for j in order if dist[j] > 1e-4],
+        })
+    return frames
+
+
+def phonemes_from_frames(
+    frames: list[Frame],
+    *,
+    source: str | None = None,
+    top_k: int = 5,
+) -> list[Phoneme]:
+    """Merge the frames of `recognize_phonemes` into phonemes.
+
+    Pass the `source` the frames were recognized with, so that each phoneme
+    is split into that language's tokens. `top_k` caps each phoneme's
+    `probas`.
+    """
+    runs: list[list[Frame]] = []
+    for frame in frames:
+        last = runs[-1][-1] if runs else None
+        if (
+            last is not None
+            and frame["start_ms"] == last["end_ms"]
+            and frame["probas"][0][0] == last["probas"][0][0]
+        ):
+            runs[-1].append(frame)
+        else:
+            runs.append([frame])
 
     result: list[Phoneme] = []
-    for start, end in runs:
-        glyph = names[top[start]]
+    sizes: list[int] = []  # frames behind each phoneme, for its mean confidence
+    for run in runs:
+        glyph = run[0]["probas"][0][0]
         if lang.is_modifier(glyph):
             if result:  # a modifier with nothing before it is dropped
-                _attach(result[-1], glyph, confidence, start, end, frame_ms)
+                _attach(result[-1], sizes, glyph, run)
             continue
-        result.append(_merge_run(probs, confidence, names, start, end, top_k, frame_ms))
-    for phoneme in result:
-        del phoneme["_frames"]
+        result.append(_merge_run(run, top_k))
+        sizes.append(len(run))
     if source is None:
         return result
 
@@ -199,32 +251,48 @@ def phonemes_from_logits(
     return split
 
 
-def _merge_run(probs, confidence, names, start, end, top_k, frame_ms) -> Phoneme:
-    # Weight each frame by its confidence.
-    weights = confidence[start:end]
-    dist = (probs[start:end] * weights[:, None]).sum(axis=0)
-    dist /= dist.sum() or 1.0
-    order = np.argsort(-dist)[:top_k]
-    probas = [(names[j], round(float(dist[j]), 3)) for j in order if dist[j] > 1e-4]
+def phonemes_from_logits(
+    logits: np.ndarray,
+    glyphs: dict[int, str] | None = None,
+    *,
+    source: str | None = None,
+    threshold: float = DEFAULT_THRESHOLD,
+    top_k: int = 5,
+    frame_ms: int = TICK_MS,
+) -> list[Phoneme]:
+    """(time, vocab) logits -> phonemes: `frames_from_logits`, then `phonemes_from_frames`."""
+    frames = frames_from_logits(
+        logits, glyphs, source=source, threshold=threshold, top_k=max(top_k, 10), frame_ms=frame_ms
+    )
+    return phonemes_from_frames(frames, source=source, top_k=top_k)
+
+
+def _merge_run(run: list[Frame], top_k: int) -> Phoneme:
+    # Weight each frame's distribution by its confidence.
+    dist: dict[str, float] = {}
+    for frame in run:
+        for name, p in frame["probas"]:
+            dist[name] = dist.get(name, 0.0) + p * frame["confidence"]
+    total = sum(dist.values()) or 1.0
+    ranked = sorted(dist.items(), key=lambda kv: -kv[1])[:top_k]
+    probas = [(name, round(p / total, 3)) for name, p in ranked if p / total > 1e-4]
     return {
-        "phoneme": probas[0][0],
-        "start_ms": start * frame_ms,
-        "end_ms": end * frame_ms,
-        "confidence": round(float(weights.mean()), 3),
+        "phoneme": run[0]["probas"][0][0],
+        "start_ms": run[0]["start_ms"],
+        "end_ms": run[-1]["end_ms"],
+        "confidence": round(sum(f["confidence"] for f in run) / len(run), 3),
         "probas": probas,
-        "_frames": end - start,  # removed once modifiers are attached
     }
 
 
-def _attach(phoneme, modifier, confidence, start, end, frame_ms) -> None:
+def _attach(phoneme: Phoneme, sizes: list[int], modifier: str, run: list[Frame]) -> None:
     """Append a modifier run to `phoneme`, extending its span and confidence."""
-    n_base = phoneme["_frames"]
-    n_mod = end - start
-    total = phoneme["confidence"] * n_base + float(confidence[start:end].sum())
+    n_base = sizes[-1]
+    total = phoneme["confidence"] * n_base + sum(f["confidence"] for f in run)
     phoneme["phoneme"] += modifier
-    phoneme["end_ms"] = end * frame_ms
-    phoneme["_frames"] = n_base + n_mod
-    phoneme["confidence"] = round(total / (n_base + n_mod), 3)
+    phoneme["end_ms"] = run[-1]["end_ms"]
+    sizes[-1] = n_base + len(run)
+    phoneme["confidence"] = round(total / sizes[-1], 3)
 
 
 def _softmax(x: np.ndarray) -> np.ndarray:

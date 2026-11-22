@@ -1,12 +1,12 @@
 """Command line. One subcommand per step of the pipeline.
 
-    ancient-language-tts ipa "Arma virumque cano" --source lat --method llm
+    ancient-language-tts ipa "Arma virumque cano" --source lat-ecc --method llm
     ancient-language-tts respell "Caesar" --source lat-ecc --target it --method rules
     ancient-language-tts respell-ipa "ˈpʰi.los" --source grc --target el --method llm
     ancient-language-tts speak "Cèssar" --target it --out out/caesar.mp3
     ancient-language-tts languages
-    ancient-language-tts rules lat
-    ancient-language-tts rules lat it
+    ancient-language-tts rules lat-ecc
+    ancient-language-tts rules lat-ecc it
 
 A positional argument that is a path to a file is read as UTF-8. Anything
 else is the text itself. The nearest `.env` at or above the current folder
@@ -215,7 +215,7 @@ def main(argv: list[str] | None = None) -> int:
 
     p = sub.add_parser("ipa", help="ancient text → IPA")
     p.add_argument("text", help="the passage, or a UTF-8 .txt file")
-    p.add_argument("--source", required=True, help="ancient-language code, e.g. lat")
+    p.add_argument("--source", required=True, help="ancient-language code, e.g. lat-ecc")
     p.add_argument("--tokens", action="store_true", help="print the IPA token list as JSON")
     p.add_argument("--chunks", action="store_true", help="print the chunks ({text, ipa} per piece) as JSON, for respell-ipa")
     _add_method(p)

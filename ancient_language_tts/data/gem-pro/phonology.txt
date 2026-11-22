@@ -1,4 +1,4 @@
-Stage. Late Proto-Germanic of about 200 AD: after Grimm's law, Verner's law, and the fixing of stress on the first syllable, and before the split into North, West, and East Germanic. Nothing was written down in it. The words are reconstructions, in the notation of Wiktionary and of the handbooks (Ringe, Kroonen). Transcribe the conventional values below, in the IPA Wiktionary gives for its Proto-Germanic entries. Do not turn the word into Gothic, Old Norse, Old English, or modern German: *dagaz is not dags, dagr, dæġ, or Tag, and its final -z is a [z], not an r and not an s.
+Stage. Late Proto-Germanic of about 200 AD: after Grimm's law, Verner's law, and the fixing of stress on the first syllable, and before the split into North, West, and East Germanic. Nothing was written down in it. The words are reconstructions, in the notation of Wiktionary and of the handbooks (Ringe, Kroonen). Transcribe the conventional values below, in the IPA Wiktionary gives for its Proto-Germanic entries: *hundaz /ˈxun.dɑz/, *hlaibaz /ˈxlɑi̯.βɑz/, *wurdą /ˈwur.dɑ̃/, *gastiz /ˈɣɑs.tiz/, *namô /ˈnɑ.mɔːː/. Do not turn the word into Gothic, Old Norse, Old English, or modern German: *dagaz is not dags, dagr, dæġ, or Tag, and its final -z is a [z], not an r and not an s.
 
 Output
 - Give a phonetic transcription of careful speech, one word at a time. Do not apply sound changes across word boundaries.
@@ -21,7 +21,7 @@ Vowels
 - i [i], ī [iː]
 - o does not occur short. ō [ɔː] is open, the vowel of British law. It is not [oː] and not [uː].
 - u [u], ū [uː]
-- Overlong vowels are trimoraic: ô [ɔːː], ê [ɛːː]. They stand in the last syllable: *namô [ˈnɑ.mɔːː], *hertô [ˈher.tɔːː], *-ôz.
+- Overlong vowels are trimoraic: ô [ɔːː], ê [ɛːː]. They stand in the last syllable: *namô [ˈnɑ.mɔːː], *hertô [ˈxer.tɔːː], *-ôz.
 - Nasal vowels: ą [ɑ̃], į [ĩ], ų [ũ]. ą̄ [ɑ̃ː], į̄ [ĩː], ų̄ [ũː], ǭ [ɔ̃ː], ǫ̂ [ɔ̃ːː]. They are the whole nucleus. There is no [n] after them: *dagą [ˈdɑ.ɣɑ̃], *tungǭ [ˈtuŋ.gɔ̃ː], *fą̄haną [ˈɸɑ̃ː.xɑ.nɑ̃].
 - Unstressed vowels are not reduced. There is no schwa. Every ending keeps its written quality and length: *gastiz [ˈɣɑs.tiz], *sunuz [ˈsu.nuz], *fadēr [ˈɸɑ.ðɛːr], *gibō [ˈɣi.βɔː].
 
@@ -29,47 +29,47 @@ Diphthongs
 - ai [ɑi̯], au [ɑu̯], eu [eu̯], iu [iu̯]: *ainaz [ˈɑi̯.nɑz], *augô [ˈɑu̯.ɣɔːː], *þeudō [ˈθeu̯.ðɔː], *liuhtą [ˈliu̯x.tɑ̃].
 - The long diphthongs ōi [ɔːi̯], ōu [ɔːu̯], ēi [ɛːi̯] occur in endings: *ahtōu [ˈɑx.tɔːu̯].
 - Each diphthong is one syllable. Write ̯ under its second element.
-- A diphthong is written with i or u. j and w are consonants and start the next syllable before a vowel: *trewą [ˈtre.wɑ̃], *frijōndz [ˈɸri.jɔːndz], *hultijaz [ˈhul.ti.jɑz]. ij and uw are a vowel plus a consonant, not long vowels.
+- A diphthong is written with i or u. j and w are consonants and start the next syllable before a vowel: *trewą [ˈtre.wɑ̃], *frijōndz [ˈɸri.jɔːndz], *hultijaz [ˈxul.ti.jɑz]. ij and uw are a vowel plus a consonant, not long vowels.
 
 Consonants: the voiced series b, d, g
 Proto-Germanic b, d, and g are stops in some positions and fricatives in others. Decide from the position, not from the spelling.
-- b is the stop [b] at the start of a word, after m, and doubled (bb): *brōþēr [ˈbrɔː.θɛːr], *lambą [ˈlɑm.bɑ̃]. Everywhere else it is [β]: *gebaną [ˈɣe.βɑ.nɑ̃], *hlaibaz [ˈhlɑi̯.βɑz], *habjaną [ˈhɑβ.jɑ.nɑ̃], *swarbaz [ˈswɑr.βɑz].
-- d is the stop [d] at the start of a word, after n, l, or z, and doubled (dd): *dagaz [ˈdɑ.ɣɑz], *hundaz [ˈhun.dɑz], *aldaz [ˈɑl.dɑz], *razdō [ˈrɑz.dɔː]. Everywhere else it is [ð], also after r: *fadēr [ˈɸɑ.ðɛːr], *wurdą [ˈwur.ðɑ̃], *tawidō [ˈtɑ.wi.ðɔː].
-- g is the stop [g] after n, where n is [ŋ], and doubled (gg): *kuningaz [ˈku.niŋ.gɑz], *tungǭ [ˈtuŋ.gɔ̃ː]. Everywhere else, the start of the word included, it is [ɣ]: *gastiz [ˈɣɑs.tiz], *dagaz [ˈdɑ.ɣɑz], *augô [ˈɑu̯.ɣɔːː], *bergaz [ˈber.ɣɑz].
+- b is the stop [b] at the start of a word, after m, and doubled (bb): *brōþēr [ˈbrɔː.θɛːr], *lambą [ˈlɑm.bɑ̃]. Everywhere else it is [β], after r and l too: *gebaną [ˈɣe.βɑ.nɑ̃], *hlaibaz [ˈxlɑi̯.βɑz], *habjaną [ˈxɑβ.jɑ.nɑ̃], *swarbaz [ˈswɑr.βɑz].
+- d is the stop [d] at the start of a word, after n, l, z, or r, and doubled (dd): *dagaz [ˈdɑ.ɣɑz], *hundaz [ˈxun.dɑz], *aldaz [ˈɑl.dɑz], *razdō [ˈrɑz.dɔː], *wurdą [ˈwur.dɑ̃]. Gothic keeps it a stop after r (waurd, not *waurþ). Everywhere else, after a vowel or a diphthong, it is [ð]: *fadēr [ˈɸɑ.ðɛːr], *tawidō [ˈtɑ.wi.ðɔː], *braidaz [ˈbrɑi̯.ðɑz].
+- g is the stop [g] after n, where n is [ŋ], and doubled (gg): *kuningaz [ˈku.niŋ.gɑz], *tungǭ [ˈtuŋ.gɔ̃ː]. Everywhere else, the start of the word included, it is [ɣ]. Word-initial g is the one of the three on which the daughter languages disagree; the fricative of Old English, Old Saxon, and Dutch is taken as the older value: *gastiz [ˈɣɑs.tiz], *dagaz [ˈdɑ.ɣɑz], *augô [ˈɑu̯.ɣɔːː], *bergaz [ˈber.ɣɑz].
 - gw is [gʷ] after n and [ɣʷ] elsewhere: *singwaną [ˈsiŋ.gʷɑ.nɑ̃].
 - At the end of a word the fricative stays a fricative: *gab [ˈɣɑβ]. Do not devoice it the way Gothic does.
-- A root after a prefix or inside a compound keeps the value it has at the start of a word: *ga-bindaną [ɣɑˈbin.dɑ.nɑ̃], *hlewa-gastiz [ˈhle.wɑ.ɣɑs.tiz].
+- A root after a prefix or inside a compound keeps the value it has at the start of a word: *ga-bindaną [ɣɑˈbin.dɑ.nɑ̃], *hlewa-gastiz [ˈxle.wɑ.ɣɑs.tiz].
 
 Consonants: the voiceless fricatives
 - f is the bilabial [ɸ] in every position: *fadēr [ˈɸɑ.ðɛːr], *wulfaz [ˈwul.ɸɑz]. It is not labiodental.
 - þ is [θ] in every position: *þrīz [ˈθriːz], *brōþēr [ˈbrɔː.θɛːr]. It is never [ð]. The voiced partner is spelled d.
 - s is [s]. z is [z], in every position, at the end of a word too: *dagaz [ˈdɑ.ɣɑz], *razdō [ˈrɑz.dɔː]. z never becomes r and never becomes s.
-- h is [h] at the start of a word or of a compound element, before a vowel and in the clusters hl, hr, hn: *hundaz [ˈhun.dɑz], *hlaibaz [ˈhlɑi̯.βɑz], *hrengaz [ˈhreŋ.gɑz]. Everywhere else it is the velar [x]: *nahts [ˈnɑxts], *ahtōu [ˈɑx.tɔːu̯], *liuhtą [ˈliu̯x.tɑ̃], *jah [ˈjɑx].
-- hw is [hʷ] at the start of a word and [xʷ] elsewhere: *hwat [ˈhʷɑt], *sehwaną [ˈse.xʷɑ.nɑ̃]. Some books write hʷ or ƕ. It is one consonant.
+- h is the velar fricative [x] in every position: the voiceless partner of g [ɣ], and the Grimm's-law outcome of Indo-European *k. Its weakening to [h] at the start of a word belongs to the daughter languages. Never write [h]: *hundaz [ˈxun.dɑz], *hertô [ˈxer.tɔːː], *hlaibaz [ˈxlɑi̯.βɑz], *hrengaz [ˈxreŋ.gɑz], *nahts [ˈnɑxts], *ahtōu [ˈɑx.tɔːu̯], *liuhtą [ˈliu̯x.tɑ̃], *jah [jɑx].
+- hw is [xʷ] in every position: *hwat [ˈxʷɑt], *sehwaną [ˈse.xʷɑ.nɑ̃]. Some books write hʷ or ƕ. It is one consonant.
 - hh is [x.x].
 
 Other consonants
-- p t k are [p t k]. There is no aspiration to mark.
+- p t k are [p t k], after s too. There is no aspiration to mark.
 - kw, kʷ, and q are [kʷ], one consonant: *kwenō [ˈkʷe.nɔː], *sinkwaną [ˈsiŋ.kʷɑ.nɑ̃].
 - m is [m]. l is [l]. r is a trill [r], pronounced in every position. j is [j]. w is [w], never [v].
 - n is [n], and [ŋ] before k, g, kw, and gw: *drinkaną [ˈdriŋ.kɑ.nɑ̃], *ganganą [ˈɣɑŋ.gɑ.nɑ̃].
 - A doubled consonant is a geminate. Write it twice, with the syllable break between: *fullaz [ˈɸul.lɑz], *kunnaną [ˈkun.nɑ.nɑ̃]. jj and ww are [j.j] and [w.w]: *twajjǫ̂ [ˈtwɑj.jɔ̃ːː].
-- A consonant before j is single. Do not double it: *habjaną [ˈhɑβ.jɑ.nɑ̃], *kunją [ˈkun.jɑ̃]. The doubling in Old English and Old Saxon is later.
-- Every written cluster is pronounced: kn, gn, wr, wl, hl, hr, hn, sw, tw, dw, þw.
+- A consonant before j is single. Do not double it: *habjaną [ˈxɑβ.jɑ.nɑ̃], *kunją [ˈkun.jɑ̃]. The doubling in Old English and Old Saxon is later.
+- Every written cluster is pronounced: kn, gn, wr, wl, hl [xl], hr [xr], hn [xn], sw, tw, dw, þw.
 
 Syllables
 - Every vowel, nasal vowel, or diphthong makes one syllable. Syllabify each word separately.
-- A single consonant between vowels goes with the following vowel. [kʷ], [gʷ], [hʷ], [xʷ], and [ɣʷ] each count as one consonant.
-- Of two or more consonants between vowels, the last goes with the following vowel and the rest close the preceding syllable: *gastiz [ˈɣɑs.tiz], *habjaną [ˈhɑβ.jɑ.nɑ̃], *hlewagastiz [ˈhle.wɑ.ɣɑs.tiz], *drinkandi [ˈdriŋ.kɑn.di].
+- A single consonant between vowels goes with the following vowel. [kʷ], [gʷ], [xʷ], and [ɣʷ] each count as one consonant.
+- Of two or more consonants between vowels, the last goes with the following vowel and the rest close the preceding syllable: *gastiz [ˈɣɑs.tiz], *habjaną [ˈxɑβ.jɑ.nɑ̃], *hlewagastiz [ˈxle.wɑ.ɣɑs.tiz], *drinkandi [ˈdriŋ.kɑn.di].
 - A prefix boundary and a compound boundary override this rule: *ga-mainiz [ɣɑˈmɑi̯.niz], *hlewa.gastiz.
 
 Stress
 - A lexical word stresses the first syllable of its root. Endings and suffixes are unstressed, long and overlong ones included: *kuningaz [ˈku.niŋ.gɑz], *namô [ˈnɑ.mɔːː].
-- A compound stresses its first element only. The second element takes no ˈ: *hlewagastiz [ˈhle.wɑ.ɣɑs.tiz], *harigastiz [ˈhɑ.ri.ɣɑs.tiz].
+- A compound stresses its first element only. The second element takes no ˈ: *hlewagastiz [ˈxle.wɑ.ɣɑs.tiz], *harigastiz [ˈxɑ.ri.ɣɑs.tiz].
 - ga- and bi- are never stressed: *gamainiz [ɣɑˈmɑi̯.niz], *bileibaną [biˈliː.βɑ.nɑ̃]. fra- and fur- are unstressed too.
-- and-, anda-, and un- are always stressed: *andawurdiją [ˈɑn.dɑ.wur.ði.jɑ̃], *unhulþaz [ˈun.hul.θɑz].
+- and-, anda-, and un- are always stressed: *andawurdiją [ˈɑn.dɑ.wur.di.jɑ̃], *unhulþaz [ˈun.xul.θɑz].
 - Every other prefix (uz-, us-, at-, ana-, in-, ut-, under-, ufar-, wiþra-, umbi-) is stressed in a noun or an adjective and unstressed in a verb: *uzdailiz [ˈuz.dɑi̯.liz], but *uzleisaną [uzˈliː.sɑ.nɑ̃]. After uz-, b d g keep their word-initial values.
-- A monosyllable takes ˈ unless it is a preposition (in, ana, at, bi, mid, fram, uf, ut, und), a conjunction (jah, ak, auk, eþþau), the negative ne, or a possessive before its noun. A possessive after its noun is stressed: *fadēr unseraz [ˈɸɑ.ðɛːr ˈun.se.rɑz]. Pronouns, verbs, nouns, and adverbs are stressed: *ek [ˈek], *þū [ˈθuː], *hwat [ˈhʷɑt].
+- A monosyllable takes ˈ unless it is a preposition (in, ana, at, bi, mid, fram, uf, ut, und), a conjunction (jah, ak, auk, eþþau), the negative ne, or a possessive before its noun. A possessive after its noun is stressed: *fadēr unseraz [ˈɸɑ.ðɛːr ˈun.se.rɑz]. Pronouns, verbs, nouns, and adverbs are stressed: *ek [ˈek], *þū [ˈθuː], *hwat [ˈxʷɑt].
 - The enclitics -uh and -gi are unstressed and are part of the word before them.
 - Put ˈ before the stressed syllable. It replaces the dot.
 
@@ -77,6 +77,6 @@ Symbols
 Vowels: ɑ ɑː e eː ɛː ɛːː i iː ɔː ɔːː u uː
 Nasal vowels: ɑ̃ ɑ̃ː ĩ ĩː ũ ũː ɔ̃ː ɔ̃ːː
 Diphthongs: ɑi̯ ɑu̯ eu̯ iu̯ ɔːi̯ ɔːu̯ ɛːi̯
-Consonants: p b t d k g kʷ gʷ ɸ β θ ð s z x ɣ xʷ ɣʷ h hʷ m n ŋ l r j w
+Consonants: p b t d k g kʷ gʷ ɸ β θ ð s z x ɣ xʷ ɣʷ m n ŋ l r j w
 Marks: ˈ .
 Pauses: , ! ? .

@@ -1,5 +1,38 @@
 [
   {
+    "id": "OrSCe2FVqh9lWiXEPvlZ",
+    "name": "Sir Miller",
+    "description": "Cloned Middle English",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "calm",
+      "cloned",
+      "narration"
+    ],
+    "popularity": 100
+  },
+  {
+    "id": "60CwgZt94Yf7yYIXMDDe",
+    "name": "Peter - Natural, Professional Narrator",
+    "description": "Middle-aged Dutch male with a warm, reliable tone. Perfect for news, audiobooks, and documentaries.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 43.5
+  },
+  {
     "id": "s7Z6uboUuE4Nd8Q2nye6",
     "name": "Hans Claesen - Professional Narrator",
     "description": "Male Flemish voice, calm and with a warm sound. Works well for Narrations.",
@@ -13,7 +46,39 @@
       "calm",
       "narrative_story"
     ],
-    "popularity": 43.45
+    "popularity": 43.44
+  },
+  {
+    "id": "dLPO5AsXc3FZDbTh1IKa",
+    "name": "Ido - Informal, Friendly Narrator",
+    "description": "A clear, warm and friendly Dutch voice with no accent. For commercials, e-learning, e-books, narration etc.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "neutral",
+      "narrative_story"
+    ],
+    "popularity": 44.44
+  },
+  {
+    "id": "YgjXqgzBJa9op0K278OW",
+    "name": "Tijs - Engaging Podcast Host",
+    "description": "Experience the rich tone of a deep Dutch voice. Perfectly suited for radio, podcasts, and narrating newspaper stories. ",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "professional",
+      "narrative_story"
+    ],
+    "popularity": 41.57
   },
   {
     "id": "tRyB8BgRzpNUv3o2XWD4",
@@ -29,7 +94,119 @@
       "raspy",
       "narrative_story"
     ],
-    "popularity": 42.19
+    "popularity": 42.18
+  },
+  {
+    "id": "ARIOBKJtltx2F7r1TMzI",
+    "name": "Dirk - Authentic and Lispy",
+    "description": "Casual Dutch voice that is perfect for voice-overs and storytelling.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 38.16
+  },
+  {
+    "id": "62klqbsYqbynbr66ypRt",
+    "name": "Arjen - Calm, Trustworthy and Kind",
+    "description": "Optimized for Dutch. Widely applicable male voice. Sounds calm and familiar.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 40.51
+  },
+  {
+    "id": "yBtEjlHaWNu9xrYohjbA",
+    "name": "Willem -  Powerful Cinematic Voice",
+    "description": "I'm a professional Dutch voiceover artist with a warm, deep, and calm voice, combined with natural energy and persuasiveness. I balance calmness with impact. Whether it's a subtle, emotional narrative or an energetic promotional video, my voice lends authority and confidence to your project. Ideal for: corporate films, advertising & social media, documentaries, audiobooks, AI videos, and explainer videos. Warm when it needs to be. Powerful when it matters.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "deep",
+      "narrative_story"
+    ],
+    "popularity": 38.81
+  },
+  {
+    "id": "T6sdx9oLQ9xfxeKIi6AM",
+    "name": "Lucas - Deep, Raspy and Engaging",
+    "description": "This deep Dutch voice is ideal for stories and conversations, with a powerful and warm tone that immediately captivates the listener.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 39.45
+  },
+  {
+    "id": "DUhjXXCXHQWckglMUnOv",
+    "name": "Eric Pro - Confident, Warm and Clear",
+    "description": "A middle to young aged Dutch voice with no accent, perfect for narration or commentary.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 39.37
+  },
+  {
+    "id": "4lUd3J8K9ufxisvqDzR0",
+    "name": "Tom Smit - Warm, Clear and Professional",
+    "description": "A natural, warm cadence of someone you instantly trust.",
+    "locale": "nl-NL",
+    "age": "young",
+    "gender": "male",
+    "tags": [
+      "male",
+      "young",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 36.25
+  },
+  {
+    "id": "gCJROUe9eMZaWlhNj1z0",
+    "name": "Bart - Calm Convincing & Friendly",
+    "description": "Dutch voice-over age range 40-55. Experienced voice-over for 30 years.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle_aged",
+      "standard",
+      "confident",
+      "narrative_story"
+    ],
+    "popularity": 39.26
   },
   {
     "id": "ppGIZI01uUlIWI734dUU",
@@ -45,71 +222,39 @@
       "casual",
       "narrative_story"
     ],
-    "popularity": 34.1
+    "popularity": 34.14
   },
   {
-    "id": "xdzjnRtJ19GiZY2bpv4i",
-    "name": "Mario Steurs",
-    "description": "Middle-aged Male voice.",
-    "locale": "nl-BE",
+    "id": "MEdY7ytKGFW1Hy0uQq2T",
+    "name": "Jaimie - Informal, Engaging Narrator",
+    "description": "A natural Dutch male voice with a clear Amsterdam accent and warm tone. Balanced between professional clarity and casual friendliness, perfect for language lessons, storytelling, podcasts, and realistic conversational AI. Smooth pacing, expressive intonation, and a genuine, human touch that connects instantly with the listener.",
+    "locale": "nl-NL",
+    "age": "middle-aged",
+    "gender": "male",
+    "tags": [
+      "male",
+      "middle-aged",
+      "standard",
+      "casual",
+      "narrative_story"
+    ],
+    "popularity": 32.95
+  },
+  {
+    "id": "vjeU1L5RIGPyrwuboFwz",
+    "name": "Remko - Calm Dutch Narrator",
+    "description": "A warm, clear and natural Dutch male voice with a calm, confident and professional delivery. Featuring articulate pronunciation, a measured speaking pace, subtle curiosity and natural conversational intonation. Ideal for documentaries, educational videos, storytelling, science explainers, e-learning and professional narration. A trustworthy and engaging voice that makes complex subjects accessible without sounding overly dramatic or theatrical.",
+    "locale": "nl-NL",
     "age": "middle_aged",
     "gender": "male",
     "tags": [
       "male",
       "middle_aged",
-      "flemish",
+      "standard",
       "calm",
       "narrative_story"
     ],
-    "popularity": 34.23
-  },
-  {
-    "id": "AgeYjqDIfXtkcA3mOcsH",
-    "name": "Gunther - Flemish Calm Narrator",
-    "description": "Warm and calm Belgian Dutch / Flemish male voice with a mature, trustworthy and conversational tone. Suitable for e-learning, corporate training, guided relaxation, meditation, audiobooks, museum audio guides, documentaries. Clear pronunciation, steady pacing and a natural, reassuring sound.",
-    "locale": "nl-BE",
-    "age": "middle_aged",
-    "gender": "male",
-    "tags": [
-      "male",
-      "middle_aged",
-      "flemish",
-      "calm",
-      "narrative_story"
-    ],
-    "popularity": 34.11
-  },
-  {
-    "id": "LoLnBvKBzvdDcAUMNbKV",
-    "name": "Rutger Vlaams - Calm & Articulate",
-    "description": "A warm, and calm Flemish Dutch male voice with a smooth, resonant tone. Ideal for narration, audiobooks, meditative content, and storytelling.",
-    "locale": "nl-BE",
-    "age": "middle_aged",
-    "gender": "male",
-    "tags": [
-      "male",
-      "middle_aged",
-      "flemish",
-      "calm",
-      "narrative_story"
-    ],
-    "popularity": 31.47
-  },
-  {
-    "id": "oBrJBCgJsPgZQkOMHL7K",
-    "name": "Philip",
-    "description": "A Flemish voice for versatile use.",
-    "locale": "nl-BE",
-    "age": "middle_aged",
-    "gender": "male",
-    "tags": [
-      "male",
-      "middle_aged",
-      "flemish",
-      "formal",
-      "narrative_story"
-    ],
-    "popularity": 29.44
+    "popularity": 38.33
   },
   {
     "id": "ANHrhmaFeVN0QJaa0PhL",
@@ -125,7 +270,22 @@
       "casual",
       "narrative_story"
     ],
-    "popularity": 43.64
+    "popularity": 43.66
+  },
+  {
+    "id": "gC9jy9VUxaXAswovchvQ",
+    "name": "Laura Peeters - Calm, Sharp and Youthful",
+    "description": "A Flemish/Dutch voice of a young woman. Calm and enthusiastic. Great for narrations.",
+    "locale": "nl-NL",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 38.34
   },
   {
     "id": "4Q02te4SdfFsVbcIKmbk",
@@ -141,7 +301,39 @@
       "gentle",
       "narrative_story"
     ],
-    "popularity": 37.29
+    "popularity": 37.27
+  },
+  {
+    "id": "DiUBVrSFwkMaPz4XqWvR",
+    "name": "Jolanda - Pleasant & Soothing",
+    "description": "A warm and engaging Dutch voice with a natural narrative energy. Perfect for e-learning, voice-overs, commercials, and content that connects, inspires, and motivates. Clear, human, and highly versatile.",
+    "locale": "nl-NL",
+    "age": "middle_aged",
+    "gender": "female",
+    "tags": [
+      "female",
+      "middle_aged",
+      "standard",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 38.37
+  },
+  {
+    "id": "jHohq0kt5W8MRWuIdNJ4",
+    "name": "Judith - Warm, Clear, Gentle Dutch",
+    "description": "Warm, calm narrator with excellent ABN and clear articulation. My voice is gentle yet clear � perfect for audiobooks, storytelling, e-learning, and mindfulness content. I speak calmly with warmth, making listeners feel comfortable and engaged. A young voice with a mature, trustworthy tone.",
+    "locale": "nl-NL",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "gentle",
+      "narrative_story"
+    ],
+    "popularity": 35.04
   },
   {
     "id": "wwW0aOSbbYgXMec1zRTp",
@@ -157,6 +349,38 @@
       "neutral",
       "narrative_story"
     ],
-    "popularity": 33.24
+    "popularity": 33.27
+  },
+  {
+    "id": "L757MWWEO8SYJccYP8lT",
+    "name": "Timmermans",
+    "description": "A soft voice with a Brabant accent.",
+    "locale": "nl-NL",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "brabantian",
+      "calm",
+      "narrative_story"
+    ],
+    "popularity": 30.15
+  },
+  {
+    "id": "5pgkLSuItdAOUCjok3EW",
+    "name": "Daantje - Warm, full, young female",
+    "description": "Warm, full and young voice. Suitable for narration, audiobooks, information and education. Also suited for childrens' books and primary education. Super approachable feeling.",
+    "locale": "nl-NL",
+    "age": "young",
+    "gender": "female",
+    "tags": [
+      "female",
+      "young",
+      "standard",
+      "excited",
+      "narrative_story"
+    ],
+    "popularity": 32.13
   }
 ]

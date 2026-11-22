@@ -7,10 +7,10 @@ It's BYOK. An [OpenRouter](https://openrouter.ai) key pays for the LLM calls, ma
 ```python
 import ancient_language_tts as alt
 
-text = "Arma virumque canō, Troiae quī prīmus ab ōrīs."
-pieces = alt.to_ipa(text, "lat", method="llm", tier="low")   # ancient text → [{"text", "ipa"}, ...]
-line = alt.respell_ipa(pieces, "lat", "it", method="llm")     # IPA → Italian spelling
-audio = alt.speak(line, "it", output="out/lat.mp3")             # Italian voice reads it
+text = "Arma virumque cano, Troiae qui primus ab oris."
+pieces = alt.to_ipa(text, "lat-ecc", method="llm", tier="low")   # ancient text → [{"text", "ipa"}, ...]
+line = alt.respell_ipa(pieces, "lat-ecc", "it", method="llm")     # IPA → Italian spelling
+audio = alt.speak(line, "it", output="out/lat-ecc.mp3")             # Italian voice reads it
 ```
 
 Keys come from `OPENROUTER_API_KEY` and `ELEVENLABS_API_KEY` (environment or `.env`), or pass `openrouter_api_key=` / `elevenlabs_api_key=` to any call.
@@ -36,7 +36,7 @@ pip install -e '.[check]'
 pytest tests/test_lat_ecc.py      # one language end to end (paid: OpenRouter + ElevenLabs)
 ```
 
-There is one test per ancient language, `tests/test_<code>.py`, on the shared backbone `tests/harness.py`. Each transcribes and respells the first `SENTENCES` lines of `data/<code>/texts.json` with the LLM, speaks each respelling with the first `VOICES_PER_GENDER` male and female voices of `voices/<target>.json`, hears every take back with the local phoneme recognizer, and reports the mismatch (weighted phoneme edit distance per expected phoneme) overall, by voice, by sentence, and by mistake. The constants sit at the top of each file; the full report goes to `out/tests/<code>.<target>.json`. A language without `texts.json` is skipped.
+There is one test per ancient language, `tests/test_<code>.py`, on the shared backbone `tests/harness.py`. Each transcribes and respells the first `SENTENCES` lines of `data/<code>/texts.json` with the LLM, speaks each respelling with the first `VOICES_PER_GENDER` male and female voices of `voices/<target>.json`, hears every take back with the local phoneme recognizer, and reports the mismatch (the recognizer's frames aligned to the expected phonemes, penalty per unit of expected weight; see `check/mismatch.py`) overall, by voice, by sentence, and by mistake. The constants sit at the top of each file; the full report goes to `out/tests/<code>.<target>.json`. A language without `texts.json` is skipped.
 
 You can also run it without installing the script, from this folder: `python -m ancient_language_tts`.
 
@@ -59,7 +59,7 @@ The LLM calls use guided chain-of-thought, described in the next section. The ca
 
 A passage longer than 1000 characters is split before those calls. The limit is `max_chars` (`ANCIENT_TTS_MAX_CHARS`). A sentence ends at `. `, `? `, or `! `. The cut is the sentence boundary closest to the middle, and both sides are split the same way until each piece fits. One sentence is left whole. Each piece is transcribed and then respelled on its own. The pieces are joined, and the voice reads that one line.
 
-1. **IPA.** At the default `effort="ultra"` (see [Settings](#settings-arguments-or-env) for the other levels), every model in the tier transcribes the passage on its own. The system prompt is the phonetic rules of that language (`ancient_language_tts/data/<code>/phonology.txt`) plus worked examples of the same transformation (`ancient_language_tts/data/<code>/examples.txt`): Classical Latin with /w/ for *v*, first-century Koine with ει as /i/ and υ still /y/, Chaucer's vowels before the Great Vowel Shift, and so on. The model is told to learn the decisions those examples make and apply them. That same model scores its line, then rewrites it from the assessment. It scores the rewrite next. The rewrite stands only when that score is higher than the score of the first line; otherwise the first line stands. Each standing line is scored by every model still in the tier. The score of a line is the arithmetic mean of those scores. `to_ipa` returns the line with the highest mean. On a tie, the earlier model in the tier wins. A call is tried three times. If the first transcription still fails, the model is dropped. If the assessment or the rewrite still fails, the first line stands. If a score of a standing line still fails, that model's scores are left out of the mean.
+1. **IPA.** At the default `effort="ultra"` (see [Settings](#settings-arguments-or-env) for the other levels), every model in the tier transcribes the passage on its own. The system prompt is the phonetic rules of that language (`ancient_language_tts/data/<code>/phonology.txt`) plus worked examples of the same transformation (`ancient_language_tts/data/<code>/examples.txt`): Ecclesiastical Latin with soft *c* before *e* and *i*, first-century Koine with ει as /i/ and υ still /y/, Chaucer's vowels before the Great Vowel Shift, and so on. The model is told to learn the decisions those examples make and apply them. That same model scores its line, then rewrites it from the assessment. It scores the rewrite next. The rewrite stands only when that score is higher than the score of the first line; otherwise the first line stands. Each standing line is scored by every model still in the tier. The score of a line is the arithmetic mean of those scores. `to_ipa` returns the line with the highest mean. On a tie, the earlier model in the tier wins. A call is tried three times. If the first transcription still fails, the model is dropped. If the assessment or the rewrite still fails, the first line stands. If a score of a standing line still fails, that model's scores are left out of the mean.
 2. **Respelling.** A second LLM turns that IPA into spelling a modern voice will actually say. The system prompt depends on both languages: how the modern spelling is read (`data/<target>/phonology.txt`), which of those spellings stands in for each sound of the source (`data/<source>/respelling/<target>.txt`), and worked examples of that mapping (`data/<source>/respelling/<target>.examples.txt`). English has no letter for a Greek upsilon, and Lithuanian none for a PIE glottal laryngeal; the pair file names the substitute.
 3. **Speech.** ElevenLabs speaks the respelling with a voice of the modern language. Text normalization is off, so the service does not rewrite the spelling into ordinary words. `language_code` is sent when the model accepts it. Stability defaults to 1, so the reading stays on one baseline.
 
@@ -92,7 +92,6 @@ The respelling call reasons in this order, then writes the spelling:
 
 | code | language | stage |
 |---|---|---|
-| `lat` | Classical Latin | c. 100 BC–AD 100. ISO 639-3. |
 | `lat-ecc` | Ecclesiastical Latin | Italian school, Roman pronunciation. No ISO 639 code; this one is the project's. |
 | `grc` | Koine Greek | Roman-era Koine, 1st century AD. ISO 639-3. |
 | `eme` | Early Modern English | c. 1600 AD. No ISO 639 code; this one is the project's. |
@@ -100,13 +99,13 @@ The respelling call reasons in this order, then writes the spelling:
 | `ang` | Old English | Late West Saxon, c. 900 AD. ISO 639-3. |
 | `gem-pro` | Proto-Germanic | c. 200 AD. Wiktionary's code. |
 | `ine-pro` | Proto-Indo-European | c. 3000 BC. Wiktionary's code. |
-| `sla-pro` | Proto-Slavic | Early Common Slavic, c. 500 AD. Wiktionary's code. |
+| `sla-pro` | Proto-Slavic | Middle Common Slavic, c. 750–800 AD. Wiktionary's code. |
 
-The English name works too: `source="Latin"` and `source="Classical Latin"` are `lat`. `source="Ecclesiastical Latin"` is `lat-ecc`. `source="Old English"` and `source="Proto-Indo-European"` work the same way.
+The English name works too: `source="Ecclesiastical Latin"` and `source="Church Latin"` are `lat-ecc`. `source="Old English"` and `source="Proto-Indo-European"` work the same way.
 
 `en`, `it`, `nl`, `is`, `el`, `lt`, and `uk` are the bundled modern languages. English uses the premade voice George (`JBFqnCBsd6RMkjVDRZzb`). Italian uses Giovanni (`zcAOhNBS3c14rBihAFp1`). Dutch has no premade voice, so it uses George with `language_code` `nl`; pin a Dutch voice from the voice library for a native accent. Icelandic does the same with `language_code` `is`, Modern Greek with `el`, Lithuanian with `lt`, and Ukrainian with `uk`. ElevenLabs may route an id to a newer voice on their side. `ELEVENLABS_VOICE_ID`, or `voice_id=` on a call, pins another one. The joined respelling still has to fit one ElevenLabs request.
 
-English pair files are bundled for every ancient language except `lat` and `lat-ecc`. Those two ship with Italian. Middle English (`enm`) also ships with Dutch. Old English (`ang`) and Proto-Germanic (`gem-pro`) also ship with Icelandic. Koine Greek (`grc`) ships with Modern Greek. Proto-Indo-European (`ine-pro`) ships with Lithuanian. Proto-Slavic (`sla-pro`) ships with Ukrainian. `respell(text, "lat", "en")` has no pair file yet, and raises.
+Bundled pair files: Ecclesiastical Latin (`lat-ecc`) ships with Italian. Koine Greek (`grc`) ships with Modern Greek. Early Modern English (`eme`) ships with English. Middle English (`enm`) ships with English and Dutch. Old English (`ang`) and Proto-Germanic (`gem-pro`) ship with Icelandic and Dutch. Proto-Indo-European (`ine-pro`) ships with Lithuanian, and with Ukrainian for the LLM pipeline only. Proto-Slavic (`sla-pro`) ships with Ukrainian. `ancient-language-tts languages` lists them. `respell(text, "lat-ecc", "en")` has no pair file yet, and raises.
 
 ## Settings: arguments or `.env`
 
@@ -153,8 +152,8 @@ ancient-language-tts respell-ipa chunks.json --source grc --target el         # 
 ancient-language-tts respell-ipa "ˈpʰi.los" --source grc --target el --text "φίλος"
 ancient-language-tts speak "Cèssar" --target it --out out/caesar.mp3
 ancient-language-tts languages              # codes, LLM pair files, rule engines
-ancient-language-tts rules lat              # the IPA system prompt
-ancient-language-tts rules lat it           # the respelling system prompt
+ancient-language-tts rules lat-ecc          # the IPA system prompt
+ancient-language-tts rules lat-ecc it       # the respelling system prompt
 ```
 
 `-v` prints each step. `-vv` prints every prompt and answer. A positional argument that points at a `.txt` or `.md` file is read as UTF-8.
@@ -168,14 +167,14 @@ alt.respell_ipa(pieces: list[Chunk], source, modern_lang="en", method="llm", *, 
 alt.speak(respelled_text, modern_lang="en", voice=None, *, output=None, seed=None, **settings) -> bytes
 ```
 
-- `source` is an ancient-language code: `lat`, `lat-ecc`, `grc`, `eme`, `enm`, `ang`, `gem-pro`, `ine-pro`, `sla-pro`.
+- `source` is an ancient-language code: `lat-ecc`, `grc`, `eme`, `enm`, `ang`, `gem-pro`, `ine-pro`, `sla-pro`.
 - `method` is `"llm"` or `"rules"`. `"rules"` makes no OpenRouter call.
 - `effort` is `"ultra"`, `"high"`, `"medium"`, `"low"`, or `"basic"` (see the table above).
 - IPA is always a list of tokens (see [IPA tokens](#ipa-tokens)). `score_ipa` and `improve_ipa` take one.
-- `to_ipa` returns the passage as chunks, one per piece it was cut into (see `max_chars`): `[{"text": "Arma virumque canō.", "ipa": ["ˈ", "a", "r", ...]}, ...]`. `respell_ipa` takes that list, so each piece of IPA is respelled with the text it came from; the LLM uses the text for word boundaries only. `alt.chunks.join_ipa(pieces)` joins the chunks into one token list.
+- `to_ipa` returns the passage as chunks, one per piece it was cut into (see `max_chars`): `[{"text": "Arma virumque cano.", "ipa": ["ˈ", "a", "r", ...]}, ...]`. `respell_ipa` takes that list, so each piece of IPA is respelled with the text it came from; the LLM uses the text for word boundaries only. `alt.chunks.join_ipa(pieces)` joins the chunks into one token list.
 - `respell_ipa` also takes a bare token list. It is cut on sentence boundaries and respelled without text. `alt.chunks.from_ipa(tokens, text)` pairs a token list with its text where the sentences line up.
 - `speak` returns the audio bytes and writes them to `output` when set. `voice` is an ElevenLabs voice id; it defaults to `ELEVENLABS_VOICE_ID`, then the language's bundled voice.
-- `**settings` are the keys of `config`: `openrouter_api_key`, `elevenlabs_api_key`, `models`, `tier_models`, `elevenlabs_model`, `output_format`, `stability`, `similarity_boost`, `cache_dir`, `cache`, `max_tokens`, `max_chars`.
+- `**settings` are the keys of `config`: `openrouter_api_key`, `elevenlabs_api_key`, `models`, `tier_models`, `elevenlabs_model`, `output_format`, `stability`, `similarity_boost`, `speed`, `cache_dir`, `cache`, `max_tokens`, `max_chars`.
 
 The rule engines can be used directly too:
 
@@ -203,7 +202,7 @@ Progress goes to the `ancient_language_tts` logger. Set `ancient_language_tts.ll
 
 ## Rules files
 
-`lat` is Classical Latin: c is /k/ and v is /w/. `lat-ecc` is Ecclesiastical Latin in the Italian school: c and g soften before front vowels, v is /v/, ae and oe are /e/, and vowel length is not pronounced. `grc` is Koine Greek of the first century AD: vowel length is gone, ει is /i/, αι is /ɛ/, οι and υ are /y/, β and γ are fricatives, φ θ χ are still aspirated stops, and the accent is a stress. The proto-languages use a speaking convention for the usual reconstruction, with the laryngeals and the jers pronounced.
+`lat-ecc` is Ecclesiastical Latin in the Italian school: c and g soften before front vowels, v is /v/, ae and oe are /e/, and vowel length is not pronounced. `grc` is Koine Greek of the first century AD: vowel length is gone, ει is /i/, αι is /ɛ/, οι and υ are /y/, β and γ are fricatives, φ θ χ are still aspirated stops, and the accent is a stress. The proto-languages use a speaking convention for the usual reconstruction, with the laryngeals and the jers pronounced.
 
 | file | what the model is told |
 |---|---|

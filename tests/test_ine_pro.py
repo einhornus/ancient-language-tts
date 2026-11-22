@@ -1,18 +1,18 @@
-"""Proto-Indo-European → lt: IPA, respelling and voice quality, scored by the phoneme recognizer.
+"""Proto-Indo-European → uk: IPA, respelling and voice quality, scored by the phoneme recognizer.
 
     pytest tests/test_ine_pro.py      or      python tests/test_ine_pro.py
 
-The report is printed and written to out/tests/ine-pro.lt.json (see harness.py).
+The report is printed and written to out/tests/ine-pro.uk.json (see harness.py).
 """
 
 from harness import run
 
 SOURCE = "ine-pro"
-TARGET = "lt"
+TARGET = "uk"
 
-SENTENCES = 100          # the first N sentences of data/ine-pro/texts.json
-VOICES_PER_GENDER = 2    # the first M males + the first M females of voices/lt.json
-TIER = "low"             # LLM tier: "high", "medium", "low"
+SENTENCES = 10          # the first N sentences of data/ang/texts.json
+VOICES_PER_GENDER = 15    # the first M males + the first M females of voices/nl.json
+TIER = "high"             # LLM tier: "high", "medium", "low"
 EFFORT = "low"           # LLM effort: "ultra", "high", "medium", "low", "basic"
 MAX_MISMATCH = None      # fail when the pooled mismatch is above this; None never fails
 

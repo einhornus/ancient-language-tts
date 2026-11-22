@@ -23,7 +23,7 @@ Short vowels
 - An unstressed /e/ at the end of a word, or in a last syllable closed by a consonant, is e: /ˈsun.ne/ is soenne, /ˈmeo̯.to.des/ is meotodes. Dutch reads it as a schwa. No Dutch spelling keeps it full there.
 
 Vowels next to vowels
-- A vowel letter that would make a Dutch digraph with the vowel letter before it takes a diaeresis: /i/ plus /e/ is ië, /ɑ/ plus /i/ is aï, /o/ plus /e/ is oë. /ˈhe.ri.ɑn/ is herrian, with no diaeresis, because Dutch reads ia as two vowels.
+- A vowel letter that would make a Dutch digraph with the vowel letter before it takes a diaeresis: /i/ plus /e/ is ië, /ɑ/ plus /i/ is aï, /o/ plus /e/ is oë. /ˈɑːs.ki.ɑn/ is aaskian, with no diaeresis, because Dutch reads ia as two vowels.
 
 Diphthongs
 - /æɑ̯/ /æːɑ̯/ → ea: /ˈæɑ̯x.tɑ/ is eachta, /ˈwæɑ̯rd/ is weard, /ˈæːɑ̯.ɣe/ is eage.

@@ -15,12 +15,12 @@ from __future__ import annotations
 from collections.abc import Sequence
 
 from .. import ipa_tokens, languages
-from . import ang, eme, enm, gem_pro, grc, ine_pro, lat, lat_ecc, sla_pro
+from . import ang, eme, enm, gem_pro, grc, ine_pro, lat_ecc, sla_pro
 from .base import Convert, RuleEngine
 
 _ENGINES: dict[str, RuleEngine] = {
     module.ENGINE.source: module.ENGINE
-    for module in (lat, lat_ecc, grc, eme, enm, ang, gem_pro, ine_pro, sla_pro)
+    for module in (lat_ecc, grc, eme, enm, ang, gem_pro, ine_pro, sla_pro)
 }
 
 

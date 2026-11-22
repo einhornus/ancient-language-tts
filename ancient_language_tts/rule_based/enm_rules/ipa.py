@@ -106,7 +106,7 @@ _WEAK_H = frozenset("he his him hir hem hath hadde how here".split())
 _VOW = frozenset("aeiouy")
 _FRONT = frozenset("eiy")
 _STOP_F = frozenset("pbtdkgf")
-_FRONT_PH = frozenset({"ɪ", "iː", "ɛ", "ɛː", "eː", "ai", "ɔi"})
+_FRONT_PH = frozenset({"ɪ", "iː", "ɛ", "ɛː", "eː", "æi", "ɔi"})
 _ENDINGS = ("s", "es", "e", "en", "ed", "eth", "er")
 
 _TOKEN_RE = re.compile(r"[^\W\d_]+(?:[-'’][^\W\d_]+)*|[,.!?;:]")
@@ -441,7 +441,7 @@ def _vowel(segs: list[_Seg], i: int, main: int, key: str, french: bool, latin: b
     cluster = tuple(foll[:2])
 
     if g == "ai":
-        return "ai"
+        return "æi"
     if g == "au":
         return "au"
     if g == "oi":

@@ -11,7 +11,7 @@ Vowels
 - /ʊ/ → uh
 - /uː/ → oo
 - /ə/ → uh, and a final /ə/ is its own syllable
-- /ai/ → eye
+- /æi/ → eye
 - /au/ → ow
 - /ɔu/ → oh, the whole nucleus. /knɔu/ is knoh, one syllable.
 - /iu/ → yoo, the whole nucleus. /niu/ is nyoo, one syllable. yoo is allowed here.

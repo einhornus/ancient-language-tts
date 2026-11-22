@@ -1,0 +1,77 @@
+Ukrainian spelling has letters for much of the Proto-Indo-European system. It has a free stress that dictionaries mark on any syllable. Its consonants stay hard before е, so a plain [ke] and a palatal [kʲe] can be kept apart (ке against кє). It has х for the fricative [x], г for the voiced [ɦ], and a separate ґ for the stop [g]. Its native clusters бг, дг, ґг (обгорнути, надгробок) are a voiced stop with a voiced breathy release. в is [w] or [u̯] after a vowel, giving the diphthongs ов, ев, ав. Ukrainian does not devoice at the end of a word, does not reduce unstressed vowels, and its р is a trill. Use these. Do not write the Slavic or Ukrainian descendant of the word: *wĺ̥kʷos is not вовк, *nébʰos is not небо, *swésōr is not сестра, *h₂ówis is not вівця, and ḱ ǵ are never с з ш ж.
+
+Map each IPA symbol to the Ukrainian spelling. Write Cyrillic letters, the apostrophe ’, and the stress mark below. Never write the IPA symbols, the asterisk, a subscript number, Latin letters, ъ, ы, ё, or э.
+
+Stress
+Proto-Indo-European had a free accent, and so does Ukrainian, but ordinary spelling does not show it. Mark it the way Ukrainian dictionaries and schoolbooks do, so the voice stresses the right syllable.
+- Every word with ˈ takes exactly one stress mark: a combining acute (U+0301) right after the vowel letter of the stressed syllable: а́ е́ и́ і́ о́ у́ я́ є́ ю́ ї́. Monosyllables take it too: /ˈstaχ/ is ста́х, /ˈdwoʔ/ is дво́, /pəχˈteːr/ is пихте́р.
+- A stressed diphthong takes the mark on its vowel letter, not on й or в: /ˈoi̯.nos/ is о́йнос, /ˈdjeːu̯s/ is д’є́вс.
+- A stressed syllabic resonant is written with и, below, and the mark goes on that и: /ˈwl̩.kʷos/ is ви́лквос, /sepˈtm̩/ is септи́м.
+- A word with no ˈ takes no mark: /ne/ is не.
+- Only the stressed syllable takes a mark. Every other vowel is written plain.
+
+Vowels
+Ukrainian has no vowel length. Write the quality and drop ː.
+- /a/ /aː/ → а: /ˈmaχ.teːr/ is ма́хтер.
+- /e/ /eː/ → е. Ukrainian е is [ɛ], and the consonant before it stays hard: /ˈbʱe.re.ti/ is бге́реті. At the start of a word е is a plain [ɛ] with no [j]: /ˈʔes.ti/ is е́сті.
+- /i/ /iː/ → і: /ˈχo.wis/ is хо́віс.
+- /o/ /oː/ → о. Ukrainian о is not reduced when unstressed: /ˈgʷoːu̯s/ is ґво́вс, /ˈɣʷo.roː/ is го́ро.
+- /u/ /uː/ → у.
+- /ə/ → и. Ukrainian и is the lax central [ɪ], the nearest to a schwa: /pəχˈteːr/ is пихте́р, /əʔˈno.mn̩/ is ино́мин. Never а, е, or і for /ə/.
+- Two vowels in two syllables are written as they stand.
+
+Diphthongs
+- /ai̯/ → ай. /ei̯/ → ей. /oi̯/ → ой. /eːi̯/ → ей. /oːi̯/ → ой.
+- /au̯/ → ав. /eu̯/ → ев. /ou̯/ → ов. /eːu̯/ → ев. /oːu̯/ → ов. Ukrainian в after a vowel and before a consonant or at the end of a word is the glide [u̯]: /ˈgʷoːu̯s/ is ґво́вс, /əʔ.rou̯ˈdʱos/ is ировдго́с.
+- Never у or ў for /u̯/, and never і or ї for /i̯/.
+
+Syllabic resonants
+- /r̩/ → ир. /l̩/ → ил. /m̩/ → им. /n̩/ → ин. Ukrainian cannot make a resonant a syllable, and a short [ɪ] before it is the closest a Ukrainian voice will say: /ˈwo.dr̩/ is во́дир, /ˈwl̩.kʷos/ is ви́лквос, /əʔˈno.mn̩/ is ино́мин.
+- The и belongs to the resonant's syllable. Do not add a vowel after the resonant.
+- Never the Slavic reflexes ер, ор, ов, ол, ен, я, or у.
+
+Laryngeals
+- /ʔ/ → nothing. Ukrainian has no letter for a glottal stop, and a word that starts with a vowel already starts with one: /ˈʔes.ti/ is е́сті, /ˈdwoʔ/ is дво́, /ˈdʱeʔ/ is дге́.
+- /χ/ → х. Ukrainian х is the velar fricative [x]: /ˈχo.wis/ is хо́віс, /ˈstaχ/ is ста́х.
+- /ɣʷ/ → г. Ukrainian г is the voiced fricative [ɦ], the nearest it has: /ˈɣʷo.roː/ is го́ро, /ˈdoɣʷ/ is до́г. Never ґ for /ɣʷ/.
+- A syllabic laryngeal is /ə/ plus the laryngeal: /əʔ/ → и, /əχ/ → их, /əɣʷ/ → иг: /dʱu.gəχˈteːr/ is дгуґихте́р, /əχ.wl̩ʔˈnaχ/ is ихвилна́х.
+
+Consonants
+- /p b t d s z m n l r/ → п б т д с з м н л р.
+- /k/ → к. /g/ → ґ, always. Ukrainian г is the fricative [ɦ], not a stop: /juˈgom/ is юґо́м, /ˈχagʲ.ros/ is ха́ґрос.
+- /ŋ/ → н: /ˈpeŋ.kʷe/ is пе́нкве.
+- /w/ → в: /ˈχo.wis/ is хо́віс, /ˈswekʲs/ is све́кс, /ˈdwoʔ/ is дво́.
+- /kʷ/ → кв. /gʷ/ → ґв. /gʷʱ/ → ґгв: /ˈkʷekʷ.los/ is кве́квлос, /gʷr̩ˈχum/ is ґвирху́м, /ˈgʷʱen/ is ґгве́н.
+- /bʱ/ → бг. /dʱ/ → дг. /gʱ/ → ґг. These are native Ukrainian clusters, a voiced stop with a voiced [ɦ] release, the nearest to a voiced aspirate: /ˈbʱe.re.ti/ is бге́реті, /dʱuχˈmos/ is дгухмо́с. Never пх, тх, or кх: Ukrainian would read them voiceless. Never a bare б, д, ґ: the release is the sound.
+- /ts/ → тс, never ц: /ˈnokʷts/ is но́квтс.
+- A geminate is written twice.
+
+The glide /j/
+- /j/ before a vowel is written with the iotated letters: /ja/ → я, /je/ → є, /ju/ → ю, /ji/ → ї, /jo/ → йо: /juˈgom/ is юґо́м, /ˈtre.jes/ is тре́єс, /ˈgʲʱe.joːm/ is ґгє́йом.
+- After a consonant, put the apostrophe ’ before я є ю ї, so the consonant stays hard and [j] is pronounced, as in ад’ютант: /ˈdjeːu̯s/ is д’є́вс. After a consonant, /jo/ → ьйо.
+- /j/ before a consonant or at the end of a word is й: /ˈoi̯.nos/ is о́йнос.
+
+Palatovelars
+- /kʲ/ → к and /gʲ/ → ґ, softened by the letter after them. /gʲʱ/ → ґг, softened the same way.
+- Before /e/: кє, ґє, ґгє: /ˈgʲe.nəʔ.toːr/ is ґє́нитор, /ˈwe.gʲʱet/ is ве́ґгєт.
+- Before /a/: кя, ґя. Before /o/: кьо, ґьо, ґгьо. Before /u/: кю, ґю. Before /i/: кі, ґі: /kʲuˈnes/ is кюне́с, /ˈχr̩t.kʲos/ is хи́рткьос, /ˈdʱe.gʲʱoːm/ is дге́ґгьом.
+- Before /ə/ and before the и of a syllabic resonant, write і instead of и, so the consonant stays soft: /kʲm̩ˈtom/ is кімто́м, /ˈde.kʲm̩/ is де́кім, /ˈme.gʲəχs/ is ме́ґіхс.
+- Before a consonant and at the end of a word, write a plain к, ґ, ґг: /ˈʔekʲ.wos/ is е́квос, /ˈswekʲs/ is све́кс, /ˈχagʲ.ros/ is ха́ґрос.
+- Plain /k/ /g/ before /e/ is hard: ке, ґе. That is the contrast with кє, ґє. Keep it.
+- Never с, з, ш, ж, ч, ц, or дж for a palatovelar. Those are the satem reflexes, not the Proto-Indo-European sound.
+
+Capitals and pauses
+- Keep the capitalization of the original text: a word that begins with a capital in the original begins with a capital here, and every other word is lowercase. A capital keeps its stress mark: /ˈoi̯.nos/ at the start is О́йнос, /ˈχo.wis/ is Хо́віс.
+- Keep each comma, exclamation mark, question mark, and period of the IPA.
+
+Lost in the Ukrainian reading
+- The pitch accent. The stress mark places the stress only.
+- Vowel length. ē and e, ō and o sound alike.
+- /ʔ/. h₁ is silent, so *dʰeh₁- and a bare *dʰe- sound alike.
+- The rounding of /ɣʷ/, and the difference between [ɣʷ] and [ɦ].
+- /ə/ comes out as Ukrainian и [ɪ], and unstressed и and е lean toward each other.
+- The syllabic resonants come out as и plus the resonant.
+- /kʲ/ /gʲ/ before a consonant or at the end of a word come out hard.
+- Ukrainian softens a consonant before і, so plain /k/ before /i/ and /kʲ/ before /i/ sound alike, and the t of е́сті is slightly palatal.
+- /w/ before a vowel may come out as the labiodental [ʋ].
+- The voiced aspirates come out as a stop followed by a separate [ɦ].
